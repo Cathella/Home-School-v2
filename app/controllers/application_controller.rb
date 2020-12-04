@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   end
   
   helper_method :current_teacher
+
+  def authorize
+    redirect_to new_teacher_session_path, notice: 'You are not authorized!' if current_teacher.nil?
+  end
 end

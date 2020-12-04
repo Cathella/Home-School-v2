@@ -1,5 +1,6 @@
 class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :index]
 
   # GET /teachers
   # GET /teachers.json
@@ -10,6 +11,9 @@ class TeachersController < ApplicationController
   # GET /teachers/1
   # GET /teachers/1.json
   def show
+  end
+
+  def teachershome
   end
 
   # GET /teachers/new
@@ -38,7 +42,7 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if teacher.save
-        format.html { redirect_to root_url, notice: 'Thank you for signing up! Please continue to Log In' }
+        format.html { redirect_to teachershome_path, notice: 'Thank you for signing up! Please continue to Log In' }
         # format.json { render :show, status: :created, location: @teacher }
       else
         format.html { render :new }
