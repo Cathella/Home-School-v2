@@ -10,6 +10,18 @@
   </head>
 
   <body>
+    <% if current_teacher %>
+      Logged in as <%= current_teacher.name %>.
+      <%= link_to "Log Out", teacher_session_path("current"), method: "delete" %>
+    <% else %>
+      <%= link_to "Sign Up", new_teacher_path %><br />
+      <%= link_to "Log In", new_teacher_session_path %>
+    <% end %>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

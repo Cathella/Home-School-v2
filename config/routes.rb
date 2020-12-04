@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # get 'teacher_sessions/new'
+  resources :teachers
+  resources :teacher_sessions
+  root to: "teachers#index"
 end
