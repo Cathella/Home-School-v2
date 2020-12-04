@@ -33,7 +33,7 @@ class ChildrenController < ApplicationController
       name: params['child']['name'],
       phone: params['child']['phone'],
       grade: params['child']['grade'],
-      subject: params['child']['guardian'],
+      guardian: params['child']['guardian'],
       address: params['child']['address'],
       password: params['child']['password'],
       password_confirmation: params['child']['password_confirmation']
