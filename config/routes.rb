@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # get 'teacher_sessions/new'
+  root to: 'home#index'
   resources :teachers
   resources :teacher_sessions
-  root to: "teachers#index"
 end

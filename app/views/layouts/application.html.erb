@@ -14,7 +14,8 @@
       Logged in as <%= current_teacher.name %>.
       <%= link_to "Log Out", teacher_session_path("current"), method: "delete" %>
     <% else %>
-      <%= link_to "Sign Up", new_teacher_path %><br />
+      For Teachers: 
+      <%= link_to "Sign Up", new_teacher_path %> or 
       <%= link_to "Log In", new_teacher_session_path %>
     <% end %>
 

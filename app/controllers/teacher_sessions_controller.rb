@@ -6,7 +6,7 @@ class TeacherSessionsController < ApplicationController
     teacher = Teacher.find_by_phone(params[:phone])
     if teacher && teacher.authenticate(params[:password])
       session[:teacher_id] = teacher.id
-      redirect_to root_url, notice: "Logged In!"
+      redirect_to teacher, notice: "Logged In!"
     else
       flash.now.alert = "Phone or password is invalid!"
       render "new"

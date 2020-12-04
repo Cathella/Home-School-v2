@@ -25,10 +25,5 @@
   <%= @teacher.address %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @teacher.password_digest %>
-</p>
+<%= link_to 'Update profile please', edit_teacher_path(@teacher) %>
 
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>
