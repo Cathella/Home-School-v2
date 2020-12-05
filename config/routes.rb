@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :groups
   root to: 'home#index'
 
   resources :children
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
   resources :teacher_sessions
 
   resources :admin_sessions
+  get "/admin", to: "admin#index", as: :admin
 end

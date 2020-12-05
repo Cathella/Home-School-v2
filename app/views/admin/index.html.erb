@@ -1,0 +1,66 @@
+<%= render "layouts/adminLoginLinks" %>
+
+<h1>This is the Admin Page</h1>
+<p>Match Teachers to students</p>
+
+<%= link_to "Create a group", new_group_path %>
+
+<div>
+  <h3>Teachers</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Grade</th>
+        <th>Subject</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @teachers.each do |teacher| %>
+        <tr>
+          <td><%= teacher.name %></td>
+          <td><%= teacher.grade %></td>
+          <td><%= teacher.subject %></td>
+          <td><%= teacher.phone %></td>
+          <td><%= teacher.address %></td>
+          <td><%= link_to 'Show', teacher %></td>
+          <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <h3>Students</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Grade</th>
+        <th>Parent Phone</th>
+        <th>Parent Name</th>
+        <th>Address</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @children.each do |child| %>
+        <tr>
+          <td><%= child.name %></td>
+          <td><%= child.grade %></td>
+          <td><%= child.phone %></td>
+          <td><%= child.guardian %></td>
+          <td><%= child.address %></td>
+          <td><%= link_to 'Show', child %></td>
+          <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

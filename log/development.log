@@ -1264,3 +1264,24 @@ Migrating to CreateAdmins (20201205071411)
   [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nakitto Catherine"], ["email", "admin@homeschool.ug"], ["phone", "0712345678"], ["password_digest", "$2a$12$DxXwVR6bAi8SGoc0qE.eFOeYEdjoIUwfcChC/DqSacdDJLgAEIILy"], ["created_at", "2020-12-05 08:25:14.990969"], ["updated_at", "2020-12-05 08:25:14.990969"]]
   [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGroups (20201205105131)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201205105131_create_groups.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201205105131_create_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201205105131"]]
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

@@ -1,4 +1,5 @@
 <h3><%= link_to "HomeSchool", root_path %></h3>
+
 <div>
   <%= link_to "For Teachers", teachershome_path %> / 
   <%= link_to "For Parents", childrenhome_path %> / 
@@ -6,6 +7,6 @@
 </div>
 
 <div>
-  <a href="/teachers">Our Teachers</a> / 
-  <a href="/children">Our Students</a><br />
+  <%= link_to "Our Teachers", teachers_path %> /  
+  <%= link_to "Our Students", children_path %> / <br />
 </div>
