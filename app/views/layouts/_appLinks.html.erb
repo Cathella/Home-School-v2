@@ -1,8 +1,8 @@
 <h3><%= link_to "HomeSchool", root_path %></h3>
 <div>
-  <a href="/teachershome">For Teachers</a> / 
-  <a href="/childrenhome">For Parents</a> / 
-  <a href="#">For Administrators</a><br /><br />
+  <%= link_to "For Teachers", teachershome_path %> / 
+  <%= link_to "For Parents", childrenhome_path %> / 
+  <%= link_to "For Administrators", new_admin_session_path %><br />
 </div>
 
 <div>

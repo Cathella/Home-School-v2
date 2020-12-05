@@ -15,11 +15,21 @@ class ApplicationController < ActionController::Base
   
   helper_method :current_child
 
+  def current_admin
+    @current_admin ||= Admin.find(session[:admin_id]) if session[:admin_id]
+  end
+  
+  helper_method :current_admin
+
   def teacher_authorize
     redirect_to new_teacher_session_path, notice: 'You are not authorized!' if current_teacher.nil?
   end
 
   def child_authorize
     redirect_to new_child_session_path, notice: 'You are not authorized!' if current_child.nil?
+  end
+
+  def admin_authorize
+    redirect_to new_admin_session_path, notice: 'You are not authorized!' if current_admin.nil?
   end
 end

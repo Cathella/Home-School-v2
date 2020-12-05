@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :teachers
   get "/teachershome", to: "teachers#teachershome", as: :teachershome
   resources :teacher_sessions
+
+  resources :admin_sessions
 end
