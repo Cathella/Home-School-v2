@@ -1,14 +1,16 @@
+<%= render "layouts/childLoginLinks" %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Children</h1>
+<h1>Students in your area</h1>
+<p>Request to tutor a child in your area</p>
+<p>Search by grade, name or area</p><br />
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Parent's Phone</th>
       <th>Grade</th>
-      <th>Parent's Name</th>
       <th>Address</th>
       <th colspan="3"></th>
     </tr>
@@ -18,18 +20,12 @@
     <% @children.each do |child| %>
       <tr>
         <td><%= child.name %></td>
-        <td><%= child.phone %></td>
         <td><%= child.grade %></td>
-        <td><%= child.guardian %></td>
         <td><%= child.address %></td>
         <td><%= link_to 'Show', child %></td>
-        <td><%= link_to 'Edit', edit_child_path(child) %></td>
-        <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Edit', edit_child_path(child) %></td>
+        <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Child', new_child_path %>

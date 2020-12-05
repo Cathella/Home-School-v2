@@ -1,11 +1,13 @@
 <% if current_teacher %>
-      Logged in as <%= current_teacher.name %>.
-      <%= link_to "Log Out", teacher_session_path("current"), method: "delete" %>
-    <% else %>
-      <%= link_to "Sign Up", new_teacher_path %> or 
-      <%= link_to "Log In", new_teacher_session_path %>
-    <% end %>
+  <h3><%= link_to "HomeSchool", root_path %></h3>
+  Logged in as <%= current_teacher.name %>.
+  <%= link_to "Log Out", teacher_session_path("current"), method: "delete" %>
+<% else %>
+  <h3><%= link_to "HomeSchool", root_path %></h3>
+  <%= link_to "Become a Teacher", new_teacher_path %> or 
+  <%= link_to "Log In", new_teacher_session_path %>
+<% end %>
 
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>
