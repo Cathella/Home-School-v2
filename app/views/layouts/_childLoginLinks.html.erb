@@ -1,0 +1,13 @@
+<% if current_child %>
+  <h3><%= link_to "HomeSchool", root_path %></h3>
+  Logged in as <%= current_child.name %>.
+  <%= link_to "Log Out", child_session_path("current"), method: "delete" %>
+<% else %>
+  <h3><%= link_to "HomeSchool", root_path %></h3>
+  <%= link_to "Register your Child", new_child_path %> or 
+  <%= link_to "Log In", new_child_session_path %>
+<% end %>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>

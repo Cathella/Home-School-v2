@@ -1,0 +1,32 @@
+<%= render "layouts/childLoginLinks" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @child.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @child.phone %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @child.grade %>
+</p>
+
+<p>
+  <strong>Guardian:</strong>
+  <%= @child.guardian %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @child.group.name %>
+</p>
+
+<%= link_to 'Update profile', edit_child_path(@child) %><br />
+<%= link_to 'Back to Student Directory', children_path %> <br />
+<%= link_to 'Request as your student', edit_child_path(@child) %>

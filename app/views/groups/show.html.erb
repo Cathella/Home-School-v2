@@ -1,0 +1,52 @@
+<%= render "layouts/adminLoginLinks" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group Name:</strong>
+  <%= @group.name %>
+</p>
+
+<p>
+  <strong>location:</strong>
+  <%= @group.place %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @group.grade %>
+</p>
+
+<p>
+  <strong>Children in the group:</strong>
+</p>
+
+<table>
+  <tbody>
+    <% @children.each do |child| %>
+      <tr>
+        <td><%= child.name %></td>
+        <td><%= link_to 'Show', teacher %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <strong>Teachers allocated to this group:</strong>
+</p>
+
+<table>
+  <tbody>
+    <% @teachers.each do |teacher| %>
+      <tr>
+        <td><%= teacher.name %></td>
+        <td><%= link_to 'Show', teacher %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Show all Groups', groups_path %>

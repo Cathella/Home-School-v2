@@ -1,0 +1,1287 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "grade" varchar, "subject" varchar, "address" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (23.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-03 12:23:05.785543"], ["updated_at", "2020-12-03 12:23:05.785543"]]
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "teachers"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "grade" varchar, "subject" varchar, "address" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 15:43:08 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by TeachersController#index as HTML
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for #<Class:0x00007f207cf65e70>
+Did you mean?  attr_accessor):
+  
+app/models/teacher.rb:7:in `<class:Teacher>'
+app/models/teacher.rb:1:in `<main>'
+app/controllers/teachers_controller.rb:7:in `index'
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 15:47:01 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (1.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 454ms (Views: 420.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 15:47:05 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (34.0ms)
+  Rendered teachers/new.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 89ms (Views: 78.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 15:50:23 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (56.6ms)
+  Rendered teachers/new.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 100ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 15:51:14 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7GV2EcepXislbPPFUOHjZhL3X76GFmneXx5zXzLVvrWM4dN3dK+I05guhJ6NLbPPHx+Q7+fZhMVuUNhosznOOw==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0770123456", "grade"=>"Primary 1", "subject"=>"Science", "address"=>"mutungo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+Unpermitted parameters: :password, :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[36mTeacher Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0770123456"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (4.4ms)
+  Rendered teachers/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 49ms (Views: 30.9ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "teachers"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "grade" varchar, "subject" varchar, "address" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (18.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 17:38:57 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (16.9ms)
+  Rendered teachers/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 97ms (Views: 65.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 17:39:01 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (3.7ms)
+  Rendered teachers/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 17:39:18 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ECfHqb9t8oeDjnz3RXU8uqYWcm2N/eXQgRAm3oKRmT5wo2LPDGskfz7MC6yYuWwTq/69POwyCMuwXo3pA33psA==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0770123456", "grade"=>"Primary 1", "subject"=>"Science", "address"=>"mutungo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+Unpermitted parameters: :password, :password_confirmation
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0770123456"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (4.8ms)
+  Rendered teachers/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 49ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "teachers"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "grade" varchar, "subject" varchar, "address" varchar, "password" varchar, "password_confirmation" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 17:43:46 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 17:43:49 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (6.6ms)
+  Rendered teachers/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 49ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 17:44:26 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FVok4UqbyKbnZL4DJv6M55brAiJ0NjinYBPu5j7KU6iTKrT38UxzYkUwoYs1Y82I1TbGgSWPjC+Ff/tnSlApuw==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0770123456", "grade"=>"Primary 1", "subject"=>"Science", "address"=>"Mutungo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+Unpermitted parameters: :password, :password_confirmation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<Teacher:0x00007f208400a248>
+Did you mean?  password):
+  
+app/controllers/teachers_controller.rb:30:in `block in create'
+app/controllers/teachers_controller.rb:29:in `create'
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 17:47:36 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "teachers"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTeachers (20201203121728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "phone" varchar, "grade" varchar, "subject" varchar, "address" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201203121728_create_teachers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201203121728"]]
+  ↳ bin/rails:9
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:03:01 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 137ms (Views: 116.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 18:03:03 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (13.0ms)
+  Rendered teachers/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 64ms (Views: 51.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 18:03:35 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SApJbW21YCUmx0as2Sa86oL1UMrTMSyGZiNOVuGNBTLOetl71mLb4YSTWSTKu/2FwSiUaYKImA6DT1vXlRd/IQ==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0770123456", "grade"=>"Primary 1", "subject"=>"Science", "address"=>"Mutungo", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0770123456"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "phone", "grade", "subject", "address", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jane Doe"], ["phone", "0770123456"], ["grade", "Primary 1"], ["subject", "Science"], ["address", "Mutungo"], ["password_digest", "$2a$12$0vSRbf159QZpbuS62gytmeL79o28F7cn52X.Q04GKLhuJU40q6/EG"], ["created_at", "2020-12-03 15:03:35.794834"], ["updated_at", "2020-12-03 15:03:35.794834"]]
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+Redirected to http://localhost:3000/teachers/1
+Completed 302 Found in 338ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/teachers/1" for 127.0.0.1 at 2020-12-03 18:03:35 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:67
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/1/edit" for 127.0.0.1 at 2020-12-03 18:04:05 +0300
+Processing by TeachersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:67
+  Rendering teachers/edit.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (3.7ms)
+  Rendered teachers/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:17:49 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started DELETE "/teachers/1" for 127.0.0.1 at 2020-12-03 18:21:19 +0300
+Processing by TeachersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WA5cFW40BCsBd9dvSoW9mj84sRi/sMmZxk8vx9mVVSk4ivlz3TLS07w1oDSXSe0zMtB+Sd5/JIL3AYTwWHklpw==", "id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:57
+  [1m[36mTeacher Destroy (3.4ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/teachers_controller.rb:57
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:57
+Redirected to http://localhost:3000/teachers
+Completed 302 Found in 49ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:21:19 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 18:22:19 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (6.0ms)
+  Rendered teachers/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 121ms (Views: 103.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 18:23:13 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8BjAli4V+7Odxypb9enC21sLoIx0YZUUbCHzZGHEs7x2aFCAlcJAdz+TNdPmdIO0GNZkLyXYIZyJTeblFV7Jrw==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0770111111", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[36mTeacher Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0770111111"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jane Doe"], ["phone", "0770111111"], ["password_digest", "$2a$12$YsP0qUewIMbNPfEFM83e8uaFpEHH349HZ9bJhcIij6qqsqRQ5ZP02"], ["created_at", "2020-12-03 15:23:14.246160"], ["updated_at", "2020-12-03 15:23:14.246160"]]
+  ↳ app/controllers/teachers_controller.rb:30
+  [1m[35m (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:30
+Redirected to http://localhost:3000/teachers/2
+Completed 302 Found in 329ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/teachers/2" for 127.0.0.1 at 2020-12-03 18:23:14 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:67
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:23:25 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:19
+  Rendered teachers/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:23:58 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers/2/edit" for 127.0.0.1 at 2020-12-03 18:24:07 +0300
+Processing by TeachersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:67
+  Rendering teachers/edit.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (5.9ms)
+  Rendered teachers/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:24:52 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 18:25:02 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nakitto/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:39:22 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 136ms (Views: 117.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 18:39:29 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (5.5ms)
+  Rendered teachers/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:39:36 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/teachers/2" for 127.0.0.1 at 2020-12-03 18:39:40 +0300
+Processing by TeachersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"99ObfDw0Pxyn3cdVagZpVgDjpRPoo1dtLp7lmsmW+BKXVz4ajzLp5BqfsA63yjn/DQtqQolsunYf0E6tSHqInA==", "id"=>"2"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[36mTeacher Destroy (1.0ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+Redirected to http://localhost:3000/teachers
+Completed 302 Found in 23ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:39:40 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:39:45 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 18:39:48 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (2.6ms)
+  Rendered teachers/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 18:40:00 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gH2krHDI7U9pfbQnZE3fdxh/gZwCk17ZMlFeeDKIqZIGDTS6yx9Wi8spq6930J4YW6JFP1Mq6lHXPUv5RhLTgQ==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0700112233", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jane Doe"], ["phone", "0700112233"], ["password_digest", "$2a$12$DEQ83NHEbmHpV7nb0/7G7u0jKrV/.pBQmZOdHAaSwwryNbVQUljs2"], ["created_at", "2020-12-03 15:40:00.437370"], ["updated_at", "2020-12-03 15:40:00.437370"]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (16.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 17.0ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/teachers_controller.rb:40:in `block in create'
+app/controllers/teachers_controller.rb:39:in `create'
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 18:40:53 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gH2krHDI7U9pfbQnZE3fdxh/gZwCk17ZMlFeeDKIqZIGDTS6yx9Wi8spq6930J4YW6JFP1Mq6lHXPUv5RhLTgQ==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0700112233", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+Completed 422 Unprocessable Entity in 325ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Phone has already been taken):
+  
+app/controllers/teachers_controller.rb:29:in `create'
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:41:07 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/teachers/3" for 127.0.0.1 at 2020-12-03 18:41:23 +0300
+Processing by TeachersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VCLWtUhAT0WAYu1lrRm0l7wp3ZkrTTVjoRKEPmwaSNE0pnPT+0aZvT0gmj5w1eQ+scESyEqC2HiQXC8J7fY4Xw==", "id"=>"3"}
+  [1m[36mTeacher Load (1.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[36mTeacher Destroy (1.3ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+Redirected to http://localhost:3000/teachers
+Completed 302 Found in 34ms (ActiveRecord: 17.5ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:41:23 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:41:35 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 18:42:21 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (16.3ms)
+  Rendered teachers/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 18:42:33 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"idGKJydEpWg1uy+bnPAOf5ffgsXATsGRHrfY2AM+5PAPoRoxnJMerJfvMBOPbU8Q1AJGZpH3dRn7281Zd6Se4w==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0700112233", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jane Doe"], ["phone", "0700112233"], ["password_digest", "$2a$12$sZ3zefVodxDR0TYz5m.QZud8Lmfs24p/H0GR5R3XjHgxjbIDbMsRe"], ["created_at", "2020-12-03 15:42:33.931255"], ["updated_at", "2020-12-03 15:42:33.931255"]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:40
+  [1m[36mTeacher Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? AND "teachers"."id" != ? LIMIT ?[0m  [["phone", "0700112233"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:40
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:40
+Redirected to http://localhost:3000/teachers/4
+Completed 302 Found in 344ms (ActiveRecord: 19.3ms)
+
+
+Started GET "/teachers/4" for 127.0.0.1 at 2020-12-03 18:42:34 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:42:45 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/4/edit" for 127.0.0.1 at 2020-12-03 18:43:38 +0300
+Processing by TeachersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  Rendering teachers/edit.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (10.8ms)
+  Rendered teachers/edit.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 81ms (Views: 75.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/4" for 127.0.0.1 at 2020-12-03 18:43:51 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 18:43:57 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 19:02:12 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (7.5ms)
+  Rendered teachers/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 84ms (Views: 59.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:02:16 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 19:06:12 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/teachers/4" for 127.0.0.1 at 2020-12-03 19:06:31 +0300
+Processing by TeachersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pOZMyx7LynC4Qu8mNXDAta7aZL03vtLNB+MRavELM77EYumtrc0ciAUAmH3ovJAcozKr7FZxP9Y2rbpdcOdDMA==", "id"=>"4"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[36mTeacher Destroy (3.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+Redirected to http://localhost:3000/teachers
+Completed 302 Found in 31ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:06:31 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 90ms (Views: 82.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:06:49 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 19:07:25 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (3.9ms)
+  Rendered teachers/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 19:08:15 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RMBbZU4R01JchkPItGktPQNJqiSUu5XIPZfOOWgGiATCsMtz9cZolv7SXECn9GxSQJRuh8UCIUDY+9u4HJzyFw==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0700112233", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Create (0.3ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jane Doe"], ["phone", "0700112233"], ["password_digest", "$2a$12$LpkcXObyQxZpF66byVpDAuUmHI7xASO5VLXNevfBBsM33m9pEc2Bm"], ["created_at", "2020-12-03 16:08:15.633165"], ["updated_at", "2020-12-03 16:08:15.633165"]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:40
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? AND "teachers"."id" != ? LIMIT ?[0m  [["phone", "0700112233"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:40
+Redirected to http://localhost:3000/teachers/5
+Completed 302 Found in 359ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/teachers/5" for 127.0.0.1 at 2020-12-03 19:08:15 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:08:28 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teachers/5" for 127.0.0.1 at 2020-12-03 19:08:39 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:10:30 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/teachers/5" for 127.0.0.1 at 2020-12-03 19:10:44 +0300
+Processing by TeachersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jNkuCBys5gZVVHi/vsVbBkWRmPjQTUwfOCwE4J57qcjsXYtur6ow/ugWD+RjCQuvSHlXqbGCoQQJYq/XH5fZRg==", "id"=>"5"}
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[36mTeacher Destroy (2.2ms)[0m  [1m[31mDELETE FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/teachers_controller.rb:67
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:67
+Redirected to http://localhost:3000/teachers
+Completed 302 Found in 29ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:10:44 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:34:47 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1294ms (Views: 1288.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-03 19:42:55 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:43:00 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:43:39 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:44:01 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 118ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:44:14 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 19:44:29 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRZTKdj44C6TFNGxIAqdTAlr0K8AEwNTYbh5kp9rSoRBkvZPa/421i5Wpur9xs3lBIMf/mHc7khQ9tKlHoc6Cg==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/teacher_sessions_controller.rb:7:in `create'
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:44:39 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 19:44:42 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (6.1ms)
+  Rendered teachers/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 55ms (Views: 46.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 19:44:50 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-03 19:44:56 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (5.1ms)
+  Rendered teachers/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teachers" for 127.0.0.1 at 2020-12-03 19:45:36 +0300
+Processing by TeachersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ihLGO/E9wBUrvfCsBdYZsfBrkL0ebf6FoEpOsdHFFZQMYlYtSup70Ynp7yQWS1jes7ZUHk/USg1FJlswpV9vhw==", "teacher"=>{"name"=>"Jane Doe", "phone"=>"0700112233", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Teacher"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[36mTeacher Create (4.2ms)[0m  [1m[32mINSERT INTO "teachers" ("name", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jane Doe"], ["phone", "0700112233"], ["password_digest", "$2a$12$9PD256I37HwTIo2Ms/r7VO3453cS9R2nY9ibqTRKT0xIullIHXIrC"], ["created_at", "2020-12-03 16:45:36.674142"], ["updated_at", "2020-12-03 16:45:36.674142"]]
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teachers_controller.rb:40
+  [1m[36mTeacher Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teachers" WHERE "teachers"."phone" = ? AND "teachers"."id" != ? LIMIT ?[0m  [["phone", "0700112233"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:40
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teachers_controller.rb:40
+Redirected to http://localhost:3000/teachers/6
+Completed 302 Found in 327ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/teachers/6" for 127.0.0.1 at 2020-12-03 19:45:36 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:77
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered teachers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:45:51 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 19:46:01 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wjau9szp2PTmgSB72moz+jrOa9BO/3WrI9eEMRbwx7k6j3sWjKc68CqivGyY3LlyV48B5HwuavOJcF44ogKHvA==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/teacher_sessions_controller.rb:7:in `create'
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:49:15 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 19:49:28 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ctlt1xrsGhc7WzQWNcBndZSDISgKMKUxpv9edz8zXIcSXcixqerM74YZQ03oDDfcmWvueWv/SCqXsfVAvt8sCQ==", "phone"=>"0700565656", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/teacher_sessions_controller.rb:7:in `create'
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 19:49:34 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 19:49:54 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9KOnNTxE0Y8cIW1gJj+hEU8U9jIBSUOTVbaxFVN4HNqUJwJTj0IHd6FjGjv78/G4Qvw5Y2CGrohk+Boi0pRsVA==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/teacher_sessions_controller.rb:7:in `create'
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 22:04:03 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-03 22:04:08 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 22:04:17 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HptaJl6hZ9N1IwfmlCym5GWa21UzloY8FLAoANBupAp+H/9A7aexK8hhcL1J4PZNaHIUBFJZaycl/oM3UYLUhA==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teacher_sessions_controller.rb:6
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 361ms (Views: 38.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 22:08:36 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BVOjfyf42xI0Zzb7YCsD27tk2iU0NjgS8y1EBOxVYSZl1wYZlP4N6oklQaC951NytowVdFX51QnCY+8zbbkRqA==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teacher_sessions_controller.rb:6
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 338ms (Views: 29.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-03 22:08:56 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2LIW7b9alGIvLv8lficlmCeHUHwt1st4QCL4KyuCh4+4NrOLDFxCmpJsiH6j63UxKm+fLUwZJmNxbFMcqm73AQ==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teacher_sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-03 22:08:56 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:13:24 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (22.5ms)
+  [1m[36mTeacher Load (1.3ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 136ms (Views: 125.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-04 06:13:55 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (4.1ms)
+  Rendered teachers/new.html.erb within layouts/application (6.3ms)
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-04 06:13:59 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.5ms)
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-04 06:20:31 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (16.2ms)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2020-12-04 06:21:14 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.1ms)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-04 06:21:27 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered teachers/_form.html.erb (18.7ms)
+  Rendered teachers/new.html.erb within layouts/application (20.0ms)
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:21:35 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (4.3ms)
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:24:29 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (4.6ms)
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/teacher_sessions/current" for 127.0.0.1 at 2020-12-04 06:24:33 +0300
+Processing by TeacherSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1wq2LkPiczaUs75ztKymJoYnVJGBh5mkJ22lGML1bOy3jhNI8OSlzinxyShpYPaPi8+bwOBIdL8WIw4vQxkcYg==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:24:33 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-04 06:25:56 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2020-12-04 06:26:55 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PRhtDLIWmH5v2ZIe1m4brjJ+H+1TpLFsueWuT6+pIhxdobjs8lh6eqP6DgmU2JEmXz912WF1rjQTQnRGG1tiGQ==", "phone"=>"0700112233", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."phone" = ? LIMIT ?[0m  [["phone", "0700112233"], ["LIMIT", 1]]
+  ↳ app/controllers/teacher_sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 297ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:26:55 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.0ms)
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:27:00 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (2.1ms)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT  "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/teacher_sessions/current" for 127.0.0.1 at 2020-12-04 06:27:03 +0300
+Processing by TeacherSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GvnskcZNgFqzwiDLM+M62sMFMP7TYtjteHvkNZuJEOF6fUn3dUtWog6AV5DuL2pzzu3/r7KtNfZJNU8CGmVgbw==", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-04 06:27:03 +0300
+Processing by TeachersController#index as HTML
+  Rendering teachers/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:18
+  Rendered teachers/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateAdmins (20201205071411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201205071411_create_admins.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201205071411_create_admins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201205071411"]]
+  ↳ bin/rails:9
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@homeschool.ug"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "email", "phone", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nakitto Catherine"], ["email", "admin@homeschool.ug"], ["phone", "0712345678"], ["password_digest", "$2a$12$DxXwVR6bAi8SGoc0qE.eFOeYEdjoIUwfcChC/DqSacdDJLgAEIILy"], ["created_at", "2020-12-05 08:25:14.990969"], ["updated_at", "2020-12-05 08:25:14.990969"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" ORDER BY "admins"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateGroups (20201205105131)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20201205105131_create_groups.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20201205105131_create_groups.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201205105131"]]
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

@@ -1,0 +1,8 @@
+<%= render "layouts/childLoginLinks" %>
+
+<h1>Please Complete your child's profile</h1>
+
+<%= render 'profileForm', child: @child %>
+
+<%= link_to 'Show', @child %> |
+<%= link_to 'Back', children_path %>

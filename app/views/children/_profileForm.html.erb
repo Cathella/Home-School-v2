@@ -1,0 +1,34 @@
+<%= form_with(model: child, local: true) do |form| %>
+  <% if child.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(child.errors.count, "error") %> prohibited this child from being saved:</h2>
+
+      <ul>
+      <% child.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :grade %>
+    <%= form.select :grade,  ['Primary One', 'Primary Two', 'Primary Three', 'Primary Four', 'Primary Five', 'Primary Six'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :guardian %>
+    <%= form.text_field :guardian %>
+  </div>
+
+  <% if current_admin %>
+  <div class="field">
+    <%= form.label :group_id, "Choose a Group:" %>
+    <%= form.collection_select(:group_id, Group.all, :id, :name) %>
+  </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit "Update your Profile" %>
+  </div>
+<% end %>
