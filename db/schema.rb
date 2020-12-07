@@ -26,14 +26,17 @@ ActiveRecord::Schema.define(version: 2020_12_05_105131) do
     t.string "phone"
     t.string "grade"
     t.string "guardian"
-    t.string "address"
     t.string "password_digest"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_children_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
+    t.string "grade"
+    t.string "place"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -43,10 +46,11 @@ ActiveRecord::Schema.define(version: 2020_12_05_105131) do
     t.string "phone"
     t.string "grade"
     t.string "subject"
-    t.string "address"
     t.string "password_digest"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_teachers_on_group_id"
   end
 
 end

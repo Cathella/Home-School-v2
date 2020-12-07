@@ -5,8 +5,8 @@ class CreateTeachers < ActiveRecord::Migration[5.2]
       t.string :phone
       t.string :grade
       t.string :subject
-      t.string :address
       t.string :password_digest
+      t.references :group, foreign_key: true
 
       t.timestamps
     end

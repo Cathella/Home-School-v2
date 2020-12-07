@@ -5,8 +5,8 @@ class CreateChildren < ActiveRecord::Migration[5.2]
       t.string :phone
       t.string :grade
       t.string :guardian
-      t.string :address
       t.string :password_digest
+      t.references :group, foreign_key: true
 
       t.timestamps
     end

@@ -27,14 +27,11 @@ class ChildrenController < ApplicationController
   # POST /children
   # POST /children.json
   def create
-    # @child = Child.new(child_params)
-
     child = Child.create!(
       name: params['child']['name'],
       phone: params['child']['phone'],
       grade: params['child']['grade'],
       guardian: params['child']['guardian'],
-      address: params['child']['address'],
       password: params['child']['password'],
       password_confirmation: params['child']['password_confirmation']
     )
@@ -56,10 +53,8 @@ class ChildrenController < ApplicationController
     respond_to do |format|
       if @child.update(child_params)
         format.html { redirect_to @child, notice: 'Child was successfully updated.' }
-        # format.json { render :show, status: :ok, location: @child }
       else
         format.html { render :edit }
-        # format.json { render json: @child.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -82,6 +77,6 @@ class ChildrenController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def child_params
-      params.require(:child).permit(:name, :phone, :grade, :guardian, :address, :password, :password_confirmation)
+      params.require(:child).permit(:name, :phone, :grade, :guardian, :password, :password_confirmation, :group_id)
     end
 end

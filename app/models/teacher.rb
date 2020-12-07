@@ -3,4 +3,6 @@ class Teacher < ApplicationRecord
 
   validates_presence_of :phone, :name
   validates_uniqueness_of :phone
+
+  belongs_to :group, optional: true
 end

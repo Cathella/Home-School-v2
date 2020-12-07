@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :grade %>
-    <%= form.text_field :grade %>
+    <%= form.select :grade,  ['Primary One', 'Primary Two', 'Primary Three', 'Primary Four', 'Primary Five', 'Primary Six'] %>
   </div>
 
   <div class="field">
@@ -21,10 +21,12 @@
     <%= form.text_field :guardian %>
   </div>
 
+  <% if current_admin %>
   <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.label :group_id, "Choose a Group:" %>
+    <%= form.collection_select(:group_id, Group.all, :id, :name) %>
   </div>
+  <% end %>
 
   <div class="actions">
     <%= form.submit "Update your Profile" %>

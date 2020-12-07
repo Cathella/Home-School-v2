@@ -11,6 +11,9 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.json
   def show
+    # @group_count = Child.where(group_id: @group.id).size
+    @children = Child.where(group_id: @group.id)
+    @teachers = Teacher.where(group_id: @group.id)
   end
 
   # GET /groups/new
@@ -70,6 +73,6 @@ class GroupsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def group_params
-      params.require(:group).permit(:name)
+      params.require(:group).permit(:name, :grade, :place)
     end
 end
