@@ -3758,3 +3758,644 @@ Processing by ChildrenController#childrenhome as HTML
 Completed 200 OK in 123ms (Views: 120.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 17:55:20 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_childLoginLinks.html.erb (4.6ms)
+  Rendered children/_form.html.erb (14.1ms)
+  Rendered children/new.html.erb within layouts/application (27.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 165ms (Views: 158.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-10 17:57:36 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (0.7ms)
+  Rendered home/index.html.erb within layouts/application (15.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachershome" for 127.0.0.1 at 2020-12-10 17:57:43 +0300
+Processing by TeachersController#teachershome as HTML
+  Rendering teachers/teachershome.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (1.1ms)
+  Rendered teachers/teachershome.html.erb within layouts/application (2.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/childrenhome" for 127.0.0.1 at 2020-12-10 17:57:54 +0300
+Processing by ChildrenController#childrenhome as HTML
+  Rendering children/childrenhome.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (16.3ms)
+  Rendered children/childrenhome.html.erb within layouts/application (26.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 169.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 17:58:02 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_childLoginLinks.html.erb (1.5ms)
+  Rendered children/_form.html.erb (5.7ms)
+  Rendered children/new.html.erb within layouts/application (12.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:06:28 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_childLoginLinks.html.erb (5.6ms)
+  Rendered children/_form.html.erb (5.5ms)
+  Rendered layouts/_intro.html.erb (0.8ms)
+  Rendered children/new.html.erb within layouts/application (21.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 122.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:09:02 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_childLoginLinks.html.erb (1.2ms)
+  Rendered children/_form.html.erb (4.2ms)
+  Rendered layouts/_intro.html.erb (0.5ms)
+  Rendered children/new.html.erb within layouts/application (8.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:10:30 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_childLoginLinks.html.erb (1.5ms)
+  Rendered layouts/_intro.html.erb (0.6ms)
+  Rendered children/_form.html.erb (5.1ms)
+  Rendered children/new.html.erb within layouts/application (11.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:11:14 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.2ms)
+  Rendered children/_form.html.erb (2.1ms)
+  Rendered children/new.html.erb within layouts/application (3.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:12:40 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.7ms)
+  Rendered children/_form.html.erb (3.7ms)
+  Rendered children/new.html.erb within layouts/application (7.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-10 18:13:04 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (1.3ms)
+  Rendered home/index.html.erb within layouts/application (30.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 199ms (Views: 197.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:13:11 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.4ms)
+  Rendered children/_form.html.erb (10.9ms)
+  Rendered children/new.html.erb within layouts/application (13.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:20:46 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.7ms)
+  Rendered children/_form.html.erb (6.4ms)
+  Rendered children/new.html.erb within layouts/application (11.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:23:32 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.3ms)
+  Rendered children/_form.html.erb (2.6ms)
+  Rendered children/new.html.erb within layouts/application (4.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:26:33 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (1.7ms)
+  Rendered children/_form.html.erb (10.5ms)
+  Rendered children/new.html.erb within layouts/application (19.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 120ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:28:46 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.2ms)
+  Rendered children/_form.html.erb (2.4ms)
+  Rendered children/new.html.erb within layouts/application (4.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:31:47 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.2ms)
+  Rendered children/_form.html.erb (1.9ms)
+  Rendered children/new.html.erb within layouts/application (3.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:41:01 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.6ms)
+  Rendered children/_form.html.erb (2.6ms)
+  Rendered children/new.html.erb within layouts/application (8.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:43:44 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.8ms)
+  Rendered children/_form.html.erb (4.3ms)
+  Rendered children/new.html.erb within layouts/application (8.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-10 18:45:25 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (1.0ms)
+  Rendered home/index.html.erb within layouts/application (8.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 125ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:45:36 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.4ms)
+  Rendered children/_form.html.erb (2.1ms)
+  Rendered children/new.html.erb within layouts/application (4.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:46:25 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.6ms)
+  Rendered children/_form.html.erb (4.6ms)
+  Rendered children/new.html.erb within layouts/application (13.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 18:47:35 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.2ms)
+  Rendered children/_form.html.erb (1.9ms)
+  Rendered children/new.html.erb within layouts/application (3.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-10 22:01:59 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (2.1ms)
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachershome" for 127.0.0.1 at 2020-12-10 22:02:06 +0300
+Processing by TeachersController#teachershome as HTML
+  Rendering teachers/teachershome.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (0.7ms)
+  Rendered teachers/teachershome.html.erb within layouts/application (1.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 145ms (Views: 143.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/childrenhome" for 127.0.0.1 at 2020-12-10 22:02:12 +0300
+Processing by ChildrenController#childrenhome as HTML
+  Rendering children/childrenhome.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (1.3ms)
+  Rendered children/childrenhome.html.erb within layouts/application (2.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 22:02:15 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 22:56:38 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (4.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 22:57:11 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (2.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 22:58:47 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 22:59:27 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (62.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 157ms (Views: 155.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:04:22 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (2.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:05:55 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (4.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:12:04 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:13:06 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (3.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 172ms (Views: 170.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:14:13 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (2.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:17:53 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:19:36 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:20:04 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (0.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:20:33 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (4.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:21:39 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (0.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:21:54 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:22:58 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (2.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 115.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:23:03 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.2ms)
+  Rendered children/_form.html.erb (2.2ms)
+  Rendered children/new.html.erb within layouts/application (3.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:25:04 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.2ms)
+  Rendered children/_form.html.erb (1.6ms)
+  Rendered children/new.html.erb within layouts/application (3.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:25:55 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.4ms)
+  Rendered children/_form.html.erb (1.4ms)
+  Rendered children/new.html.erb within layouts/application (3.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:26:14 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.3ms)
+  Rendered children/_form.html.erb (1.6ms)
+  Rendered children/new.html.erb within layouts/application (3.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:26:22 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:26:25 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.5ms)
+  Rendered children/_form.html.erb (2.2ms)
+  Rendered children/new.html.erb within layouts/application (7.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:26:28 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (1.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:26:30 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.5ms)
+  Rendered children/_form.html.erb (2.6ms)
+  Rendered children/new.html.erb within layouts/application (5.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:26:33 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (3.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:26:58 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.6ms)
+  Rendered children/_form.html.erb (6.2ms)
+  Rendered children/new.html.erb within layouts/application (10.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:27:58 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.3ms)
+  Rendered children/_form.html.erb (2.1ms)
+  Rendered children/new.html.erb within layouts/application (4.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2020-12-10 23:28:06 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (3.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:28:13 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (2.3ms)
+  Rendered children/_form.html.erb (6.4ms)
+  Rendered children/new.html.erb within layouts/application (16.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 150ms (Views: 144.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-10 23:28:17 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (2.3ms)
+  Rendered home/index.html.erb within layouts/application (25.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/childrenhome" for 127.0.0.1 at 2020-12-10 23:28:21 +0300
+Processing by ChildrenController#childrenhome as HTML
+  Rendering children/childrenhome.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (3.1ms)
+  Rendered children/childrenhome.html.erb within layouts/application (5.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/children/new" for 127.0.0.1 at 2020-12-10 23:28:25 +0300
+Processing by ChildrenController#new as HTML
+  Rendering children/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.5ms)
+  Rendered children/_form.html.erb (9.8ms)
+  Rendered children/new.html.erb within layouts/application (14.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-10 23:28:28 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (2.9ms)
+  Rendered home/index.html.erb within layouts/application (16.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachershome" for 127.0.0.1 at 2020-12-10 23:28:30 +0300
+Processing by TeachersController#teachershome as HTML
+  Rendering teachers/teachershome.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (2.5ms)
+  Rendered teachers/teachershome.html.erb within layouts/application (4.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-10 23:28:49 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered layouts/_teacherLoginLinks.html.erb (2.3ms)
+  Rendered teachers/_form.html.erb (20.7ms)
+  Rendered teachers/new.html.erb within layouts/application (29.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 143ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-10 23:42:44 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered layouts/_teacherLoginLinks.html.erb (7.1ms)
+  Rendered teachers/_form.html.erb (3.4ms)
+  Rendered teachers/new.html.erb within layouts/application (15.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-10 23:45:44 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.5ms)
+  Rendered teachers/_form.html.erb (1.9ms)
+  Rendered teachers/new.html.erb within layouts/application (6.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-10 23:49:13 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.6ms)
+  Rendered teachers/_form.html.erb (1.9ms)
+  Rendered teachers/new.html.erb within layouts/application (4.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-10 23:49:45 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (0.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-10 23:53:28 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (1.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 122.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-10 23:59:12 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (2.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teachers/new" for 127.0.0.1 at 2020-12-10 23:59:27 +0300
+Processing by TeachersController#new as HTML
+  Rendering teachers/new.html.erb within layouts/application
+  Rendered layouts/_intro.html.erb (0.5ms)
+  Rendered teachers/_form.html.erb (1.8ms)
+  Rendered teachers/new.html.erb within layouts/application (5.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2020-12-10 23:59:34 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (8.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+

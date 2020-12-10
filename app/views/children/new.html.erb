@@ -1,7 +1,26 @@
-<%= render "layouts/childLoginLinks" %>
-
-<h1>New Child</h1>
-
-<%= render 'form', child: @child %>
-
-<%= link_to 'Back', children_path %>
+<div class="signup-view">
+  <div class="container-fluid">
+    <div class="row">
+      <%= render "layouts/intro" %>
+      <div class="col-md-6" id="remain">
+        <div class="my-form">
+          <div class="text-center mt-4">
+            <a class="navbar-brand logo text-info mb-5" href="/">
+              🏠 
+              <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+            </a>
+          </div>
+          <%= render 'form', child: @child %>
+          <div class="text-center mb-5 mt-3">
+            <%= link_to "Child Login", new_child_session_path, class: "text-info" %>
+          </div>
+          <small class="d-flex justify-content-between mt-4 flex-wrap">
+            <p class="text-info"><i class="far fa-check-circle mr-2"></i>Community-based</p>
+            <p class="text-info"><i class="far fa-check-circle mr-2"></i>Convinient</p>
+            <p class="text-info"><i class="far fa-check-circle mr-2"></i>Affordable</p>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
