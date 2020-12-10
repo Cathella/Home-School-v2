@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :addresses
   resources :groups
   root to: 'home#index'
 

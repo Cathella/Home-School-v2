@@ -1,5 +1,21 @@
-<%= render "layouts/teacherLoginLinks" %>
+<%= render 'layouts/main-nav' %>
 
-<h1>We empower great Teachers</h1>
-<p>Teach small groups in a secure a contained environment.</p>
-<%= link_to "Apply to HomeSchool", new_teacher_path %>
+<div class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 teacher-intro-img">
+      </div>
+      <div class="col-md-6 intro">
+        <h1 class="color-5">
+          We empower great Teachers
+        </h1>
+        <p class="intro-desc">Teach small groups in a secure and contained environment.</p>
+        <div class="lft-it">
+          <%= link_to "Apply to HomeSchool", new_teacher_path, class: "big-btn text-white rounded shadow" %>
+          <%= link_to "Login", new_teacher_session_path, class: "ml-5 text-info" %><i class="fas fa-arrow-right ml-2 text-info"></i>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

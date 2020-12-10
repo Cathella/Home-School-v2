@@ -1,4 +1,24 @@
-<%= render "layouts/childLoginLinks" %>
+<%= render 'layouts/main-nav' %>
 
-<h1>Children Home Page</h1>
-<p>This is the child's home page</p>
+<div class="">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 child-intro-img">
+      </div>
+      <div class="col-md-6 intro">
+        <h1 class="color-5">
+          We stand for the children at home
+        </h1>
+        <p class="intro-desc">
+          Children are grouped in a study group 
+          with a qualified teacher they will adore
+          </p>
+        <div class="lft-it">
+          <%= link_to "Register your Child", new_child_path, class: "big-btn text-white rounded shadow" %>
+          <%= link_to "Login", new_child_session_path, class: "ml-5 text-info" %><i class="fas fa-arrow-right ml-2 text-info"></i>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

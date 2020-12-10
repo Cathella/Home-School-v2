@@ -27,6 +27,11 @@
   <%= @teacher.group.name %>
 </p>
 
+<p>
+  <strong>Address:</strong>
+  <%= @teacher.address.landmark %>
+</p>
+
 <%= link_to 'Update profile please', edit_teacher_path(@teacher) %><br />
 <%= link_to 'Back to Teacher Directory', teachers_path %> <br />
 <%= link_to 'Request as a Tutor', edit_teacher_path(@teacher) %>

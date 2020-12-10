@@ -1,0 +1,51 @@
+<header class="pt-1 pb-1 shadow">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand logo text-info" href="/">
+        🏠 
+        <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          
+          <% if current_teacher || current_child || current_admin %>
+            <li class="nav-item">
+              <%= link_to "Dashboard", dashboard_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Children", my_children_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Study groups", my_groups_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link login-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <a class="nav-link login-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link login-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link login-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Teachers", teachershome_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Parents", childrenhome_path, class: "nav-link register-link" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
