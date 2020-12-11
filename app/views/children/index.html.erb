@@ -1,34 +1,31 @@
-<%= render "layouts/childLoginLinks" %>
+<%= render "layouts/main-nav" %>
 
-<p id="notice"><%= notice %></p>
+<div class="container py-5 dash-view">
+  <p id="notice"><%= notice %></p>
+  <h1 class="font-weight-bold text-label mb-3">Students in your area</h1>
+  <p class="mb-5">Request to tutor a child in your area</p>
 
-<h1>Students in your area</h1>
-<p>Request to tutor a child in your area</p>
-<p>Search by grade, name or area</p><br />
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Grade</th>
-      <th>Group</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @children.each do |child| %>
-      <tr>
-        <td><%= child.name %></td>
-        <td><%= child.grade %></td>
-        <td><%= child.group.name %></td>
-        <td><%= link_to 'Show', child %></td>
-        
-        <% if current_admin %>
-        <td><%= link_to 'Edit', edit_child_path(child) %></td>
-        <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <table class="child-table">
+    <tbody>
+      <% @children.each do |child| %>
+        <tr>
+          <td><%= child.name %></td>
+          <td>
+            <small class="text-label font-weight-bold">Class:</small><br>
+            <%= child.grade %>
+          </td>
+          <td>
+            <small class="text-label font-weight-bold">Group Allocated:</small><br>
+            <%= child.group.name %>
+          </td>
+          <td><%= link_to 'View Profile', child, class: "btn bg-white border border-info text-info" %></td>
+          
+          <% if current_admin %>
+          <td><%= link_to 'Edit', edit_child_path(child), class: "btn bg-white border border-primary text-primary" %></td>
+          <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-white border border-danger text-danger' %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

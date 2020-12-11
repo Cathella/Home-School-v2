@@ -1,8 +1,24 @@
-<%= render "layouts/childLoginLinks" %>
-
-<h1>Please Complete your child's profile</h1>
-
-<%= render 'profileForm', child: @child %>
-
-<%= link_to 'Show', @child %> |
-<%= link_to 'Back', children_path %>
+<%= render "layouts/main-nav" %>
+<div class="signup-view">
+  <div class="container py-5 dash-view">
+    <div class="row" id="dash">
+      <div class="col-md-4 pr-5">
+        <div class="mb-5">
+          <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+          <p class="mt-5 text-center">
+            I am 
+            <%= current_child.name %>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <p id="notice"><%= notice %></p>
+        <h2 class="font-weight-bold text-info mb-5">Complete child's profile</h2>
+        <%= render 'profileForm', child: @child %>
+        <div class="text-center my-3">
+          <%= link_to "Back to Profile", @child %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

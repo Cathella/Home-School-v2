@@ -1,32 +1,81 @@
-<%= render "layouts/childLoginLinks" %>
+<%= render "layouts/main-nav" %>
 
-<p id="notice"><%= notice %></p>
+<div class="container py-5 dash-view">
+  <div class="row" id="dash">
+    <div class="col-md-4 pr-5">
+      <div class="mb-5">
+        <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+        <p class="mt-5 text-center">
+          I am 
+          <%= current_child.name %>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <p id="notice"><%= notice %></p>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-phone-alt border rounded py-3 text-info px-3 mr-3"></i>
+              <p class="pt-4 text-label">
+                <strong>Parent's Phone</strong><br>
+                <%= @child.phone %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-user border rounded py-3 text-info px-3 mr-3"></i>
+              <p class="pt-4 text-label">
+                <strong>Parent</strong><br>
+                <%= @child.guardian %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-graduation-cap border rounded py-3 text-info px-3 mr-3"></i>
+              <p class="pt-4 text-label">
+                <strong>Class</strong><br>
+                <%= @child.grade %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-users border rounded py-3 text-info px-3 mr-3"></i>
+              <p class="pt-4 text-label">
+                <strong>Study Group</strong><br>
+                <%= @child.group.name %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mb-5">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-map-marker-alt border rounded py-3 text-info px-3 mr-3"></i>
+              <p class="pt-4 text-label">
+                <strong>Address</strong><br>
+                <%= @child.address.landmark %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @child.name %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @child.phone %>
-</p>
-
-<p>
-  <strong>Grade:</strong>
-  <%= @child.grade %>
-</p>
-
-<p>
-  <strong>Guardian:</strong>
-  <%= @child.guardian %>
-</p>
-
-<p>
-  <strong>Group:</strong>
-  <%= @child.group.name %>
-</p>
-
-<%= link_to 'Update profile', edit_child_path(@child) %><br />
-<%= link_to 'Back to Student Directory', children_path %> <br />
-<%= link_to 'Request as your student', edit_child_path(@child) %>
+      <div class="d-flex justify-content-between">
+        <%= link_to 'Update profile', edit_child_path(@child), class: "btn bg-green-btn text-white shadow px-5 py-3" %>
+        <%= link_to 'Registered Students', children_path, class: "btn bg-green-btn bg-light text-info border border-info px-4 py-3" %>
+        <%= link_to 'Browse Teachers near you', teachers_path, class: "btn bg-green-btn bg-light text-info border border-info px-4 py-3" %>
+      </div>
+    </div>
+  </div>
+</div>

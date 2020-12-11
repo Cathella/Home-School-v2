@@ -1,17 +1,42 @@
-<h1>Admin Log In</h1>
-
-<%= form_tag admin_sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+<div class="signup-view">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="my-form">
+          <div class="text-center mt-5">
+            <a class="navbar-brand logo text-info mb-5" href="/">
+              🏠 
+              <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+            </a>
+          </div>
+          <p class="text-center text-muted mb-4">ADMIN LOGIN</p>
+          <%= form_tag admin_sessions_path do %>
+            <div class="row">
+              <div class="form-group col-md-12">
+                <div class="field mb-3">
+                  <%= text_field_tag :email, params[:email], placeholder: "Email" %>
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <div class="field">
+                  <%= password_field_tag :password, params[:password], placeholder: "Password" %>
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <div class="actions">
+                  <%= submit_tag "Log In" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          <small class="d-flex justify-content-between mt-5 flex-wrap">
+            <p class="text-info"><i class="far fa-check-circle mr-2"></i>Community-based</p>
+            <p class="text-info"><i class="far fa-check-circle mr-2"></i>Convinient</p>
+            <p class="text-info"><i class="far fa-check-circle mr-2"></i>Affordable</p>
+          </small>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-
-  <div class="actions">
-    <%= submit_tag "Log In" %>
-  </div>
-<% end %>
