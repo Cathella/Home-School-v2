@@ -12,8 +12,16 @@
       </div>
     </div>
     <div class="col-md-8">
-      <p id="notice"><%= notice %></p>
+      <% if notice %>
+        <p id="notice"><%= notice %></p>
+      <% end %>
       <div class="row">
+        <div class="col-md-12">
+          <p class="alert-warning p-3 rounded">
+            Adding an Address allows the system to match you with the nearest teachers 
+            or group for your children. <a href="/addresses/new" class="text-info border-bottom border-info ml-2 font-weight-bold">Add Address</a>
+          </p>
+        </div>
         <div class="col-md-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
@@ -31,7 +39,11 @@
               <i class="fas fa-user border rounded py-3 text-info px-3 mr-3"></i>
               <p class="pt-4 text-label">
                 <strong>Parent</strong><br>
-                <%= @child.guardian %>
+                <% if @child.guardian? %>
+                  <%= @child.guardian %>
+                <% else %>
+                  <a href="/children/<%= current_child.id %>/edit">Add parent's name</a>
+                <% end %>
               </p>
             </div>
           </div>
@@ -42,7 +54,11 @@
               <i class="fas fa-graduation-cap border rounded py-3 text-info px-3 mr-3"></i>
               <p class="pt-4 text-label">
                 <strong>Class</strong><br>
-                <%= @child.grade %>
+                <% if @child.grade? %>
+                  <%= @child.grade %>
+                <% else %>
+                  <a href="/children/<%= current_child.id %>/edit">Add current class</a>
+                <% end %> 
               </p>
             </div>
           </div>
@@ -53,25 +69,33 @@
               <i class="fas fa-users border rounded py-3 text-info px-3 mr-3"></i>
               <p class="pt-4 text-label">
                 <strong>Study Group</strong><br>
-                <%= @child.group.name %>
+                <% if group_add %>
+                  <%= @child.group.name %>
+                <% else %>
+                  No group allocated yet.
+                <% end %>
               </p>
             </div>
           </div>
         </div>
-        <div class="col-md-12 mb-5">
+        <!--<div class="col-md-12 mb-5">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
               <i class="fas fa-map-marker-alt border rounded py-3 text-info px-3 mr-3"></i>
               <p class="pt-4 text-label">
                 <strong>Address</strong><br>
-                <%= @child.address.landmark %>
+                <% if address_add %>
+                  <%= @child.address.landmark %>
+                <% else %>
+                  <a href="/addresses/new">Add your Address</a>
+                <% end %>
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
 
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between mt-4">
         <%= link_to 'Update profile', edit_child_path(@child), class: "btn bg-green-btn text-white shadow px-5 py-3" %>
         <%= link_to 'Registered Students', children_path, class: "btn bg-green-btn bg-light text-info border border-info px-4 py-3" %>
         <%= link_to 'Browse Teachers near you', teachers_path, class: "btn bg-green-btn bg-light text-info border border-info px-4 py-3" %>

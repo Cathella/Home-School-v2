@@ -1,7 +1,9 @@
 <%= render "layouts/main-nav" %>
 
 <div class="container py-5 dash-view">
-  <p id="notice"><%= notice %></p>
+  <% if notice %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
   <h1 class="font-weight-bold text-label mb-3">Students in your area</h1>
   <p class="mb-5">Request to tutor a child in your area</p>
 
@@ -15,15 +17,15 @@
             <%= child.grade %>
           </td>
           <td>
-            <small class="text-label font-weight-bold">Group Allocated:</small><br>
-            <%= child.group.name %>
+            <%= link_to 'View Profile', child, class: "btn bg-white border border-info text-info" %>
+            <% if current_teacher %>
+              <%= link_to 'Request as Student', child, class: "btn bg-info ml-2 text-white" %>
+            <% end %>
+            <% if current_admin %>
+              <%= link_to 'Edit', edit_child_path(child), class: "btn bg-white border border-primary text-primary" %>
+              <%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-white border border-danger text-danger' %>
+            <% end %>
           </td>
-          <td><%= link_to 'View Profile', child, class: "btn bg-white border border-info text-info" %></td>
-          
-          <% if current_admin %>
-          <td><%= link_to 'Edit', edit_child_path(child), class: "btn bg-white border border-primary text-primary" %></td>
-          <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-white border border-danger text-danger' %></td>
-          <% end %>
         </tr>
       <% end %>
     </tbody>

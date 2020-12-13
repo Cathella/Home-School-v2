@@ -13,7 +13,7 @@
           
           <% if current_teacher %>
             <div class="d-flex">
-              <li class="">
+              <li>
                 <a href="#" class="nav-link login-link">
                   <%= current_teacher.name %>(Teacher Account).
                 </a>
@@ -21,7 +21,10 @@
               <li>
                 <%= link_to "My Profile", teacher_path(current_teacher.id), class: "nav-link login-link" %>
               </li>
-              <li class="">
+              <li>
+                <%= link_to "My Address", teacher_address_path, class: "nav-link login-link" %>
+              </li>
+              <li>
                 <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "nav-link login-link" %>
               </li>
             </div>
@@ -33,6 +36,9 @@
             </li>
             <li>
               <%= link_to "My Profile", child_path(current_child.id), class: "nav-link login-link" %>
+            </li>
+            <li>
+              <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
             </li>
             <li class="">
               <%= link_to "Log Out", child_session_path("current"), method: "delete", class: "nav-link login-link" %>

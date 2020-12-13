@@ -187,9 +187,14 @@ a {
   background: white;
 }
 
-.container-fluid {
-  /* padding: 0; */
-  /* margin: 0; */
+#notice {
+  position: relative; 
+  top: 0; 
+  right: 0; 
+  background: linen; 
+  padding: 1em 2em; 
+  border-radius: .25rem;
+  color: #155724;
 }
 
 .image-container {
@@ -418,11 +423,18 @@ main {
 .signup-view select {
   height: 3em;
   width: 100%;
+  /* background: white; */
+  padding: 0.7em;
+  border-radius: .25rem;;
+  border: 1px solid #ced4da;
+  color: #495057;
+  font-size: 1rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .register-teachers select,
 .signup-view select {
-  font-size: 1em;
+  
 }
 
 .register-teachers input[type="submit"],

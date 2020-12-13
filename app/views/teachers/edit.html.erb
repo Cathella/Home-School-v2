@@ -12,7 +12,9 @@
         </div>
       </div>
       <div class="col-md-6 mx-auto">
-        <p id="notice"><%= notice %></p>
+        <% if notice %>
+          <p id="notice"><%= notice %></p>
+        <% end %>
         <h2 class="font-weight-bold text-info mb-5">Complete your profile</h2>
         <%= render 'profileForm', teacher: @teacher %>
         <div class="text-center my-3">

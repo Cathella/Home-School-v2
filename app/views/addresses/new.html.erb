@@ -1,8 +1,32 @@
-<h1>Add an Address</h1>
-<p>
-  Adding an Address allows the system to match you with the nearest teachers or group for your children.
-</p>
+<%= render "layouts/main-nav" %>
 
-<%= render 'form', address: @address %>
+<div class="register-teachers">
+  <div class="container">
+    <div class="row" id="dash">
+      <div class="col-md-4 pr-5">
+        <div class="mb-5">
+          <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+          <% if current_child %>
+          <p class="mt-5 text-center">
+            I am 
+            <%= current_child.name %>
+          </p>
+          <% else %>
+          <p class="mt-5 text-center">
+            I am 
+            <%= current_teacher.name %>
+          </p>
+          <% end %>
+        </div>
+      </div>
 
-<%= link_to 'Back', addresses_path %>
+      <div class="col-md-6 mx-auto">
+      <h1 class="text-heading font-weight-bold">Add an Address</h1>
+        <p class="mt-4 alert-success p-3 rounded">
+          Adding an Address allows the system to match you with the nearest teachers or group for your children.
+        </p>
+        <%= render 'form', address: @address %>
+      </div>
+    </div>
+  </div>
+</div>

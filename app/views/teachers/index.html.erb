@@ -1,7 +1,9 @@
 <%= render "layouts/main-nav" %>
 
 <div class="container py-5 dash-view">
-  <p id="notice"><%= notice %></p>
+  <% if notice %>
+    <p id="notice"><%= notice %></p>
+  <% end %>
   <h1 class="font-weight-bold text-label mb-3">Teachers in your area.</h1>
   <p class="mb-5">Browse our Teachers directory to see registered teachers in your neighboorhood.</p>
 
@@ -19,16 +21,14 @@
             <%= teacher.subject %>
           </td>
           <td>
-            <small class="text-label font-weight-bold">Group Allocated:</small><br>
-            <%= teacher.group.name %>
-          </td>
-          <td>
             <%= link_to 'View Profile', teacher, class: "btn bg-white border border-info text-info" %>
-          </td>
-          <% if current_admin %>
-          <td><%= link_to 'Edit', edit_teacher_path(teacher), class: "btn bg-white border border-primary text-primary" %></td>
-          <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-white border border-danger text-danger' %></td>
-          <% end %>
+            <% if current_child %>
+              <%= link_to 'Request as Tutor', teacher, class: "btn bg-info  text-white" %>
+            <% end %>
+            <% if current_admin %>
+            <%= link_to 'Edit', edit_teacher_path(teacher), class: "btn bg-white border border-primary text-primary" %>
+            <%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-white border border-danger text-danger' %>
+            <% end %>
           </tr>
       <% end %>
     </tbody>

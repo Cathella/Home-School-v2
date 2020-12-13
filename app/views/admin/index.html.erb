@@ -3,6 +3,10 @@
 <h1>This is the Admin Page</h1>
 <p>Match Teachers to students</p>
 
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <%= link_to "Create a group", new_group_path %>
 
 <div>
