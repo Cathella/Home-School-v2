@@ -34,11 +34,9 @@ class AddressesController < ApplicationController
 
     respond_to do |format|
       if @address.save
-        format.html { redirect_to @address, notice: 'Address was successfully created.' }
-        # format.json { render :show, status: :created, location: @address }
+        format.html { redirect_to my_address_path, notice: 'Address was successfully created.' }
       else
         format.html { render :new }
-        # format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -48,11 +46,9 @@ class AddressesController < ApplicationController
   def update
     respond_to do |format|
       if @address.update(address_params)
-        format.html { redirect_to @address, notice: 'Address was successfully updated.' }
-        # format.json { render :show, status: :ok, location: @address }
+        format.html { redirect_to my_address_path, notice: 'Address was successfully updated.' }
       else
         format.html { render :edit }
-        # format.json { render json: @address.errors, status: :unprocessable_entity }
       end
     end
   end

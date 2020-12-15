@@ -2,7 +2,11 @@ class AdminController < ApplicationController
   before_action :admin_authorize, only: [:index]
 
   def index
-    @teachers = Teacher.all
-    @children = Child.all
+    @teacher_count = Teacher.all.size
+    @child_count = Child.all.size
+    @group_count = Group.all.size
+    @user_count = @teacher_count + @child_count + @group_count
+    @ugrouped_child_count = Child.where(group_id: nil).size
+    @ugrouped_teacher_count = Teacher.where(group_id: nil).size
   end
 end

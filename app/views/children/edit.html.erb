@@ -5,10 +5,21 @@
       <div class="col-md-4 pr-5">
         <div class="mb-5">
           <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
-          <p class="mt-5 text-center">
-            I am 
-            <%= current_child.name %>
-          </p>
+          <% if current_child %>
+            <p class="mt-5 text-center">
+              I am 
+              <%= current_child.name %>
+            </p>
+          <% elsif current_admin %>
+            <p class="mt-5 text-center">
+              I am 
+              an Admin
+            </p>
+          <% else %>
+            <p class="mt-5 text-center">
+              You should not be here
+            </p>
+          <% end %>
         </div>
       </div>
       <div class="col-md-6 mx-auto">

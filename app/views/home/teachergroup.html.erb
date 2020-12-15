@@ -1,0 +1,35 @@
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5 dash-view">
+  <div class="row">
+    <div class="col-md-4 pr-5">
+      <div class="mb-5">
+        <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+        <% if current_teacher %>
+          <p class="mt-5 text-center text-muted">
+            I am 
+            <%= current_teacher.name %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <h2 class="font-weight-bold text-heading pb-3">My Group</h2>
+      <div class="">
+        <% if group_add %>
+          <table class="child-table">
+            <tbody>
+              <tr>
+                <td><%= link_to @group.name, @group, class: "text-info" %></td>
+                  <td class="text-center"><%= @group.grade %></td>
+                  <td class="text-center"><%= @group.place %></td>
+                  <td class="text-right"><%= link_to "See Members", @group, class: "btn btn-info" %></td>
+                </tr>
+            </tbody>
+          </table>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+</div>

@@ -5,10 +5,12 @@
       <div class="col-md-4 pr-5">
         <div class="mb-5">
           <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+          <% if current_teacher %>
           <p class="mt-5 text-center">
             I am 
             <%= current_teacher.name %>
           </p>
+          <% end %>
         </div>
       </div>
       <div class="col-md-6 mx-auto">

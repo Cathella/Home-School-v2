@@ -12,6 +12,7 @@
   <% end %>
 
   <div class="row">
+    <% if current_teacher %>
     <div class="col-md-12">
       <div class="field mb-3">
         <%= form.label :grade, "Class Taught" %>
@@ -24,6 +25,8 @@
         <%= form.text_field :subject %>
       </div>
     </div>
+    <% end %>
+    
     <% if current_admin %>
     <div class="col-md-12">
       <div class="field mb-3">

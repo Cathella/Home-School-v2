@@ -9,4 +9,12 @@ class HomeController < ApplicationController
   def teacheraddress
     @address = current_teacher.address
   end
+
+  def mygroup
+    @group = current_child.group
+  end
+
+  def teachergroup
+    @group = current_teacher.group
+  end
 end

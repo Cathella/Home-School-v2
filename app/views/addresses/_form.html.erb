@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :landmark, 'Nearest Landmark near your home' %>
-    <%= form.search_field :landmark, class: "form-control", data: { target: "places.field", action: "keydown->places#keydown" } %>
+    <%= form.search_field :landmark, data: { target: "places.field", action: "keydown->places#keydown" } %>
   </div>
 
   <div class="field">

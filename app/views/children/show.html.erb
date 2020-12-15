@@ -5,10 +5,12 @@
     <div class="col-md-4 pr-5">
       <div class="mb-5">
         <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
-        <p class="mt-5 text-center">
-          I am 
-          <%= current_child.name %>
-        </p>
+        <% if current_child %>
+          <p class="mt-5 text-center">
+            I am 
+            <%= current_child.name %>
+          </p>
+        <% end %>
       </div>
     </div>
     <div class="col-md-8">
@@ -16,12 +18,30 @@
         <p id="notice"><%= notice %></p>
       <% end %>
       <div class="row">
+        <% if current_child %>
         <div class="col-md-12">
           <p class="alert-warning p-3 rounded">
             Adding an Address allows the system to match you with the nearest teachers 
-            or group for your children. <a href="/addresses/new" class="text-info border-bottom border-info ml-2 font-weight-bold">Add Address</a>
+            or group for your children. 
+            <%= link_to "Add Address", my_address_path, class: "text-info border-bottom border-info ml-2 font-weight-bold" %>
           </p>
         </div>
+        <% end %>
+        
+        <% if current_admin %>
+        <div class="col-md-12 mb-4">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="fas fa-user-alt border rounded py-3 text-info px-3 mr-3"></i>
+              <p class="pt-4 text-label">
+                <strong>Name:</strong><br>
+                <%= @child.name %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
         <div class="col-md-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
@@ -42,7 +62,7 @@
                 <% if @child.guardian? %>
                   <%= @child.guardian %>
                 <% else %>
-                  <a href="/children/<%= current_child.id %>/edit">Add parent's name</a>
+                  Update your profile
                 <% end %>
               </p>
             </div>
@@ -57,7 +77,7 @@
                 <% if @child.grade? %>
                   <%= @child.grade %>
                 <% else %>
-                  <a href="/children/<%= current_child.id %>/edit">Add current class</a>
+                  Update your profile.
                 <% end %> 
               </p>
             </div>
@@ -69,36 +89,17 @@
               <i class="fas fa-users border rounded py-3 text-info px-3 mr-3"></i>
               <p class="pt-4 text-label">
                 <strong>Study Group</strong><br>
-                <% if group_add %>
-                  <%= @child.group.name %>
-                <% else %>
-                  No group allocated yet.
-                <% end %>
+                <%= link_to "See your group here.", my_group_path %>
               </p>
             </div>
           </div>
         </div>
-        <!--<div class="col-md-12 mb-5">
-          <div class="bg-light px-3 rounded">
-            <div class="d-flex align-items-center">
-              <i class="fas fa-map-marker-alt border rounded py-3 text-info px-3 mr-3"></i>
-              <p class="pt-4 text-label">
-                <strong>Address</strong><br>
-                <% if address_add %>
-                  <%= @child.address.landmark %>
-                <% else %>
-                  <a href="/addresses/new">Add your Address</a>
-                <% end %>
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
 
       <div class="d-flex justify-content-between mt-4">
         <%= link_to 'Update profile', edit_child_path(@child), class: "btn bg-green-btn text-white shadow px-5 py-3" %>
-        <%= link_to 'Registered Students', children_path, class: "btn bg-green-btn bg-light text-info border border-info px-4 py-3" %>
-        <%= link_to 'Browse Teachers near you', teachers_path, class: "btn bg-green-btn bg-light text-info border border-info px-4 py-3" %>
+        <%= link_to 'Registered Students', children_path, class: "btn bg-green-btn bg-light text-label border px-4 py-3" %>
+        <%= link_to 'Browse Teachers', teachers_path, class: "btn bg-green-btn bg-light text-label border px-5 py-3" %>
       </div>
     </div>
   </div>

@@ -22,6 +22,9 @@
                 <%= link_to "My Profile", teacher_path(current_teacher.id), class: "nav-link login-link" %>
               </li>
               <li>
+                <%= link_to "My Group", teacher_group_path, class: "nav-link login-link" %>
+              </li>
+              <li>
                 <%= link_to "My Address", teacher_address_path, class: "nav-link login-link" %>
               </li>
               <li>
@@ -38,6 +41,9 @@
               <%= link_to "My Profile", child_path(current_child.id), class: "nav-link login-link" %>
             </li>
             <li>
+              <%= link_to "My Group", my_group_path, class: "nav-link login-link" %>
+            </li>
+            <li>
               <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
             </li>
             <li class="">
@@ -48,6 +54,9 @@
               <a href="#" class="nav-link login-link">
                 <%= current_admin.email %>(Admin Account)
               </a>
+            </li>
+            <li>
+              <%= link_to "Dashboard", admin_path, class: "nav-link login-link" %>
             </li>
             <li>
               <%= link_to "Log Out", admin_session_path("current"), method: "delete", class: "nav-link login-link" %>

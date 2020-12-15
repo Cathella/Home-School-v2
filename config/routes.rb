@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :groups
-  
   root to: 'home#index'
+
+  resources :groups
+  get "mygroup", to: "home#mygroup", as: "my_group"
+  get "teachergroup", to: "home#teachergroup", as: "teacher_group"
 
   resources :children
   get "/childrenhome", to: "children#childrenhome", as: :childrenhome

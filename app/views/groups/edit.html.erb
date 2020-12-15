@@ -1,8 +1,15 @@
-<%= render "layouts/adminLoginLinks" %>
+<%= render "layouts/main-nav" %>
 
-<h1>Editing Group</h1>
-
-<%= render 'form', group: @group %>
-
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+<div class="register-teachers">
+  <div class="container">
+    <div class="row" id="dash">
+      <% if notice %>
+        <p id="notice"><%= notice %></p>
+      <% end %>
+      <div class="col-md-6 mx-auto">
+        <h1 class="text-heading font-weight-bold text-center mb-5">Editing Group</h1>
+        <%= render 'form', group: @group %>
+      </div>
+    </div>
+  </div>
+</div>

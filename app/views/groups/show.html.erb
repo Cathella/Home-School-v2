@@ -1,52 +1,76 @@
-<%= render "layouts/adminLoginLinks" %>
+<%= render "layouts/main-nav" %>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Group Name:</strong>
-  <%= @group.name %>
-</p>
-
-<p>
-  <strong>location:</strong>
-  <%= @group.place %>
-</p>
-
-<p>
-  <strong>Class:</strong>
-  <%= @group.grade %>
-</p>
-
-<p>
-  <strong>Children in the group:</strong>
-</p>
-
-<table>
-  <tbody>
-    <% @children.each do |child| %>
-      <tr>
-        <td><%= child.name %></td>
-        <td><%= link_to 'Show', teacher %></td>
-      </tr>
+<div class="container py-5 dash-view">
+  <div class="row">
+    <% if notice %>
+      <p id="notice"><%= notice %></p>
     <% end %>
-  </tbody>
-</table>
 
-<p>
-  <strong>Teachers allocated to this group:</strong>
-</p>
+    <div class="col-md-12">
+      <h2 class="text-heading mb-4 pb-3 border-bottom font-weight-bold text-center">
+        <%= @group.name %>
+      </h2>
+      <div class="pb-3">
+          <div class="row">
+            <div class="col-md-6 col-lg-4">
+              <p class="profile-p">
+                <strong>Location:</strong>
+                <span><%= @group.place %></span>
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <p class="profile-p">
+                <strong>Class:</strong>
+                <span><%= @group.grade %></span>
+              </p>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <p class="profile-p">
+                <strong>No. of Children:</strong>
+                <span><%= @group_count %> Child(ren)</span>
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
 
-<table>
-  <tbody>
-    <% @teachers.each do |teacher| %>
-      <tr>
-        <td><%= teacher.name %></td>
-        <td><%= link_to 'Show', teacher %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="col-md-6">
+      <div class="">
+        <p class="orange-link pb-2 font-weight-bold mt-5">Group Members</p>
+        <table class="child-table">
+          <tbody>
+            <% @children.each do |child| %>
+              <tr>
+                <td><%= child.name %></td>
+                <td class="text-right"><%= link_to 'View Profile', child, class: "btn btn-info" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Show all Groups', groups_path %>
+    <div class="col-md-6">
+      <div class="">
+        <p class="orange-link pb-2 font-weight-bold mt-5">Teachers Allocated</p>
+        <table class="child-table">
+          <tbody>
+            <% @teachers.each do |teacher| %>
+              <tr>
+                <td><%= teacher.name %></td>
+                <td class="text-right"><%= link_to 'View Profile', teacher, class: "btn btn-info" %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="col-md-12">
+      <% if current_admin %>
+      <%= link_to 'Edit Group', edit_group_path(@group) %>
+      <% end %>
+      <%= link_to 'View all Groups', groups_path, class: 'btn btn-light text-center w-100 mt-4 py-3' %>
+    </div>
+  </div>
+</div>
