@@ -85,15 +85,14 @@ a {
 }
 
 .intro-img {
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bg.jpg'); */
   background-image: url(/assets/bg2.jpg);
   background-size: cover;
   background-position: 70% 0%;
   padding: 9em 0;
+  border-radius: 0 0 1.6em 0;
 }
 
 .teacher-intro-img {
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bg.jpg'); */
   background-image: url(/assets/teacher.jpg);
   background-size: cover;
   background-position: 70% 40%;
@@ -112,15 +111,15 @@ a {
 .intro h1,
 .teacher-intro,
 .child-intro {
-  font-size: 3.8em;
+  font-size: 3.3em;
   letter-spacing: -3px;
   font-weight: 900;
   color: #095578;
-  margin: 0 0 1em 2em;
+  margin: 0 1em 1em 2.2em;
 }
 
 .intro-desc {
-  margin: -2.5em 1em 3em 8em
+  margin: -2.5em 5em 3em 8em
 }
 
 .lft-it {
@@ -183,7 +182,7 @@ a {
 
 /* secondary-intro */
 .secondary-intro {
-  margin: 2em 0 8em;
+  margin: 5em 0 8em;
   background: white;
 }
 
@@ -198,7 +197,7 @@ a {
 }
 
 .image-container {
-  width: 80%;
+  width: 90%;
   height: 600px;
   overflow: hidden;
   border-radius: 1em;
@@ -289,16 +288,16 @@ a {
 
 /* covid-alert */
 .covid-alert {
-  background-image: url(/assets/items.jpg);
+  background-image: url(/assets/bg.jpg);
   background-size: cover;
   background-position: center;
-  padding: 4em 0;
+  padding: 4.3em 0;
 }
 
 .statement-1 {
-  background: #e37238;
+  /* background: #095578; */
   border-radius: .5em;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   padding: 4em 4em;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, .1);
 }
@@ -314,7 +313,7 @@ a {
 
 /* recommend teachers */
 .recommend-teachers {
-  padding: 6em 0;
+  padding: 0 0 6em 0;
   background: white;
 }
 
@@ -324,7 +323,6 @@ a {
 
 .recommend-teachers h2 {
   font-weight: 900;
-  color: #1c93ae;
   font-size: 2.5em;
   margin: 2.7em 0 1em 0;
 }

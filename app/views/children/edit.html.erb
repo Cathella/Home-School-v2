@@ -25,8 +25,9 @@
       <div class="col-md-6 mx-auto">
         <%= render 'layouts/notice' %>
         
-        <h2 class="font-weight-bold text-info mb-5">Complete child's profile</h2>
+        <h2 class="font-weight-bold text-label mb-5">Complete child's profile</h2>
         <%= render 'profileForm', child: @child %>
+        
         <div class="text-center my-3">
           <%= link_to "Back to Profile", @child %>
         </div>

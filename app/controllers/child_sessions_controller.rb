@@ -6,7 +6,7 @@ class ChildSessionsController < ApplicationController
     child = Child.find_by_phone(params[:phone])
     if child && child.authenticate(params[:password])
       session[:child_id] = child.id
-      redirect_to child, notice: "Child logged in"
+      redirect_to child, notice: "You have successfully logged In"
     else
       flash.now.alert = "Phone or password is invalid!"
       render "new"
@@ -15,6 +15,6 @@ class ChildSessionsController < ApplicationController
 
   def destroy
     session[:child_id] = nil
-    redirect_to childrenhome_path, notice: "Child logged out!"
+    redirect_to childrenhome_path, notice: "You have been logged out!"
   end
 end
