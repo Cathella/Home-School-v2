@@ -14,6 +14,8 @@
       </div>
     </div>
     <div class="col-md-8">
+      <%= render 'layouts/notice' %>
+      
       <h2 class="font-weight-bold text-heading pb-3">My Group</h2>
       <div class="">
         <% if group_add %>
@@ -27,6 +29,10 @@
                 </tr>
             </tbody>
           </table>
+        <% else %>
+          <p class="alert alert-warning">
+            Sorry, You have not been allocated a group yet.
+          </p>
         <% end %>
       </div>
     </div>

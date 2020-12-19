@@ -2,9 +2,7 @@
 
 <div class="container py-5 dash-view">
   <div class="row">
-    <% if notice %>
-      <p id="notice"><%= notice %></p>
-    <% end %>
+    <%= render 'layouts/notice' %>
 
     <div class="col-md-12">
       <h2 class="text-heading mb-4 pb-3 border-bottom font-weight-bold text-center">
@@ -68,9 +66,9 @@
     
     <div class="col-md-12">
       <% if current_admin %>
-      <%= link_to 'Edit Group', edit_group_path(@group) %>
+      <%= link_to 'Edit Group', edit_group_path(@group), class: 'btn btn-info text-center w-100 mt-5 py-3' %>
       <% end %>
-      <%= link_to 'View all Groups', groups_path, class: 'btn btn-light text-center w-100 mt-4 py-3' %>
+      <%= link_to 'View all Groups', groups_path, class: 'btn btn-light text-center w-100 mt-2 py-3' %>
     </div>
   </div>
 </div>

@@ -23,9 +23,8 @@
         </div>
       </div>
       <div class="col-md-6 mx-auto">
-        <% if notice %>
-          <p id="notice"><%= notice %></p>
-        <% end %>
+        <%= render 'layouts/notice' %>
+        
         <h2 class="font-weight-bold text-info mb-5">Complete child's profile</h2>
         <%= render 'profileForm', child: @child %>
         <div class="text-center my-3">

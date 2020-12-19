@@ -1,9 +1,8 @@
 <%= render "layouts/main-nav" %>
 
 <div class="container py-5 dash-view">
-  <% if notice %>
-    <p id="notice"><%= notice %></p>
-  <% end %>
+  <%= render 'layouts/notice' %>
+  
   <h1 class="font-weight-bold text-label mb-3">Students in your area</h1>
   <p class="mb-5">Request to tutor a child in your area</p>
 

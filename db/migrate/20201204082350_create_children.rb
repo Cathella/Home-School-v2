@@ -7,6 +7,7 @@ class CreateChildren < ActiveRecord::Migration[5.2]
       t.string :guardian
       t.string :password_digest
       t.references :group, foreign_key: true
+      t.references :address, foreign_key: true
 
       t.timestamps
     end

@@ -38,11 +38,9 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if child.save
-        format.html { redirect_to childrenhome_path, notice: 'Student was successfully registered!' }
-        # format.json { render :show, status: :created, location: @child }
+        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered!, Please continue to Login' }
       else
         format.html { render :new }
-        # format.json { render json: @child.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -52,7 +50,7 @@ class ChildrenController < ApplicationController
   def update
     respond_to do |format|
       if @child.update(child_params)
-        format.html { redirect_to @child, notice: 'Child was successfully updated.' }
+        format.html { redirect_to @child, notice: 'Your profile has been updated.' }
       else
         format.html { render :edit }
       end

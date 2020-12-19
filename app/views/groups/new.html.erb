@@ -3,9 +3,8 @@
 <div class="register-teachers">
   <div class="container">
     <div class="row" id="dash">
-      <% if notice %>
-        <p id="notice"><%= notice %></p>
-      <% end %>
+      <%= render 'layouts/notice' %>
+      
       <div class="col-md-6 mx-auto">
         <h1 class="text-heading font-weight-bold text-center mb-5">New Study Group</h1>
         <%= render 'form', group: @group %>

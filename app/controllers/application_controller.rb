@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_authorize
-    redirect_to new_admin_session_path, notice: 'You are not authorized!' if current_admin.nil?
+    redirect_to new_admin_session_path, notice: 'Only Admins can see this content' if current_admin.nil?
   end
 
   def group_add

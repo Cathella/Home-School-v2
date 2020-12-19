@@ -40,8 +40,10 @@ ActiveRecord::Schema.define(version: 2020_12_08_075036) do
     t.string "guardian"
     t.string "password_digest"
     t.integer "group_id"
+    t.integer "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_children_on_address_id"
     t.index ["group_id"], name: "index_children_on_group_id"
   end
 
@@ -60,8 +62,10 @@ ActiveRecord::Schema.define(version: 2020_12_08_075036) do
     t.string "subject"
     t.string "password_digest"
     t.integer "group_id"
+    t.integer "address_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_teachers_on_address_id"
     t.index ["group_id"], name: "index_teachers_on_group_id"
   end
 

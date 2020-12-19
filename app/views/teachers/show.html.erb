@@ -14,9 +14,8 @@
       </div>
     </div>
     <div class="col-md-8">
-      <% if notice %>
-        <p id="notice"><%= notice %></p>
-      <% end %>
+      <%= render 'layouts/notice' %>
+      
       <div class="row">
         <% if current_teacher %>
         <div class="col-md-12">

@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2 bg-white border-top">
+    <div class="col-md-2 bg-light border-top pb-5">
       <p class="pt-5 px-3">
         Welcome <%= current_admin.name %>
       </p>
@@ -10,71 +10,71 @@
         <li><%= link_to "Children", children_path, class: "" %></li>
         <li><%= link_to "Teachers", teachers_path %></li>
         <li><%= link_to "Groups", groups_path %></li>
-        <li><%= link_to "Create a new group", new_group_path %></li>
+        <li><%= link_to "Addresses", addresses_path %></li>
+        <li><%= link_to "Create a group", new_group_path, class: "btn bg-green-btn text-white px-4 py-2 shadow mt-5" %></li>
       </ul>
     </div>
-    <div class="col-md-10 py-5 px-5" style="background-color: #f1f4ff;">
-      <% if notice %>
-        <p id="notice"><%= notice %></p>
-      <% end %>
+    <div class="col-md-10 py-5 px-5" style="">
+      <%= render 'layouts/notice' %>
+      
       <div class="row">
         <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 rounded shadow d-flex">
+          <div class="bg-white px-3 pt-3 d-flex" style="border: 1px solid #e5e5e5; border-radius: 6px; box-shadow: 0 2px 4px rgba(1,14,40,.05);">
             <p style="font-size: 3em" class="pt-3">
               <%= @teacher_count %>
             </p>
             <p class="text-muted pl-3">
-              <small class="text-uppercase">Registered<br>Teacher(s)</small>
+              <small class="text-uppercase text-success">Registered<br>Teacher(s)</small>
             </p>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 rounded shadow d-flex">
+          <div class="bg-white px-3 pt-3 d-flex" style="border: 1px solid #e5e5e5; border-radius: 6px; box-shadow: 0 2px 4px rgba(1,14,40,.05);">
             <p style="font-size: 3em" class="pt-3">
               <%= @child_count %>
             </p>
             <p class="text-muted pl-3">
-              <small class="text-uppercase">Registered<br>Child(ren)</small>
+              <small class="text-uppercase orange-link">Registered<br>Child(ren)</small>
             </p>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 rounded shadow d-flex">
+          <div class="bg-white px-3 pt-3 d-flex" style="border: 1px solid #e5e5e5; border-radius: 6px; box-shadow: 0 2px 4px rgba(1,14,40,.05);">
             <p style="font-size: 3em" class="pt-3">
               <%= @group_count %>
             </p>
             <p class="text-muted pl-3">
-              <small class="text-uppercase">Created<br>Group(s)</small>
+              <small class="text-uppercase text-primary">Created<br>Group(s)</small>
             </p>
           </div>
         </div>
         <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 rounded shadow d-flex">
+          <div class="bg-white px-3 pt-3 d-flex" style="border: 1px solid #e5e5e5; border-radius: 6px; box-shadow: 0 2px 4px rgba(1,14,40,.05);">
             <p style="font-size: 3em" class="pt-3">
               <%= @ugrouped_child_count %>
             </p>
             <p class="text-muted pl-3">
-              <small class="text-uppercase">Ungrouped<br>Child(ren)</small>
+              <small class="text-uppercase orange-link">Ungrouped<br>Child(ren)</small>
             </p>
           </div>
         </div>
         <div class="col-md-3 mt-4">
-          <div class="bg-white px-3 pt-3 rounded shadow d-flex">
+          <div class="bg-white px-3 pt-3 d-flex" style="border: 1px solid #e5e5e5; border-radius: 6px; box-shadow: 0 2px 4px rgba(1,14,40,.05);">
             <p style="font-size: 3em" class="pt-3">
               <%= @ugrouped_teacher_count %>
             </p>
             <p class="text-muted pl-3">
-              <small class="text-uppercase">Ungrouped<br>Teacher(s)</small>
+              <small class="text-uppercase text-danger">Ungrouped<br>Teacher(s)</small>
             </p>
           </div>
         </div>
         <div class="col-md-3 mt-4">
-          <div class="bg-white px-3 pt-3 rounded shadow d-flex">
+          <div class="bg-white px-3 pt-3 d-flex" style="border: 1px solid #e5e5e5; border-radius: 6px; box-shadow: 0 2px 4px rgba(1,14,40,.05);">
             <p style="font-size: 3em" class="pt-3">
               <%= @user_count %>
             </p>
             <p class="text-muted pl-3">
-              <small class="text-uppercase">Total<br>Account(s)</small>
+              <small class="text-uppercase text-success">Total<br>Account(s)</small>
             </p>
           </div>
         </div>

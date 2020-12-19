@@ -7,9 +7,33 @@ class AddressesController < ApplicationController
     @addresses = Address.all
   end
 
+  def haversine_distance(geo_a, geo_b, miles=false)
+    # Get latitude and longitude
+    lat1, lon1 = geo_a
+    lat2, lon2 = geo_b
+  
+    # Calculate radial arcs for latitude and longitude
+    dLat = (lat2 - lat1) * Math::PI / 180
+    dLon = (lon2 - lon1) * Math::PI / 180
+  
+    a = Math.sin(dLat / 2) * 
+        Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math::PI / 180) * 
+        Math.cos(lat2 * Math::PI / 180) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2)
+  
+    c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+    
+    d = 6371 * 1000 * c # in meters
+  end
+
   # GET /addresses/1
   # GET /addresses/1.json
   def show
+    origin = [@address.latitude, @address.longitude]
+    @destination = Address.get_lat_lon_array
+    # @size = @destination.length
+    @distances = @destination.map { |point| haversine_distance(point, origin).to_i }
   end
 
   # GET /addresses/new

@@ -1,11 +1,10 @@
 <%= render "layouts/main-nav" %>
 
 <div class="container py-5 dash-view">
-  <% if notice %>
-    <p id="notice"><%= notice %></p>
-  <% end %>
+  <%= render 'layouts/notice' %>
+  
   <h1 class="font-weight-bold text-label mb-3">Study Groups in your area</h1>
-  <p class="mb-5 text-muted">See groups that have been create near you and find a perfect one for your child.</p>
+  <p class="mb-5 text-muted">See groups that have been created near you and find a perfect one for your child.</p>
   <table class="child-table">
     <tbody>
       <% @groups.each do |group| %>

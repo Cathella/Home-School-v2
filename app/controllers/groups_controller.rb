@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
   # GET /groups/1
   # GET /groups/1.json
   def show
-    # @group_count = Child.where(group_id: @group.id).size
+    @group_count = Child.where(group_id: @group.id).size
     @children = Child.where(group_id: @group.id)
     @teachers = Teacher.where(group_id: @group.id)
   end
@@ -32,11 +32,9 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_path, notice: 'Group was successfully created.' }
-        format.json { render :show, status: :created, location: @group }
+        format.html { redirect_to @group, notice: 'Group was successfully created.' }
       else
         format.html { render :new }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -47,10 +45,8 @@ class GroupsController < ApplicationController
     respond_to do |format|
       if @group.update(group_params)
         format.html { redirect_to @group, notice: 'Group was successfully updated.' }
-        format.json { render :show, status: :ok, location: @group }
       else
         format.html { render :edit }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
   end
