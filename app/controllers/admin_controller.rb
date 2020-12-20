@@ -8,5 +8,8 @@ class AdminController < ApplicationController
     @user_count = @teacher_count + @child_count
     @ugrouped_child_count = Child.where(group_id: nil).size
     @ugrouped_teacher_count = Teacher.where(group_id: nil).size
+
+    @teachers = Teacher.first(5)
+    @children = Child.first(5)
   end
 end

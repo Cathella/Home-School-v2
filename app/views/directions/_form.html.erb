@@ -1,4 +1,4 @@
-<%= form_with(model: direction, local: true) do |form| %>
+<%= form_with(model: direction, local: true, data: { controller: "places", action: "google-maps-callback@window->places#initMap", places_latitude: direction.latitude, places_longitude: direction.longitude}) do |form| %>
   <% if direction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(direction.errors.count, "error") %> prohibited this direction from being saved:</h2>
@@ -11,7 +11,22 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :landmark, 'Nearest Landmark near your home' %>
+    <%= form.search_field :landmark, data: { target: "places.field", action: "keydown->places#keydown" } %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :latitude, data: { target: "places.latitude" } %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :longitude, data: { target: "places.longitude" }%>
+  </div>
+
+  <div id="map" data-target="places.map" style="height: 300px; width: 530px;" class="mt-4 mb-4"></div>
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Add Address" %>
   </div>
 <% end %>

@@ -5,5 +5,5 @@ class Teacher < ApplicationRecord
   validates_uniqueness_of :phone
 
   belongs_to :group, optional: true
-  belongs_to :address, optional: true
+  has_one :direction, :dependent => :destroy
 end

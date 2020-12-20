@@ -1,5 +1,7 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [:show, :edit, :update, :destroy]
+  before_action :admin_authorize, only: [:index, :show]
+  before_action :child_authorize, only: [:edit, :update]
 
   # GET /addresses
   # GET /addresses.json
@@ -49,16 +51,10 @@ class AddressesController < ApplicationController
   def create
     @address = Address.new(address_params)
     @address.child_id = current_child.id
-    
-    # if current_teacher
-    #   @address.teacher_id = current_teacher.id
-    # else
-    #   @address.child_id = current_child.id
-    # end
 
     respond_to do |format|
       if @address.save
-        format.html { redirect_to @address, notice: 'Your Address was successfully added.' }
+        format.html { redirect_to my_address_path, notice: 'Your Address was successfully added.' }
       else
         format.html { render :new }
       end

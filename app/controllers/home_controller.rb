@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
 
   def teacheraddress
-    # @address = current_teacher.address
+    @direction = current_teacher.direction
   end
 
   def mygroup

@@ -1,6 +1,35 @@
-<h1>Editing Direction</h1>
+<%= render "layouts/main-nav" %>
+ 
+<div class="register-teachers">
+  <div class="container">
+    <div class="row" id="dash">
+      <div class="col-md-4 pr-5">
+        <div class="mb-5">
+          <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+          <% if current_child %>
+          <p class="mt-5 text-center">
+            I am 
+            <%= current_child.name %>
+          </p>
+          <% else %>
+          <p class="mt-5 text-center">
+            I am 
+            <%= current_teacher.name %>
+          </p>
+          <% end %>
+        </div>
+      </div>
 
-<%= render 'form', direction: @direction %>
-
-<%= link_to 'Show', @direction %> |
-<%= link_to 'Back', directions_path %>
+      <div class="col-md-6 mx-auto">
+        <%= render 'layouts/notice' %>
+        
+        <h1 class="text-heading font-weight-bold">Updating Address</h1>
+        <p class="mt-4 alert-success p-3 rounded">
+          Adding an Address allows the system to match you with the 
+          nearest teachers or group for your children.
+        </p>
+        <%= render 'form', direction: @direction %>
+      </div>
+    </div>
+  </div>
+</div>

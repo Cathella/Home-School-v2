@@ -53,5 +53,14 @@ class ApplicationController < ActionController::Base
 
   helper_method :address_add
 
-  
+  def direction_add
+    if @direction
+      @direction_add ||= Direction.exists?
+    else
+      @direction_add = nil
+    end
+  end
+
+  helper_method :direction_add
+
 end
