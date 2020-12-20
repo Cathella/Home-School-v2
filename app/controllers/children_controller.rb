@@ -38,7 +38,7 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if child.save
-        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered!, Please continue to Login' }
+        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
       else
         format.html { render :new }
       end

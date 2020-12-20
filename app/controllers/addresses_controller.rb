@@ -32,7 +32,6 @@ class AddressesController < ApplicationController
   def show
     origin = [@address.latitude, @address.longitude]
     @destination = Address.get_lat_lon_array
-    # @size = @destination.length
     @distances = @destination.map { |point| haversine_distance(point, origin).to_i }
   end
 
@@ -49,16 +48,17 @@ class AddressesController < ApplicationController
   # POST /addresses.json
   def create
     @address = Address.new(address_params)
+    @address.child_id = current_child.id
     
-    if current_teacher
-      @address.teacher_id = current_teacher.id
-    else
-      @address.child_id = current_child.id
-    end
+    # if current_teacher
+    #   @address.teacher_id = current_teacher.id
+    # else
+    #   @address.child_id = current_child.id
+    # end
 
     respond_to do |format|
       if @address.save
-        format.html { redirect_to my_address_path, notice: 'Address was successfully created.' }
+        format.html { redirect_to @address, notice: 'Your Address was successfully added.' }
       else
         format.html { render :new }
       end
@@ -70,7 +70,7 @@ class AddressesController < ApplicationController
   def update
     respond_to do |format|
       if @address.update(address_params)
-        format.html { redirect_to my_address_path, notice: 'Address was successfully updated.' }
+        format.html { redirect_to @address, notice: 'Your Address was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -82,8 +82,7 @@ class AddressesController < ApplicationController
   def destroy
     @address.destroy
     respond_to do |format|
-      format.html { redirect_to addresses_url, notice: 'Address was successfully destroyed.' }
-      # format.json { head :no_content }
+      format.html { redirect_to addresses_url, notice: 'Address was successfully removed.' }
     end
   end
 

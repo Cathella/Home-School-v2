@@ -25,27 +25,27 @@
       <h2 class="font-weight-bold text-heading pb-3">My Address</h2>
       <div class="">
         <% if address_add %>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="profile-p">
-              <strong>Nearest Landmark:</strong><br>
-              <span>
-                <%= @address.landmark %>
-              </span>
-            </p>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="profile-p">
+                <strong>Nearest Landmark:</strong><br>
+                <span>
+                  <%= @address.landmark %>
+                </span>
+              </p>
+            </div>
+            <div class="col-md-12 col-lg-6 pt-2">
+                <%= link_to '<i class="fas fa-pencil-alt mr-2"></i> Update Address'.html_safe, edit_address_path(@address), class: "btn btn-info px-5 py-2 mt-2" %>
+            </div>
           </div>
-          <div class="col-md-12 col-lg-6 pt-2">
-              <%= link_to '<i class="fas fa-pencil-alt mr-2"></i> Update Address'.html_safe, edit_address_path(@address), class: "btn btn-info px-5 py-2 mt-2" %>
-          </div>
-        </div>
         <% else %>
-        <p class="profile-p text-center">
-          <span>
-            <strong>
-              <%= link_to '+ Add an Address', new_address_path, class: 'orange-link' %>
-            </strong>
-          </span>
-        </p>
+          <p class="profile-p text-center">
+            <span>
+              <strong>
+                <%= link_to '+ Add an Address', new_address_path, class: 'orange-link' %>
+              </strong>
+            </span>
+          </p>
         <% end %>
       </div>
     </div>
