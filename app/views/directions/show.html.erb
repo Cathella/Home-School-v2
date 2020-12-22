@@ -10,25 +10,25 @@
       <div class="row">
         <div class="col-md-6">
           <p class="text-muted">
-            <span class="font-weight-bold text-label">Longitude:</span><br>
+            <span class="font-weight-bold text-info">Longitude:</span><br>
             <%= @direction.longitude %>
           </p>
         </div>
         <div class="col-md-6">
           <p class="text-muted">
-            <span class="font-weight-bold text-label">Latitude:</span><br>
+            <span class="font-weight-bold text-info">Latitude:</span><br>
             <%= @direction.latitude %>
           </p>
         </div>
         <div class="col-md-6 mt-3">
           <p class="text-muted">
-            <span class="font-weight-bold text-label">Belongs to:</span><br>
+            <span class="font-weight-bold text-info">Belongs to:</span><br>
             <%= @direction.teacher.name %>
           </p>
         </div>
         <div class="col-md-6 mt-3">
           <p class="text-muted">
-            <span class="font-weight-bold text-label">Account:</span><br>
+            <span class="font-weight-bold text-info">Account:</span><br>
             Teacher
           </p>
         </div>
@@ -39,7 +39,7 @@
       <%= render "layouts/notice" %>
       
       <div class="bg-info p-5 rounded text-white ml-5 mt-5">
-        <h3 class="mb-4 font-weight-bold text-label">Comparing Distances</h3>
+        <h3 class="mb-4 font-weight-bold">Comparing Distances</h3>
 
         <table class="child-table mt-4">
           <tbody>
