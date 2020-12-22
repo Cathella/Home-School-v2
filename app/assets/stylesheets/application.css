@@ -97,6 +97,7 @@ a {
   background-size: cover;
   background-position: 70% 40%;
   padding: 9em 0;
+  border-radius: 0 0 1.6em 0;
 }
 
 .child-intro-img {
