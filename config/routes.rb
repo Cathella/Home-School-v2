@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :groups
+  resources :directions
   root to: 'home#index'
+
+  resources :groups
+  get "mygroup", to: "home#mygroup", as: "my_group"
+  get "teachergroup", to: "home#teachergroup", as: "teacher_group"
 
   resources :children
   get "/childrenhome", to: "children#childrenhome", as: :childrenhome
@@ -12,4 +16,8 @@ Rails.application.routes.draw do
 
   resources :admin_sessions
   get "/admin", to: "admin#index", as: :admin
+
+  resources :addresses
+  get "myaddress", to: "home#myaddress", as: "my_address"
+  get "teacheraddress", to: "home#teacheraddress", as: "teacher_address"
 end

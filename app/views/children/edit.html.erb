@@ -1,8 +1,37 @@
-<%= render "layouts/childLoginLinks" %>
-
-<h1>Please Complete your child's profile</h1>
-
-<%= render 'profileForm', child: @child %>
-
-<%= link_to 'Show', @child %> |
-<%= link_to 'Back', children_path %>
+<%= render "layouts/main-nav" %>
+<div class="signup-view">
+  <div class="container py-5 dash-view">
+    <div class="row" id="dash">
+      <div class="col-md-4 pr-5">
+        <div class="mb-5">
+          <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+          <% if current_child %>
+            <p class="mt-5 text-center">
+              I am 
+              <%= current_child.name %>
+            </p>
+          <% elsif current_admin %>
+            <p class="mt-5 text-center">
+              I am 
+              an Admin
+            </p>
+          <% else %>
+            <p class="mt-5 text-center">
+              You should not be here
+            </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-6 mx-auto">
+        <%= render 'layouts/notice' %>
+        
+        <h2 class="font-weight-bold text-label mb-5">Complete child's profile</h2>
+        <%= render 'profileForm', child: @child %>
+        
+        <div class="text-center my-3">
+          <%= link_to "Back to Profile", @child %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

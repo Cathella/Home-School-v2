@@ -11,24 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :grade %>
-    <%= form.select :grade,  ['Primary One', 'Primary Two', 'Primary Three', 'Primary Four', 'Primary Five', 'Primary Six'] %>
-  </div>
-
-  <div class="field">
-    <%= form.label :guardian %>
-    <%= form.text_field :guardian %>
-  </div>
-
-  <% if current_admin %>
-  <div class="field">
-    <%= form.label :group_id, "Choose a Group:" %>
-    <%= form.collection_select(:group_id, Group.all, :id, :name) %>
-  </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit "Update your Profile" %>
+  <div class="row">
+    <% if current_child %>
+      <div class="col-md-12">
+        <div class="field mb-3">
+          <%= form.label :grade, "Class" %>
+          <%= form.select :grade,  ['Primary One', 'Primary Two', 'Primary Three', 'Primary Four', 'Primary Five', 'Primary Six'], {}, class: "custom-select" %>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="field mb-3">
+          <%= form.label :guardian, "Parent's Name", class: "mt-3" %>
+          <%= form.text_field :guardian %>
+        </div>
+      </div>
+    <% end %>
+    <% if current_admin %>
+    <div class="col-md-12">
+      <div class="field mb-3">
+        <%= form.label :group_id, "Choose a Group:", class: "mt-3" %>
+        <%= form.collection_select(:group_id, Group.all, :id, :name, {}, { class: "custom-select" }) %>
+      </div>
+    </div>
+    <% end %>
+    <div class="col-md-12">
+      <div class="actions">
+        <%= form.submit "Complete Profile" %>
+      </div>
+    </div>
   </div>
 <% end %>

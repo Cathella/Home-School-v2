@@ -1,0 +1,53 @@
+<%= render "layouts/main-nav" %>
+ 
+<div class="container py-5 dash-view">
+  <div class="row">
+    <div class="col-md-4 pr-5">
+      <div class="mb-5">
+        <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
+        <% if current_child %>
+        <p class="mt-5 text-center">
+          I am 
+          <%= current_child.name %>
+        </p>
+        <% else %>
+        <p class="mt-5 text-center">
+          I am 
+          <%= current_teacher.name %>
+        </p>
+        <% end %>
+      </div>
+    </div>
+    
+    <div class="col-md-8">
+      <%= render 'layouts/notice' %>
+
+      <h2 class="font-weight-bold text-heading pb-3">My Address</h2>
+      <div class="">
+        <% if direction_add %>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="profile-p">
+                <strong>Nearest Landmark:</strong><br>
+                <span>
+                  <%= @direction.landmark %>
+                </span>
+              </p>
+            </div>
+            <div class="col-md-12 col-lg-6 pt-2">
+              <%= link_to '<i class="fas fa-pencil-alt mr-2"></i> Update Address'.html_safe, edit_direction_path(@direction), class: "btn btn-info px-5 py-2 mt-2" %>
+            </div>
+          </div>
+        <% else %>
+          <p class="profile-p text-center">
+            <span>
+              <strong>
+                <%= link_to '+ Add an Address', new_direction_path, class: 'orange-link' %>
+              </strong>
+            </span>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

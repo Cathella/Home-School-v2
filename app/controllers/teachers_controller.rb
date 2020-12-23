@@ -1,6 +1,5 @@
 class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
-  before_action :teacher_authorize, only: [:edit, :update]
 
   # GET /teachers
   # GET /teachers.json
@@ -14,6 +13,7 @@ class TeachersController < ApplicationController
   end
 
   def teachershome
+    @teachers = Teacher.first(10)
   end
 
   # GET /teachers/new

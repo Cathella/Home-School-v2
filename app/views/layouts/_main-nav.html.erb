@@ -1,0 +1,76 @@
+<header class="pt-1 pb-1 shadow">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand logo text-info" href="/">
+        🏠 
+        <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ml-auto">
+          
+          <% if current_teacher %>
+            <div class="d-flex">
+              <li>
+                <a href="#" class="nav-link login-link">
+                  <%= current_teacher.name %>(Teacher Account).
+                </a>
+              </li>
+              <li>
+                <%= link_to "My Profile", teacher_path(current_teacher.id), class: "nav-link login-link" %>
+              </li>
+              <li>
+                <%= link_to "My Group", teacher_group_path, class: "nav-link login-link" %>
+              </li>
+              <li>
+                <%= link_to "My Address", teacher_address_path, class: "nav-link login-link" %>
+              </li>
+              <li>
+                <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "nav-link login-link" %>
+              </li>
+            </div>
+          <% elsif current_child %>
+            <li class="">
+              <a href="#" class="nav-link login-link">
+                <%= current_child.name %>(Child Account)
+              </a>
+            </li>
+            <li>
+              <%= link_to "My Profile", child_path(current_child.id), class: "nav-link login-link" %>
+            </li>
+            <li>
+              <%= link_to "My Group", my_group_path, class: "nav-link login-link" %>
+            </li>
+            <li>
+              <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
+            </li>
+            <li class="">
+              <%= link_to "Log Out", child_session_path("current"), method: "delete", class: "nav-link login-link" %>
+            </li>
+          <% elsif current_admin %>
+            <li>
+              <a href="#" class="nav-link login-link">
+                <%= current_admin.email %>(Admin Account)
+              </a>
+            </li>
+            <li>
+              <%= link_to "Dashboard", admin_path, class: "nav-link login-link" %>
+            </li>
+            <li>
+              <%= link_to "Log Out", admin_session_path("current"), method: "delete", class: "nav-link login-link" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Teachers", teachershome_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Parents / Children", childrenhome_path, class: "nav-link register-link" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

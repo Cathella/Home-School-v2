@@ -1,4 +1,178 @@
-<%= render "layouts/appLinks" %>
-<h1>HomeSchool</h1>
-<p>We match students with available and capable teachers in their area.</p><br />
-<%= link_to "Register your Child", new_child_path %>
+<%= render 'layouts/main-nav' %>
+
+<div class="">
+  <div class="container-fluid">
+    <div class="row">
+      <%= render 'layouts/notice2' %>
+      
+      <div class="col-md-6 intro-img">
+      </div>
+
+      <div class="col-md-6 intro">
+        <h1 class="text-heading pr-1">
+          We match 
+          <span class="orange-link" style="text-decoration: underline">Students</span> with 
+          <span class="text-info" style="text-decoration: underline">Teachers</span> in the Neighbourhood
+        </h1>
+        <div class="lft-it">
+          <%= link_to 'Register your Child', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3" %>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+        <!-- <div class="how">
+            <div class="container pt-5 pb-5 mb-5">
+                <h2 class="pb-3 mt-5 mb-5 text-center">How it works</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="how-to how-to-1">
+                            <h1>📖</h1>
+                            <h4>Design your School</h4>
+                            <p>Identify where you can host a group and Register with us <a href="#" class="text-white border-bottom">here</a></p>
+                        </div>  
+                    </div>
+                    <div class="col-md-3">
+                        <div class="how-to how-to-2">
+                            <h1>🧒</h1>
+                            <h4>Form a Group</h4>
+                            <p>
+                                Get matched with families with children on 
+                                the same class level near you.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="how-to how-to-3">
+                            <h1>👩🏽‍🏫</h1>
+                            <h4>Find Teachers</h4>
+                            <p>We screen teachers to ensure that the best educator is 
+                                leading your group just near your area.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="how-to how-to-4">
+                            <h1>⛺</h1>
+                            <h4>Setup a Space</h4>
+                            <p>Identify the space where your pod will take place</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+<div class="secondary-intro">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-md-6 pr-5">
+        <p class="font-weight-bold">
+          Home school is giving hope to the children at home.
+          Classes of 5-8 students are grouped in a study group
+          with a qualified teacher they adore 💕
+        </p>
+        <div class="d-flex justify-content-between mt-5">
+          <div class="profile">
+            <%= image_tag("boy.jpg", :alt => "") %>
+          </div>
+          <span class="w-75 text-muted">
+            Learning is fun because my neighbors are my playmates. 
+            I am always excited!<br>
+            -- Kalule Simon.
+          </span>
+        </div>
+        <div class="d-flex justify-content-between mt-5">
+          <div class="profile">
+            <%= image_tag("teacher.jpg", :alt => "") %>
+          </div>
+          <span class="w-75 text-muted">
+            I find great joy in having a small class because I spend more time my students<br>
+            -- Beatrice Achen.
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="image-container ml-5">
+          <%= image_tag("boy.jpg", :alt => "") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="recommend-teachers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="image-container">
+          <%= image_tag("teacher.jpg", :alt => "") %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="ml-5">
+          <h2 class="text-heading">Our Recommended Teachers</h2>
+          <ul>
+            <li>🌟 Have a minimum of 3 years of experience.</li>
+            <li>🌟 Are Registered Teachers</li>
+            <li>🌟 Amazing Recommendations</li>
+            <li>🌟 Focus on Student-Teacher relationships.</li>
+          </ul>
+          <%= link_to 'Become a Teacher', new_teacher_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-5" %>
+        </div>
+      </div>
+                    
+    </div>
+  </div>
+</div>
+
+<div class="covid-alert">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="statement-1 bg-info tex-white">
+          <h2>Even with covid19 around, education is still essential.</h2>
+            <p class="pl-5">
+              This is a solution for parents looking for a quality
+              education for their children but also for the abandoned 
+              teachers with no work across the country.
+            </p>
+        </div>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+</div>
+
+<div class="convinient-school">
+  <div class="container text-center">
+    <h2 class="w-50 text-heading">See how school just got more convinient.</h2>
+    <p class="text-muted">
+      Classes can be held anywhere - can be at your house, backyard or living room.
+    </p>
+    <div class="row mt-5 pt-5" id="gallery">
+                    <div class="col-md-3">
+                        <div class="image-container-3">
+                            <%= image_tag("feat-1.jpg", :alt => "") %>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="image-container-3">
+                            <%= image_tag("feat-2.jpg", :alt => "") %>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="image-container-3">
+                            <%= image_tag("feat-3.jpg", :alt => "") %>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="image-container-3">
+                            <%= image_tag("bg.jpg", :alt => "") %>
+                        </div>
+                    </div>
+    </div>
+  </div>
+</div>
+    

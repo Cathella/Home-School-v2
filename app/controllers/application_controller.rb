@@ -30,6 +30,37 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_authorize
-    redirect_to new_admin_session_path, notice: 'You are not authorized!' if current_admin.nil?
+    redirect_to new_admin_session_path, notice: 'Only Admins can see this content' if current_admin.nil?
   end
+
+  def group_add
+    if @group
+      @group_add ||= Group.exists?
+    else
+      @group_add = nil
+    end
+  end
+
+  helper_method :group_add
+
+  def address_add
+    if @address
+      @address_add ||= Address.exists?
+    else
+      @address_add = nil
+    end
+  end
+
+  helper_method :address_add
+
+  def direction_add
+    if @direction
+      @direction_add ||= Direction.exists?
+    else
+      @direction_add = nil
+    end
+  end
+
+  helper_method :direction_add
+
 end

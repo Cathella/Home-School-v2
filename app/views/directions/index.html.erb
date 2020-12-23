@@ -1,0 +1,22 @@
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
+
+  <h1 class="font-weight-bold text-label mb-3">Teachers Addresses</h1>
+  <table class="child-table mt-4">
+    <tbody>
+      <% @directions.each do |direction| %>
+        <tr>
+          <td><%= direction.landmark %></td>
+          <td>
+            <%= direction.teacher.name %>
+          </td>
+          <td>
+            <%= link_to 'View', direction, class: "btn btn-info" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

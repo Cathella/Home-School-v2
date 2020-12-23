@@ -1,34 +1,36 @@
-<%= render "layouts/childLoginLinks" %>
+<%= render "layouts/main-nav" %>
 
-<p id="notice"><%= notice %></p>
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
+  
+  <h1 class="font-weight-bold text-label mb-3">Students in your area</h1>
+  <p class="mb-5">Request to tutor a child in your area</p>
 
-<h1>Students in your area</h1>
-<p>Request to tutor a child in your area</p>
-<p>Search by grade, name or area</p><br />
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Grade</th>
-      <th>Group</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @children.each do |child| %>
-      <tr>
-        <td><%= child.name %></td>
-        <td><%= child.grade %></td>
-        <td><%= child.group.name %></td>
-        <td><%= link_to 'Show', child %></td>
-        
-        <% if current_admin %>
-        <td><%= link_to 'Edit', edit_child_path(child) %></td>
-        <td><%= link_to 'Destroy', child, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="row">
+    <div class="col-md-10">
+      <table class="child-table">
+        <tbody>
+          <% @children.each do |child| %>
+            <tr>
+              <td class="text-info"><%= child.name %></td>
+              <td>
+                <small class="text-label font-weight-bold">Class:</small><br>
+                <%= child.grade %>
+              </td>
+              <td class="text-right">
+                <%= link_to 'View Profile', child, class: "btn btn-info" %>
+                <% if current_teacher %>
+                  <%= link_to 'Request as Student', child, class: "btn btn-info ml-2" %>
+                <% end %>
+                <% if current_admin %>
+                  <%= link_to 'Edit Child', edit_child_path(child), class: "btn btn-primary ml-2" %>
+                  <%= link_to 'Delete Child', child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
