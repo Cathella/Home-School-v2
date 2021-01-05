@@ -24,10 +24,14 @@
     <div class="row pb-5">
       <% @teachers.each do |teacher| %>
         <div class="col-md-6">
-          <div class="bg-light p-3 rounded" style="height: 264px;">
+          <div class="bg-light p-3 rounded mt-4" style="height: 260px;">
             <div class="row">
               <div class="col-md-4">
-                <div class="bg-white mt-2 rounded border" style="height: 150px"></div>
+                <div class="mt-2">
+                <% if teacher.image.attached? %>
+                  <%= image_tag teacher.image, style: "width: 150px; display: block; margin: 0 auto", class: "rounded shadow" %>
+                <% end %>
+                </div>
               </div>
               <div class="col-md-8">
                   <h4 class="font-weight-bold text-label pt-2 pb-1"><%= teacher.name %></h4>
