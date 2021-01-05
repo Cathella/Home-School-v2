@@ -511,10 +511,7 @@ main {
 }
 
 .profile-pic {
-  font-size: 7em;
-  text-align: center;
-  border: 1px solid #ddd;
-  padding: .2em 0;
+  /* text-align: center; */
 }
 
 .profile-p {
