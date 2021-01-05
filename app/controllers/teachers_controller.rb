@@ -30,14 +30,15 @@ class TeachersController < ApplicationController
   def create
     # @teacher = Teacher.new(teacher_params)
 
-    teacher = Teacher.create!(
-      name: params['teacher']['name'],
-      phone: params['teacher']['phone'],
-      grade: params['teacher']['grade'],
-      subject: params['teacher']['subject'],
-      password: params['teacher']['password'],
-      password_confirmation: params['teacher']['password_confirmation']
-    )
+    # teacher = Teacher.create!(
+    #   name: params['teacher']['name'],
+    #   phone: params['teacher']['phone'],
+    #   grade: params['teacher']['grade'],
+    #   subject: params['teacher']['subject'],
+    #   password: params['teacher']['password'],
+    #   password_confirmation: params['teacher']['password_confirmation']
+    # )
+    teacher = Teacher.create(teacher_params)
 
     respond_to do |format|
       if teacher.save
@@ -79,6 +80,6 @@ class TeachersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def teacher_params
-      params.require(:teacher).permit(:name, :phone, :grade, :subject, :group_id, :password, :password_confirmation)
+      params.require(:teacher).permit(:name, :phone, :grade, :subject, :group_id, :password, :password_confirmation, :image)
     end
 end

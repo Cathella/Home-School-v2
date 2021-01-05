@@ -431,11 +431,6 @@ main {
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.register-teachers select,
-.signup-view select {
-  
-}
-
 .register-teachers input[type="submit"],
 .signup-view input[type="submit"] {
   width: 100%;
@@ -508,13 +503,6 @@ main {
   margin: 0 0 1em 0;
   color: rgba(246, 36, 89, 1);
   border: 1px solid rgba(246, 36, 89, 1);
-}
-
-.profile-pic {
-  font-size: 7em;
-  text-align: center;
-  border: 1px solid #ddd;
-  padding: .2em 0;
 }
 
 .profile-p {
