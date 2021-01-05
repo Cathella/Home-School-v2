@@ -6,9 +6,9 @@
       <div class="mb-5">
         <div class="profile-pic text-center">
           <% if @child.image.attached? %>
-            <%= image_tag @child.image, style: "width: 250px; display: block; margin: 0 auto" %>
+            <%= image_tag @child.image, style: "width: 250px; display: block; margin: 0 auto", class: "rounded shadow" %>
           <% end %>
-        </div>
+        </div> 
 
         <% if current_child %>
           <p class="mt-5 text-center">
