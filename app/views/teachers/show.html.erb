@@ -1,20 +1,17 @@
 <%= render "layouts/main-nav" %>
 
-<div class="container py-5 dash-view">
+<div class="container py-5 dash-view mt-4">
   <div class="row" id="dash">
     <div class="col-md-4 pr-5">
       <div class="mb-5">
         <div class="profile-pic text-center">
           <% if @teacher.image.attached? %>
-            <%= image_tag @teacher.image, style: "width: 250px; display: block; margin: 0 auto", class: "rounded shadow" %>
+            <%= image_tag @teacher.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
           <% end %>
         </div>
-        <% if current_teacher %>
         <p class="mt-5 text-center">
-          I am 
-          <%= current_teacher.name %>
+          <%= @teacher.name %>
         </p>
-        <% end %>
       </div>
     </div>
     <div class="col-md-8">
@@ -28,20 +25,6 @@
             or group for your children. 
             <%= link_to "Add Address", teacher_address_path, class: "text-info border-bottom border-info ml-2 font-weight-bold" %>
           </p>
-        </div>
-        <% end %>
-
-        <% if current_admin %>
-        <div class="col-md-12 mb-4">
-          <div class="px-3 rounded bg-light">
-            <div class="d-flex align-items-center">
-              <i class="fas fa-user-alt rounded py-3 text-label border bg-light px-3 mr-3"></i>
-              <p class="pt-4 text-info">
-                <strong>Name</strong><br>
-                <%= @teacher.name %>
-              </p>
-            </div>
-          </div>
         </div>
         <% end %>
 
@@ -99,8 +82,11 @@
         </div>
       </div>
 
-      <div class="d-flex justify-content-between mt-4">
-        <%= link_to 'Update profile', edit_teacher_path(@teacher), class: "btn bg-green-btn text-white shadow px-5 py-3" %>
+      <div class="d-flex justify-content-between mt-4 mb-5">
+        <% if current_teacher || current_admin %>
+          <%= link_to 'Update profile', edit_teacher_path(@teacher), class: "btn bg-green-btn text-white shadow px-5 py-3" %>
+        <% end %>
+
         <%= link_to 'Registered Teachers', teachers_path, class: "btn bg-green-btn bg-light text-label border px-4 py-3" %>
         <%= link_to 'Browse Children', children_path, class: "btn bg-green-btn bg-light text-label border px-5 py-3" %>
       </div>

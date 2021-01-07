@@ -7,11 +7,14 @@
   <p class="mb-5 text-muted">Browse our Teachers directory to see registered teachers in your neighboorhood.</p>
 
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-12">
       <table class="child-table">
         <tbody>
           <% @teachers.each do |teacher| %>
             <tr>
+              <td>
+                <%= image_tag teacher.image, style: "width: 60px; display: block; margin: 0 auto", class: "rounded-circle" %>
+              </td>
               <td class="text-info"><%= teacher.name %></td>
               <td>
                 <small class="text-label font-weight-bold">Class Taught:</small><br>
@@ -23,12 +26,9 @@
               </td>
               <td class="text-right">
                 <%= link_to 'View Profile', teacher, class: "btn btn-info" %>
-                <% if current_child %>
-                  <%= link_to 'Request as Tutor', teacher, class: "btn btn-info ml-2" %>
-                <% end %>
                 <% if current_admin %>
-                <%= link_to 'Edit Teacher', edit_teacher_path(teacher), class: "btn btn-primary ml-2" %>
-                <%= link_to 'Delete Teacher', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
+                <%= link_to 'Edit', edit_teacher_path(teacher), class: "btn btn-primary ml-2" %>
+                <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
                 <% end %>
               </td>
             </tr>

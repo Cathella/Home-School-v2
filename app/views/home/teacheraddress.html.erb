@@ -1,25 +1,17 @@
 <%= render "layouts/main-nav" %>
  
-<div class="container py-5 dash-view">
+<div class="container py-5 dash-view mt-4">
   <div class="row">
     <div class="col-md-4 pr-5">
       <div class="mb-5">
         <div class="profile-pic text-center">
           <% if current_teacher.image.attached? %>
-            <%= image_tag current_teacher.image, style: "width: 250px; display: block; margin: 0 auto", class: "rounded shadow" %>
+            <%= image_tag current_teacher.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
           <% end %>
         </div>
-        <% if current_child %>
         <p class="mt-5 text-center">
-          I am 
-          <%= current_child.name %>
-        </p>
-        <% else %>
-        <p class="mt-5 text-center">
-          I am 
           <%= current_teacher.name %>
         </p>
-        <% end %>
       </div>
     </div>
     

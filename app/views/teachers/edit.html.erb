@@ -4,13 +4,14 @@
     <div class="row" id="dash">
       <div class="col-md-4 pr-5">
         <div class="mb-5">
-          <div class="profile-pic w-75 mx-auto text-center bg-light rounded">🧒</div>
-          <% if current_teacher %>
+          <div class="profile-pic text-center">
+            <% if @teacher.image.attached? %>
+              <%= image_tag @teacher.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
+            <% end %>
+          </div>
           <p class="mt-5 text-center">
-            I am 
-            <%= current_teacher.name %>
+            <%= @teacher.name %>
           </p>
-          <% end %>
         </div>
       </div>
       <div class="col-md-6 mx-auto">

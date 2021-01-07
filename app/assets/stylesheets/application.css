@@ -97,7 +97,7 @@ a {
   background-size: cover;
   background-position: 70% 40%;
   padding: 9em 0;
-  border-radius: 0 0 1.6em 0;
+  /* border-radius: 0 0 1.6em 0; */
 }
 
 .child-intro-img {
@@ -244,7 +244,7 @@ a {
 }
 
 .lady-img-bg h2 {
-  padding: 2.5em 1.8em 2.3em;
+  padding: 2.5em 1.8em 3.3em;
   font-weight: bold;
   font-size: 3.2em;
   line-height: 1.62;
@@ -559,15 +559,33 @@ main {
   }
 }
 
-@media only screen and (max-width: 1199px) {
-  .intro {
-    padding: 7em 0 4em;
+@media only screen and (max-width: 1229px) {
+  #teacher-intro h1 {
+    margin: 0 1em 1em 1em;
+  }
+  
+  .intro-desc {
+    margin: -1em 0em 3em 3em;
   }
 
+  #teacher-intro .lft-it {
+    margin-left: 3em;
+  }
+}
+
+@media only screen and (max-width: 1219px) {
   .intro h1 {
-      font-size: 3em;
+    font-size: 2.5em;
+    letter-spacing: -2px;
+    margin: 0 1em 1em 1.5em;
   }
 
+  .lft-it {
+    margin-left: 4em;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
   .how-to p {
       font-size: .8em;
       top: -3.5em;
@@ -592,14 +610,16 @@ main {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  #teacher-intro a#login-btn {
+    display: block;
+    margin-top: 1.5em;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .intro {
-    padding: 3em 0;
-  }
-
-  .intro h1 {
-      font-size: 2.5em;
-      letter-spacing: -2px;
+    padding: 4em 0;
   }
 
   .navbar-nav li {
@@ -615,11 +635,6 @@ main {
     font-size: 1em;
   }
 
-  .col-md-3 {
-      flex: 0 0 50%;
-      max-width: 50%;
-  }
-
   .how-to p {
       font-size: 1em;
       top: -2em;
@@ -628,11 +643,6 @@ main {
   .secondary-intro p {
       font-size: 1em;
       margin: 1em 0 0 0;
-  }
-
-  .covid-alert .col-md-6 {
-      flex: 0 0 75%;
-      max-width: 75%;
   }
 
   .recommend-teachers h2 {
@@ -648,22 +658,18 @@ main {
       font-size: 1em;
   }
 
+  .image-container {
+    width: 100%;
+    height: auto;
+}
+
   .image-container-2 {
       width: 95%;
       height: 450px;
   }
 
-  .convinient-school .w-50 {
-      width: 75% !important;
-  }
-
-  .convinient-school .col-md-3 {
-      margin: 0 0 1em 0;
-  }
-
-  .enroll .col-md-6 {
-      flex: 0 0 75%;
-      max-width: 75%;
+  .image-container-3 {
+    margin-bottom: 1.5em
   }
 
   #side-with-image {
@@ -674,13 +680,12 @@ main {
     margin: 0 auto;
   }
 
-  .profile-pic {
-    border: none;
-    padding: 0;
-  }
-
   #transparent-bg {
     background: transparent !important;
+  }
+
+  .convinient-school .w-50 {
+    width: 100% !important;
   }
 }
 
@@ -695,9 +700,8 @@ main {
       flex-direction: column;
   }
 
-  .intro h1 {
-      font-size: 1.8em;
-      letter-spacing: -1px;
+  .secondary-intro {
+      margin: 0 0 5em;
   }
 
   .intro .big-btn,
@@ -710,18 +714,13 @@ main {
   }
 
   .image-container {
-      width: 100%;
+      margin-left: 0 !important;
+      margin-top: 2em;
       height: 320px;
-      margin: 0 0 1em 0;
-  }
-
-  .covid-alert .col-md-6 {
-      flex: 0 0 100%;
-      max-width: 100%;
   }
 
   .convinient-school {
-    padding: 1em 0;
+    padding: 4em 0;
   }
 
   .image-container-2 {
@@ -771,11 +770,11 @@ main {
   }
 
   .how-to p {
-      top: -4em;
+      /* top: -4em; */
   }
       
   .how-to h4 {
-      top: -3em;
+      /* top: -3em; */
   }
 
   .image-container {
@@ -786,9 +785,9 @@ main {
       height: 350px;
   }
 
-  .convinient-school {
+  /* .convinient-school {
       padding: 1em 0;
-  }
+  } */
 
   .convinient-school .w-50 {
       width: 100% !important;
@@ -803,22 +802,17 @@ main {
   }
 
   .enroll h1 {
-      font-size: 1.8em;
+      /* font-size: 1.8em; */
   }
 
   .enroll form {
-      text-align: center;
+      /* text-align: center; */
   }     
 }
 
 @media only screen and (max-width: 458px) {
   header ul{
       font-size: .8em;
-  }
-
-  .col-md-3 {
-      flex: 0 0 100%;
-      max-width: 100%;
   }
 
   .how-to h4 {
@@ -841,10 +835,6 @@ main {
   .secondary-intro {
     margin: 0 0 4em;
   }
-  
-  .covid-alert {
-    display: none;
-  }
 
   .recommend-teachers {
     padding-top: 0;
@@ -853,6 +843,18 @@ main {
   .register-teachers h2,
   .signup-view h2 {
     font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 437px) {
+  .intro h1 {
+    font-size: 1.8em;
+    letter-spacing: -1px; 
+    margin: 0 0 1em 1em;
+  }
+
+  .lft-it {
+    margin-left: 2em;
   }
 }
 

@@ -5,21 +5,21 @@
     <div class="row">
       <%= render 'layouts/notice2' %>
 
-      <div class="col-md-6 teacher-intro-img">
+      <div class="col-md-4 col-lg-6 teacher-intro-img">
       </div>
-      <div class="col-md-6 intro">
+      <div class="col-md-8 col-lg-6 intro" id="teacher-intro">
         <h1 class="text-heading pr-3">
           We empower great <span class="text-info">Teachers</span>
         </h1>
         <p class="intro-desc text-muted">Teach small groups of children in a secure and contained environment.</p>
         <div class="lft-it">
           <%= link_to 'Become a Teacher', new_teacher_path, class: "btn bg-red-btn text-white shadow px-5 py-3" %>
-          <%= link_to "Teacher Login", new_teacher_session_path, class: "ml-5 text-info" %><i class="fas fa-arrow-right ml-2 text-info"></i>
+          <%= link_to 'Teacher Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_teacher_session_path, class: "ml-5 text-info", id: "login-btn" %>
         </div>
       </div>
     </div>
   </div>
-  <div class="container my-5">
+  <!-- <div class="container my-5">
     <h1 class="text-center text-label my-5 pt-5 font-weight-bold">Meet Our Teachers</h1>
     <div class="row pb-5">
       <% @teachers.each do |teacher| %>
@@ -56,5 +56,5 @@
     <div class="text-center pb-5">
       <%= link_to 'See more<i class="fas fa-arrow-right ml-4 text-info"></i>'.html_safe, teachers_path, class: "btn bg-green-btn text-info border border-info px-5 py-3 bg-light" %>
     </div>
-  </div>
+  </div> -->
 </div>
