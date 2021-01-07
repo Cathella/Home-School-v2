@@ -5,19 +5,19 @@
     <div class="row">
       <%= render 'layouts/notice2' %>
       
-      <div class="col-md-6 child-intro-img">
+      <div class="col-md-4 col-lg-6 child-intro-img">
       </div>
-      <div class="col-md-6 intro">
+      <div class="col-md-8 col-lg-6 intro" id="teacher-intro">
         <h1 class="text-heading">
           We stand for the <span class="orange-link">Children</span> at home
         </h1>
         <p class="intro-desc text-muted">
           Children are grouped in a study group 
           with a qualified teacher they will adore
-          </p>
+        </p>
         <div class="lft-it">
           <%= link_to 'Register your Child', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3" %>
-          <%= link_to "Child Login", new_child_session_path, class: "ml-5 text-info" %><i class="fas fa-arrow-right ml-2 text-info"></i>
+          <%= link_to 'Child Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_child_session_path, class: "ml-5 text-info", id: "login-btn" %>
         </div>
       </div>
     </div>
