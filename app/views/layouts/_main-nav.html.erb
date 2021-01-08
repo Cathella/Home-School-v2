@@ -12,10 +12,9 @@
         <ul class="navbar-nav ml-auto">
           
           <% if current_teacher %>
-            <div class="d-flex">
               <li>
                 <a href="#" class="nav-link login-link">
-                  <%= current_teacher.name %>(Teacher Account).
+                  <%= current_teacher.name %>(Teacher).
                 </a>
               </li>
               <li>
@@ -30,11 +29,10 @@
               <li>
                 <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "nav-link login-link" %>
               </li>
-            </div>
           <% elsif current_child %>
             <li class="">
               <a href="#" class="nav-link login-link">
-                <%= current_child.name %>(Child Account)
+                <%= current_child.name %>(Child)
               </a>
             </li>
             <li>
