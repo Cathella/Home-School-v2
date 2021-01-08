@@ -769,14 +769,6 @@ main {
       padding-bottom: 3em;
   }
 
-  .how-to p {
-      /* top: -4em; */
-  }
-      
-  .how-to h4 {
-      /* top: -3em; */
-  }
-
   .image-container {
       height: 300px;
   }
@@ -799,15 +791,7 @@ main {
 
   .image-container-3 img {
       height: 100%;
-  }
-
-  .enroll h1 {
-      /* font-size: 1.8em; */
-  }
-
-  .enroll form {
-      /* text-align: center; */
-  }     
+  }    
 }
 
 @media only screen and (max-width: 458px) {
