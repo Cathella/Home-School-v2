@@ -36,7 +36,7 @@
               </a>
             </li>
             <li>
-              <%= link_to "My Profile", child_path(current_child.id), class: "nav-link login-link" %>
+              <%= link_to "Profile", child_path(current_child.id), class: "nav-link login-link" %>
             </li>
             <li>
               <%= link_to "My Group", my_group_path, class: "nav-link login-link" %>
@@ -45,7 +45,7 @@
               <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
             </li>
             <li class="">
-              <%= link_to "Log Out", child_session_path("current"), method: "delete", class: "nav-link login-link" %>
+              <%= link_to "Logout", child_session_path("current"), method: "delete", class: "nav-link login-link" %>
             </li>
           <% elsif current_admin %>
             <li>
