@@ -1,10 +1,10 @@
-<%= form_with(model: child, local: true) do |form| %>
-  <% if child.errors.any? %>
+<%= form_with(model: admin, local: true) do |form| %>
+  <% if admin.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(child.errors.count, "error") %> prohibited this child from being saved:</h2>
+      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this admin from being saved:</h2>
 
       <ul>
-      <% child.errors.full_messages.each do |message| %>
+      <% admin.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -17,27 +17,29 @@
         <%= form.text_field :name, placeholder: "Enter Full Name" %>
       </div>
     </div>
-
+    <div class="form-group col-md-12">
+      <div class="field mb-3">
+        <%= form.text_field :email, placeholder: "Enter email address" %>
+      </div>
+    </div>
     <div class="form-group col-md-12">
       <div class="field mb-3">
         <%= form.text_field :phone, placeholder: "Enter Phone Number" %>
       </div>
     </div>
-
     <div class="form-group col-md-6">
       <div class="field">
         <%= form.password_field :password, placeholder: "Password" %>
       </div>
     </div>
-
+    
     <div class="form-group col-md-6">
       <div class="field">
         <%= form.password_field :password_confirmation, placeholder: "Confirm Password" %>
       </div>
     </div>
   </div>
-
   <div class="actions">
-    <%= form.submit "Register your Child" %>
+    <%= form.submit "Create Admin Account" %>
   </div>
 <% end %>

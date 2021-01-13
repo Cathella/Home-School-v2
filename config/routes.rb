@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   get "/teachershome", to: "teachers#teachershome", as: :teachershome
   resources :teacher_sessions
 
+  resources :admins
   resources :admin_sessions
-  get "/admin", to: "admin#index", as: :admin
+  # get "/admin", to: "admin#index", as: :admin
 
   resources :addresses
   get "myaddress", to: "home#myaddress", as: "my_address"

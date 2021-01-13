@@ -39,6 +39,8 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if child.save
+        # AdminMailer.with(child: @child).account_created_email.deliver_later
+        AdminMailer.account_created_email.deliver
         format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
       else
         format.html { render :new }
