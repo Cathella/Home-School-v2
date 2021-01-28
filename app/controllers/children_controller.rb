@@ -35,11 +35,10 @@ class ChildrenController < ApplicationController
     #   password: params['child']['password'],
     #   password_confirmation: params['child']['password_confirmation']
     # )
-    child = Child.create(child_params)
+    @child = Child.create(child_params)
 
     respond_to do |format|
-      if child.save
-        # AdminMailer.with(child: @child).account_created_email.deliver_later
+      if @child.save
         AdminMailer.account_created_email.deliver
         format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
       else

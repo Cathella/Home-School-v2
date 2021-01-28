@@ -13,7 +13,7 @@
           <% @teachers.each do |teacher| %>
             <tr>
               <td>
-                <%= image_tag teacher.image, style: "width: 60px; display: block; margin: 0 auto", class: "rounded-circle" %>
+              <%= image_tag(teacher.image, style: "width: 60px; display: block; margin: 0 auto", class: "rounded-circle") if teacher.image.attached? %>
               </td>
               <td class="text-info"><%= teacher.name %></td>
               <td>

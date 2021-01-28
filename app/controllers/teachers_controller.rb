@@ -28,25 +28,14 @@ class TeachersController < ApplicationController
   # POST /teachers
   # POST /teachers.json
   def create
-    # @teacher = Teacher.new(teacher_params)
-
-    # teacher = Teacher.create!(
-    #   name: params['teacher']['name'],
-    #   phone: params['teacher']['phone'],
-    #   grade: params['teacher']['grade'],
-    #   subject: params['teacher']['subject'],
-    #   password: params['teacher']['password'],
-    #   password_confirmation: params['teacher']['password_confirmation']
-    # )
-    teacher = Teacher.create(teacher_params)
+    @teacher = Teacher.create(teacher_params)
 
     respond_to do |format|
-      if teacher.save
-        format.html { redirect_to teachershome_path, notice: 'Thank you for signing up! Please continue to Log In' }
-        # format.json { render :show, status: :created, location: @teacher }
+      if @teacher.save
+        AdminMailer.account_created_email.deliver
+        format.html { redirect_to teachershome_path, notice: 'You have signed up! Please continue to Log In' }
       else
         format.html { render :new }
-        # format.json { render json: @teacher.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -56,7 +45,7 @@ class TeachersController < ApplicationController
   def update
     respond_to do |format|
       if @teacher.update(teacher_params)
-        format.html { redirect_to @teacher, notice: 'Teacher was successfully updated.' }
+        format.html { redirect_to @teacher, notice: 'Your details have been updated.' }
       else
         format.html { render :edit }
       end

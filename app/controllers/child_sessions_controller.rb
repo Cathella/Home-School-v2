@@ -8,7 +8,7 @@ class ChildSessionsController < ApplicationController
       session[:child_id] = child.id
       redirect_to child, notice: "You have successfully logged In"
     else
-      flash.now.alert = "Phone or password is invalid!"
+      flash.now.alert = "Enter correct Phone or Password!"
       render "new"
     end
   end
