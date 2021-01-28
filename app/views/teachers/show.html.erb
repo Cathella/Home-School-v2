@@ -28,6 +28,7 @@
         </div>
         <% end %>
 
+        <% if current_teacher || current_admin %>
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="px-3 rounded bg-light">
             <div class="d-flex align-items-center">
@@ -39,6 +40,8 @@
             </div>
           </div>
         </div>
+        <% end %>
+        
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
@@ -69,6 +72,7 @@
             </div>
           </div>
         </div>
+        <% if current_teacher || current_admin %>
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
@@ -80,6 +84,7 @@
             </div>
           </div>
         </div>
+        <% end %>
       </div>
 
       <div class="d-flex flex-wrap mt-4 mb-5">

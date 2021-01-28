@@ -11,6 +11,10 @@
               <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
             </a>
           </div>
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, class: "alert alert-danger text-center" %>
+          <% end %>
+          
           <p class="text-center text-muted mb-4"><small>TEACHER LOGIN</small></p>
           <%= form_tag teacher_sessions_path do %>
             <div class="row">
