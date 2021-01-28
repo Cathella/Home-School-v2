@@ -17,4 +17,7 @@ class HomeController < ApplicationController
   def teachergroup
     @group = current_teacher.group
   end
+
+  def joined
+  end
 end

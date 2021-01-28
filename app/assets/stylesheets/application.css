@@ -100,6 +100,13 @@ a {
   /* border-radius: 0 0 1.6em 0; */
 }
 
+.joined-img {
+  background-image: url(/assets/boy.jpg);
+  background-size: cover;
+  background-position: 70% 12%;
+  padding: 9em 0;
+}
+
 .child-intro-img {
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bg.jpg'); */
   background-image: url(/assets/jeremy-alford-ngOT6TG3qgs-unsplash.jpg);

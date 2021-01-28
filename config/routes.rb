@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :directions
   root to: 'home#index'
 
+  get "joined", to: "home#joined", as: "joined"
+
   resources :groups
   get "mygroup", to: "home#mygroup", as: "my_group"
   get "teachergroup", to: "home#teachergroup", as: "teacher_group"
