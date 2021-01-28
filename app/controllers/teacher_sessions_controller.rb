@@ -8,7 +8,7 @@ class TeacherSessionsController < ApplicationController
       session[:teacher_id] = teacher.id
       redirect_to teacher, notice: "You have successfully logged In!"
     else
-      flash.now.alert = "Phone or password is invalid!"
+      flash.now.alert = "Enter correct Phone or Password!"
       render "new"
     end
   end
