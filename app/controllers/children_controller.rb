@@ -27,19 +27,11 @@ class ChildrenController < ApplicationController
   # POST /children
   # POST /children.json
   def create
-    # child = Child.create!(
-    #   name: params['child']['name'],
-    #   phone: params['child']['phone'],
-    #   grade: params['child']['grade'],
-    #   guardian: params['child']['guardian'],
-    #   password: params['child']['password'],
-    #   password_confirmation: params['child']['password_confirmation']
-    # )
     @child = Child.create(child_params)
 
     respond_to do |format|
       if @child.save
-        AdminMailer.account_created_email.deliver
+        # AdminMailer.account_created_email.deliver
         format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
       else
         format.html { render :new }
