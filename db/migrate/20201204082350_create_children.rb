@@ -3,6 +3,7 @@ class CreateChildren < ActiveRecord::Migration[5.2]
     create_table :children do |t|
       t.string :name
       t.string :phone
+      t.string :email
       t.string :grade
       t.string :guardian
       t.string :password_digest

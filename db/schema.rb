@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_01_05_160657) do
   create_table "children", force: :cascade do |t|
     t.string "name"
     t.string "phone"
+    t.string "email"
     t.string "grade"
     t.string "guardian"
     t.string "password_digest"
@@ -85,6 +86,7 @@ ActiveRecord::Schema.define(version: 2021_01_05_160657) do
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "phone"
+    t.string "email"
     t.string "grade"
     t.string "subject"
     t.string "password_digest"
