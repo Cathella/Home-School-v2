@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # get 'password_resets/new'
+  resources :password_resets
+
   resources :directions
   root to: 'home#index'
 
