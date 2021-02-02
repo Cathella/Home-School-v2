@@ -30,12 +30,23 @@
         <% end %>
 
         <% if current_child || current_admin %>
+        <div class="col-md-12 col-lg-6 mb-4">
+          <div class="bg-light px-3 rounded">
+            <div class="d-flex align-items-center">
+              <i class="far fa-envelope border rounded py-3 text-label px-3 mr-3"></i>
+              <p class="pt-4 text-muted">
+                <strong>Email</strong><br>
+                <%= @child.email %>
+              </p>
+            </div>
+          </div>
+        </div>
           <div class="col-md-12 col-lg-6 mb-4">
             <div class="bg-light px-3 rounded">
               <div class="d-flex align-items-center">
-                <i class="fas fa-phone-alt border rounded py-3 text-info px-3 mr-3"></i>
-                <p class="pt-4 text-label">
-                  <strong>Parent's Phone</strong><br>
+                <i class="fas fa-phone-alt border rounded py-3 text-label px-3 mr-3"></i>
+                <p class="pt-4 text-muted">
+                  <strong>Phone</strong><br>
                   <%= @child.phone %>
                 </p>
               </div>
@@ -44,8 +55,8 @@
           <div class="col-md-12 col-lg-6 mb-4">
             <div class="bg-light px-3 rounded">
               <div class="d-flex align-items-center">
-                <i class="fas fa-user border rounded py-3 text-info px-3 mr-3"></i>
-                <p class="pt-4 text-label">
+                <i class="fas fa-user border rounded py-3 text-label px-3 mr-3"></i>
+                <p class="pt-4 text-muted">
                   <strong>Parent</strong><br>
                   <% if @child.guardian? %>
                     <%= @child.guardian %>
@@ -61,8 +72,8 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
-              <i class="fas fa-graduation-cap border rounded py-3 text-info px-3 mr-3"></i>
-              <p class="pt-4 text-label">
+              <i class="fas fa-graduation-cap border rounded py-3 text-label px-3 mr-3"></i>
+              <p class="pt-4 text-muted">
                 <strong>Class</strong><br>
                 <% if @child.grade? %>
                   <%= @child.grade %>
@@ -73,29 +84,12 @@
             </div>
           </div>
         </div>
-
-        <% if current_child || current_admin %>
-        <div class="col-md-12 col-lg-6 mb-4">
-          <div class="bg-light px-3 rounded">
-            <div class="d-flex align-items-center">
-              <i class="fas fa-users border rounded py-3 text-info px-3 mr-3"></i>
-              <p class="pt-4 text-label">
-                <strong>Study Group</strong><br>
-                <%= link_to "See group here.", my_group_path %>
-              </p>
-            </div>
-          </div>
-        </div>
-        <% end %>
       </div>
 
       <div class="d-flex flex-wrap mt-4 mb-5">
         <% if current_child || current_admin %>
           <%= link_to 'Update profile', edit_child_path(@child), class: "btn bg-green-btn text-white shadow px-5 py-3 mr-3 mb-3" %>
         <% end %>
-
-        <%= link_to 'Registered Students', children_path, class: "btn bg-green-btn bg-light text-label border px-4 py-3 mr-3 mb-3" %>
-        <%= link_to 'Browse Teachers', teachers_path, class: "btn bg-green-btn bg-light text-label border px-5 py-3 mb-3" %>
       </div>
     </div>
   </div>
