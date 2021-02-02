@@ -46,7 +46,11 @@
               <i class="fas fa-phone-alt rounded py-3 text-label border bg-light px-3 mr-3"></i>
               <p class="pt-4 text-muted">
                 <strong>Phone</strong><br>
-                <%= @teacher.phone %>
+                <% if @teacher.phone? %>
+                  <%= @teacher.phone %>
+                <% else %>
+                    Update your profile
+                <% end %>
               </p>
             </div>
           </div>
