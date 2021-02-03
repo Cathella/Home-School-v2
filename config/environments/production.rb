@@ -99,8 +99,8 @@ Rails.application.configure do
     :port                 => "587",
     :user_name            => "ncathie214@gmail.com",
     :password             => "Happiness:)",
-    :authentication       => "plain",
-    :openssl_verify_mode   => "none",
+    :authentication       => "login",
+    :openssl_verify_mode  => "none",
     :enable_starttls_auto => true
   }
   config.action_mailer.default_url_options = {:host => 'https://shielded-brushlands-99997.herokuapp.com'}
