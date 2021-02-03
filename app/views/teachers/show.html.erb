@@ -32,10 +32,25 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="px-3 rounded bg-light">
             <div class="d-flex align-items-center">
+              <i class="far fa-envelope rounded py-3 text-label border bg-light px-3 mr-3"></i>
+              <p class="pt-4 text-muted">
+                <strong>Email</strong><br>
+                <%= @teacher.email %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-6 mb-4">
+          <div class="px-3 rounded bg-light">
+            <div class="d-flex align-items-center">
               <i class="fas fa-phone-alt rounded py-3 text-label border bg-light px-3 mr-3"></i>
-              <p class="pt-4 text-info">
+              <p class="pt-4 text-muted">
                 <strong>Phone</strong><br>
-                <%= @teacher.phone %>
+                <% if @teacher.phone? %>
+                  <%= @teacher.phone %>
+                <% else %>
+                    Update your profile
+                <% end %>
               </p>
             </div>
           </div>
@@ -46,7 +61,7 @@
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
               <i class="fas fa-book-reader rounded py-3 text-label bg-light border px-3 mr-3"></i>
-              <p class="pt-4 text-info">
+              <p class="pt-4 text-muted">
                 <strong>Class</strong><br>
                 <% if @teacher.grade? %>
                   <%= @teacher.grade %>
@@ -61,7 +76,7 @@
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
               <i class="fas fa-book-open rounded py-3 text-label bg-light border px-3 mr-3"></i>
-              <p class="pt-4 text-info">
+              <p class="pt-4 text-muted">
                 <strong>Subject</strong><br>
                 <% if @teacher.subject? %>
                   <%= @teacher.subject %>
@@ -72,28 +87,12 @@
             </div>
           </div>
         </div>
-        <% if current_teacher || current_admin %>
-        <div class="col-md-12 col-lg-6 mb-4">
-          <div class="bg-light px-3 rounded">
-            <div class="d-flex align-items-center">
-              <i class="fas fa-user-friends border rounded py-3 text-label bg-light px-3 mr-3"></i>
-              <p class="pt-4 text-info">
-                <strong>Study Group</strong><br>
-                <%= link_to "See your group here.", teacher_group_path %>
-              </p>
-            </div>
-          </div>
-        </div>
-        <% end %>
       </div>
 
       <div class="d-flex flex-wrap mt-4 mb-5">
         <% if current_teacher || current_admin %>
           <%= link_to 'Update profile', edit_teacher_path(@teacher), class: "btn bg-green-btn text-white shadow px-5 py-3 mb-3 mr-3" %>
         <% end %>
-
-        <%= link_to 'Registered Teachers', teachers_path, class: "btn bg-green-btn bg-light text-label border px-4 py-3 mr-3 mb-3" %>
-        <%= link_to 'Browse Children', children_path, class: "btn bg-green-btn bg-light text-label border px-5 py-3 mb-3" %>
       </div>
     </div>
   </div>

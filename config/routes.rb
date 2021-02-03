@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :teacher_password_resets
+  resources :password_resets
+
   resources :directions
   root to: 'home#index'
 

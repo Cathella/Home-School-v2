@@ -31,7 +31,6 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if @child.save
-        # AdminMailer.account_created_email.deliver
         format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
       else
         format.html { render :new }
@@ -40,7 +39,6 @@ class ChildrenController < ApplicationController
   end
 
   # PATCH/PUT /children/1
-  # PATCH/PUT /children/1.json
   def update
     respond_to do |format|
       if @child.update(child_params)
@@ -52,12 +50,10 @@ class ChildrenController < ApplicationController
   end
 
   # DELETE /children/1
-  # DELETE /children/1.json
   def destroy
     @child.destroy
     respond_to do |format|
       format.html { redirect_to children_url, notice: 'Child was successfully destroyed.' }
-      # format.json { head :no_content }
     end
   end
 
@@ -69,6 +65,6 @@ class ChildrenController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def child_params
-      params.require(:child).permit(:name, :phone, :grade, :guardian, :password, :password_confirmation, :group_id, :image)
+      params.require(:child).permit(:name, :phone, :grade, :guardian, :password, :password_confirmation, :group_id, :image, :email)
     end
 end

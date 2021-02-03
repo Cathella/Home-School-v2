@@ -32,7 +32,6 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if @teacher.save
-        # AdminMailer.account_created_email.deliver
         format.html { redirect_to teachershome_path, notice: 'You have signed up! Please continue to Log In' }
       else
         format.html { render :new }
@@ -69,6 +68,6 @@ class TeachersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def teacher_params
-      params.require(:teacher).permit(:name, :phone, :grade, :subject, :group_id, :password, :password_confirmation, :image)
+      params.require(:teacher).permit(:name, :phone, :grade, :subject, :group_id, :password, :password_confirmation, :image, :email)
     end
 end

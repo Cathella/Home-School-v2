@@ -3,12 +3,12 @@ class ChildSessionsController < ApplicationController
   end
 
   def create
-    child = Child.find_by_phone(params[:phone])
+    child = Child.find_by_email(params[:email])
     if child && child.authenticate(params[:password])
       session[:child_id] = child.id
       redirect_to child, notice: "You have successfully logged In"
     else
-      flash.now.alert = "Enter correct Phone or Password!"
+      flash.now.alert = "Enter correct Email or Password!"
       render "new"
     end
   end

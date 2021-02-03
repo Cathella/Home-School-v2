@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_05_160657) do
+ActiveRecord::Schema.define(version: 2021_02_03_145511) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -55,12 +55,16 @@ ActiveRecord::Schema.define(version: 2021_01_05_160657) do
   create_table "children", force: :cascade do |t|
     t.string "name"
     t.string "phone"
+    t.string "email"
     t.string "grade"
     t.string "guardian"
     t.string "password_digest"
     t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "auth_token"
+    t.string "password_reset_token"
+    t.datetime "password_reset_sent_at"
     t.index ["group_id"], name: "index_children_on_group_id"
   end
 
@@ -85,12 +89,16 @@ ActiveRecord::Schema.define(version: 2021_01_05_160657) do
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "phone"
+    t.string "email"
     t.string "grade"
     t.string "subject"
     t.string "password_digest"
     t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_reset_token"
+    t.datetime "password_reset_sent_at"
+    t.string "auth_token"
     t.index ["group_id"], name: "index_teachers_on_group_id"
   end
 
