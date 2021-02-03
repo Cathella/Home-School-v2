@@ -1,13 +1,8 @@
 class ChildMailer < ApplicationMailer
-
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.child_mailer.password_reset.subject
-  #
-  def password_reset
+  def password_reset(child)
+    @child = child
     @greeting = "Hi"
 
-    mail to: "to@example.org"
+    mail to: @child.email, :subject => 'Reset password instructions'
   end
 end
