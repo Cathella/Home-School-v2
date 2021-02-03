@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get 'password_resets/new'
+  resources :teacher_password_resets
   resources :password_resets
 
   resources :directions

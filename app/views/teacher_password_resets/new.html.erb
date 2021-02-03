@@ -18,7 +18,7 @@
             Reset Password
           </h2>
 
-          <%= form_tag password_resets_path, :method => :post do %>
+          <%= form_tag teacher_password_resets_path, :method => :post do %>
             <div class='field mb-3'>
               <%= text_field_tag :email, params[:email], placeholder: "Enter your email address" %>
             </div>
