@@ -1,5 +1,6 @@
 class Teacher < ApplicationRecord
-  # before_create { generate_token(:auth_token) }
+  before_create { generate_token(:auth_token) }
+  before_create :confirmation_token
   
   has_secure_password
 
@@ -14,6 +15,12 @@ class Teacher < ApplicationRecord
   belongs_to :group, optional: true
   has_one :direction, :dependent => :destroy
 
+  def email_activate
+    self.email_confirmed = true
+    self.confirm_token = nil
+    save!(:validates => false)
+  end
+
   def send_password_reset
     generate_token(:password_reset_token)
     self.password_reset_sent_at = Time.zone.now
@@ -27,4 +34,11 @@ class Teacher < ApplicationRecord
       self[column] = SecureRandom.urlsafe_base64
     end while Teacher.exists?(column => self[column])
   end
+
+  private
+    def confirmation_token
+      if self.confirm_token.blank?
+        self.confirm_token = SecureRandom.urlsafe_base64.to_s
+      end
+    end
 end

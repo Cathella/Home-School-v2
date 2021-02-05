@@ -24,6 +24,19 @@ class ChildrenController < ApplicationController
   def edit
   end
 
+  def confirm_email
+    child = Child.find_by_confirm_token(params[:id])
+    if child
+      child.email_activate
+      flash[:success] = 'Your email has been verified 
+      Please sign in to continue.'
+      redirect_to new_child_session_path
+    else
+      flash[:error] = "Sorry, User does not exist"
+      redirect_to root_url
+    end
+  end
+
   # POST /children
   # POST /children.json
   def create
@@ -31,7 +44,9 @@ class ChildrenController < ApplicationController
 
     respond_to do |format|
       if @child.save
-        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
+        ChildMailer.registration_confirmation(@child).deliver
+        AdminMailer.account_created_email.deliver
+        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please check email to verify your account.' }
       else
         format.html { render :new }
       end
