@@ -32,6 +32,7 @@ class TeachersController < ApplicationController
 
     respond_to do |format|
       if @teacher.save
+        TeacherMailer.registration_confirmation(@teacher).deliver
         AdminMailer.account_created_email.deliver
         format.html { redirect_to teachershome_path, notice: 'You have signed up! Please continue to Log In' }
       else
