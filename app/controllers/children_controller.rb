@@ -28,11 +28,11 @@ class ChildrenController < ApplicationController
     child = Child.find_by_confirm_token(params[:id])
     if child
       child.email_activate
-      flash[:success] = 'Welcome to HomeSchool! Your email has been confirmed. 
+      flash[:success] = 'Your email has been verified 
       Please sign in to continue.'
       redirect_to new_child_session_path
     else
-      flash[:error] = "Sorry. User does not exist"
+      flash[:error] = "Sorry, User does not exist"
       redirect_to root_url
     end
   end
@@ -46,7 +46,7 @@ class ChildrenController < ApplicationController
       if @child.save
         ChildMailer.registration_confirmation(@child).deliver
         AdminMailer.account_created_email.deliver
-        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please continue to Login. ' }
+        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please check email to verify your account.' }
       else
         format.html { render :new }
       end

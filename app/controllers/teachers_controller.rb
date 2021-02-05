@@ -13,7 +13,7 @@ class TeachersController < ApplicationController
   end
 
   def teachershome
-    @teachers = Teacher.first(10)
+    # @teachers = Teacher.first(10)
   end
 
   # GET /teachers/new
@@ -25,6 +25,19 @@ class TeachersController < ApplicationController
   def edit
   end
 
+  def confirm_email
+    teacher = Teacher.find_by_confirm_token(params[:id])
+    if teacher
+      teacher.email_activate
+      flash[:success] = 'Your email has been verified 
+      Please sign in to continue.'
+      redirect_to new_teacher_session_path
+    else
+      flash[:error] = "Sorry, User does not exist"
+      redirect_to root_url
+    end
+  end
+
   # POST /teachers
   # POST /teachers.json
   def create
@@ -34,7 +47,7 @@ class TeachersController < ApplicationController
       if @teacher.save
         TeacherMailer.registration_confirmation(@teacher).deliver
         AdminMailer.account_created_email.deliver
-        format.html { redirect_to teachershome_path, notice: 'You have signed up! Please continue to Log In' }
+        format.html { redirect_to teachershome_path, notice: 'Teacher was successfully registered, Please check email to verify your account.' }
       else
         format.html { render :new }
       end
