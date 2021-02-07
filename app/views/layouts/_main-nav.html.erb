@@ -10,13 +10,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav ml-auto">
-          
           <% if current_teacher %>
-              <li>
-                <a href="#" class="nav-link login-link">
-                  <%= current_teacher.name %>(Teacher).
-                </a>
-              </li>
               <li>
                 <%= link_to "My Profile", teacher_path(current_teacher.id), class: "nav-link login-link" %>
               </li>
@@ -26,8 +20,14 @@
               <li>
                 <%= link_to "My Address", teacher_address_path, class: "nav-link login-link" %>
               </li>
-              <li>
-                <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "nav-link login-link" %>
+              <li class="dropdown">
+                <a class="dropdown-toggle nav-link login-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <%= current_teacher.name %>
+                </a>
+  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "dropdown-item" %>
+                </div>
               </li>
           <% elsif current_child %>
             <li>
@@ -45,20 +45,21 @@
               </a>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <%= link_to "Logout", child_session_path("current"), method: "delete", class: "login-link dropdown-item" %>
+                <%= link_to "Logout", child_session_path("current"), method: "delete", class: "dropdown-item" %>
               </div>
             </li>
           <% elsif current_admin %>
             <li>
-              <a href="#" class="nav-link login-link">
-                <%= current_admin.email %>
-              </a>
-            </li>
-            <li>
               <%= link_to "Dashboard", admins_path, class: "nav-link login-link" %>
             </li>
-            <li>
-              <%= link_to "Log Out", admin_session_path("current"), method: "delete", class: "nav-link login-link" %>
+            <li class="dropdown">
+              <a class="dropdown-toggle nav-link login-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_admin.email %>
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <%= link_to "Logout", admin_session_path("current"), method: "delete", class: "dropdown-item" %>
+              </div>
             </li>
           <% else %>
             <li class="nav-item">

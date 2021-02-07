@@ -518,6 +518,14 @@ main {
   border: 1px solid rgba(246, 36, 89, 1);
 }
 
+.dropdown:hover {
+}
+
+.dropdown-menu {
+  min-width: 100%;
+  margin: .125rem 0 0 2rem;
+  }
+
 .profile-p {
   line-height: 2.9;
   color: #095578;
