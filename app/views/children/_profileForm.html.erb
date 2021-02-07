@@ -2,11 +2,10 @@
   <% if child.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(child.errors.count, "error") %> prohibited this child from being saved:</h2>
-
       <ul>
-      <% child.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% child.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -24,6 +23,13 @@
         <div class="field mb-3">
           <%= form.label :grade, "Class" %>
           <%= form.select :grade,  ['Primary One', 'Primary Two', 'Primary Three', 'Primary Four', 'Primary Five', 'Primary Six'], {}, class: "custom-select" %>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="field mb-3">
+          <%= form.label :program, "Choose a program" %>
+          <%= form.select :grade,  ['Full-time Classes', 'Extra Classes'], {}, class: "custom-select" %>
         </div>
       </div>
 

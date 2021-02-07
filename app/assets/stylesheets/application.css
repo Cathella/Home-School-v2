@@ -484,6 +484,10 @@ main {
   color: #095578;
 }
 
+.bg-red {
+  background: #e37238;
+}
+
 .bg-red-btn {
   background: #da6f4f;
   border-radius: 2rem;
@@ -498,6 +502,10 @@ main {
 
 .text-label {
   color: #095578;
+}
+
+.text-green {
+  color: #1c93ae;
 }
 
 /* Messages */
