@@ -30,11 +30,6 @@
                 <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "nav-link login-link" %>
               </li>
           <% elsif current_child %>
-            <li class="">
-              <a href="#" class="nav-link login-link">
-                <%= current_child.name %>(Child)
-              </a>
-            </li>
             <li>
               <%= link_to "Profile", child_path(current_child.id), class: "nav-link login-link" %>
             </li>
@@ -44,8 +39,14 @@
             <li>
               <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
             </li>
-            <li class="">
-              <%= link_to "Logout", child_session_path("current"), method: "delete", class: "nav-link login-link" %>
+            <li class="dropdown">
+              <a class="dropdown-toggle nav-link login-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_child.name %>
+              </a>
+
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <%= link_to "Logout", child_session_path("current"), method: "delete", class: "login-link dropdown-item" %>
+              </div>
             </li>
           <% elsif current_admin %>
             <li>

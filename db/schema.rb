@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2021_02_04_095509) do
     t.string "name"
     t.string "phone"
     t.string "email"
+    t.string "program"
     t.string "grade"
     t.string "guardian"
     t.string "password_digest"
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(version: 2021_02_04_095509) do
     t.string "name"
     t.string "grade"
     t.string "place"
+    t.string "program"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
