@@ -102,5 +102,5 @@ Rails.application.configure do
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
-  config.action_mailer.default_url_options = {:host => 'https://shielded-brushlands-99997.herokuapp.com'}
+  config.action_mailer.default_url_options = {:host => 'https://home-school-v-2-ni2m6.ondigitalocean.app'}
 end
