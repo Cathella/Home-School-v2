@@ -61,27 +61,29 @@
             </div>
         </div> -->
 
-        <div class="about">
-        <div class="container pt-5 mb-5">
-            <h2 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About HomeSchool</h2>
-            <div class="row">
-              <div class="col-lg-5">
-                <div class="text-muted">
-                  We are a Not-for-Profit company that is aiming for quality education across the country. 
-                  Our platform finds tutors for the community children to study in small groups at 
-                  subsidised fees that have been agreed upon by the teachers and the parents of the grouped children.
-                  <br><br>
-                  Our job is to create study-groups and add children or students according to their proximity and then match them with a willing and qualified teacher.
-                </div>
-              </div>
-              <div class="col-lg-6 d-flex justify-content-between align-items-center">
-                <div class="" style="font-size: 10em">👩🏽‍🏫</div>
-                <div class="" style="font-size: 8em">📖</div>
-                <div class="" style="font-size: 11em">🧒</div>
-              </div>
-            </div>
+<div class="about">
+  <div class="container pt-5 mb-5">
+    <h1 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About Us</h1>
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="text-muted pr-5">
+          We are a Not-for-Profit company that is aiming for quality education across the country. 
+          Our platform finds tutors for the community children to study in small groups at 
+          subsidised fees that have been agreed upon by the teachers and the parents of the grouped children.
+          <br><br>
+          Our job is to create study-groups and add children or students according to their proximity and then match them with a willing and qualified teacher.
         </div>
+      </div>
+      <div class="col-lg-7">
+        <div class=" p-4 d-flex justify-content-between align-items-center bg-light">
+          <div class="" style="font-size: 9em">👩🏽‍🏫</div>
+          <div class="" style="font-size: 4.5em">📖</div>
+          <div class="" style="font-size: 9em">🧒</div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
 <div class="secondary-intro">
   <div class="container pt-5">
@@ -164,33 +166,48 @@
 </div>
 
 <div class="convinient-school">
-  <div class="container text-center">
-    <h2 class="w-50 text-heading">School just got more convinient.</h2>
-    <p class="text-muted">
-      Classes can be held anywhere - can be at your house, backyard or living room.
-    </p>
-    <div class="row mt-5 pt-5" id="gallery">
+  <div class="container">
+    <div class="row mt-5" id="gallery">
       <div class="col-md-6 col-lg-3">
-        <div class="image-container-3">
-          <%= image_tag("feat-1.jpg", :alt => "") %>
-        </div>
+        <h2 class="text-heading">Learning just got more convinient.</h2>
+        <p class="text-muted">
+          Classes can be held anywhere - can be at your house, backyard or living room.
+        </p>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
           <%= image_tag("feat-2.jpg", :alt => "") %>
         </div>
+        <p class="text-muted mt-3">
+          COVID Safety. Each member of the teaching staff should come 
+          masked up to ensure the children's safety.
+        </p>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
           <%= image_tag("feat-3.jpg", :alt => "") %>
         </div>
+        <p class="text-muted mt-3">
+          We encourage small classes to promote social distancing 
+          to reduce COVID-19 spread.
+        </p>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
           <%= image_tag("bg.jpg", :alt => "") %>
         </div>
+        <p class="text-muted mt-3">
+          A chance for your child to learn with friends and neighbours 
+          in a non exposed environment.
+        </p>
       </div>
     </div>
   </div>
 </div>
-    
+
+<div class="container pb-5">
+  <div class="text-center mb-5 p-5 rounded " style="background: #458773;">
+    <h1 class="mt-4 text-white">Ready to get Started?</h1>
+    <%= link_to 'Register at HomeSchool today', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
+  </div>
+</div>
