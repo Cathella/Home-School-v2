@@ -1,0 +1,8 @@
+Verify your Account
+============================================================
+
+<%= @greeting %> <%= @teacher.name %>
+
+Thanks for registering! To confirm your registration click the URL below.
+
+<%= confirm_email_teacher_url(@teacher.confirm_token) %>

@@ -11,11 +11,20 @@ Rails.application.routes.draw do
   get "mygroup", to: "home#mygroup", as: "my_group"
   get "teachergroup", to: "home#teachergroup", as: "teacher_group"
 
-  resources :children
+  resources :children do
+    member do
+      get :confirm_email
+    end
+  end
+
   get "/childrenhome", to: "children#childrenhome", as: :childrenhome
   resources :child_sessions
   
-  resources :teachers
+  resources :teachers do
+    member do
+      get :confirm_email
+    end
+  end
   get "/teachershome", to: "teachers#teachershome", as: :teachershome
   resources :teacher_sessions
 
