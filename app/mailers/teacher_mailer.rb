@@ -6,4 +6,10 @@ class TeacherMailer < ApplicationMailer
 
     mail to: teacher.email, :subject => "Reset password instructions"
   end
+
+  def registration_confirmation(teacher)
+    @teacher = teacher
+
+    mail to: teacher.email, :subject => "Registration Confirmation"
+  end
 end
