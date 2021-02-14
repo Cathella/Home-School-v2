@@ -5,8 +5,14 @@ class TeacherSessionsController < ApplicationController
   def create
     teacher = Teacher.find_by_email(params[:email])
     if teacher && teacher.authenticate(params[:password])
-      session[:teacher_id] = teacher.id
-      redirect_to teacher, notice: "You have successfully logged In!"
+      if teacher.email_confirmed
+        session[:teacher_id] = teacher.id
+        redirect_to teacher, notice: "You have successfully logged In!"
+      else
+        flash.now.alert = "Please activate your account by following the 
+        instructions in the account confirmation email you received to proceed."
+        render "new"
+      end
     else
       flash.now.alert = "Enter correct Email or Password!"
       render "new"

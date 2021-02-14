@@ -4,6 +4,7 @@ class CreateGroups < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :grade
       t.string :place
+      t.string :program
 
       t.timestamps
     end

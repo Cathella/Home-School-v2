@@ -100,6 +100,7 @@ Rails.application.configure do
     :user_name            => "homeschoolug@gmail.com",
     :password             => "2021Mangoes",
     :authentication       => "plain",
+    :openssl_verify_mode  => "none",
     :enable_starttls_auto => true
   }
   config.action_mailer.default_url_options = {:host => 'https://home-school-v-2-ni2m6.ondigitalocean.app'}

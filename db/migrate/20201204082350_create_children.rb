@@ -4,6 +4,7 @@ class CreateChildren < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :phone
       t.string :email
+      t.string :program
       t.string :grade
       t.string :guardian
       t.string :password_digest
