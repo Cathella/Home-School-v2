@@ -7,6 +7,7 @@
         <!-- <div class="text-center border py-3 rounded text-green bg-light">
           <%= @child.program %>
         </div> -->
+
         <div class="text-center" style="font-size: 6em;">🧒</div>
 
         <!-- <div class="profile-pic text-center">
@@ -38,7 +39,7 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
-              <i class="far fa-envelope border rounded py-3 text-label px-3 mr-3"></i>
+              <span class="border rounded py-2 px-3 mr-3">✉️</span>
               <p class="pt-4 text-muted">
                 <strong>Email</strong><br>
                 <%= @child.email %>
@@ -49,7 +50,7 @@
           <div class="col-md-12 col-lg-6 mb-4">
             <div class="bg-light px-3 rounded">
               <div class="d-flex align-items-center">
-                <i class="fas fa-phone-alt border rounded py-3 text-label px-3 mr-3"></i>
+                <span class="border rounded py-2 px-3 mr-3">☎️</span>
                 <p class="pt-4 text-muted">
                   <strong>Phone</strong><br>
                   <% if @child.phone? %>
@@ -64,7 +65,7 @@
           <div class="col-md-12 col-lg-6 mb-4">
             <div class="bg-light px-3 rounded">
               <div class="d-flex align-items-center">
-                <i class="fas fa-user border rounded py-3 text-label px-3 mr-3"></i>
+                <span class="border rounded py-2 px-3 mr-3">👪</span>
                 <p class="pt-4 text-muted">
                   <strong>Parent</strong><br>
                   <% if @child.guardian? %>
@@ -81,7 +82,7 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
-              <i class="fas fa-graduation-cap border rounded py-3 text-label px-3 mr-3"></i>
+              <span class="border rounded py-2 px-3 mr-3">🎓</span>
               <p class="pt-4 text-muted">
                 <strong>Class</strong><br>
                 <% if @child.grade? %>
