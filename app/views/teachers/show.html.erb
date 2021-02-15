@@ -35,7 +35,7 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="px-3 rounded bg-light">
             <div class="d-flex align-items-center">
-              <i class="far fa-envelope rounded py-3 text-label border bg-light px-3 mr-3"></i>
+              <span class="border rounded py-2 px-3 mr-3">✉️</span>
               <p class="pt-4 text-muted">
                 <strong>Email</strong><br>
                 <%= @teacher.email %>
@@ -46,7 +46,7 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="px-3 rounded bg-light">
             <div class="d-flex align-items-center">
-              <i class="fas fa-phone-alt rounded py-3 text-label border bg-light px-3 mr-3"></i>
+              <span class="border rounded py-2 px-3 mr-3">☎️</span>
               <p class="pt-4 text-muted">
                 <strong>Phone</strong><br>
                 <% if @teacher.phone? %>
@@ -63,7 +63,7 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
-              <i class="fas fa-book-reader rounded py-3 text-label bg-light border px-3 mr-3"></i>
+              <span class="border rounded py-2 px-3 mr-3">🎓</span>
               <p class="pt-4 text-muted">
                 <strong>Class</strong><br>
                 <% if @teacher.grade? %>
@@ -78,7 +78,7 @@
         <div class="col-md-12 col-lg-6 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
-              <i class="fas fa-book-open rounded py-3 text-label bg-light border px-3 mr-3"></i>
+              <span class="border rounded py-2 px-3 mr-3">📖</span>
               <p class="pt-4 text-muted">
                 <strong>Subject</strong><br>
                 <% if @teacher.subject? %>

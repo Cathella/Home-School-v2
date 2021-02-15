@@ -7,7 +7,7 @@
   <p class="mb-5 text-muted">Browse our Teachers directory to see registered teachers in your neighboorhood.</p>
 
   <div class="row">
-    <div class="col-md-12">
+    <!-- <div class="col-md-12">
       <table class="child-table">
         <tbody>
           <% @teachers.each do |teacher| %>
@@ -35,6 +35,32 @@
           <% end %>
         </tbody>
       </table>
-    </div>
+    </div> -->
+
+    <% @teachers.each do |teacher| %>
+      <div class="col-md-4">
+        <div class="border shadow rounded pb-4 mb-4">
+          <div class="bg-light mb-3 border-bottom" style="height: 170px;"></div>
+          <div class="text-muted text-center font-weight-bold text-label"><%= teacher.name %></div>
+          <div class="d-flex flex-wrap justify-content-center bg-light mx-4 my-2">
+            <div class="my-2 mr-5">
+              <span class="">🎓</span>
+              <small><%= teacher.grade %></small>
+            </div>
+            <div class="my-2">
+              <span>📖</span>
+              <small><%= teacher.subject %></small>
+            </div>
+          </div>
+          <div class="text-center mt-3">
+            <%= link_to 'View Profile', teacher, class: "btn btn-warning" %>
+            <% if current_admin %>
+              <%= link_to 'Edit', edit_teacher_path(teacher), class: "btn btn-primary ml-2" %>
+              <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
