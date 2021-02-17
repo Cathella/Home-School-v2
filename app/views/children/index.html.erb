@@ -7,36 +7,16 @@
   <p class="mb-5">See signed up children in your area.</p>
 
   <div class="row">
-    <!-- <div class="col-md-12">
-      <table class="child-table">
-        <tbody>
-          <% @children.each do |child| %>
-            <tr>
-              <td>
-                <%= image_tag(child.image, style: "width: 60px; display: block; margin: 0 auto", class: "rounded-circle") if child.image.attached? %>
-              </td>
-              <td class="text-info"><%= child.name %></td>
-              <td>
-                <small class="text-label font-weight-bold">Class:</small><br>
-                <%= child.grade %>
-              </td>
-              <td class="text-right">
-                <%= link_to 'View Profile', child, class: "btn btn-info" %>
-                <% if current_admin %>
-                  <%= link_to 'Edit', edit_child_path(child), class: "btn btn-primary ml-2" %>
-                  <%= link_to 'Delete', child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
-                <% end %>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div> -->
-
     <% @children.each do |child| %>
       <div class="col-md-4">
         <div class="border shadow rounded pb-4 mb-4">
-          <div class="bg-light mb-3 border-bottom" style="height: 170px;"></div>
+          <div class="bg-light mb-3 border-bottom pt-4" style="height: 250px;">
+            <% if child.image.attached? %>
+              <%= image_tag child.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle" %>
+            <% else %>
+              <div class="text-center pt-4" style="font-size: 8em;">🧒</div>
+            <% end %>
+          </div>
           <div class="text-muted text-center font-weight-bold text-label"><%= child.name %></div>
           <div class="d-flex flex-wrap justify-content-center bg-light mx-4 my-2">
             <div class="my-2 mr-5">

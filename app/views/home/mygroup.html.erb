@@ -4,13 +4,13 @@
   <div class="row">
     <div class="col-md-4 pr-5">
       <div class="mb-5">
-        <div class="text-center" style="font-size: 6em;">🧒</div>
-
-        <!-- <div class="profile-pic text-center">
+        <div class="profile-pic text-center">
           <% if current_child.image.attached? %>
             <%= image_tag current_child.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
+          <% else %>
+            <div class="text-center" style="font-size: 6em;">🧒</div>
           <% end %>
-        </div> -->
+        </div>
         
         <p class="text-center text-muted mt-5">
           <%= current_child.name %>
@@ -28,7 +28,7 @@
                 <td><%= link_to @group.name, @group, class: "text-info" %></td>
                   <td class="text-center"><%= @group.grade %></td>
                   <td class="text-center"><%= @group.place %></td>
-                  <td class="text-right"><%= link_to "See Members", @group, class: "btn btn-info" %></td>
+                  <td class="text-right"><%= link_to "See Members", @group, class: "btn bg-green-btn text-white px-4", style: "font-size: .9em" %></td>
                 </tr>
             </tbody>
           </table>
