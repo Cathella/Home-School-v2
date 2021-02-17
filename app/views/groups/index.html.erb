@@ -19,7 +19,7 @@
             <%= group.place %>
           </td>
           <td class="text-right">
-            <%= link_to 'View group', group, class: "btn btn-info" %>
+            <%= link_to 'View group', group, class: "btn bg-green-btn text-white px-4", style: "font-size: .9em"%>
             <% if current_admin %>
             <%= link_to 'Edit Group', edit_group_path(group), class: "btn btn-primary ml-2" %>
             <%= link_to 'Delete Group', group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
