@@ -20,52 +20,11 @@
   </div>
 </div>
 
-        <!-- <div class="how">
-            <div class="container pt-5 pb-5 mb-5">
-                <h2 class="pb-3 mt-5 mb-5 text-center">How it works</h2>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="how-to how-to-1">
-                            <h1>📖</h1>
-                            <h4>Design your School</h4>
-                            <p>Identify where you can host a group and Register with us <a href="#" class="text-white border-bottom">here</a></p>
-                        </div>  
-                    </div>
-                    <div class="col-md-3">
-                        <div class="how-to how-to-2">
-                            <h1>🧒</h1>
-                            <h4>Form a Group</h4>
-                            <p>
-                                Get matched with families with children on 
-                                the same class level near you.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="how-to how-to-3">
-                            <h1>👩🏽‍🏫</h1>
-                            <h4>Find Teachers</h4>
-                            <p>We screen teachers to ensure that the best educator is 
-                                leading your group just near your area.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="how-to how-to-4">
-                            <h1>⛺</h1>
-                            <h4>Setup a Space</h4>
-                            <p>Identify the space where your pod will take place</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
 <div class="about">
   <div class="container pt-5 mb-5">
-    <h1 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About Us</h1>
     <div class="row">
       <div class="col-lg-5">
+        <h1 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About Us</h1>
         <div class="text-muted pr-5">
           We are a Not-for-Profit team that is aiming for quality education across the country. 
           Our platform finds tutors for the community children to study in small groups at 
@@ -74,21 +33,60 @@
           Our job is to create study-groups and add children or students according to their proximity and then match them with a willing and qualified teacher.
         </div>
       </div>
-      <div class="col-lg-7">
-        <div class=" p-4 d-flex justify-content-between align-items-center bg-light">
-          <div class="" style="font-size: 9em">👩🏽‍🏫</div>
-          <div class="" style="font-size: 4.5em">📖</div>
-          <div class="" style="font-size: 9em">🧒</div>
-        </div>
+      <div class="col-lg-6 ml-auto pt-5">
+        <%= image_tag("about.jpg", :alt => "", class: "img-fluid mt-5 shadow", style: "border-radius: 1.6em 0 0 0;") %>
       </div>
     </div>
   </div>
 </div>
 
+<div class="how">
+    <div class="container pt-5">
+        <h1 class="pb-3 mt-5 mb-5 text-center font-weight-bold text-label">How it works</h1>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-1">
+                  <h1>🧒</h1>
+                  <h4>Register Child</h4>
+                  <p>As a parent, register your child with us <a href="https://homeschool.ug/children/new" class="text-white border-bottom">here</a></p>
+                </div>  
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-2">
+                  <h1>🧑🏽‍🤝‍🧑🏽</h1>
+                  <h4>Form a Group</h4>
+                  <p>
+                    A Study Group is formed by our system when children 
+                    in the same area are registered.
+                  </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-3">
+                    <h1>👩🏽‍🏫</h1>
+                    <h4>Find Teachers</h4>
+                    <p>
+                      A group is allocated a teacher in the same area to teach and guide it.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-4">
+                    <h1>📖</h1>
+                    <h4>Happy Learning</h4>
+                    <p>
+                      We check on the progress of each study group occasionally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="secondary-intro">
   <div class="container pt-5">
     <div class="row">
-      <div class="col-md-7 col-lg-6 pr-5">
+      <div class="col-md-7 col-lg-5 mr-auto">
         <p class="font-weight-bold">
           Home school is giving hope to the children at home.
           Classes of 5-8 students are grouped in a study group
@@ -115,8 +113,8 @@
         </div>
       </div>
       <div class="col-md-5 col-lg-6">
-        <div class="image-container ml-5">
-          <%= image_tag("boy.jpg", :alt => "") %>
+        <div class="" style="height: 650px; overflow: hidden">
+          <%= image_tag("boy.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 1.6em") %>
         </div>
       </div>
     </div>
@@ -127,8 +125,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5 col-lg-6">
-        <div class="image-container">
-          <%= image_tag("teacher.jpg", :alt => "") %>
+        <div class="">
+          <%= image_tag("teacher.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 0 1.6em 0 1.6em") %>
         </div>
       </div>
       <div class="col-md-7 col-lg-6">

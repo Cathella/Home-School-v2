@@ -142,7 +142,7 @@ a {
 }
 
 .how-to {
-  height: 15em;
+  height: 15.8em;
   padding: 0 2em;
   position: relative;
   margin-top: 3.5em;
@@ -151,20 +151,19 @@ a {
 }
 
 .how-to-1 {
-  background: #78c27c;
+  background: #458773;
 }
 
 .how-to-2 {
-  
-  background: #ff9050;
+  background: #d46f4f;
 }
 
 .how-to-3 {
-  background: #d9a531;
+  background: #aa8e21;
 }
 
 .how-to-4 {
-  background: #ba95b7;
+  background: #095578;
 }
 
 .how-to h1 {
