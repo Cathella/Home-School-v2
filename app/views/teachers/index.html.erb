@@ -20,16 +20,20 @@
           <div class="text-muted text-center font-weight-bold text-label"><%= teacher.name %></div>
           <div class="d-flex flex-wrap justify-content-center bg-light mx-4 my-2">
             <div class="my-2 mr-5">
+            <% if teacher.grade? %>
               <span class="">🎓</span>
               <small><%= teacher.grade %></small>
+            <% end %>
             </div>
             <div class="my-2">
+            <% if teacher.subject? %>
               <span>📖</span>
               <small><%= teacher.subject %></small>
+            <% end %>
             </div>
           </div>
-          <div class="text-center mt-3">
-            <%= link_to 'View Profile', teacher, class: "btn btn-warning" %>
+          <div class="text-center mt-3 mb-3">
+            <%= link_to 'View Profile', teacher, class: "btn bg-green-btn text-white px-3 shadow", style: "font-size: 0.9em" %>
             <% if current_admin %>
               <%= link_to 'Edit', edit_teacher_path(teacher), class: "btn btn-primary ml-2" %>
               <%= link_to 'Delete', teacher, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
