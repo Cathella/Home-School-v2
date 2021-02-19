@@ -507,6 +507,10 @@ main {
   color: #1c93ae;
 }
 
+.bg-green {
+  background: #095578;
+}
+
 /* Messages */
 #error_explanation {
   background: rgba(246, 36, 89, .1);
@@ -515,9 +519,6 @@ main {
   margin: 0 0 1em 0;
   color: rgba(246, 36, 89, 1);
   border: 1px solid rgba(246, 36, 89, 1);
-}
-
-.dropdown:hover {
 }
 
 .dropdown-menu {

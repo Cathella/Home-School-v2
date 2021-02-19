@@ -9,7 +9,7 @@
       <div class="col-md-8 col-lg-6 intro">
         <h1 class="text-heading pr-1">
           We match 
-          <span class="orange-link" style="text-decoration: underline">Students</span> with 
+          <span class="orange-link" style="text-decoration: underline">Learners</span> with 
           <span class="text-info" style="text-decoration: underline">Teachers</span> in the Neighbourhood
         </h1>
         <div class="lft-it">
@@ -140,8 +140,7 @@
           </ul>
           <%= link_to 'Become a Teacher', new_teacher_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-5" %>
         </div>
-      </div>
-                    
+      </div>           
     </div>
   </div>
 </div>
@@ -157,6 +156,80 @@
               education for their children but also for the abandoned 
               teachers with no work across the country.
             </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="faqs">
+  <div class="container pt-5 mt-5">
+    <h1 class="text-center font-weight-bold text-label mb-5">FAQS</h1>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="mb-4">
+          <h5 class="text-center bg-green text-white py-3">What is HomeSchool?</h5>
+          <p class="text-muted bg-light py-3 px-5">
+            HomeSchool brings the best parts of education to your home with 
+            excellent teachers, small class sizes, and a personalized curriculum. 
+            Your children receive an enriching experience with greater flexibility 
+            and more personalized attention than the traditional schools can offer - 
+            all in a safe and inspiring home learning environment.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample" aria-controls="collapseExample" style="cursor: pointer;">
+          <span>Why do we need a teacher?</span>
+          <i class="fas fa-plus"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample">
+            Think back to the best education experiences you've had, chances are 
+            you're thinking of a teacher. Research supports that teachers have the 
+            largest impact on student satisfaction and educational outcomes. 
+            HomeSchool enables children to be allocated a teacher to guide them.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample2" aria-controls="collapseExample2" style="cursor: pointer;">
+          <span>Health and Safety</span>
+          <i class="fas fa-plus"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample2">
+            Safety is our highest priority, for your family, the children we work with, and the teacher. 
+            We ask all teachers to follow all local guidelines as it relates to COVID-19. 
+            Beyond that, each study-group creates its own health agreement prior to starting, 
+            which we have all families, and teachers sign-off on.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample3" aria-controls="collapseExample3" style="cursor: pointer;">
+          <span>Who are the teachers?</span>
+          <i class="fas fa-plus"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample3">
+            The teachers we register go through a rigorous screen process.
+            Our teachers have minimum teaching experience and often have 
+            advanced diplomas and degrees with adequate recommendations.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample4" aria-controls="collapseExample4" style="cursor: pointer;">
+          <span>Where does the learning happen?</span>
+          <i class="fas fa-plus"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample4">
+            Learning can happen anywhere as long as there is enough space for the children 
+            and the teachers. Lessons can happen in playrooms, backyards, living rooms, 
+            and in community spaces.
+          </p>
         </div>
       </div>
     </div>
@@ -206,6 +279,6 @@
 <div class="container pb-5">
   <div class="text-center mb-5 p-5 rounded shadow" style="background: #458773;">
     <h1 class="mt-4 text-white">Ready to get Started?</h1>
-    <%= link_to 'Register at HomeSchool today', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
+    <%= link_to 'Register at HomeSchool today', new_child_path, class: "btn bg-red-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
   </div>
 </div>
