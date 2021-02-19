@@ -21,10 +21,10 @@ class AdminsController < ApplicationController
   end
 
   def create
-    admin = Admin.create(admin_params)
+    @admin = Admin.create(admin_params)
 
     respond_to do |format|
-      if admin.save
+      if @admin.save
         format.html { redirect_to admins_path, notice: 'Account created!' }
       else
         format.html { render :new }
@@ -36,9 +36,8 @@ class AdminsController < ApplicationController
     def set_admin
       @admin = Admin.find(params[:id])
     end
- 
+
     def admin_params
       params.require(:admin).permit(:name, :email, :phone, :password, :password_confirmation)
     end
-
 end

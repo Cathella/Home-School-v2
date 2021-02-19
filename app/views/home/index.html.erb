@@ -9,7 +9,7 @@
       <div class="col-md-8 col-lg-6 intro">
         <h1 class="text-heading pr-1">
           We match 
-          <span class="orange-link" style="text-decoration: underline">Students</span> with 
+          <span class="orange-link" style="text-decoration: underline">Learners</span> with 
           <span class="text-info" style="text-decoration: underline">Teachers</span> in the Neighbourhood
         </h1>
         <div class="lft-it">
@@ -20,75 +20,73 @@
   </div>
 </div>
 
-        <!-- <div class="how">
-            <div class="container pt-5 pb-5 mb-5">
-                <h2 class="pb-3 mt-5 mb-5 text-center">How it works</h2>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="how-to how-to-1">
-                            <h1>📖</h1>
-                            <h4>Design your School</h4>
-                            <p>Identify where you can host a group and Register with us <a href="#" class="text-white border-bottom">here</a></p>
-                        </div>  
-                    </div>
-                    <div class="col-md-3">
-                        <div class="how-to how-to-2">
-                            <h1>🧒</h1>
-                            <h4>Form a Group</h4>
-                            <p>
-                                Get matched with families with children on 
-                                the same class level near you.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="how-to how-to-3">
-                            <h1>👩🏽‍🏫</h1>
-                            <h4>Find Teachers</h4>
-                            <p>We screen teachers to ensure that the best educator is 
-                                leading your group just near your area.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="how-to how-to-4">
-                            <h1>⛺</h1>
-                            <h4>Setup a Space</h4>
-                            <p>Identify the space where your pod will take place</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
 <div class="about">
   <div class="container pt-5 mb-5">
-    <h1 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About Us</h1>
     <div class="row">
       <div class="col-lg-5">
+        <h1 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About Us</h1>
         <div class="text-muted pr-5">
-          We are a Not-for-Profit company that is aiming for quality education across the country. 
+          We are a Not-for-Profit team that is aiming for quality education across the country. 
           Our platform finds tutors for the community children to study in small groups at 
           subsidised fees that have been agreed upon by the teachers and the parents of the grouped children.
           <br><br>
           Our job is to create study-groups and add children or students according to their proximity and then match them with a willing and qualified teacher.
         </div>
       </div>
-      <div class="col-lg-7">
-        <div class=" p-4 d-flex justify-content-between align-items-center bg-light">
-          <div class="" style="font-size: 9em">👩🏽‍🏫</div>
-          <div class="" style="font-size: 4.5em">📖</div>
-          <div class="" style="font-size: 9em">🧒</div>
-        </div>
+      <div class="col-lg-6 ml-auto pt-5">
+        <%= image_tag("about.jpg", :alt => "", class: "img-fluid mt-5 shadow", style: "border-radius: 1.6em 0 0 0;") %>
       </div>
     </div>
   </div>
 </div>
 
+<div class="how">
+    <div class="container pt-5">
+        <h1 class="pb-3 mt-5 mb-5 text-center font-weight-bold text-label">How it works</h1>
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-1">
+                  <h1>🧒</h1>
+                  <h4>Register Child</h4>
+                  <p>As a parent, register your child with us <a href="https://homeschool.ug/children/new" class="text-white border-bottom">here</a></p>
+                </div>  
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-2">
+                  <h1>🧑🏽‍🤝‍🧑🏽</h1>
+                  <h4>Form a Group</h4>
+                  <p>
+                    A Study Group is formed by our system when children 
+                    in the same area are registered.
+                  </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-3">
+                    <h1>👩🏽‍🏫</h1>
+                    <h4>Find Teachers</h4>
+                    <p>
+                      A group is allocated a teacher in the same area to teach and guide it.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="how-to how-to-4">
+                    <h1>📖</h1>
+                    <h4>Happy Learning</h4>
+                    <p>
+                      We check on the progress of each study group occasionally.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="secondary-intro">
   <div class="container pt-5">
     <div class="row">
-      <div class="col-md-7 col-lg-6 pr-5">
+      <div class="col-md-7 col-lg-5 mr-auto">
         <p class="font-weight-bold">
           Home school is giving hope to the children at home.
           Classes of 5-8 students are grouped in a study group
@@ -115,8 +113,8 @@
         </div>
       </div>
       <div class="col-md-5 col-lg-6">
-        <div class="image-container ml-5">
-          <%= image_tag("boy.jpg", :alt => "") %>
+        <div class="" style="height: 650px; overflow: hidden">
+          <%= image_tag("boy.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 1.6em") %>
         </div>
       </div>
     </div>
@@ -127,8 +125,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5 col-lg-6">
-        <div class="image-container">
-          <%= image_tag("teacher.jpg", :alt => "") %>
+        <div class="">
+          <%= image_tag("teacher.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 0 1.6em 0 1.6em") %>
         </div>
       </div>
       <div class="col-md-7 col-lg-6">
@@ -142,8 +140,7 @@
           </ul>
           <%= link_to 'Become a Teacher', new_teacher_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-5" %>
         </div>
-      </div>
-                    
+      </div>           
     </div>
   </div>
 </div>
@@ -165,12 +162,86 @@
   </div>
 </div>
 
+<div class="faqs">
+  <div class="container pt-5 mt-5">
+    <h1 class="text-center font-weight-bold text-label mb-5">FAQS</h1>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="mb-4">
+          <h5 class="text-center bg-green text-white py-3">What is HomeSchool?</h5>
+          <p class="text-muted bg-light py-3 px-5">
+            HomeSchool brings the best parts of education to your home with 
+            excellent teachers, small class sizes, and a personalized curriculum. 
+            Your children receive an enriching experience with greater flexibility 
+            and more personalized attention than the traditional schools can offer - 
+            all in a safe and inspiring home learning environment.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample" aria-controls="collapseExample" style="cursor: pointer;">
+          <span>Why do we need a teacher?</span>
+          <i class="fas fa-plus text-green"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample">
+            Think back to the best education experiences you've had, chances are 
+            you're thinking of a teacher. Research supports that teachers have the 
+            largest impact on student satisfaction and educational outcomes. 
+            HomeSchool enables children to be allocated a teacher to guide them.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample2" aria-controls="collapseExample2" style="cursor: pointer;">
+          <span>Health and Safety</span>
+          <i class="fas fa-plus text-green"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample2">
+            Safety is our highest priority, for your family, the children we work with, and the teacher. 
+            We ask all teachers to follow all local guidelines as it relates to COVID-19. 
+            Beyond that, each study-group creates its own health agreement prior to starting, 
+            which we have all families, and teachers sign-off on.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample3" aria-controls="collapseExample3" style="cursor: pointer;">
+          <span>Who are the teachers?</span>
+          <i class="fas fa-plus text-green"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample3">
+            The teachers we register go through a rigorous screen process.
+            Our teachers have minimum teaching experience and often have 
+            advanced diplomas and degrees with adequate recommendations.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-4">
+          <h5 class="px-5 bg-green text-white py-3 d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" data-target="#collapseExample4" aria-controls="collapseExample4" style="cursor: pointer;">
+          <span>Where does the learning happen?</span>
+          <i class="fas fa-plus text-green"></i>
+          </h5>
+          <p class="text-muted bg-light py-3 px-5 collapse" id="collapseExample4">
+            Learning can happen anywhere as long as there is enough space for the children 
+            and the teachers. Lessons can happen in playrooms, backyards, living rooms, 
+            and in community spaces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="convinient-school">
   <div class="container">
     <div class="row mt-5" id="gallery">
       <div class="col-md-6 col-lg-3">
-        <h2 class="text-heading">Learning just got more convinient.</h2>
-        <p class="text-muted">
+        <h1 class="text-heading font-weight-bold mb-5">HomeSchool <br>Benefits.</h1>
+        <p class="text-muted pr-4">
           Classes can be held anywhere - can be at your house, backyard or living room.
         </p>
       </div>
@@ -178,7 +249,7 @@
         <div class="image-container-3">
           <%= image_tag("feat-2.jpg", :alt => "") %>
         </div>
-        <p class="text-muted mt-3">
+        <p class="text-muted mt-4 pr-4">
           COVID Safety. Each member of the teaching staff should come 
           masked up to ensure the children's safety.
         </p>
@@ -187,7 +258,7 @@
         <div class="image-container-3">
           <%= image_tag("feat-3.jpg", :alt => "") %>
         </div>
-        <p class="text-muted mt-3">
+        <p class="text-muted mt-4 pr-4">
           We encourage small classes to promote social distancing 
           to reduce COVID-19 spread.
         </p>
@@ -196,7 +267,7 @@
         <div class="image-container-3">
           <%= image_tag("bg.jpg", :alt => "") %>
         </div>
-        <p class="text-muted mt-3">
+        <p class="text-muted mt-4 pr-4">
           A chance for your child to learn with friends and neighbours 
           in a non exposed environment.
         </p>
@@ -206,7 +277,7 @@
 </div>
 
 <div class="container pb-5">
-  <div class="text-center mb-5 p-5 rounded " style="background: #458773;">
+  <div class="text-center mb-5 p-5 rounded shadow bg-green">
     <h1 class="mt-4 text-white">Ready to get Started?</h1>
     <%= link_to 'Register at HomeSchool today', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
   </div>

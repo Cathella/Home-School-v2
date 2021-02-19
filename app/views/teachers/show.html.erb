@@ -2,7 +2,7 @@
 
 <div class="container py-5 dash-view mt-4">
   <div class="row" id="dash">
-    <div class="col-md-4 pr-5">
+    <div class="col-md-4">
       <div class="mb-5">
         <div class="profile-pic text-center">
           <% if @teacher.image.attached? %>
@@ -17,7 +17,7 @@
         </p>
       </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-6 mr-auto">
       <%= render 'layouts/notice' %>
       
       <div class="row">
@@ -32,7 +32,7 @@
         <% end %>
 
         <% if current_teacher || current_admin %>
-        <div class="col-md-12 col-lg-6 mb-4">
+        <div class="col-md-12 mb-4">
           <div class="px-3 rounded bg-light">
             <div class="d-flex align-items-center">
               <span class="border rounded py-2 px-3 mr-3">✉️</span>
@@ -43,7 +43,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-6 mb-4">
+
+        <div class="col-md-12 mb-4">
           <div class="px-3 rounded bg-light">
             <div class="d-flex align-items-center">
               <span class="border rounded py-2 px-3 mr-3">☎️</span>
@@ -60,7 +61,7 @@
         </div>
         <% end %>
         
-        <div class="col-md-12 col-lg-6 mb-4">
+        <div class="col-md-12 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
               <span class="border rounded py-2 px-3 mr-3">🎓</span>
@@ -75,7 +76,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-6 mb-4">
+
+        <div class="col-md-12 mb-4">
           <div class="bg-light px-3 rounded">
             <div class="d-flex align-items-center">
               <span class="border rounded py-2 px-3 mr-3">📖</span>
