@@ -1,5 +1,16 @@
-<h1>New Video</h1>
+<%= render "layouts/main-nav" %>
 
-<%= render 'form', video: @video %>
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
+  <h1 class="text-center my-5 text-green font-weight-bold">Upload Video</h1>
 
-<%= link_to 'Back', videos_path %>
+  <div class="row mb-5">
+    <div class="col-lg-6 mx-auto bg-light rounded p-5">
+      <%= render 'form', video: @video %>
+      <div class="text-center mt-4">
+        <%= link_to 'Back to Videos', videos_path, class: "" %>
+      </div>
+    </div>
+  </div>
+
+</div>

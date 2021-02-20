@@ -1,14 +1,47 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/main-nav" %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @video.title %>
-</p>
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @video.description %>
-</p>
+  <div class="row my-5">
+    <div class="col-lg-12">
+      <!--<div>
+        <%= video_tag(url_for(@video.clip), style: "width: 100%; height: auto", controls: "") %>
+      </div> -->
 
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+      <video
+        id="my-video"
+        class="video-js border w-100"
+        controls
+        preload="auto"
+        width=""
+        height="480"
+        poster="<%= url_for(@video.thumbnail) %>"
+        data-setup="{}"
+      >
+        <source src="<%= url_for(@video.clip) %>" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="col-lg-12 pl-4 text-muted mt-4">
+      <h4 class="mb-4 text-label">
+        <%= @video.title %>
+      </h4>
+      <div class="border-bottom pb-4">
+        <small><span class="text-label">Posted on:</span> <%= @video.created_at.to_formatted_s(:short) %></small>
+        <small class="ml-4"><span class="text-label">Author:</span> Homeschool</small>
+      </div>
+
+      <p class="my-4">
+        <%= @video.description %>
+      </p>
+
+      <!--<div style="width: 400px">
+        <strong>Thumbnail:</strong><br>
+        <%= image_tag (@video.thumbnail), style: "width: 100%; height: auto" %>
+      </div> -->
+
+      <%= link_to 'Back to videos', videos_path %>
+    </div>
+  </div>
+</div>
