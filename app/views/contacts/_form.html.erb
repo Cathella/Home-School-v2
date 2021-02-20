@@ -1,0 +1,54 @@
+<div class="container-fluid bg-green text-white">
+<%= form_with(model: contact, local: true) do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h1 class="font-weight-bold pt-5" style="margin-left: 3.3em">Write to Us</h1>
+  <div class="row">
+    <div class="col-lg-6 border-right border-info">
+      <div class="row py-5">
+        <div class="col-md-8 mx-auto pb-5">
+          <div class="field mb-5">
+            <%= form.label :name, class: "text-info" %>
+            <%= form.text_field :name, class: "w-100 transparent-field text-white", placeholder: "Enter your name" %>
+          </div>
+
+          <div class="field mb-5">
+            <%= form.label :address, class: "text-info" %>
+            <%= form.text_field :address, class: "w-100 transparent-field text-white", placeholder: "Where do stay?" %>
+          </div>
+
+          <div class="field mb-5">
+            <%= form.label :phone, class: "text-info" %>
+            <%= form.text_field :phone, class: "w-100 transparent-field text-white", placeholder: "+256 770 XXX XXX" %>
+          </div>
+
+          <div class="field">
+            <%= form.label :user, "Who are you?", class: "text-info" %>
+            <%= form.select :user,  ['Iam a parent', 'I am a teacher'], {}, class: "custom-select", style: "" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="field mb-4 mx-5">
+        <%= form.label :message, class: "text-info mb-4" %>
+        <%= form.text_area :message, class: "w-100 transparent-field p-0 text-white", placeholder: "Write your message here", style: "height: 300px; border: none" %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Send Message", class: "btn btn-block bg-info text-white py-3 rounded-0 font-weight-bold text-uppercase", style: "position: absolute; bottom: 0; margin-left: -15px;" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

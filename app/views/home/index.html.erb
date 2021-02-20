@@ -23,18 +23,23 @@
 <div class="about">
   <div class="container pt-5 mb-5">
     <div class="row">
-      <div class="col-lg-5">
-        <h1 class="pb-3 mt-5 mb-5 font-weight-bold text-label">About Us</h1>
-        <div class="text-muted pr-5">
+      <div class="col-lg-6">
+        <h1 class="pb-3 mt-5 mb-4 font-weight-bold text-label">About Us</h1>
+        <div class="text-muted pr-4">
           We are a Not-for-Profit team that is aiming for quality education across the country. 
-          Our platform finds tutors for the community children to study in small groups at 
+          Our platform finds tutors for the community children to study in small localised groups at 
           subsidised fees that have been agreed upon by the teachers and the parents of the grouped children.
           <br><br>
-          Our job is to create study-groups and add children or students according to their proximity and then match them with a willing and qualified teacher.
+          Ever since the COVID-19 education lockdown, our children have been seated home and 
+          are wearing away academically, and with the recently increased school lockdown for lower primary, 
+          we believe home schooling is a viable option to keep the children occupied academically.
+          <br><br>
+          Our job is to create study-groups and add children or students according to their proximity and then 
+          match them with a willing and qualified teacher.
         </div>
       </div>
       <div class="col-lg-6 ml-auto pt-5">
-        <%= image_tag("about.jpg", :alt => "", class: "img-fluid mt-5 shadow", style: "border-radius: 1.6em 0 0 0;") %>
+        <%= image_tag("about.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 1.6em 0 0 0; margin-top: 4em") %>
       </div>
     </div>
   </div>
@@ -149,13 +154,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-lg-6 mr-auto">
-        <div class="statement-1 bg-info tex-white">
-          <h2>Even with covid19 around, education is still essential.</h2>
-            <p class="pl-5">
+        <div class="statement-1 bg-info text-white shadow">
+          <h2 class="font-weight-bold mb-4">Even with covid19 around, education is still essential.</h2>
+          <p class="pl-5">
               This is a solution for parents looking for a quality
               education for their children but also for the abandoned 
               teachers with no work across the country.
-            </p>
+          </p>
         </div>
       </div>
     </div>
@@ -171,10 +176,14 @@
           <h5 class="text-center bg-green text-white py-3">What is HomeSchool?</h5>
           <p class="text-muted bg-light py-3 px-5">
             HomeSchool brings the best parts of education to your home with 
-            excellent teachers, small class sizes, and a personalized curriculum. 
-            Your children receive an enriching experience with greater flexibility 
-            and more personalized attention than the traditional schools can offer - 
-            all in a safe and inspiring home learning environment.
+            willing teachers, small class sizes, and a personalized curriculum.
+            Children in the same neighbourhood and classes can study together for 
+            3 - 4 hours a day. Your children receive an enriching experience with 
+            greater flexibility and more personalized attention than the traditional 
+            schools can offer - all in a safe and inspiring home learning environment. 
+            HomeSchool does not intend to replace the existing education framework it is 
+            only expected to run until schools are fully open to all classes. 
+            We just want our children to study, even in COVID!
           </p>
         </div>
       </div>
@@ -238,16 +247,18 @@
 
 <div class="convinient-school">
   <div class="container">
+    <h1 class="text-green font-weight-bold mb-5 mt-3 text-center" style="font-size: 3em">Benefits.</h1>
     <div class="row mt-5" id="gallery">
       <div class="col-md-6 col-lg-3">
-        <h1 class="text-heading font-weight-bold mb-5">HomeSchool <br>Benefits.</h1>
-        <p class="text-muted pr-4">
-          Classes can be held anywhere - can be at your house, backyard or living room.
-        </p>
+        <div class="bg-red py-5 mb-3" style="border-radius: 1.6em 0">
+          <p class="text-white py-5 px-5">
+            Classes can be held anywhere - can be at your house, backyard or living room.
+          </p>
+        </div>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
-          <%= image_tag("feat-2.jpg", :alt => "") %>
+          <%= image_tag("feat-3.jpg", :alt => "") %>
         </div>
         <p class="text-muted mt-4 pr-4">
           COVID Safety. Each member of the teaching staff should come 
@@ -256,7 +267,7 @@
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
-          <%= image_tag("feat-3.jpg", :alt => "") %>
+          <%= image_tag("about2.jpg", :alt => "") %>
         </div>
         <p class="text-muted mt-4 pr-4">
           We encourage small classes to promote social distancing 
@@ -277,7 +288,7 @@
 </div>
 
 <div class="container pb-5">
-  <div class="text-center mb-5 p-5 rounded shadow bg-green">
+  <div class="text-center mb-5 p-5 bg-green" style="border-radius: 0 1.6em 0 0">
     <h1 class="mt-4 text-white">Ready to get Started?</h1>
     <%= link_to 'Register at HomeSchool today', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
   </div>
