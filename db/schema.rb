@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_063015) do
+ActiveRecord::Schema.define(version: 2021_02_20_160637) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -116,6 +116,13 @@ ActiveRecord::Schema.define(version: 2021_02_20_063015) do
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
     t.index ["group_id"], name: "index_teachers_on_group_id"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
