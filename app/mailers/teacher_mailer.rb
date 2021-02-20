@@ -9,6 +9,7 @@ class TeacherMailer < ApplicationMailer
 
   def registration_confirmation(teacher)
     @teacher = teacher
+    @greeting = "Hi"
 
     mail to: teacher.email, :subject => "Registration Confirmation"
   end

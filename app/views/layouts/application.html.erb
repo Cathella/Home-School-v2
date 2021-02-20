@@ -7,6 +7,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -22,17 +23,17 @@
 
     <footer class="bg-light pt-3 pb-3">
       <nav class="container">
-      <!-- <small class="d-flex justify-content-center flex-wrap">
-        <a class="nav-link text-muted" href="/">Home School</a>
-        <a class="nav-link text-muted" href="#">About</a>
-        <a class="nav-link text-muted" href="#">FAQs</a>
-        <a class="nav-link text-muted" href="#">Contact Us</a>
-        <a class="nav-link text-muted" href="#">How it Works</a>
-      </small> -->
-      
-      <small class="text-center">
-        <a class="nav-link text-info" href="/">
-          &copy; 2021 HomeSchool - Ug
+      <small class="d-flex justify-content-between flex-wrap">
+        <span class="d-flex flex-wrap">
+          <a class="nav-link text-muted" href="/">
+            &copy; 2021 Copyright HomeSchool - Ug
+          </a>
+          <a class="nav-link text-muted" href="/contacts/new">
+          <i class="far fa-envelope mr-1 text-info"></i>Contact Us
+          </a>
+        </span>
+        <a class="nav-link text-info" href="https://www.facebook.com/homeschoolug">
+          Follow us on <i class="fab fa-lg ml-4 text-label fa-facebook"></i>
         </a>
       </small>
       </nav>

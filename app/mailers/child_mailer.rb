@@ -8,6 +8,7 @@ class ChildMailer < ApplicationMailer
 
   def registration_confirmation(child)
     @child = child
+    @greeting = "Hi"
 
     mail to: child.email, :subject => "Registration Confirmation"
   end
