@@ -1,29 +1,55 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/main-nav" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
 
-<p>
-  <strong>Address:</strong>
-  <%= @contact.address %>
-</p>
+  <div class="row">
+    <div class="col-lg-5">
+      <h1 class="font-weight-bold text-center text-label mt-5">
+        Message<br>
+        #<%= @contact.id %><%= @contact.created_at.to_formatted_s(:time) %>
+      </h1>
+    </div>
+    <div class="col-lg-7">
+      <div class="bg-light p-5 border text-muted" style="border-radius: 1.6em 0">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="mb-5">
+              <strong>Sender</strong></br>
+              <%= @contact.name %>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p class="mb-5">
+              <strong>Address</strong></br>
+              <%= @contact.address %>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p class="mb-5">
+              <strong>Phone</strong></br>
+              <%= @contact.phone %>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p class="mb-5">
+              <strong>User</strong></br>
+              <%= @contact.user %>
+            </p>
+          </div>
+          <div class="col-lg-12">
+            <p class="mb-4">
+              <strong>Message</strong></br>
+              <%= @contact.message %>
+            </p>
+          </div>
+        </div>
+        <div class="mt-5">
+          <%= link_to '<i class="fas fa-reply mr-2"></i>Reply Message'.html_safe, edit_contact_path(@contact), class: "mr-3 text-green" %>
+          <%= link_to 'Back to Messages', contacts_path, class: "btn border py-3 px-5 bg-light bg-green-btn text-label" %>
+        </div>
+      </div>
+    </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
-
-<p>
-  <strong>User-type:</strong>
-  <%= @contact.user %>
-</p>
-
-<p>
-  <strong>Message:</strong>
-  <%= @contact.message %>
-</p>
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+  </div>
+</div>
