@@ -154,13 +154,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-lg-6 mr-auto">
-        <div class="statement-1 bg-info tex-white">
-          <h2>Even with covid19 around, education is still essential.</h2>
-            <p class="pl-5">
+        <div class="statement-1 bg-info text-white shadow">
+          <h2 class="font-weight-bold mb-4">Even with covid19 around, education is still essential.</h2>
+          <p class="pl-5">
               This is a solution for parents looking for a quality
               education for their children but also for the abandoned 
               teachers with no work across the country.
-            </p>
+          </p>
         </div>
       </div>
     </div>
@@ -247,16 +247,18 @@
 
 <div class="convinient-school">
   <div class="container">
+    <h1 class="text-green font-weight-bold mb-5 mt-3 text-center" style="font-size: 3em">Benefits.</h1>
     <div class="row mt-5" id="gallery">
       <div class="col-md-6 col-lg-3">
-        <h1 class="text-heading font-weight-bold mb-5">HomeSchool <br>Benefits.</h1>
-        <p class="text-muted pr-4">
+        <div class="bg-red py-5" style="border-radius: 1.6em 0">
+        <p class="text-white py-5 px-5">
           Classes can be held anywhere - can be at your house, backyard or living room.
         </p>
+        </div>
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
-          <%= image_tag("feat-2.jpg", :alt => "") %>
+          <%= image_tag("feat-3.jpg", :alt => "") %>
         </div>
         <p class="text-muted mt-4 pr-4">
           COVID Safety. Each member of the teaching staff should come 
@@ -265,7 +267,7 @@
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="image-container-3">
-          <%= image_tag("feat-3.jpg", :alt => "") %>
+          <%= image_tag("about2.jpg", :alt => "") %>
         </div>
         <p class="text-muted mt-4 pr-4">
           We encourage small classes to promote social distancing 
@@ -286,7 +288,7 @@
 </div>
 
 <div class="container pb-5">
-  <div class="text-center mb-5 p-5 rounded shadow bg-green">
+  <div class="text-center mb-5 p-5 bg-green" style="border-radius: 0 1.6em 0 0">
     <h1 class="mt-4 text-white">Ready to get Started?</h1>
     <%= link_to 'Register at HomeSchool today', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
   </div>

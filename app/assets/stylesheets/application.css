@@ -146,24 +146,26 @@ a {
   padding: 0 2em;
   position: relative;
   margin-top: 3.5em;
-  border-radius: .3em;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, .1);
 }
 
 .how-to-1 {
   background: #458773;
+  border-radius: 1.6em 0 0 0;
 }
 
 .how-to-2 {
   background: #d46f4f;
+  border-radius: 0 0 1.6em 0 ;
 }
 
 .how-to-3 {
   background: #aa8e21;
+  border-radius: 0 1.6em 0 0;
 }
 
 .how-to-4 {
   background: #095578;
+  border-radius: 0 0 0 1.6em;
 }
 
 .how-to h1 {
@@ -300,20 +302,12 @@ a {
 }
 
 .statement-1 {
-  /* background: #095578; */
-  border-radius: .5em;
-  color: rgba(255, 255, 255, 1);
-  padding: 4em 4em;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, .1);
-}
-
-.statement-1 h2 {
-  font-weight: 900;
-  margin: 0 0 1em 0;
+  padding: 4em;
+  border-radius: 1.6em 0
 }
 
 .statement-1 p {
-  border-left: 3px solid white;
+  border-left: 3px solid #095578;
 }
 
 /* recommend teachers */
@@ -752,10 +746,6 @@ main {
 
   #gallery {
     display: none;
-  }
-
-  footer {
-      font-size: .8em;
   }
 
   #dash .border-right {
