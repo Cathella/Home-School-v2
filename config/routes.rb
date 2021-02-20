@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :videos
   resources :contacts
   resources :teacher_password_resets
   resources :password_resets
