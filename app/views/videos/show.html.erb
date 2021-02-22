@@ -23,7 +23,7 @@
       </video>
     </div>
 
-    <div class="col-lg-12 pl-4 text-muted mt-4">
+    <div class="col-lg-12 text-muted mt-4">
       <h4 class="mb-4 text-label">
         <%= @video.title %>
       </h4>
@@ -36,12 +36,7 @@
         <%= @video.description %>
       </p>
 
-      <!--<div style="width: 400px">
-        <strong>Thumbnail:</strong><br>
-        <%= image_tag (@video.thumbnail), style: "width: 100%; height: auto" %>
-      </div> -->
-
-      <%= link_to 'Back to videos', videos_path %>
+      <%= link_to '<i class="fas fa-long-arrow-alt-left mr-2"></i>Back to videos'.html_safe, videos_path, class: "btn bg-green-btn bg-light px-5 py-3 border" %>
     </div>
   </div>
 </div>

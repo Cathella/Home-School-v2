@@ -5,7 +5,7 @@ body {
 
 a {
   color: #095578;
-  }
+}
 
 /* Nav */
 .logo {
@@ -105,8 +105,14 @@ a {
   padding: 9em 0;
 }
 
+.ug-intro {
+  background-image: url(/assets/ugabg.jpg);
+  background-size: cover;
+  background-position: 70% 12%;
+  padding: 9em 0;
+}
+
 .child-intro-img {
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bg.jpg'); */
   background-image: url('/assets/jeremy-alford-ngOT6TG3qgs-unsplash.jpg');
   background-size: cover;
   background-position: 70% 20%;
