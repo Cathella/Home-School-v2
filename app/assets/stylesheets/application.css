@@ -149,6 +149,10 @@ a {
   border-radius: 0;
 }
 
+.avatar-size {
+  font-size: 6em;
+}
+
 /* How to */
 .how {
   padding-bottom: 3em;
@@ -729,7 +733,7 @@ main {
 
 @media only screen and (max-width: 767px) {
   header .justify-content-between {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .secondary-intro {
@@ -738,17 +742,17 @@ main {
 
   .intro .big-btn,
   .how-btn {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   .how-to p {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
 
   .image-container {
-      margin-left: 0 !important;
-      margin-top: 2em;
-      height: 320px;
+    margin-left: 0 !important;
+    margin-top: 2em;
+    height: 320px;
   }
 
   .image-container-3 {
@@ -760,9 +764,9 @@ main {
   }
 
   .image-container-2 {
-      width: 100%;
-      height: 400px;
-      margin: 3em 0 0 0;
+    width: 100%;
+    height: 400px;
+    margin: 3em 0 0 0;
   }
 
   #dash .border-right {
@@ -778,7 +782,7 @@ main {
   }
 
   .profile-pic {
-    font-size: 5em;
+    /* font-size: 5em; */
   }
 
   .my-form {
