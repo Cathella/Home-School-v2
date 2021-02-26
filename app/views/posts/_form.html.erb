@@ -72,7 +72,7 @@
         </p>
       </div>
       <div class="col-lg-8">
-        <%= form.select :meeting,  ['Online Sessions', 'My place', 'Teachers place'], {}, { class: "custom-select mt-3" } %>
+        <%= form.select :meeting,  ['Online Sessions', 'Student/Parents place', 'Teachers place'], {}, { class: "custom-select mt-3" } %>
       </div>
     </div>
   </div>
@@ -88,7 +88,14 @@
         </p>
       </div>
       <div class="col-lg-8">
-        <%= form.text_field :budget, class: "form-control mt-3" %>
+        <div class="row">
+          <div class="col-lg-7">
+            <%= form.text_field :budget, class: "form-control mt-3" %>
+          </div>
+          <div class="col-lg-5">
+            <%= form.select :per_payment,  ['Fixed amount', 'Per day', 'Per Week', 'Per month'], {}, { class: "custom-select mt-3" } %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :gender
       t.integer :tutors_number
       t.string :commitment
+      t.string :per_payment
 
       t.timestamps
     end

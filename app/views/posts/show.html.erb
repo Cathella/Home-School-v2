@@ -1,44 +1,81 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/main-nav" %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
+<div class="container py-5 dash-view mt-4">
+  <div class="d-flex justify-content-between border-bottom mb-4">  
+    <h3 class="font-weight-bold mb-4 text-green">A <%= @post.subject %> teacher is needed in Namugongo</h3>
+    <div class="d-flex">
+    <p style="text-decoration: underline"><%= link_to "Messages" %></p>
+    <%= link_to 'My Posts', posts_path, class: "text-muted ml-3" %>
+    </div>
+  </div>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @post.subject %>
-</p>
+  <div class="border-bottom text-muted">
+    <div class="row">
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Subjects:</small><br>
+          <%= @post.subject %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p>
+          <small class="text-label">Teachers needed:</small><br>
+          <%= @post.tutors_number %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Meeting place:</small><br>
+          <%= @post.meeting %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p>
+          <small class="text-label">Commitment:</small><br>
+          <%= @post.commitment %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Level:</small><br>
+          <%= @post.grade %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Gender preferred:</small><br>
+          <%= @post.gender %>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p class="">
+          <small class="text-label">Location:</small><br>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <small class="text-label">Budget:</small><br>
+          Ugx. <%= @post.budget %> / <%= @post.per_payment %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Posted on:</small><br>
+          <%= @post.created_at.to_formatted_s(:short) %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Posted by:</small><br>
+        </p>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <strong>Grade:</strong>
-  <%= @post.grade %>
-</p>
+  <div class="mt-4 bg-light rounded p-4 text-muted">
+    <%= @post.description %>
+  </div>
 
-<p>
-  <strong>Meeting:</strong>
-  <%= @post.meeting %>
-</p>
-
-<p>
-  <strong>Budget:</strong>
-  <%= @post.budget %>
-</p>
-
-<p>
-  <strong>Gender:</strong>
-  <%= @post.gender %>
-</p>
-
-<p>
-  <strong>Tutors number:</strong>
-  <%= @post.tutors_number %>
-</p>
-
-<p>
-  <strong>Commitment:</strong>
-  <%= @post.commitment %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Edit Requirement', edit_post_path(@post), class: "btn bg-green-btn text-white py-3 px-5 shadow mt-4" %>
+  <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger btn bg-green-btn border border-danger bg-white ml-3 py-3 px-5 mt-4' %>
+</div>

@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 2021_02_26_055636) do
     t.string "gender"
     t.integer "tutors_number"
     t.string "commitment"
+    t.string "per_payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

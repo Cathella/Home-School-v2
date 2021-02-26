@@ -1,41 +1,33 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/main-nav" %>
 
-<h1>Posts</h1>
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Subject</th>
-      <th>Grade</th>
-      <th>Meeting</th>
-      <th>Budget</th>
-      <th>Gender</th>
-      <th>Tutors number</th>
-      <th>Commitment</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="d-flex justify-content-between align-content-center border-bottom mb-4">
+    <h1 class="font-weight-bold text-label mb-5 mt-4">Tutor Requests.</h1>
+    <div>
+      <%= link_to 'Post a Request', new_post_path, class: "btn bg-green-btn text-white py-3 px-5 shadow"%>
+    </div>
+  </div>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.description %></td>
-        <td><%= post.subject %></td>
-        <td><%= post.grade %></td>
-        <td><%= post.meeting %></td>
-        <td><%= post.budget %></td>
-        <td><%= post.gender %></td>
-        <td><%= post.tutors_number %></td>
-        <td><%= post.commitment %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  <% @posts.each do |post| %>
+    <div class="p-3 border-bottom d-flex justify-content-between align-content-center text-muted">
+      <div>
+        <p class="mt-2"><%= post.description %></p>
+        <div class="d-flex">
+          <p class="mr-4">
+            <small class="text-label">Posted on:</small>
+            <small><%= post.created_at.to_formatted_s(:short) %></small>
+          </p>
+          <p class="">
+            <small class="text-label">Posted by:</small>
+            <small></small>
+          </p>
+        </div>
+      </div>
+      <div>
+        <%= link_to 'Details', post, class: "btn bg-green-btn px-4 text-white py-2 shadow" %>
+      </div>
+    </div>
+  <% end %>
+</div>
