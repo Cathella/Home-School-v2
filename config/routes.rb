@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   resources :videos
   get "lessons", to: "home#lessons", as: "lessons"
   
