@@ -1,5 +1,15 @@
-<h1>New Post</h1>
+<%= render "layouts/main-nav" %>
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Back', posts_path %>
+<div class="register-teachers">
+  <div class="container">
+    <div class="row" id="dash">
+      <%= render 'layouts/notice' %>
+      
+      <div class="col-lg-8 mx-auto">
+        <h1 class="text-heading font-weight-bold text-center mb-5">Request a Tutor</h1>
+        <%= render 'form', post: @post %>
+        <!--<%= link_to 'Back', posts_path %> -->
+      </div>
+    </div>
+  </div>
+</div>

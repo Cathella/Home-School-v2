@@ -11,47 +11,141 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :description, "Requirement details:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Write about your required tutor experience, 
+            your expectations from the teacher, budget, time, subjects 
+            and task details.
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.text_area :description, class: 'form-control', style: 'height: 240px;'%>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :subject %>
-    <%= form.text_field :subject %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :subject, "Subject:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Add a subjects required of the teacher.
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.select :subject,  ['Maths', 'Science', 'Social studies', 'English', 'Reading'], {}, { class: "custom-select mt-3" } %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :grade %>
-    <%= form.text_field :grade %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :grade, "Class:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Select grade the teacher is expected to teach.
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.select :grade,  ['Pre-school', 'P.1', 'P.2', 'P.3', 'P.4', 'P.5', 'P.6', 'P.7'], {}, { class: "custom-select mt-3" } %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :meeting %>
-    <%= form.text_field :meeting %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :meeting, "Meeting options:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Where do you want to meet for the tutor sessions?
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.select :meeting,  ['Online Sessions', 'My place', 'Teachers place'], {}, { class: "custom-select mt-3" } %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :budget %>
-    <%= form.text_field :budget %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :budget, "Budget:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            How much you are willing to pay.
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.text_field :budget, class: "form-control mt-3" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :gender, "Gender Preference:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Select your preferred teacher gender.
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.select :gender,  ['Female', 'Male', 'Both Female and Male'], {}, { class: "custom-select mt-3" } %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :tutors_number %>
-    <%= form.text_field :tutors_number %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :tutors_number, "Teachers wanted:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            How many teachers do you want?
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.text_field :tutors_number, class: "form-control mt-3" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :commitment %>
-    <%= form.text_field :commitment %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-lg-4">
+        <%= form.label :commitment, "Teacher's commitment:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Choose teacher's commitment'
+          </small>
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <%= form.select :commitment,  ['Part-time', 'Full-time'], {}, { class: "custom-select mt-3" } %>
+      </div>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <div class="row">
+      <div class="col-lg-8 ml-auto">
+        <%= form.submit "Post Requirement", class: "shadow" %>
+      </div>
+    </div>
   </div>
 <% end %>
