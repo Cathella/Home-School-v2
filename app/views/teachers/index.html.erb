@@ -8,7 +8,7 @@
 
   <div class="row">
     <% @teachers.each do |teacher| %>
-      <div class="col-sm-9 col-md-6 col-lg-4">
+      <div class="col-sm-9 col-md-6 col-lg-3">
         <div class="border shadow rounded pb-4 mb-4">
           <div class="bg-light mb-3 pt-4" style="height: 220px;">
             <% if teacher.image.attached? %>
@@ -21,13 +21,13 @@
             <%= teacher.name %>
           </div>
           <div class="d-flex flex-wrap justify-content-center bg-light border-top mx-4 my-2">
-            <div class="my-2 mr-5">
+            <div class="my-2 mx-3">
             <% if teacher.grade? %>
               <span class="">🎓</span>
               <small><%= teacher.grade %></small>
             <% end %>
             </div>
-            <div class="my-2">
+            <div class="my-2 mx-3">
             <% if teacher.subject? %>
               <span>📖</span>
               <small><%= teacher.subject %></small>

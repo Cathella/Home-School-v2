@@ -32,9 +32,6 @@
               </li>
           <% elsif current_child %>
             <li>
-              <%= link_to "Profile", child_path(current_child.id), class: "nav-link login-link" %>
-            </li>
-            <li>
               <%= link_to "My Group", my_group_path, class: "nav-link login-link" %>
             </li>
             <li>
@@ -49,6 +46,8 @@
               </a>
 
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                
+                <%= link_to "My Profile", child_path(current_child.id), class: "dropdown-item", style: "font-size: 1em;"%>
                 <%= link_to "Logout", child_session_path("current"), method: "delete", class: "dropdown-item" %>
               </div>
             </li>
