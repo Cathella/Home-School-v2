@@ -10,6 +10,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.integer :tutors_number
       t.string :commitment
       t.string :per_payment
+      t.references :child, foreign_key: true
 
       t.timestamps
     end

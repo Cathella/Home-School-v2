@@ -14,6 +14,7 @@ class Child < ApplicationRecord
   
   belongs_to :group, optional: true
   has_one :address, :dependent => :destroy
+  has_many :posts, :dependent => :destroy
 
   def email_activate
     self.email_confirmed = true

@@ -110,8 +110,10 @@ ActiveRecord::Schema.define(version: 2021_02_26_055636) do
     t.integer "tutors_number"
     t.string "commitment"
     t.string "per_payment"
+    t.integer "child_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["child_id"], name: "index_posts_on_child_id"
   end
 
   create_table "teachers", force: :cascade do |t|

@@ -2,13 +2,17 @@
 
 <div class="register-teachers">
   <div class="container">
+    <%= render 'layouts/notice' %>
+  
+    <div class="d-flex bg-light py-2 px-5 mb-5 rounded justify-content-end">
+      <%= link_to 'My Posts', posts_path, class: "text-muted mr-4" %>
+      <%= link_to "Messages" %>
+    </div>
+
     <div class="row" id="dash">
-      <%= render 'layouts/notice' %>
-      
       <div class="col-lg-8 mx-auto">
         <h1 class="text-heading font-weight-bold text-center mb-5">Request a Tutor</h1>
         <%= render 'form', post: @post %>
-        <!--<%= link_to 'Back', posts_path %> -->
       </div>
     </div>
   </div>
