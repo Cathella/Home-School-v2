@@ -1,0 +1,91 @@
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5 dash-view mt-4 mb-5">
+  <%= render 'layouts/notice' %>
+
+  <% if current_child %>
+  <div class="d-flex bg-light py-2 px-5 mb-5 rounded justify-content-end">
+    <%= link_to 'My Posts', posts_path, class: "text-muted mr-4" %>
+    <%= link_to "Messages" %>
+  </div>
+  <% end %>
+
+  <div class="border-bottom mb-4">  
+    <h3 class="font-weight-bold mb-4 text-green">A <%= @post.subject %> teacher is needed in <%= @post.child.address.landmark %></h3>
+    <% if current_child %>
+    <div class="mb-3">
+      <%= link_to 'Edit post', edit_post_path(@post), class: "btn bg-green-btn text-white py-2 px-4 shadow" %>
+      <%= link_to '<i class="fas fa-trash mr-2"></i>Delete post'.html_safe, @post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger btn ml-3', style: "font-size: 1em" %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="border-bottom text-muted">
+    <div class="row">
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Subjects:</small><br>
+          <%= @post.subject %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p>
+          <small class="text-label">Teachers needed:</small><br>
+          <%= @post.tutors_number %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Meeting place:</small><br>
+          <small><%= @post.meeting %></small>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p>
+          <small class="text-label">Commitment:</small><br>
+          <small><%= @post.commitment %></small>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Level:</small><br>
+          <small><%= @post.grade %></small>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Gender preferred:</small><br>
+          <small><%= @post.gender %></small>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p class="">
+          <small class="text-label">Location:</small><br>
+          <small><%= @post.child.address.landmark %></small>
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <p>
+          <small class="text-label">Budget:</small><br>
+          Ugx. <%= @post.budget %> / <%= @post.per_payment %>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Posted on:</small><br>
+          <small><%= @post.created_at.to_formatted_s(:short) %></small>
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <p class="">
+          <small class="text-label">Posted by:</small><br>
+          <small><%= @post.child.name %></small>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-4 bg-light rounded p-4 text-muted">
+    <%= @post.description %>
+  </div>
+</div>
