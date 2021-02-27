@@ -22,61 +22,61 @@
 
   <div class="border-bottom text-muted">
     <div class="row">
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p class="">
           <small class="text-label">Subjects:</small><br>
-          <%= @post.subject %>
+          <small><%= @post.subject %></small>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p>
           <small class="text-label">Teachers needed:</small><br>
           <%= @post.tutors_number %>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p class="">
           <small class="text-label">Meeting place:</small><br>
           <small><%= @post.meeting %></small>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p>
           <small class="text-label">Commitment:</small><br>
           <small><%= @post.commitment %></small>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p class="">
           <small class="text-label">Level:</small><br>
           <small><%= @post.grade %></small>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p class="">
           <small class="text-label">Gender preferred:</small><br>
           <small><%= @post.gender %></small>
         </p>
       </div>
-      <div class="col-lg-4">
+      <div class="col-sm-6 col-md-6 col-lg-4">
         <p class="">
           <small class="text-label">Location:</small><br>
           <small><%= @post.child.address.landmark %></small>
         </p>
       </div>
-      <div class="col-lg-4">
+      <div class="col-sm-6 col-md-6 col-lg-4">
         <p>
           <small class="text-label">Budget:</small><br>
           Ugx. <%= @post.budget %> / <%= @post.per_payment %>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p class="">
           <small class="text-label">Posted on:</small><br>
           <small><%= @post.created_at.to_formatted_s(:short) %></small>
         </p>
       </div>
-      <div class="col-lg-2">
+      <div class="col-sm-4 col-md-3 col-lg-2">
         <p class="">
           <small class="text-label">Posted by:</small><br>
           <small><%= @post.child.name %></small>
