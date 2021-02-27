@@ -1,0 +1,22 @@
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5">
+  <div class="row mt-5">
+    <% @videos.each do |video| %>
+      <div class="col-lg-4">
+        <div class="bg-light rounded shadow">
+          <%= image_tag (video.thumbnail), style: "width: 100%; height: auto" %>
+        </div>
+        <div class="my-3">
+        <small><%= link_to video.title, video, class: "text-muted" %></small>
+        </div>
+        <div class="d-flex justify-content-center">
+          <!--<%= link_to 'View Video', video, class: "btn bg-green-btn text-white px-3 shadow", style: "font-size: 0.9em" %>
+          <%= link_to 'Edit', edit_video_path(video), class: "btn btn-warning mr-3" %>
+          <%= link_to 'Delete', video, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+          -->
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div> 

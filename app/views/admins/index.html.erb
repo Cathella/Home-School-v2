@@ -20,8 +20,8 @@
       </form> -->
       <p class="font-weight-bold text-label">Overview</p>
       <div class="row mb-5">
-        <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 d-flex" style="border: 3px solid #f0f8ff; border-radius: 6px;">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="bg-white px-3 pt-3 d-flex mt-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
             <p style="font-size: 2.3em" class="pt-3 text-muted">
               <%= @teacher_count %>
             </p>
@@ -30,8 +30,8 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 d-flex" style="border: 3px solid #f0f8ff; border-radius: 6px;">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="bg-white px-3 pt-3 d-flex mt-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
             <p style="font-size: 2.3em" class="pt-3 text-muted">
               <%= @child_count %>
             </p>
@@ -40,8 +40,8 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 d-flex" style="border: 3px solid #f0f8ff; border-radius: 6px;">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="bg-white px-3 pt-3 d-flex mt-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
             <p style="font-size: 2.3em" class="pt-3 text-muted">
               <%= @group_count %>
             </p>
@@ -50,8 +50,8 @@
             </p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="bg-white px-3 pt-3 d-flex" style="border: 3px solid #f0f8ff; border-radius: 6px;">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="bg-white px-3 pt-3 d-flex mt-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
             <p style="font-size: 2.3em" class="pt-3 text-muted">
               <%= @ugrouped_child_count %>
             </p>
@@ -82,54 +82,62 @@
         </div> -->
       </div>
       <div class="row">
-        <div class="col-md-6">
-          <div class="p-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
+        <div class="col-md-12 col-lg-6">
+          <div class="p-3 mb-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
             <p class="font-weight-bold text-label pt-2">New Teachers</p>
-            <table class="w-100">
-              <thead class="" style="background: #f0f8ff;">
-                <th class="text-label font-weight-normal py-2 pl-4">Name</th>
-                <th class="text-label font-weight-normal">Class</th>
-                <th class="text-label font-weight-normal pr-4">Date</th>
-              </thead>
-              <tbody>
-                <% @teachers.each do |teacher| %>
-                  <tr>
-                    <td class="py-3"><%= link_to teacher.name, teacher, class: 'text-info pl-4' %></td>
-                    <td class="text-muted">
-                      <%= teacher.grade %>
-                    </td>
-                    <td class="text-muted">
-                      <%= teacher.created_at.strftime("%F") %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="" style="background: #f0f8ff;">
+                  <th class="text-label font-weight-normal">Name</th>
+                  <th class="text-label font-weight-normal">Class</th>
+                  <th class="text-label font-weight-normal">Date</th>
+                </thead>
+                <tbody>
+                  <% @teachers.each do |teacher| %>
+                    <tr>
+                      <td class="">
+                        <small><%= link_to teacher.name, teacher, class: 'text-info' %></small>
+                      </td>
+                      <td class="text-muted">
+                        <small><%= teacher.grade %></small>
+                      </td>
+                      <td class="text-muted">
+                        <small><%= teacher.created_at.to_formatted_s(:short) %></small>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="p-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
+        <div class="col-md-12 col-lg-6">
+          <div class="p-3 mb-3" style="border: 3px solid #f0f8ff; border-radius: 6px;">
             <p class="font-weight-bold text-label pt-2">New Children</p>
-            <table class="w-100">
-              <thead class="" style="background: #f0f8ff;">
-                <th class="text-label font-weight-normal py-2 pl-4">Name</th>
-                <th class="text-label font-weight-normal">Class</th>
-                <th class="text-label font-weight-normal pr-4">Date</th>
-              </thead>
-              <tbody>
-                <% @children.each do |child| %>
-                  <tr>
-                    <td class="py-3"><%= link_to child.name, child, class: 'text-info pl-4' %></td>
-                    <td class="text-muted">
-                      <%= child.grade %>
-                    </td>
-                    <td class="text-muted">
-                      <%= child.created_at.strftime("%F") %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="" style="background: #f0f8ff;">
+                  <th class="text-label font-weight-normal">Name</th>
+                  <th class="text-label font-weight-normal">Class</th>
+                  <th class="text-label font-weight-normal">Date</th>
+                </thead>
+                <tbody>
+                  <% @children.each do |child| %>
+                    <tr>
+                      <td class="">
+                        <small><%= link_to child.name, child, class: 'text-info' %></small>
+                      </td>
+                      <td class="text-muted">
+                        <small><%= child.grade %></small>
+                      </td>
+                      <td class="text-muted">
+                        <small><%= child.created_at.to_formatted_s(:short) %></small>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

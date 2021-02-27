@@ -5,7 +5,7 @@ body {
 
 a {
   color: #095578;
-  }
+}
 
 /* Nav */
 .logo {
@@ -105,8 +105,14 @@ a {
   padding: 9em 0;
 }
 
+.ug-intro {
+  background-image: url(/assets/ugabg.jpg);
+  background-size: cover;
+  background-position: 70% 12%;
+  padding: 9em 0;
+}
+
 .child-intro-img {
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bg.jpg'); */
   background-image: url('/assets/jeremy-alford-ngOT6TG3qgs-unsplash.jpg');
   background-size: cover;
   background-position: 70% 20%;
@@ -141,6 +147,10 @@ a {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, .5);
   border-radius: 0;
+}
+
+.avatar-size {
+  font-size: 6em;
 }
 
 /* How to */
@@ -723,7 +733,7 @@ main {
 
 @media only screen and (max-width: 767px) {
   header .justify-content-between {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .secondary-intro {
@@ -732,17 +742,17 @@ main {
 
   .intro .big-btn,
   .how-btn {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   .how-to p {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
 
   .image-container {
-      margin-left: 0 !important;
-      margin-top: 2em;
-      height: 320px;
+    margin-left: 0 !important;
+    margin-top: 2em;
+    height: 320px;
   }
 
   .image-container-3 {
@@ -754,9 +764,9 @@ main {
   }
 
   .image-container-2 {
-      width: 100%;
-      height: 400px;
-      margin: 3em 0 0 0;
+    width: 100%;
+    height: 400px;
+    margin: 3em 0 0 0;
   }
 
   #dash .border-right {
@@ -772,7 +782,7 @@ main {
   }
 
   .profile-pic {
-    font-size: 5em;
+    /* font-size: 5em; */
   }
 
   .my-form {

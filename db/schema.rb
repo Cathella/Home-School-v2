@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_063015) do
+ActiveRecord::Schema.define(version: 2021_02_26_055636) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_02_20_063015) do
   create_table "contacts", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.string "phone"
+    t.string "email"
     t.string "user"
     t.text "message"
     t.datetime "created_at", null: false
@@ -100,6 +100,22 @@ ActiveRecord::Schema.define(version: 2021_02_20_063015) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.text "description"
+    t.string "subject"
+    t.string "grade"
+    t.string "meeting"
+    t.integer "budget"
+    t.string "gender"
+    t.integer "tutors_number"
+    t.string "commitment"
+    t.string "per_payment"
+    t.integer "child_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["child_id"], name: "index_posts_on_child_id"
+  end
+
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "phone"
@@ -116,6 +132,13 @@ ActiveRecord::Schema.define(version: 2021_02_20_063015) do
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
     t.index ["group_id"], name: "index_teachers_on_group_id"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,0 +1,39 @@
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5 dash-view">
+  <%= render 'layouts/notice' %>
+
+  <div class="d-flex justify-content-between align-content-center border-bottom mb-4 flex-wrap pb-5">
+    <h1 class="font-weight-bold text-label mt-4">Tutor Requests.</h1>
+    <div>
+      <%= link_to 'Post a Request', new_post_path, class: "btn bg-green-btn text-white py-3 px-5 shadow"%>
+    </div>
+  </div>
+
+  <% @posts.each do |post| %>
+    <div class="p-3 border-bottom text-muted">
+      <div class="row">
+        <div class="col-lg-10">
+          <div>
+            <p class="mt-2"><%= post.description %></p>
+            <div class="d-flex flex-wrap">
+              <p class="mr-4">
+                <small class="text-label">Posted on:</small>
+                <small><%= post.created_at.to_formatted_s(:short) %></small>
+              </p>
+              <p class="">
+                <small class="text-label">Posted by:</small>
+                <small><%= post.child.name %></small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="mb-4">
+            <%= link_to 'Details', post, class: "btn bg-green-btn px-4 text-green border border-info py-2 bg-white" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

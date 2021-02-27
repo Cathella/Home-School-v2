@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :posts
+  
+  resources :videos
+  get "lessons", to: "home#lessons", as: "lessons"
+  
   resources :contacts
+
   resources :teacher_password_resets
   resources :password_resets
 
