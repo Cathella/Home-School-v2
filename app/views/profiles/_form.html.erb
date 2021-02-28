@@ -1,7 +1,7 @@
 <%= form_with(model: profile, local: true) do |form| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+      <p><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</p>
 
       <ul>
       <% profile.errors.full_messages.each do |message| %>
@@ -11,32 +11,74 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :per_charge %>
-    <%= form.text_field :per_charge %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-md-4 col-lg-4">
+        <%= form.label :per_charge, "I charge:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Add minimum fee you charge for your services.
+          </small>
+        </p>
+      </div>
+      <div class="col-md-8 col-lg-8">
+        <div class="row">
+          <div class="col-sm-7 col-md-7 col-lg-7">
+            <%= form.text_field :fee, class: 'form-control mt-3' %>
+          </div>
+          <div class="col-sm-5 col-md-5 col-lg-5">
+            <%= form.select :per_charge,  ['daily', 'weekly', 'monthly'], {}, { class: "custom-select mt-3" } %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :fee %>
-    <%= form.text_field :fee %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-md-4 col-lg-4">
+        <%= form.label :experience, "Years of teaching experience:" %>
+        
+      </div>
+      <div class="col-md-8 col-lg-8">
+        <%= form.text_field :experience, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :experience %>
-    <%= form.text_field :experience %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-md-4 col-lg-4">
+        <%= form.label :commitment, "Commitment you prefer:" %>
+      </div>
+      <div class="col-md-8 col-lg-8">
+        <%= form.select :commitment,  ['Part-time', 'Full-time'], {}, { class: "custom-select" } %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :commitment %>
-    <%= form.text_field :commitment %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="field mb-4">
+    <div class="row">
+      <div class="col-md-4 col-lg-4">
+        <%= form.label :description, "Profile description:" %>
+        <p class="text-muted" style="line-height: 1;">
+          <small>
+            Share your teaching style, metodology, results 
+            and what makes you a great teacher.
+          </small>
+        </p>
+      </div>
+      <div class="col-md-8 col-lg-8">
+        <%= form.text_area :description, class: 'form-control mt-3', style: 'height: 240px;'%>
+      </div>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <div class="row">
+      <div class="col-md-8 col-lg-8 ml-auto">
+        <%= form.submit "Join private tutoring", class: "shadow" %>
+      </div>
+    </div>
   </div>
 <% end %>

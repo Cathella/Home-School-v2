@@ -1,6 +1,17 @@
-<h1>Editing Profile</h1>
+<%= render "layouts/main-nav" %>
 
-<%= render 'form', profile: @profile %>
+<div class="register-teachers">
+  <div class="container">
+    <%= render 'layouts/notice' %>
 
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+    <div class="row" id="dash">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="text-heading font-weight-bold text-center mb-5">Edit Profile</h1>
+        <%= render 'form', profile: @profile %>
+
+        <%= link_to 'Show', @profile %> |
+        <%= link_to 'Back', profiles_path %>
+      </div>
+    </div>
+  </div>
+</div>
