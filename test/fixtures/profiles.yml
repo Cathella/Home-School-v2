@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  per_charge: MyString
+  fee: MyString
+  experience: MyString
+  commitment: MyString
+  description: MyString
+
+two:
+  per_charge: MyString
+  fee: MyString
+  experience: MyString
+  commitment: MyString
+  description: MyString
