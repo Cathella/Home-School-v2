@@ -8,8 +8,11 @@
       <div class="col-lg-8 mx-auto">
         <h1 class="text-heading font-weight-bold text-center mb-5">Create Tutor Profile</h1>
         <%= render 'form', profile: @profile %>
-
-        <%= link_to 'Back', profiles_path %>
+        <div class="row">
+          <div class="col-lg-8 col-md-8 ml-auto">
+            <%= link_to 'See other profiles<i class="fas fa-arrow-right ml-2"></i>'.html_safe, profiles_path, class: "btn py-3 mt-3 text-label", style: "font-size: 1em" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

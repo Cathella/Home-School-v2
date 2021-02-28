@@ -1,35 +1,78 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/main-nav" %>
 
-<h1>Profiles</h1>
+<div class="container py-5 dash-view mb-5">
+  <%= render 'layouts/notice' %>
+  
+  <div class="border-bottom mb-4 pb-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="font-weight-bold text-label mt-4">Tutor Profiles.</h1>
+      </div>
+      <div class="col-lg-4">
+        <%= link_to 'Create tutor profile', new_profile_path, class: "btn bg-green-btn text-white py-3 px-5 shadow mt-3"%>
+      </div>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Per charge</th>
-      <th>Fee</th>
-      <th>Experience</th>
-      <th>Commitment</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @profiles.each do |profile| %>
+    <div class="py-3 mt-4 text-muted border-bottom">
+      <div class="row">
+        <div class="col-lg-10">
+          <h4 class="mb-3 mt-3"><%= link_to profile.teacher.name, profile, class: "text-green" %></h4>
+          <p><%= profile.description %></p>
+          <div class="">
+            <div class="row">
+              <div class="col-sm-4 col-md-3 col-lg-4">  
+                <p class="">
+                  <small class="text-label">Location:</small><br>
+                  <small><%= profile.teacher.direction.landmark %></small>
+                </p>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2"> 
+                <p class="">
+                  <small class="text-label">Fee:</small><br>
+                  <small><%= profile.fee %> <%= profile.per_charge %></small>
+                </p>
+              </div> 
+              <div class="col-sm-4 col-md-3 col-lg-2">  
+                <p class="">
+                  <small class="text-label">Experience:</small><br>
+                  <small><%= profile.experience %> years</small>
+                </p>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2">  
+                <p class="">
+                  <small class="text-label">Commitment:</small><br>
+                  <small><%= profile.commitment %></small>
+                </p>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2">  
+                <p class="">
+                  <small class="text-label">Classes:</small><br>
+                  <small><%= profile.teacher.grade %></small>
+                </p>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2">  
+                <p class="">
+                  <small class="text-label">Subjects:</small><br>
+                  <small><%= profile.teacher.subject %></small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="mb-4">
+            <%= link_to '<i class="far fa-envelope mr-2 text-label"></i>Send Message'.html_safe, {}, class: "btn text-green border" %>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.per_charge %></td>
-        <td><%= profile.fee %></td>
-        <td><%= profile.experience %></td>
-        <td><%= profile.commitment %></td>
-        <td><%= profile.description %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <!--<td><%= link_to 'Show', profile %></td>
+          <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+          <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        
+  <% end %>
 
-<br>
-
-<%= link_to 'New Profile', new_profile_path %>
+</div>

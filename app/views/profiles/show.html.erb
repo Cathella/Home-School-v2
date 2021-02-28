@@ -1,29 +1,44 @@
-<p id="notice"><%= notice %></p>
+<%= render "layouts/main-nav" %>
 
-<p>
-  <strong>Per charge:</strong>
-  <%= @profile.per_charge %>
-</p>
+<div class="container py-5 dash-view mt-4 mb-5">
+  <%= render 'layouts/notice' %>
 
-<p>
-  <strong>Fee:</strong>
-  <%= @profile.fee %>
-</p>
+  <h3 class="font-weight-bold border-bottom mb-5 py-4 text-green">My Profile</h3>
 
-<p>
-  <strong>Experience:</strong>
-  <%= @profile.experience %>
-</p>
+  <div class="row">
+    <div class="col-lg-4 col-md-4">
+      <p>
+        Fees:<br>
+        <div class="bg-light p-3 border rounded">
+          <%= @profile.fee %>
+          <%= @profile.per_charge %>
+        </div>
+      </p>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <p>
+        Teaching Experience:<br>
+        <div class="bg-light p-3 border rounded">
+          <%= @profile.experience %> years
+        </div>
+      </p>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <p>
+        Commitment:<br>
+        <div class="bg-light p-3 border rounded">
+          <%= @profile.commitment %>
+        </div>
+      </p>
+    </div>
+  </div>
+  <p class="mt-3">
+    Profile Description:</br>
+    <div class="bg-light p-3 border rounded">
+      <%= @profile.description %>
+    </div>
+  </p>
 
-<p>
-  <strong>Commitment:</strong>
-  <%= @profile.commitment %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @profile.description %>
-</p>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+  <%= link_to 'Update profile', edit_profile_path(@profile), class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3" %>
+  <%= link_to 'See other profiles<i class="fas fa-arrow-right ml-2"></i>'.html_safe, profiles_path, class: "btn py-3 mt-3 text-label ml-5", style: "font-size: 1em" %>
+</div>
