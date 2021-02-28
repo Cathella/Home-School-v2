@@ -2,10 +2,11 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
   def change
     create_table :profiles do |t|
       t.string :per_charge
-      t.string :fee
-      t.string :experience
+      t.integer :fee
+      t.integer :experience
       t.string :commitment
-      t.string :description
+      t.text :description
+      t.references :teacher, foreign_key: true
 
       t.timestamps
     end

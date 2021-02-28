@@ -14,6 +14,7 @@ class Teacher < ApplicationRecord
 
   belongs_to :group, optional: true
   has_one :direction, :dependent => :destroy
+  has_one :profile, :dependent => :destroy
 
   def email_activate
     self.email_confirmed = true
