@@ -67,11 +67,14 @@
             </li>
           <% else %>
             <li class="nav-item">
+              <%= link_to "Private teaching", privateaching_path, class: "nav-link login-link" %>
+            </li>
+            <!-- <li class="nav-item">
               <%= link_to "Find a tutor", profiles_path, class: "nav-link login-link" %>
             </li>
             <li class="nav-item">
               <%= link_to "Tutor jobs", posts_path, class: "nav-link login-link" %>
-            </li>
+            </li> -->
             <li class="nav-item">
               <%= link_to "Teachers", teachershome_path, class: "nav-link login-link" %>
             </li>

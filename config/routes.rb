@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get "joined", to: "home#joined", as: "joined"
+  get "privateaching", to: "home#privateaching", as: "privateaching"
 
   resources :groups
   get "mygroup", to: "home#mygroup", as: "my_group"
