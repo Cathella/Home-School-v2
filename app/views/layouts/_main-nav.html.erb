@@ -67,6 +67,12 @@
             </li>
           <% else %>
             <li class="nav-item">
+              <%= link_to "Find a tutor", profiles_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Tutor jobs", posts_path, class: "nav-link login-link" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "Teachers", teachershome_path, class: "nav-link login-link" %>
             </li>
             <li class="nav-item">
@@ -75,14 +81,14 @@
             <!-- <li class="nav-item">
               <a href="/lessons" class="nav-link register-link">UgaStudy</a>
             </li> -->
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a href="/joined" class="nav-link login-link">
                 <span class="badge badge-warning">
                   <i class="far fa-star"></i>
                   See who just joined Us
                 </span>
               </a>
-            </li>
+            </li>-->
           <% end %>
         </ul>
       </div>
