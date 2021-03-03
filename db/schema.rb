@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_28_023212) do
+ActiveRecord::Schema.define(version: 2021_03_02_181939) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -81,6 +81,13 @@ ActiveRecord::Schema.define(version: 2021_02_28_023212) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "recipient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "directions", force: :cascade do |t|
     t.string "landmark", null: false
     t.decimal "latitude", precision: 10, scale: 6
@@ -98,6 +105,16 @@ ActiveRecord::Schema.define(version: 2021_02_28_023212) do
     t.string "program"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.integer "conversation_id"
+    t.integer "teacher_id"
+    t.integer "child_id"
+    t.index ["child_id"], name: "index_messages_on_child_id"
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["teacher_id"], name: "index_messages_on_teacher_id"
   end
 
   create_table "posts", force: :cascade do |t|

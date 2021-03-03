@@ -16,6 +16,10 @@ Rails.application.routes.draw do
   get "joined", to: "home#joined", as: "joined"
   get "privateaching", to: "home#privateaching", as: "privateaching"
 
+  resources :conversations do
+    resources :messages
+  end
+
   resources :groups
   get "mygroup", to: "home#mygroup", as: "my_group"
   get "teachergroup", to: "home#teachergroup", as: "teacher_group"
