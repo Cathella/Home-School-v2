@@ -111,8 +111,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.text "body"
     t.integer "conversation_id"
     t.integer "teacher_id"
-    t.integer "child_id"
-    t.index ["child_id"], name: "index_messages_on_child_id"
+    t.boolean "read", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["conversation_id"], name: "index_messages_on_conversation_id"
     t.index ["teacher_id"], name: "index_messages_on_teacher_id"
   end
