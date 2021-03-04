@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_02_181939) do
+ActiveRecord::Schema.define(version: 2021_03_04_081325) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -40,7 +40,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.integer "child_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
     t.index ["child_id"], name: "index_addresses_on_child_id"
+    t.index ["slug"], name: "index_addresses_on_slug", unique: true
   end
 
   create_table "admins", force: :cascade do |t|
@@ -68,7 +70,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.datetime "password_reset_sent_at"
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
+    t.string "slug"
     t.index ["group_id"], name: "index_children_on_group_id"
+    t.index ["slug"], name: "index_children_on_slug", unique: true
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -95,7 +99,20 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.integer "teacher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_directions_on_slug", unique: true
     t.index ["teacher_id"], name: "index_directions_on_teacher_id"
+  end
+
+  create_table "friendly_id_slugs", force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -105,6 +122,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.string "program"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_groups_on_slug", unique: true
   end
 
   create_table "messages", force: :cascade do |t|
@@ -161,7 +180,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.string "auth_token"
     t.boolean "email_confirmed", default: false
     t.string "confirm_token"
+    t.string "slug"
     t.index ["group_id"], name: "index_teachers_on_group_id"
+    t.index ["slug"], name: "index_teachers_on_slug", unique: true
   end
 
   create_table "videos", force: :cascade do |t|
@@ -169,6 +190,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_181939) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
+    t.index ["slug"], name: "index_videos_on_slug", unique: true
   end
 
 end
