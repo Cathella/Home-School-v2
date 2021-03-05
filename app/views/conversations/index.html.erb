@@ -3,32 +3,23 @@
 <div class="container py-5 mb-5">
   <div class="mb-5">
     <h3>Mailbox</h3> 
-    <div class=”ui list”>
-      <div class=”item”>
+    <div class="ui list">
+      <div class="item">
         <% @conversations.each do |conversation| %>
-          <% if conversation.sender_id == current_teacher.id || conversation.recipient_id == current_teacher.id %>
+          <% if conversation.sender_id == current_teacher.id || conversation.recipient_id == current_teacher.id || conversation.sender_id == current_child.id || conversation.recipient_id == current_child.id %>
             <% if conversation.sender_id == current_teacher.id %>
               <% recipient = Teacher.find(conversation.recipient_id) %>
-            <% else %>
+            <% elsif %>
               <% recipient = Teacher.find(conversation.sender_id) %>
+            <% elsif %>
+              <% recipient = Child.find(conversation.recipient_id) %>
+            <% else %>
+              <% recipient = Child.find(conversation.sender_id) %>
             <% end %>
-            <%= link_to recipient.name,   conversation_messages_path(conversation)%>
+            <%= link_to recipient.name, conversation_messages_path(conversation) %>
           <% end %>
         <% end %>
       </div>
-    </div>
-  </div>
-
-  <div class="">
-    <h3>All Teachers</h3>
-    <div class=”ui list”>
-      <% @teachers.each do |teacher| %>
-        <% if teacher.id != current_teacher.id %>
-          <div class=”item”>
-            <%= teacher.name %> <%= link_to "Message me!", conversations_path(sender_id: current_teacher.id, recipient_id: teacher.id), method: "post" %>
-          </div>
-        <% end %>
-      <% end %>
     </div>
   </div>
 </div>

@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
     end
 
     if @messages.last
-      if @messages.last.teacher_id != current_teacher.id
+      if (@messages.last.teacher_id != current_teacher.id) || (@messages.last.child_id != current_child.id)
         @messages.last.read = true
       end
     end
@@ -37,7 +37,7 @@ class MessagesController < ApplicationController
 
   private
     def message_params
-      params.require(:message).permit(:body, :teacher_id)
+      params.require(:message).permit(:body, :teacher_id, :child_id)
     end
 
     def find_conversation

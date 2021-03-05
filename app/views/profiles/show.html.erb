@@ -3,31 +3,73 @@
 <div class="container py-5 dash-view mt-4 mb-5">
   <%= render 'layouts/notice' %>
 
-  <h3 class="font-weight-bold border-bottom mb-5 py-4 text-green">My Profile</h3>
+  <div class="row border-bottom mb-5">
+    <div class="col-lg-9">
+      <h3 class="font-weight-bold py-4 text-green">
+        <%= link_to @profile.teacher.name, {}, class: 'text-green' %>
+      </h3>
+    </div>
+    <div class="col-lg-3">
+      <a href="#" class="btn text-green border mt-4"><i class="far fa-envelope mr-2 text-label"></i>Contact <%= @profile.teacher.name %></a>
+      <%= link_to "Send message", conversation_messages_path(@conversation), class: "text-green" %>
+    </div>
+  </div>
 
   <div class="row">
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-6 col-md-6">
+      <p>
+        Address:<br>
+        <div class="bg-light p-3 border rounded">
+          <small><%= @profile.teacher.direction.landmark %></small>
+        </div>
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <p>
+        Classes:<br>
+        <div class="bg-light p-3 border rounded">
+          <small><%= @profile.teacher.grade %></small>
+        </div>
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <p>
+        Subject:<br>
+        <div class="bg-light p-3 border rounded">
+          <small><%= @profile.teacher.subject %></small>
+        </div>
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-4">
       <p>
         Fees:<br>
         <div class="bg-light p-3 border rounded">
-          <%= @profile.fee %>
-          <%= @profile.per_charge %>
+          UGX. <%= @profile.fee %>
+          <small><%= @profile.per_charge %></small>
         </div>
       </p>
     </div>
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-3 col-md-4">
       <p>
         Teaching Experience:<br>
         <div class="bg-light p-3 border rounded">
-          <%= @profile.experience %> years
+          <small><%= @profile.experience %> years</small>
         </div>
       </p>
     </div>
-    <div class="col-lg-4 col-md-4">
+    <div class="col-lg-3 col-md-4">
       <p>
         Commitment:<br>
         <div class="bg-light p-3 border rounded">
-          <%= @profile.commitment %>
+          <small><%= @profile.commitment %></small>
+        </div>
+      </p>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <p>
+        Phone:<br>
+        <div class="bg-light p-3 border rounded">
+          <small><%= @profile.teacher.phone %></small>
         </div>
       </p>
     </div>
