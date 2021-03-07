@@ -1,0 +1,44 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5 mb-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="mb-5">
+        <small><%= link_to '<i class="fas fa-arrow-left mr-2"></i>Back to Mailbox'.html_safe, conversations_path, class: "text-muted", style: "text-decoration: underline" %></small>
+      </div>
+
+      <% if @over_ten %>
+        <%= link_to "Show Previous", "?m=all" %>
+      <% end %>
+
+      <div class="ui segment">
+        <% @messages.each do |message| %>
+          <% if message.body %>
+            <% teacher = Teacher.find(message.teacher_id) %>
+            <div class="item">
+              <div class="content">
+                <div class="header mt-4">
+                  <small class="text-muted"><%= teacher.name %>:</small><br>
+                  <div class="bg-light p-3 rounded">
+                  <%= message.body %>
+                  </div>
+                  <small class="text-muted">Sent on: <%= message.message_time %></small>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <%= form_for [@conversation, @message], html: {class: "mt-4"} do |f| %>
+        <div class="field">
+          <%= f.text_area :body, class: "form-control", style: "height: 150px" %>
+        </div>
+        <%= f.text_field :teacher_id, value: current_teacher.id, type: "hidden" %>
+        <div class="mt-4">
+          <%= f.submit "Add Reply", class: "btn bg-green-btn text-white py-3 px-5 shadow " %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -10,8 +10,15 @@
   </div>
   <% end %>
 
-  <div class="border-bottom mb-4">  
-    <h3 class="font-weight-bold mb-4 text-green">A <%= @post.subject %> teacher is needed in <%= @post.child.address.landmark %></h3>
+  <div class="border-bottom mb-4">
+    <div class="row">
+      <div class="col-lg-8">  
+        <h3 class="font-weight-bold mb-4 text-green">A <%= @post.subject %> teacher is needed in <%= @post.child.address.landmark %></h3>
+      </div>
+      <div class="col-lg-4">
+        <a href="#" class="btn text-green border"><i class="far fa-envelope mr-2 text-label"></i>Contact <%= @post.child.name %></a>
+      </div>
+    </div>
     <% if current_child %>
     <div class="mb-3">
       <%= link_to 'Edit post', edit_post_path(@post), class: "btn bg-green-btn text-white py-2 px-4 shadow" %>
@@ -67,7 +74,7 @@
       <div class="col-sm-6 col-md-6 col-lg-4">
         <p>
           <small class="text-label">Budget:</small><br>
-          Ugx. <%= @post.budget %> / <%= @post.per_payment %>
+          <small>UGX. <%= @post.budget %> / <%= @post.per_payment %></small>
         </p>
       </div>
       <div class="col-sm-4 col-md-3 col-lg-2">

@@ -1,4 +1,7 @@
 class Address < ApplicationRecord
+  extend FriendlyId
+  friendly_id :landmark, use: :slugged
+
   validates :latitude, :longitude, :landmark, presence: true
 
   belongs_to :child, optional: true

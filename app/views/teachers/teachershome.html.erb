@@ -19,42 +19,43 @@
       </div>
     </div>
   </div>
-  <!-- <div class="container my-5">
+
+  <div class="container my-5">
     <h1 class="text-center text-label my-5 pt-5 font-weight-bold">Meet Our Teachers</h1>
     <div class="row pb-5">
       <% @teachers.each do |teacher| %>
         <div class="col-md-6">
-          <div class="bg-light p-3 rounded mt-4" style="height: 260px;">
+          <div class="bg-light py-4 px-3 rounded mt-4">
             <div class="row">
               <div class="col-md-4">
                 <div class="mt-2">
-                <% if teacher.image.attached? %>
-                  <%= image_tag teacher.image, style: "width: 150px; display: block; margin: 0 auto", class: "rounded shadow" %>
-                <% end %>
+                  <% if teacher.image.attached? %>
+                    <%= image_tag teacher.image, style: "width: 150px; display: block; margin: 0 auto", class: "rounded shadow" %>
+                  <% end %>
                 </div>
               </div>
               <div class="col-md-8">
-                  <h4 class="font-weight-bold text-label pt-2 pb-1"><%= teacher.name %></h4>
-                  <p class="text-muted d-flex align-items-center">
-                    <i class="fas fa-book-reader mr-3 text-info"></i>
-                    <span><%= teacher.grade %></span>
-                  </p>
-                  <% if teacher.direction.nil? %>
-                  <% else %>
-                    <p class="text-muted d-flex align-items-center">
-                      <i class="fas fa-map-marker-alt mr-3 text-info"></i>
-                      <small><%= teacher.direction.landmark %></small>
-                    </p>
-                  <% end %>
-                  <p class="btn border text-info bg-light">View Profile</p>
+                <h5 class="font-weight-bold text-green"><%= teacher.name %></h5>
+                <div class="text-muted">
+                    <span class="mr-3">🎓 <%= teacher.grade %>,</span><span class="">📖 <%= teacher.subject %></span>
+                </div>
+                <div class="mt-2">
+                    <span class="mr-2"><i class="fas fa-map-marker-alt text-green"></i></span>
+                    <small class="text-muted">
+                      <%= teacher.direction.landmark %>
+                    </small>
+                </div>
+                <div class="">
+                  <%= link_to "Send message", {}, class: "btn bg-white text-green border mt-3" %>
+                </div>
               </div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-    <div class="text-center pb-5">
+    <!--<div class="text-center pb-5">
       <%= link_to 'See more<i class="fas fa-arrow-right ml-4 text-info"></i>'.html_safe, teachers_path, class: "btn bg-green-btn text-info border border-info px-5 py-3 bg-light" %>
-    </div>
-  </div> -->
+    </div>-->
+  </div>
 </div>
