@@ -1,4 +1,7 @@
 class Child < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  
   before_create { generate_token(:auth_token) }
   before_create :confirmation_token
 

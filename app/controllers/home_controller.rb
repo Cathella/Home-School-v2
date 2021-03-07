@@ -23,4 +23,7 @@ class HomeController < ApplicationController
 
   def lessons
   end
+
+  def privateaching
+  end
 end

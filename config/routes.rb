@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles
   resources :posts
   
   resources :videos
@@ -13,6 +14,11 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   get "joined", to: "home#joined", as: "joined"
+  get "privateaching", to: "home#privateaching", as: "privateaching"
+
+  resources :conversations do
+    resources :messages
+  end
 
   resources :groups
   get "mygroup", to: "home#mygroup", as: "my_group"
