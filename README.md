@@ -23,6 +23,6 @@
 
 
 ## Live project demo
-- homeschool.ug
+- https://homeschool.ug
 
 - Please star this project if you like it.
