@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[ show edit update destroy ]
-  before_action :teacher_authorize, only: [:new, :edit, :update, :show]
+  before_action :teacher_authorize, only: [:new, :edit, :update]
 
   # GET /profiles or /profiles.json
   def index
