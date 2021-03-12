@@ -8,79 +8,78 @@
       <h3 class="font-weight-bold py-4 text-green">
         <%= link_to @profile.teacher.name, {}, class: 'text-green' %>
       </h3>
+      <% if current_teacher %>
+        <div class="mb-3">
+          <%= link_to 'Edit profile', edit_profile_path(@profile), class: "btn bg-green-btn text-white py-2 px-4 shadow" %>
+          <%= link_to '<i class="fas fa-trash mr-2"></i>Delete profile'.html_safe, @profile, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger btn ml-3', style: "font-size: 1em" %>
+        </div>
+      <% end %>
     </div>
     <div class="col-lg-3">
-      <a href="#" class="btn text-green border mt-4"><i class="far fa-envelope mr-2 text-label"></i>Contact <%= @profile.teacher.name %></a>
-      <%= link_to "Send message", conversation_messages_path(@conversation), class: "text-green" %>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row text-muted border-bottom pb-3 mb-5">
     <div class="col-lg-6 col-md-6">
       <p>
-        Address:<br>
-        <div class="bg-light p-3 border rounded">
-          <small><%= @profile.teacher.direction.landmark %></small>
-        </div>
+        <small class="text-label">Address:</small><br>
+        <small><%= @profile.teacher.direction.landmark %></small>
       </p>
     </div>
     <div class="col-lg-3 col-md-4">
       <p>
-        Classes:<br>
-        <div class="bg-light p-3 border rounded">
-          <small><%= @profile.teacher.grade %></small>
-        </div>
+        <small class="text-label">Classes:</small><br>
+        <small><%= @profile.teacher.grade %></small>
       </p>
     </div>
     <div class="col-lg-3 col-md-4">
       <p>
-        Subject:<br>
-        <div class="bg-light p-3 border rounded">
-          <small><%= @profile.teacher.subject %></small>
-        </div>
+        <small class="text-label">Subject:</small><br>
+        <small><%= @profile.teacher.subject %></small>
       </p>
     </div>
     <div class="col-lg-3 col-md-4">
       <p>
-        Fees:<br>
-        <div class="bg-light p-3 border rounded">
+        <small class="text-label">Fees:</small><br>
+        <small>
           UGX. <%= @profile.fee %>
-          <small><%= @profile.per_charge %></small>
-        </div>
+          <%= @profile.per_charge %>
+        </small>
       </p>
     </div>
     <div class="col-lg-3 col-md-4">
       <p>
-        Teaching Experience:<br>
-        <div class="bg-light p-3 border rounded">
-          <small><%= @profile.experience %> years</small>
-        </div>
+        <small class="text-label">Teaching Experience:</small><br>
+        <small><%= @profile.experience %> years</small>
       </p>
     </div>
     <div class="col-lg-3 col-md-4">
       <p>
-        Commitment:<br>
-        <div class="bg-light p-3 border rounded">
-          <small><%= @profile.commitment %></small>
-        </div>
+        <small class="text-label">Commitment:</small><br>
+        <small><%= @profile.commitment %></small>
       </p>
     </div>
     <div class="col-lg-3 col-md-4">
       <p>
-        Phone:<br>
-        <div class="bg-light p-3 border rounded">
+        <small class="text-label">Phone:</small><br>
+        <% if current_child || current_teacher %>
           <small><%= @profile.teacher.phone %></small>
-        </div>
+        <% else %>
+          <small><%= link_to "Sign in to view phone", new_child_session_path %></small>
+        <% end %>
       </p>
     </div>
   </div>
-  <p class="mt-3">
+
+  <p class="mt-3 text-muted">
     Profile Description:</br>
-    <div class="bg-light p-3 border rounded">
+    <div class="bg-light p-4 rounded text-muted">
       <%= @profile.description %>
     </div>
   </p>
 
-  <%= link_to 'Update profile', edit_profile_path(@profile), class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3" %>
-  <%= link_to 'See other profiles<i class="fas fa-arrow-right ml-2"></i>'.html_safe, profiles_path, class: "btn py-3 mt-3 text-label ml-5", style: "font-size: 1em" %>
+  <% if current_teacher %>
+  <%= link_to 'Update profile', edit_profile_path(@profile), class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mr-5" %>
+  <% end %>
+  <%= link_to 'See other profiles<i class="fas fa-arrow-right ml-2"></i>'.html_safe, profiles_path, class: "btn py-3 mt-3 text-green", style: "font-size: 1em" %>
 </div>
