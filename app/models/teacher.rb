@@ -1,4 +1,7 @@
 class Teacher < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   before_create { generate_token(:auth_token) }
   before_create :confirmation_token
   
@@ -14,6 +17,7 @@ class Teacher < ApplicationRecord
 
   belongs_to :group, optional: true
   has_one :direction, :dependent => :destroy
+  has_one :profile, :dependent => :destroy
 
   def email_activate
     self.email_confirmed = true

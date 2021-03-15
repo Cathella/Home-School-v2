@@ -1,0 +1,60 @@
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5 dash-view mb-5">
+  <%= render 'layouts/notice' %>
+  
+  <div class="border-bottom mb-4 pb-5">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="font-weight-bold text-label mt-4">Tutor Profiles.</h1>
+      </div>
+      <div class="col-lg-4">
+        <%= link_to 'Hire a tutor', new_post_path, class: "btn bg-green-btn text-white py-3 px-5 shadow mt-3"%>
+      </div>
+    </div>
+  </div>
+
+  <% @profiles.each do |profile| %>
+    <div class="py-3 mt-4 text-muted border-bottom">
+      <div class="row">
+        <div class="col-lg-10">
+          <h4 class="my-3"><%= link_to profile.teacher.name, profile, class: 'text-green' %></h4>
+          <p><%= profile.description.truncate_words(35) %></p>
+          <div class="">
+            <div class="row">
+              <div class="col-sm-4 col-md-5 col-lg-6">  
+                <p class="">
+                  <small class="text-label">Location:</small><br>
+                  <small><%= profile.teacher.direction.landmark %></small>
+                </p>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-3"> 
+                <p class="">
+                  <small class="text-label">Fee:</small><br>
+                  <small>UGX. <%= profile.fee %> <%= profile.per_charge %></small>
+                </p>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-3">  
+                <p class="">
+                  <small class="text-label">Classes:</small><br>
+                  <small><%= profile.teacher.grade %></small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="mb-4 mt-5">
+            <%= link_to 'See profile', profile, class: "btn bg-green-btn px-4 text-green border border-info py-2 bg-white" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!--<td><%= link_to 'Show', profile %></td>
+          <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+          <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        
+  <% end %>
+
+</div>

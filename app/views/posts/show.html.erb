@@ -5,13 +5,18 @@
 
   <% if current_child %>
   <div class="d-flex bg-light py-2 px-5 mb-5 rounded justify-content-end">
-    <%= link_to 'My Posts', posts_path, class: "text-muted mr-4" %>
-    <%= link_to "Messages" %>
+    <%= link_to 'My Posts', posts_path, class: "text-muted" %>
   </div>
   <% end %>
 
-  <div class="border-bottom mb-4">  
-    <h3 class="font-weight-bold mb-4 text-green">A <%= @post.subject %> teacher is needed in <%= @post.child.address.landmark %></h3>
+  <div class="border-bottom mb-4">
+    <div class="row">
+      <div class="col-lg-8">  
+        <h3 class="font-weight-bold mb-4 text-green">A <%= @post.subject %> teacher is needed in <%= @post.child.address.landmark %></h3>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
     <% if current_child %>
     <div class="mb-3">
       <%= link_to 'Edit post', edit_post_path(@post), class: "btn bg-green-btn text-white py-2 px-4 shadow" %>
@@ -64,10 +69,10 @@
           <small><%= @post.child.address.landmark %></small>
         </p>
       </div>
-      <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="col-sm-6 col-md-6 col-lg-2">
         <p>
           <small class="text-label">Budget:</small><br>
-          Ugx. <%= @post.budget %> / <%= @post.per_payment %>
+          <small>UGX. <%= @post.budget %> / <%= @post.per_payment %></small>
         </p>
       </div>
       <div class="col-sm-4 col-md-3 col-lg-2">
@@ -82,10 +87,22 @@
           <small><%= @post.child.name %></small>
         </p>
       </div>
+      <div class="col-sm-6 col-md-6 col-lg-2">
+        <p>
+          <small class="text-label">Phone:</small><br>
+          <% if current_child || current_teacher %>
+            <small><%= @post.child.phone %></small>
+          <% else %>
+            <small><%= link_to "Sign in to view phone", new_teacher_session_path %></small>
+          <% end %>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="mt-4 bg-light rounded p-4 text-muted">
     <%= @post.description %>
   </div>
+
+  <%= link_to 'Other posts<i class="fas fa-arrow-right ml-2"></i>'.html_safe, posts_path, class: "btn py-3 mt-3 text-green", style: "font-size: 1em" %>
 </div>

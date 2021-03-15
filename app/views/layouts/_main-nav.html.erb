@@ -1,88 +1,42 @@
 <header class="pt-1 pb-1 shadow">
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand logo text-info" href="/">
-        🏠 
-        <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+  <div class="container">
+    <div class="overlay" id="myNav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        &times;
       </a>
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto">
-          <% if current_teacher %>
-              <li>
-                <%= link_to "My Group", teacher_group_path, class: "nav-link login-link" %>
-              </li>
-              <li>
-                <%= link_to "My Address", teacher_address_path, class: "nav-link login-link" %>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle nav-link login-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <%= current_teacher.name %>
-                </a>
-  
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <%= link_to "My Profile", teacher_path(current_teacher.id), class: "dropdown-item" %>
-                  <%= link_to "Sign Out", teacher_session_path("current"), method: "delete", class: "dropdown-item" %>
-                </div>
-              </li>
-          <% elsif current_child %>
-            <li>
-              <%= link_to "My Group", my_group_path, class: "nav-link login-link" %>
-            </li>
-            <li>
-              <%= link_to "My Address", my_address_path, class: "nav-link login-link" %>
-            </li>
-            <!--<li class="nav-item">
-              <%= link_to "Request Tutor", new_post_path, class: "nav-link login-link" %>
-            </li> -->
-            <li class="dropdown">
-              <a class="dropdown-toggle nav-link login-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= current_child.name %>
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                
-                <%= link_to "My Profile", child_path(current_child.id), class: "dropdown-item", style: "font-size: 1em;"%>
-                <%= link_to "Logout", child_session_path("current"), method: "delete", class: "dropdown-item" %>
-              </div>
-            </li>
-          <% elsif current_admin %>
-            <li>
-              <%= link_to "Dashboard", admins_path, class: "nav-link login-link" %>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle nav-link login-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%= current_admin.email %>
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <%= link_to "Logout", admin_session_path("current"), method: "delete", class: "dropdown-item" %>
-              </div>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= link_to "Teachers", teachershome_path, class: "nav-link login-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "Parents", childrenhome_path, class: "nav-link register-link" %>
-            </li>
-            <!-- <li class="nav-item">
-              <a href="/lessons" class="nav-link register-link">UgaStudy</a>
-            </li> -->
-            <li class="nav-item">
-              <a href="/joined" class="nav-link login-link">
-                <span class="badge badge-warning">
-                  <i class="far fa-star"></i>
-                  See who just joined Us
-                </span>
-              </a>
-            </li>
-          <% end %>
-        </ul>
+      <div class="overlay-content">
+        <% if current_teacher %>
+          <%= link_to "My Group", teacher_group_path %>
+          <%= link_to "My Address", teacher_address_path %>
+          <%= link_to "Find a tutor job", posts_path %>
+          <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+        <% elsif current_child %>
+          <%= link_to "My Group", my_group_path %>
+          <%= link_to "My Address", my_address_path %>
+          <%= link_to "Post a tutor job", profiles_path %>
+          <%= link_to "Logout", child_session_path("current"), method: "delete" %>
+        <% elsif current_admin %>
+          <%= link_to "Dashboard", admins_path %>
+          <%= link_to "Logout", admin_session_path("current"), method: "delete" %>
+        <% else %>
+          <%= link_to "Home", root_path %>
+          <%= link_to "For Teachers", teachershome_path %>
+          <%= link_to "For Parents", childrenhome_path %>
+          <%= link_to "Hire a tutor", profiles_path %>
+          <%= link_to "Post a tutor job", posts_path %>
+        <% end %>
       </div>
     </div>
-  </nav>
+
+    <a class="navbar-brand logo text-info" href="/">
+      🏠 
+      <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+    </a>
+    
+    <span style="cursor:pointer; margin-top: 13px;" class="float-right" onclick="openNav()">
+      <div class="rounded" style="background: #095578; width: 43px; height: 4px; margin: 0 0 7px 0;"></div>
+      <div class="rounded" style="background: #095578; width: 43px; height: 4px; margin: 0 0 7px 0;"></div>
+      <div class="rounded" style="background: #095578; width: 43px; height: 4px; margin: 0 0 7px 0;"></div>
+    </span>
+  </div>
 </header>
