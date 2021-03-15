@@ -103,4 +103,6 @@
   <div class="mt-4 bg-light rounded p-4 text-muted">
     <%= @post.description %>
   </div>
+
+  <%= link_to 'Other posts<i class="fas fa-arrow-right ml-2"></i>'.html_safe, posts_path, class: "btn py-3 mt-3 text-green", style: "font-size: 1em" %>
 </div>
