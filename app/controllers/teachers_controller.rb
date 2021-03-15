@@ -13,7 +13,7 @@ class TeachersController < ApplicationController
   end
 
   def teachershome
-    @teachers = Teacher.first(10)
+    # @teachers = Teacher.first(10)
   end
 
   # GET /teachers/new
