@@ -11,7 +11,7 @@
   <% end %>
 
   <div class="row">
-    <% if current_child %>
+    <% if current_child || current_admin %>
       <div class="form-group col-md-12">
         <div class="field mb-3">
           <%= form.label :image, "Upload Profile Image", class: "mt-2" %>
@@ -48,6 +48,7 @@
       </div>
     </div>
     <% end %>
+
     <div class="col-md-12">
       <div class="actions">
         <%= form.submit "Complete Profile" %>
