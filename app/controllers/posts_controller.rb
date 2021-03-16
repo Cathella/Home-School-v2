@@ -25,13 +25,17 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.child_id = current_child.id
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: "Your request has been posted." }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+    if @post.child.address.nil? || @post.child.grade.nil? || @post.child.phone.nil?
+      redirect_to new_post_path, notice: "Please update your profile or add your address."
+    else
+      respond_to do |format|
+        if @post.save
+          format.html { redirect_to @post, notice: "Your tutor job has been posted." }
+          format.json { render :show, status: :created, location: @post }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @post.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
