@@ -25,13 +25,17 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.teacher_id = current_teacher.id
 
-    respond_to do |format|
-      if @profile.save
-        format.html { redirect_to @profile, notice: "Profile was successfully created." }
-        format.json { render :show, status: :created, location: @profile }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
+    if @profile.teacher.direction.nil? || @profile.teacher.grade.nil? || @profile.teacher.phone.nil? || @profile.teacher.subject.nil?
+      redirect_to new_profile_path, notice: "Please update your profile and add your address."
+    else
+      respond_to do |format|
+        if @profile.save
+          format.html { redirect_to @profile, notice: "Your Profile was successfully created." }
+          format.json { render :show, status: :created, location: @profile }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @profile.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
