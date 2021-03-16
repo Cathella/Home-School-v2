@@ -1,7 +1,7 @@
 <%= form_with(model: teacher, local: true) do |form| %>
   <% if teacher.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(teacher.errors.count, "error") %> prohibited this teacher from being saved:</h2>
+      <p><%= pluralize(teacher.errors.count, "error") %> prohibited this teacher from being saved:</p>
 
       <ul>
       <% teacher.errors.full_messages.each do |message| %>
@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="row">
-    <% if current_teacher %>
+    <% if current_teacher || current_admin %>
       <div class="form-group col-md-12">
         <div class="field mb-3">
           <%= form.label :image, "Upload Profile Image", class: "mt-2" %>

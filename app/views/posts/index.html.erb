@@ -7,6 +7,7 @@
     <div class="row">
       <div class="col-lg-8">
         <h1 class="font-weight-bold text-label mt-4">Private teaching jobs.</h1>
+        <p class="text-muted mt-3">Find local and online teachers, to help with tutoring, coaching, assignments and academic projects, in various subjects.</p>
       </div>
       <div class="col-lg-4">
         <%= link_to 'Become a private teacher', new_profile_path, class: "btn bg-green-btn text-white py-3 px-5 shadow mt-3"%>
@@ -15,12 +16,15 @@
   </div>
 
   <% @posts.each do |post| %>
-    <div class="p-3 border-bottom text-muted">
+    <div class="p-3 border-bottom text-muted bg-light rounded mt-5">
       <div class="row">
         <div class="col-lg-10">
           <div>
-            <p class="mt-2"><%= post.description.truncate_words(35) %></p>
-            <div class="d-flex flex-wrap">
+            <!-- <p class="mt-2 pl-3"><%= post.description.truncate_words(35) %></p> -->
+            <p class="font-weight-bold text-green pl-3">
+              A <%= post.subject.downcase %> teacher is needed near <%= post.child.address.landmark %>
+            </p>
+            <div class="d-flex flex-wrap pl-3">
               <p class="mr-4">
                 <small class="text-label">Posted on:</small>
                 <small><%= post.created_at.to_formatted_s(:short) %></small>
