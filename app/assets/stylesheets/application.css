@@ -5,7 +5,7 @@ body {
 
 a {
   color: #095578;
-  }
+}
 
 /* Nav */
 .logo {
@@ -105,8 +105,14 @@ a {
   padding: 9em 0;
 }
 
+.ug-intro {
+  background-image: url(/assets/ugabg.jpg);
+  background-size: cover;
+  background-position: 70% 12%;
+  padding: 9em 0;
+}
+
 .child-intro-img {
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url('/assets/bg.jpg'); */
   background-image: url('/assets/jeremy-alford-ngOT6TG3qgs-unsplash.jpg');
   background-size: cover;
   background-position: 70% 20%;
@@ -141,6 +147,10 @@ a {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, .5);
   border-radius: 0;
+}
+
+.avatar-size {
+  font-size: 6em;
 }
 
 /* How to */
@@ -723,7 +733,7 @@ main {
 
 @media only screen and (max-width: 767px) {
   header .justify-content-between {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .secondary-intro {
@@ -732,17 +742,17 @@ main {
 
   .intro .big-btn,
   .how-btn {
-      font-size: 1em;
+    font-size: 1em;
   }
 
   .how-to p {
-      font-size: 0.8em;
+    font-size: 0.8em;
   }
 
   .image-container {
-      margin-left: 0 !important;
-      margin-top: 2em;
-      height: 320px;
+    margin-left: 0 !important;
+    margin-top: 2em;
+    height: 320px;
   }
 
   .image-container-3 {
@@ -754,9 +764,9 @@ main {
   }
 
   .image-container-2 {
-      width: 100%;
-      height: 400px;
-      margin: 3em 0 0 0;
+    width: 100%;
+    height: 400px;
+    margin: 3em 0 0 0;
   }
 
   #dash .border-right {
@@ -769,10 +779,6 @@ main {
 
   #dash .mb-5 {
     margin: 0 !important;
-  }
-
-  .profile-pic {
-    font-size: 5em;
   }
 
   .my-form {
@@ -869,5 +875,56 @@ main {
 @media only screen and (max-width: 267px) {
   .how-to p {
     font-size: .8em;
+  }
+}
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }

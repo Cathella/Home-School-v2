@@ -8,7 +8,7 @@
 
   <div class="row">
     <% @children.each do |child| %>
-      <div class="col-md-4">
+      <div class="col-sm-9 col-md-6 col-lg-3">
         <div class="border shadow rounded pb-4 mb-4">
           <div class="bg-light mb-3 pt-4" style="height: 220px;">
             <% if child.image.attached? %>
@@ -18,7 +18,7 @@
             <% end %>
           </div>
           <div class="text-muted text-center font-weight-bold text-label">
-          <span class="text-truncate d-inline-block" style="max-width: 100px"><%= child.name %></span>
+          <span class="text-truncate d-inline-block" style="max-width: 100px"><%= child.name.capitalize %></span>
           </div>
           <div class="d-flex flex-wrap justify-content-center bg-light mx-4 my-2 border-top">
             <div class="my-2">
@@ -32,14 +32,11 @@
           <div class="text-center mt-3 mb-3">
           <% if current_admin %>
               <%= link_to 'View Profile', child, class: "btn bg-green-btn text-white px-3 shadow", style: "font-size: 0.9em" %>
-              <%= link_to 'Edit', edit_child_path(child), class: "btn btn-primary ml-2" %>
-              <%= link_to 'Delete', child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
+              <%= link_to '<i class="fas fa-pen-alt ml-3"></i>'.html_safe, edit_child_path(child), class: "text-primary" %>
+              <%= link_to '<i class="fas fa-trash ml-3"></i>'.html_safe, child, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger' %>
             <% end %>
           </div>
         </div>
-        <!-- 
-        <%= image_tag(child.image, style: "width: 60px; display: block; margin: 0 auto", class: "rounded-circle") if child.image.attached? %>
-        -->
       </div>
     <% end %>
   </div>

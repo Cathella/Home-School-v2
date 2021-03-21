@@ -5,28 +5,28 @@
 
   <h1 class="text-label font-weight-bold">Messages</h1>
 
-  <table class="table child-table mt-5">
-    <thead class="text-green">
-      <tr>
-        <th>Date</th>
-        <th>Sender</th>
-        <th>Message</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @contacts.each do |contact| %>
+  <div class="table-responsive">
+    <table class="table child-table mt-5" style="min-width: 690px">
+      <thead class="text-green">
         <tr>
-          <td><%= contact.created_at.to_formatted_s(:short) %></td>
-          <td><%= contact.name %></td>
-          <td><%= contact.message %></td>
-          <td>
-            <%= link_to 'View Details', contact, class: "btn bg-green-btn text-white px-3 shadow mr-4", style: "font-size: .9em" %>
-            <%= link_to '<i class="fas fa-trash text-danger"></i>'.html_safe, contact, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
+          <th>Date</th>
+          <th>Sender</th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.created_at.to_formatted_s(:short) %></td>
+            <td><%= contact.name %></td>
+            <td>
+              <%= link_to 'Details', contact, class: "btn bg-green-btn text-white px-3 shadow mr-4", style: "font-size: .9em" %>
+              <%= link_to '<i class="fas fa-trash text-danger"></i>'.html_safe, contact, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

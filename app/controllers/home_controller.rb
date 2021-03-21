@@ -20,4 +20,10 @@ class HomeController < ApplicationController
 
   def joined
   end
+
+  def lessons
+  end
+
+  def privateaching
+  end
 end

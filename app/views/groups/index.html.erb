@@ -5,28 +5,31 @@
   
   <h1 class="font-weight-bold text-label mb-3 mt-4">Study Groups in your area</h1>
   <p class="mb-5 text-muted">See groups that have been created near you and find a perfect one for your child.</p>
-  <table class="child-table">
-    <tbody>
-      <% @groups.each do |group| %>
-        <tr>
-          <td><%= group.name %></td>
-          <td>
-            <small class="text-label font-weight-bold">Class:</small><br>
-            <%= group.grade %>
-          </td>
-          <td>
-            <small class="text-label font-weight-bold">Address:</small><br>
-            <%= group.place %>
-          </td>
-          <td class="text-right">
-            <%= link_to 'View group', group, class: "btn bg-green-btn text-white px-4", style: "font-size: .9em"%>
-            <% if current_admin %>
-            <%= link_to 'Edit Group', edit_group_path(group), class: "btn btn-primary ml-2" %>
-            <%= link_to 'Delete Group', group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger ml-2' %>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  
+  <div class="table-responsive">
+    <table class="child-table" style="min-width: 600px">
+      <tbody>
+        <% @groups.each do |group| %>
+          <tr>
+            <td><%= group.name %></td>
+            <td>
+              <small class="text-label font-weight-bold">Class:</small><br>
+              <%= group.grade %>
+            </td>
+            <!--<td>
+              <small class="text-label font-weight-bold">Address:</small><br>
+              <%= group.place %>
+            </td> -->
+            <td class="text-right">
+              <%= link_to 'View group', group, class: "btn bg-green-btn text-white px-4", style: "font-size: .9em"%>
+              <% if current_admin %>
+              <%= link_to '<i class="fas fa-pen-alt ml-3"></i>'.html_safe, edit_group_path(group), class: "text-green" %>
+              <%= link_to '<i class="fas fa-trash ml-3"></i>'.html_safe, group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger' %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
