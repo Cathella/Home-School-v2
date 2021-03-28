@@ -6,7 +6,7 @@
         <div class="mb-5">          
           <div class="profile-pic text-center">
             <% if @child.image.attached? %>
-              <%= image_tag @child.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
+              <%= image_tag @child.image, style: "width: 200px; height: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
             <% else %>
               <div class="text-center" style="font-size: 6em;">🧒</div>
             <% end %>

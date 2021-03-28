@@ -1,8 +1,6 @@
 <%= form_with(model: address, local: true, data: { controller: "places", action: "google-maps-callback@window->places#initMap", places_latitude: address.latitude, places_longitude: address.longitude }) do |form| %>
   <% if address.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
-
       <ul>
       <% address.errors.full_messages.each do |message| %>
         <li><%= message %></li>
