@@ -45,7 +45,7 @@ The code includes unit testing using RSpec. To start the test run `bundle exec r
 ## Author
 
 **Nakitto Catherine**
-- Linkedin: [Nakitto Catherine](https://www.linkedin.com/in/nakitt-catherine2020)
+- Linkedin: [Nakitto Catherine](https://www.linkedin.com/in/nakitto-catherine2020)
 - Github: [@Cathella](https://github.com/Cathella)
 - Twitter: [@cathella9](https://twitter.com/cathella9)
 
