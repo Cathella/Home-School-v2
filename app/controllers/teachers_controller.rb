@@ -47,7 +47,8 @@ class TeachersController < ApplicationController
       if @teacher.save
         TeacherMailer.registration_confirmation(@teacher).deliver
         AdminMailer.account_created_email.deliver
-        format.html { redirect_to teachershome_path, notice: 'Teacher was successfully registered, Please check email to verify your account.' }
+        session[:teacher_id] = @teacher.id
+        format.html { redirect_to teacher, notice: 'Teacher was successfully registered, Please check email to verify your account.' }
       else
         format.html { render :new }
       end

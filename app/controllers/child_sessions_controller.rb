@@ -10,7 +10,7 @@ class ChildSessionsController < ApplicationController
         redirect_to child, notice: "You have successfully logged In"
       else
         flash.now.alert = "Please activate your account by following the 
-        instructions in the account confirmation email you received to proceed."
+        instructions in the account confirmation email you received to login."
         render "new"
       end
     else

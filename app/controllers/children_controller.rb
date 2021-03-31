@@ -46,7 +46,8 @@ class ChildrenController < ApplicationController
       if @child.save
         ChildMailer.registration_confirmation(@child).deliver
         AdminMailer.account_created_email.deliver
-        format.html { redirect_to childrenhome_path, notice: 'Child was successfully registered, Please check email to verify your account.' }
+        session[:child_id] = @child.id
+        format.html { redirect_to child, notice: 'Child was successfully registered, Please check email to verify your account.' }
       else
         format.html { render :new }
       end
