@@ -6,6 +6,7 @@ class Teacher < ApplicationRecord
   before_create :confirmation_token
   
   has_secure_password
+  denshobato_for :teacher
 
   validates_presence_of :name, :email
   validates_uniqueness_of :email
