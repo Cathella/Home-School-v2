@@ -3,8 +3,33 @@
 <div class="container py-5 mb-5">
   <div class="mb-5">
     <h3>Mailbox</h3>
-    <% @conversations.each do |conversation| %>
-          
+    <% @conversations.each do |room| %>
+      <%= interlocutor_image(room.recipient, :user_avatar, 'img-circle') %>
+      <%= link_to "Conversation with: #{interlocutor_info(room.recipient, :first_name, :last_name)}", conversation_path(room) %>
+      <p>
+        <%= room.messages.last.try(:body) %>
+      </p>
+
+      <%= interlocutor_image(room.messages.last.try(:author), :user_avatar, 'img-circle') %>
+      <% if room.messages.last.present? %>
+        <p>
+          <%= "Last message from: #{message_from(room.messages.last, :first_name, :last_name)}" %>
+        </p>
+      <% end %>
+
+      <%= button_to 'Remove Conversation', conversation_path(room), method: :delete, class: 'btn btn-danger' %>
+      <%= button_to 'Move to Trash', to_trash_path(id: room), class: 'btn btn-warning', method: :patch %>
+      <hr>
+    <% end %>
+
+    <% if @trash.any? %>
+      <h1>Trash</h1>
+
+      <% @trash.each do |room| %>
+        <%= link_to "Conversation with #{interlocutor_info(room.recipient, :first_name, :last_name)}", conversation_path(room) %>
+        <%= button_to 'Remove Conversation', conversation_path(room), method: :delete, class: 'btn btn-danger' %>
+        <%= button_to 'Move from Trash', from_trash_path(id: room), class: 'btn btn-warning', method: :patch %>
+      <% end %>
     <% end %>
   </div>
 </div>
