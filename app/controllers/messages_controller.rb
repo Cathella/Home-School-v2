@@ -1,46 +1,19 @@
 class MessagesController < ApplicationController
-  before_action :find_conversation
-
-  def index
-    @messages = @conversation.messages
-
-    if @messages.length > 10
-      @over_ten = true
-      @messages = @messages[-10..-1]
-    end
-
-    if params[:m]
-      @over_ten = false
-      @messages = @conversation.messages
-    end
-
-    if @messages.last
-      if (@messages.last.teacher_id != current_teacher.id) || (@messages.last.child_id != current_child.id)
-        @messages.last.read = true
-      end
-    end
-
-    @message = @conversation.messages.new
-  end
-
   def create
-    @message = @conversation.messages.new(message_params)
+    conversation_id = params[:denshobato_message][:conversation_id]
+    @message = current_account.send_message_to(conversation_id, message_params)
 
     if @message.save
-      redirect_to conversation_messages_path(@conversation)
+      @message.send_notification(conversation_id)
+      redirect_to conversation_path(conversation_id), notice: 'Message sent'
+    else
+      redirect_to conversation_path(conversation_id), notice: @message.errors
     end
-  end
-
-  def new
-    @message = @conversation.messages.new
   end
 
   private
-    def message_params
-      params.require(:message).permit(:body, :teacher_id, :child_id)
-    end
 
-    def find_conversation
-      @conversation = Conversation.find(params[:conversation_id])
-    end
+  def message_params
+    params.require(:denshobato_message).permit(:body, :author_id, :author_type)
+  end
 end
