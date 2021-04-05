@@ -1,23 +1,42 @@
 class ConversationsController < ApplicationController
   def index
-    # @teachers = Teacher.all
-    # @children = Child.all
-    @users = Teacher.all + Child.all
-    @conversations = Conversation.all
+    @conversations = current_account.my_conversations
+    @trash = current_account.trashed_conversations
   end
 
   def create
-    if Conversation.between(params[:sender_id], params[:recipient_id]).present?
-      @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
+    @conversation = current_account.hato_converstions.build(conversation_params)
+    if @conversation.save
+      redirect_to conversation_path(@conversation)
     else
-      @conversation = Conversation.create!(conversation_params)
+      redirect_to :conversations, notice: @conversation.errors
     end
+  end
 
-    redirect_to conversation_messages_path(@conversation)
+  def show
+    @conversation = Denshobato::Conversation.find(params[:id])
+    redirect_to :conversations, notice: 'You cant join this conversation' unless user_in_conversation?(current_account, @conversation)
+
+    @message_form = current_account.hato_messages.build
+    @messages = @conversation.messages
+  end
+
+  def destroy
+    @conversation = Deshobato::Conversation.find(params[:id])
+    redirect_to :conversations if @conversation.destroy
+  end
+
+  %w(to_trash from_trash).each do |name|
+    define_method name do
+      room = Deshobato::Conversation.find(params[:id])
+      room.send(name)
+      redirect_to :conversations
+    end
   end
 
   private
-    def conversation_params
-      params.permit(:sender_id, :recipient_id)
-    end
+
+  def conversation_params
+    params.require(:denshobato_conversation).permit(:sender_id, :sender_type, :recipient_id, :recipient_type)
+  end
 end
