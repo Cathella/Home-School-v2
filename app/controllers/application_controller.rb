@@ -3,6 +3,12 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def current_account
+    current_teacher || current_child
+  end
+
+  helper_method :current_account
+
   def current_teacher
     @current_teacher ||= Teacher.find(session[:teacher_id]) if session[:teacher_id]
   end

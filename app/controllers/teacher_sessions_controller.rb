@@ -21,6 +21,6 @@ class TeacherSessionsController < ApplicationController
 
   def destroy
     session[:teacher_id] = nil
-    redirect_to teachershome_path, notice: "You have been logged Out!"
+    redirect_to accounts_path, notice: "You have been logged Out!"
   end
 end
