@@ -50,12 +50,13 @@
                   <%= button_to 'Remove from blacklist',
                     remove_from_blacklist_path(user: teacher, klass: teacher.class.name), class: 'btn btn-info mt-2' %>
                 <% else %>
-                  <%= button_to 'Add to blacklist',
-                    black_list_path(user: teacher, klass: teacher.class.name), class: 'btn btn-danger' %>
-                  <%= form_for @conversation, url: :conversations do |form| %>
-                    <%= fill_conversation_form(form, teacher) %>
-                    <%= form.submit 'Start Conversation', class: 'btn btn-info mt-2' %>
-                  <% end %>
+                  <div class="d-flex flex-wrap align-items-center justify-content-center">
+                    <%= button_to 'Blacklist', black_list_path(user: teacher, klass: teacher.class.name), class: 'btn btn-danger mr-2' %>
+                    <%= form_for @conversation, url: :conversations do |form| %>
+                      <%= fill_conversation_form(form, teacher) %>
+                      <%= form.submit 'Start Conversation', class: 'btn btn-info ml-2' %>
+                    <% end %>
+                  </div>
                 <% end %>
               <% end %>
             <% end %>

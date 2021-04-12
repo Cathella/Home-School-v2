@@ -20,24 +20,18 @@
       <div class="row">
         <div class="col-lg-10">
           <h5 class="my-3 font-weight-bold"><%= link_to profile.teacher.name, profile, class: 'text-green' %></h5>
-          <p><%= profile.description.truncate_words(35) %></p>
+          <p><%= profile.description.to_plain_text.truncate_words(30) %></p>
           <div class="">
             <div class="row">
-              <div class="col-sm-4 col-md-5 col-lg-6">  
+              <div class="col-sm-4 col-md-8 col-lg-8">  
                 <p class="">
-                  <small class="text-label">Location:</small><br>
+                  <small class="text-label">Location:</small>
                   <small><%= profile.teacher.direction.landmark %></small>
                 </p>
               </div>
-              <div class="col-sm-4 col-md-4 col-lg-3"> 
+              <div class="col-sm-4 col-md-4 col-lg-4">  
                 <p class="">
-                  <small class="text-label">Fee:</small><br>
-                  <small>UGX. <%= profile.fee %> <%= profile.per_charge %></small>
-                </p>
-              </div>
-              <div class="col-sm-4 col-md-3 col-lg-3">  
-                <p class="">
-                  <small class="text-label">Classes:</small><br>
+                  <small class="text-label">Class:</small>
                   <small><%= profile.teacher.grade %></small>
                 </p>
               </div>
