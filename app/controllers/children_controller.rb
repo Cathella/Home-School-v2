@@ -5,6 +5,7 @@ class ChildrenController < ApplicationController
   # GET /children.json
   def index
     @children = Child.all
+    @conversation = current_account.hato_conversations.build
   end
 
   # GET /children/1

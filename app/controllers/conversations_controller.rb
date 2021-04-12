@@ -4,12 +4,8 @@ class ConversationsController < ApplicationController
     @trash = current_account.trashed_conversations
   end
 
-  def new
-    @conversation = Conversation.new
-  end
-
   def create
-    @conversation = current_account.hato_converstions.build(conversation_params)
+    @conversation = current_account.hato_conversations.build(conversation_params)
     if @conversation.save
       redirect_to conversation_path(@conversation)
     else

@@ -1,17 +1,27 @@
-<%= form_for @message_form, url: :messages do |form| %>
-  <%= form.text_field :body, class: 'form-control' %>
-  <%= fill_message_form(form, current_account, @conversation) %>
-  <%= form.submit 'Send message', class: 'btn btn-primary' %>
-<% end %>
+<%= render 'layouts/main-nav' %>
 
+<div class="container py-5 mb-5 mt-5">
+  <div class="row">
+    <div class="col-lg-7 mx-auto">
+      <h3 class="text-center mb-3 text-green">
+        Conversation
+      </h3>
+      <%= form_for @message_form, url: :messages do |form| %>
+        <%= form.text_area :body, class: 'form-control mb-3' %>
+        <%= fill_message_form(form, current_account, @conversation) %>
+        <%= form.submit 'Send message', class: 'btn form-control btn-info mb-5' %>
+      <% end %>
 
-<% @messages.each do |msg| %>
-  <p>
-    <%= interlocutor_info(msg.author, :first_name, :last_name) %>
-  </p>
-  <%= interlocutor_image(msg.author, :user_avatar, 'img-circle') %>
-  <p>
-    <%= msg.body %>
-  </p>
-  <hr>
-<% end %>
+      <% @messages.each do |msg| %>
+        <p class="text-green">
+          <%= interlocutor_info(msg.author, :name) %>
+        </p>
+        <!-- <%= interlocutor_image(msg.author, :user_avatar, 'img-circle') %> -->
+        <p class="text-muted">
+          <%= msg.body %>
+        </p>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>

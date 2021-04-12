@@ -46,6 +46,7 @@ Rails.application.routes.draw do
   get "teacheraddress", to: "home#teacheraddress", as: "teacher_address"
 
   resources :conversations
+  resources :messages
 
   get 'messages/create'
   

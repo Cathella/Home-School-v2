@@ -2,23 +2,33 @@
 
 <div class="container py-5 mb-5">
   <div class="mb-5">
-    <h3>Mailbox</h3>
-    <% @conversations.each do |room| %>
-      <%= interlocutor_image(room.recipient, :user_avatar, 'img-circle') %>
-      <%= link_to "Conversation with: #{interlocutor_info(room.recipient, :first_name, :last_name)}", conversation_path(room) %>
-      <p>
-        <%= room.messages.last.try(:body) %>
-      </p>
+    <h3 class="mb-5">Mailbox</h3>
 
-      <%= interlocutor_image(room.messages.last.try(:author), :user_avatar, 'img-circle') %>
+    <% @conversations.each do |room| %>
+      <div class="bg-light py-3 px-4 mb-3 rounded">
+        <%= interlocutor_image(room.recipient, :user_avatar, 'img-circle') %>
+        <%= link_to "Conversation with: #{interlocutor_info(room.recipient, :name)}", conversation_path(room) %>
+      </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <p class="text-muted">
+            <%= room.messages.last.try(:body) %>
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex">
+            <%= button_to 'Remove Conversation', conversation_path(room), method: :delete, class: 'btn btn-danger' %>
+            <%= button_to 'Move to Trash', to_trash_path(id: room), class: 'btn btn-warning ml-3', method: :patch %>
+          </div>
+        </div>
+      </div>
+
+      <!--<%= interlocutor_image(room.messages.last.try(:author), :user_avatar, 'img-circle') %>
       <% if room.messages.last.present? %>
         <p>
-          <%= "Last message from: #{message_from(room.messages.last, :first_name, :last_name)}" %>
+          <%= "Last message from: #{message_from(room.messages.last, :name)}" %>
         </p>
-      <% end %>
-
-      <%= button_to 'Remove Conversation', conversation_path(room), method: :delete, class: 'btn btn-danger' %>
-      <%= button_to 'Move to Trash', to_trash_path(id: room), class: 'btn btn-warning', method: :patch %>
+      <% end %> -->
       <hr>
     <% end %>
 

@@ -5,23 +5,12 @@
 
   <div class="row border-bottom mb-5">
     <div class="col-lg-9">
-      <h3 class="font-weight-bold py-4 text-green">
-        <%= link_to @profile.teacher.name, {}, class: 'text-green' %>
-      </h3>
-      <% unless conversation_exists?(current_account, @teacher) %>
-        <% if can_create_conversation?(current_account, @teacher) %>
-          <% if user_in_black_list?(current_account, @teacher) %>
-            <p>This user is in your blacklist</p>
-            <%= button_to 'Remove from blacklist', remove_from_blacklist_path(user: @teacher, klass: @teacher.class.name), class: 'btn btn-info' %>
-          <% else %>
-            <%= button_to 'Add to blacklist', black_list_path(user: @teacher, klass: @teacher.class.name), class: 'btn btn-danger' %>
-            <%= form_for @conversation, url: :conversations do |form| %>
-              <%= fill_conversation_form(form, @teacher) %>
-              <%= form.submit 'Start Conversation', class: 'btn btn-primary' %>
-            <% end %>
-          <% end %>
-        <% end %>
-      <% end %>
+      <div class="d-flex">
+        <h3 class="font-weight-bold py-4 text-green">
+          <%= link_to @profile.teacher.name, {}, class: 'text-green' %>
+        </h3>
+        <%= link_to "Send message", teachers_path, class: 'my-4 btn ml-4 bg-light border text-green'%>
+      </div>
       <% if current_teacher %>
         <div class="mb-3">
           <%= link_to 'Edit profile', edit_profile_path(@profile), class: "btn bg-green-btn text-white py-2 px-4 shadow" %>
