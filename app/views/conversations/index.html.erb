@@ -1,25 +1,44 @@
 <%= render 'layouts/main-nav' %>
 
 <div class="container py-5 mb-5">
+  <%= render 'layouts/notice' %>
+  
   <div class="mb-5">
-    <h3>Mailbox</h3> 
-    <div class="ui list">
-      <div class="item">
-        <% @conversations.each do |conversation| %>
-          <% if conversation.sender_id == current_teacher.id || conversation.recipient_id == current_teacher.id || conversation.sender_id == current_child.id || conversation.recipient_id == current_child.id %>
-            <% if conversation.sender_id == current_teacher.id %>
-              <% recipient = Teacher.find(conversation.recipient_id) %>
-            <% elsif %>
-              <% recipient = Teacher.find(conversation.sender_id) %>
-            <% elsif %>
-              <% recipient = Child.find(conversation.recipient_id) %>
-            <% else %>
-              <% recipient = Child.find(conversation.sender_id) %>
-            <% end %>
-            <%= link_to recipient.name, conversation_messages_path(conversation) %>
-          <% end %>
-        <% end %>
+    <h3 class="mb-5 border-bottom text-green font-weight-bold pb-4">Mailbox</h3>
+
+    <% @conversations.each do |room| %>
+      <div class="bg-light py-3 px-4 mb-3 rounded">
+        <%= interlocutor_image(room.recipient, :user_avatar, 'img-circle') %>
+        <%= link_to "Conversation with: #{interlocutor_info(room.recipient, :name)}", conversation_path(room) %>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-lg-7">
+          <p class="text-muted">
+            <%= room.messages.last.try(:body) %>
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="d-flex">
+            <%= button_to 'Delete Conversation', conversation_path(room), method: :delete, class: 'btn btn-danger' %>
+            <%= button_to 'Discard', to_trash_path(id: room), class: 'btn btn-warning ml-3', method: :patch %>
+          </div>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+
+    <% if @trash.any? %>
+      <h3 class="mb-3 border-bottom text-danger font-weight-bold pb-3 pt-5">Trash</h3>
+
+      <% @trash.each do |room| %>
+        <div class="bg-light py-3 px-4 mb-3 rounded">
+          <%= link_to "Conversation with #{interlocutor_info(room.recipient, :name)}", conversation_path(room), class: "text-danger" %>
+        </div>
+        <div class="d-flex">
+          <%= button_to 'Delete Conversation', conversation_path(room), method: :delete, class: 'btn btn-danger' %>
+          <%= button_to 'Restore', from_trash_path(id: room), class: 'btn btn-warning ml-2', method: :patch %>
+        </div>
+          <% end %>
+    <% end %>
   </div>
 </div>

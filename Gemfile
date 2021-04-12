@@ -5,6 +5,7 @@ ruby '2.6.5'
 
 # Begin custom gems
 gem 'friendly_id'
+gem 'denshobato'
 # End custom gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
