@@ -18,17 +18,17 @@ class ConversationsController < ApplicationController
     redirect_to :conversations, notice: 'You cant join this conversation' unless user_in_conversation?(current_account, @conversation)
 
     @message_form = current_account.hato_messages.build
-    @messages = @conversation.messages
+    @messages = @conversation.messages.order('created_at DESC')
   end
 
   def destroy
-    @conversation = Deshobato::Conversation.find(params[:id])
+    @conversation = Denshobato::Conversation.find(params[:id])
     redirect_to :conversations if @conversation.destroy
   end
 
   %w(to_trash from_trash).each do |name|
     define_method name do
-      room = Deshobato::Conversation.find(params[:id])
+      room = Denshobato::Conversation.find(params[:id])
       room.send(name)
       redirect_to :conversations
     end

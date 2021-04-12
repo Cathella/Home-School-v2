@@ -1,6 +1,9 @@
 <%= render 'layouts/main-nav' %>
 
 <div class="container py-5 mb-5 mt-5">
+  <span class="text-center d-block mb-4 ">
+    <%= link_to 'Back to mailbox', conversations_path, class: 'text-muted' %>
+  </span>
   <div class="row">
     <div class="col-lg-7 mx-auto">
       <h3 class="text-center mb-3 text-green">
@@ -13,14 +16,17 @@
       <% end %>
 
       <% @messages.each do |msg| %>
-        <p class="text-green">
-          <%= interlocutor_info(msg.author, :name) %>
-        </p>
-        <!-- <%= interlocutor_image(msg.author, :user_avatar, 'img-circle') %> -->
-        <p class="text-muted">
-          <%= msg.body %>
-        </p>
-        <hr>
+        <div class="bg-light px-4 py-2 rounded mb-3 border-bottom d-flex align-content-center">
+          <div style="font-size: 3em">🧒</div>
+          <div class="ml-3">
+            <small class="text-green">
+              <%= interlocutor_info(msg.author, :name) %>
+            </small>
+            <div class="text-muted">
+              <%= msg.body %>
+            </div>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>

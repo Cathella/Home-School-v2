@@ -3,7 +3,7 @@ class BlacklistsController < ApplicationController
     define_method name do
       user = params[:klass].constantize.find(params[:user])
       record = current_account.send(name, user)
-      record.send(action) ? (redirect_to user.class.name.downcase.pluralize.sym) : (redirect_to :root)
+      record.send(action) ? (redirect_to user.class.name.downcase.pluralize.to_sym) : (redirect_to :root)
     end
   end
 

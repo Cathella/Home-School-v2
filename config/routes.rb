@@ -1,14 +1,12 @@
 Rails.application.routes.draw do
-  resources :profiles
-  resources :posts
+  resources :profiles, :posts
   
   resources :videos
   get "lessons", to: "home#lessons", as: "lessons"
   
   resources :contacts
 
-  resources :teacher_password_resets
-  resources :password_resets
+  resources :teacher_password_resets, :password_resets
 
   resources :directions
   root to: 'home#index'
@@ -37,16 +35,14 @@ Rails.application.routes.draw do
   get "/teachershome", to: "teachers#teachershome", as: :teachershome
   resources :teacher_sessions
 
-  resources :admins
-  resources :admin_sessions
+  resources :admins, :admin_sessions
   # get "/admin", to: "admin#index", as: :admin
 
   resources :addresses
   get "myaddress", to: "home#myaddress", as: "my_address"
   get "teacheraddress", to: "home#teacheraddress", as: "teacher_address"
 
-  resources :conversations
-  resources :messages
+  resources :conversations, :messages
 
   get 'messages/create'
   
