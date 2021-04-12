@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/post_spec.rb": {
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/profile_spec.rb": {
         "lines": [
           1,
           null,
@@ -616,6 +616,6 @@
         ]
       }
     },
-    "timestamp": 1618260001
+    "timestamp": 1618260421
   }
 }

@@ -11,7 +11,7 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :description, "Requirement details:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -21,8 +21,8 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
-        <%= form.text_area :description, class: 'form-control', style: 'height: 240px;'%>
+      <div class="col-md-8 col-lg-9">
+        <%= form.rich_text_area :description, class: 'form-control', style: 'height: 240px;'%>
       </div>
     </div>
   </div>

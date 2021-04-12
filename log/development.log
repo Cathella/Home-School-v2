@@ -23192,3 +23192,1127 @@ For historical reasons, it may run twice, so it has to be idempotent.
 Check the "Autoloading and Reloading Constants" guide to learn more about how
 Rails autoloads and reloads.
  (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-12 23:42:50 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210412203526_create_action_text_tables.action_text.rb
+
+
+):
+  
+activerecord (6.1.3.1) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3.1) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3.1) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.3.1) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.3.1) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.3.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageVariantRecords (20210412125459)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (2.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210412125459"]]
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20210412125458)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "service_name" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_blobs_on_key" ON "aactive_storage_blobs" ("key")[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aactive_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name" FROM "active_storage_blobs"[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at" FROM "aactive_storage_blobs"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "aactive_storage_blobs"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210412125458"]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDenshobatoBlacklists (20210405202231)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "denshobato_blacklists"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210405202231"]]
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDenshobatoNotifications (20210405202230)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX "unique_messages_for_conversations"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "denshobato_notifications"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210405202230"]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDenshobatoMessages (20210405202229)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "denshobato_messages"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210405202229"]]
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDenshobatoConversations (20210405202228)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "denshobato_conversations"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (8.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210405202228"]]
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToVideos (20210304081325)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP INDEX "index_videos_on_slug"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avideos" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "description" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar DEFAULT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "avideos" ("id","title","description","created_at","updated_at","slug")
+                     SELECT "id","title","description","created_at","updated_at","slug" FROM "videos"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "videos"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "videos" ("id" integer NOT NULL PRIMARY KEY, "title" varchar DEFAULT NULL, "description" text DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "videos" ("id","title","description","created_at","updated_at")
+                     SELECT "id","title","description","created_at","updated_at" FROM "avideos"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "avideos"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304081325"]]
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToDirections (20210304081308)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP INDEX "index_directions_on_slug"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adirections" ("id" integer NOT NULL PRIMARY KEY, "landmark" varchar NOT NULL, "latitude" decimal(10,6) DEFAULT NULL, "longitude" decimal(10,6) DEFAULT NULL, "teacher_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_adirections_on_teacher_id" ON "adirections" ("teacher_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "adirections" ("id","landmark","latitude","longitude","teacher_id","created_at","updated_at","slug")
+                     SELECT "id","landmark","latitude","longitude","teacher_id","created_at","updated_at","slug" FROM "directions"[0m
+  [1m[35m (13.2ms)[0m  [1m[35mDROP TABLE "directions"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "directions" ("id" integer NOT NULL PRIMARY KEY, "landmark" varchar NOT NULL, "latitude" decimal(10,6) DEFAULT NULL, "longitude" decimal(10,6) DEFAULT NULL, "teacher_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_directions_on_teacher_id" ON "directions" ("teacher_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "directions" ("id","landmark","latitude","longitude","teacher_id","created_at","updated_at")
+                     SELECT "id","landmark","latitude","longitude","teacher_id","created_at","updated_at" FROM "adirections"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "adirections"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (6.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304081308"]]
+  [1m[36mTRANSACTION (19.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToAddresses (20210304081242)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.8ms)[0m  [1m[35mDROP INDEX "index_addresses_on_slug"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.9ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "landmark" varchar NOT NULL, "latitude" decimal(10,6) DEFAULT NULL, "longitude" decimal(10,6) DEFAULT NULL, "child_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar DEFAULT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "tindex_aaddresses_on_child_id" ON "aaddresses" ("child_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","landmark","latitude","longitude","child_id","created_at","updated_at","slug")
+                     SELECT "id","landmark","latitude","longitude","child_id","created_at","updated_at","slug" FROM "addresses"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "landmark" varchar NOT NULL, "latitude" decimal(10,6) DEFAULT NULL, "longitude" decimal(10,6) DEFAULT NULL, "child_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_child_id" ON "addresses" ("child_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "addresses" ("id","landmark","latitude","longitude","child_id","created_at","updated_at")
+                     SELECT "id","landmark","latitude","longitude","child_id","created_at","updated_at" FROM "aaddresses"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304081242"]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToGroups (20210304081225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP INDEX "index_groups_on_slug"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "agroups" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "grade" varchar DEFAULT NULL, "place" varchar DEFAULT NULL, "program" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar DEFAULT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "agroups" ("id","name","grade","place","program","created_at","updated_at","slug")
+                     SELECT "id","name","grade","place","program","created_at","updated_at","slug" FROM "groups"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "groups"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "grade" varchar DEFAULT NULL, "place" varchar DEFAULT NULL, "program" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("id","name","grade","place","program","created_at","updated_at")
+                     SELECT "id","name","grade","place","program","created_at","updated_at" FROM "agroups"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "agroups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304081225"]]
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToChildren (20210304081208)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX "index_children_on_slug"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "achildren" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "program" varchar DEFAULT NULL, "grade" varchar DEFAULT NULL, "guardian" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "group_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "auth_token" varchar DEFAULT NULL, "password_reset_token" varchar DEFAULT NULL, "password_reset_sent_at" datetime DEFAULT NULL, "email_confirmed" boolean DEFAULT 0, "confirm_token" varchar DEFAULT NULL, "slug" varchar DEFAULT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "tindex_achildren_on_group_id" ON "achildren" ("group_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "achildren" ("id","name","phone","email","program","grade","guardian","password_digest","group_id","created_at","updated_at","auth_token","password_reset_token","password_reset_sent_at","email_confirmed","confirm_token","slug")
+                     SELECT "id","name","phone","email","program","grade","guardian","password_digest","group_id","created_at","updated_at","auth_token","password_reset_token","password_reset_sent_at","email_confirmed","confirm_token","slug" FROM "children"[0m
+  [1m[35m (5.5ms)[0m  [1m[35mDROP TABLE "children"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "children" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "program" varchar DEFAULT NULL, "grade" varchar DEFAULT NULL, "guardian" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "group_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "auth_token" varchar DEFAULT NULL, "password_reset_token" varchar DEFAULT NULL, "password_reset_sent_at" datetime DEFAULT NULL, "email_confirmed" boolean DEFAULT 0, "confirm_token" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_children_on_group_id" ON "children" ("group_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "children" ("id","name","phone","email","program","grade","guardian","password_digest","group_id","created_at","updated_at","auth_token","password_reset_token","password_reset_sent_at","email_confirmed","confirm_token")
+                     SELECT "id","name","phone","email","program","grade","guardian","password_digest","group_id","created_at","updated_at","auth_token","password_reset_token","password_reset_sent_at","email_confirmed","confirm_token" FROM "achildren"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "achildren"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304081208"]]
+  [1m[36mTRANSACTION (21.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddSlugToTeachers (20210304071957)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP INDEX "index_teachers_on_slug"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ateachers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "grade" varchar DEFAULT NULL, "subject" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "group_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_reset_token" varchar DEFAULT NULL, "password_reset_sent_at" datetime DEFAULT NULL, "auth_token" varchar DEFAULT NULL, "email_confirmed" boolean DEFAULT 0, "confirm_token" varchar DEFAULT NULL, "slug" varchar DEFAULT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "tindex_ateachers_on_group_id" ON "ateachers" ("group_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "ateachers" ("id","name","phone","email","grade","subject","password_digest","group_id","created_at","updated_at","password_reset_token","password_reset_sent_at","auth_token","email_confirmed","confirm_token","slug")
+                     SELECT "id","name","phone","email","grade","subject","password_digest","group_id","created_at","updated_at","password_reset_token","password_reset_sent_at","auth_token","email_confirmed","confirm_token","slug" FROM "teachers"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "teachers"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "phone" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "grade" varchar DEFAULT NULL, "subject" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "group_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_reset_token" varchar DEFAULT NULL, "password_reset_sent_at" datetime DEFAULT NULL, "auth_token" varchar DEFAULT NULL, "email_confirmed" boolean DEFAULT 0, "confirm_token" varchar DEFAULT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_teachers_on_group_id" ON "teachers" ("group_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "teachers" ("id","name","phone","email","grade","subject","password_digest","group_id","created_at","updated_at","password_reset_token","password_reset_sent_at","auth_token","email_confirmed","confirm_token")
+                     SELECT "id","name","phone","email","grade","subject","password_digest","group_id","created_at","updated_at","password_reset_token","password_reset_sent_at","auth_token","email_confirmed","confirm_token" FROM "ateachers"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "ateachers"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304071957"]]
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFriendlyIdSlugs (20210304024744)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304024744"]]
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMessages (20210302181939)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "messages"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210302181939"]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateConversations (20210302181626)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "conversations"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210302181626"]]
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfiles (20210228023212)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "profiles"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210228023212"]]
+  [1m[36mTRANSACTION (21.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20210226055636)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "posts"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210226055636"]]
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20210226055636)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar, "grade" varchar, "meeting" varchar, "budget" integer, "gender" varchar, "tutors_number" integer, "commitment" varchar, "per_payment" varchar, "child_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_88fc970a04"
+FOREIGN KEY ("child_id")
+  REFERENCES "children" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_posts_on_child_id" ON "posts" ("child_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210226055636"]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfiles (20210228023212)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "per_charge" varchar, "fee" integer, "experience" integer, "commitment" varchar, "teacher_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_605b0f1a3b"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "teachers" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_profiles_on_teacher_id" ON "profiles" ("teacher_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (7.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210228023212"]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConversations (20210302181626)
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "conversations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302181626"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMessages (20210302181939)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302181939"]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFriendlyIdSlugs (20210304024744)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304024744"]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSlugToTeachers (20210304071957)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (5.7ms)[0m  [1m[35mALTER TABLE "teachers" ADD "slug" varchar[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teachers_on_slug" ON "teachers" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (16.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304071957"]]
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSlugToChildren (20210304081208)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.2ms)[0m  [1m[35mALTER TABLE "children" ADD "slug" varchar[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_children_on_slug" ON "children" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304081208"]]
+  [1m[36mTRANSACTION (23.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSlugToGroups (20210304081225)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "groups" ADD "slug" varchar[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_groups_on_slug" ON "groups" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304081225"]]
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSlugToAddresses (20210304081242)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "slug" varchar[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_addresses_on_slug" ON "addresses" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304081242"]]
+  [1m[36mTRANSACTION (19.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSlugToDirections (20210304081308)
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "directions" ADD "slug" varchar[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_directions_on_slug" ON "directions" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304081308"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSlugToVideos (20210304081325)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.7ms)[0m  [1m[35mALTER TABLE "videos" ADD "slug" varchar[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_videos_on_slug" ON "videos" ("slug")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304081325"]]
+  [1m[36mTRANSACTION (22.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDenshobatoConversations (20210405202228)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "denshobato_conversations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "trashed" boolean DEFAULT 0, "sender_type" varchar, "sender_id" integer, "recipient_type" varchar, "recipient_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "conversation_polymorphic_sender" ON "denshobato_conversations" ("sender_type", "sender_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "conversation_polymorphic_recipient" ON "denshobato_conversations" ("recipient_type", "recipient_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210405202228"]]
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDenshobatoMessages (20210405202229)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "denshobato_messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text DEFAULT '', "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "message_polymorphic_author" ON "denshobato_messages" ("author_type", "author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210405202229"]]
+  [1m[36mTRANSACTION (25.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDenshobatoNotifications (20210405202230)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "denshobato_notifications" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message_id" integer, "conversation_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "notification_for_message" ON "denshobato_notifications" ("message_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "notification_for_conversation" ON "denshobato_notifications" ("conversation_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "unique_messages_for_conversations" ON "denshobato_notifications" ("message_id", "conversation_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (9.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210405202230"]]
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDenshobatoBlacklists (20210405202231)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "denshobato_blacklists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blocker_type" varchar, "blocker_id" integer, "blocked_type" varchar, "blocked_id" integer)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "blocker_user" ON "denshobato_blacklists" ("blocker_type", "blocker_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "blocked_user" ON "denshobato_blacklists" ("blocked_type", "blocked_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210405202231"]]
+  [1m[36mTRANSACTION (31.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20210412125458)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "active_storage_blobs" ADD "service_name" varchar[0m
+  [1m[36mActiveStorage::Blob Update All (0.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "service_name" = ?[0m  [["service_name", "local"]]
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "service_name" varchar DEFAULT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_blobs_on_key" ON "aactive_storage_blobs" ("key")[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "aactive_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name" FROM "active_storage_blobs"[0m
+  [1m[35m (9.1ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "service_name" varchar NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name" FROM "aactive_storage_blobs"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "aactive_storage_blobs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210412125458"]]
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveStorageVariantRecords (20210412125459)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210412125459"]]
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActionTextTables (20210412203526)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "body" text, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts" ("record_type", "record_id", "name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210412203526"]]
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-12 23:50:17 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.7ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 9.6ms | Allocations: 709)
+  Rendered layouts/_notice.html.erb (Duration: 3.1ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 109.7ms | Allocations: 10419)
+  Rendered posts/new.html.erb within layouts/application (Duration: 134.6ms | Allocations: 11996)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/nakitto/odin_on_rails/Home-School-v2/public/packs
+[Webpacker] Hash: f6bf54dfa14f3b55853e
+Version: webpack 4.44.2
+Time: 5687ms
+Built at: 04/12/2021 11:50:32 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f6ebc52f919f28b37731.js    507 KiB  application  [emitted] [immutable]  application
+js/application-f6ebc52f919f28b37731.js.map    539 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-f6ebc52f919f28b37731.js js/application-f6ebc52f919f28b37731.js.map
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 187 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/places_controller.js] 4.66 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 391 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 48 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 14873.4ms | Allocations: 68080)
+Completed 200 OK in 15016ms (Views: 14879.8ms | ActiveRecord: 3.8ms | Allocations: 87293)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-12 23:52:40 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/_form.html.erb (Duration: 7.8ms | Allocations: 2319)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2680)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 833.3ms | Allocations: 186570)
+Completed 200 OK in 840ms (Views: 836.5ms | ActiveRecord: 0.2ms | Allocations: 187666)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-12 23:53:30 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.3ms | Allocations: 183)
+  Rendered layouts/_notice2.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 58.4ms | Allocations: 4979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 212.7ms | Allocations: 36290)
+Completed 200 OK in 232ms (Views: 225.5ms | ActiveRecord: 0.0ms | Allocations: 37297)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-12 23:53:37 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.7ms | Allocations: 146)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 116.8ms | Allocations: 32359)
+Completed 200 OK in 120ms (Views: 118.3ms | ActiveRecord: 0.0ms | Allocations: 32995)
+
+
+Started GET "/teacher_sessions/new" for 127.0.0.1 at 2021-04-12 23:53:42 +0300
+Processing by TeacherSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering teacher_sessions/new.html.erb within layouts/application
+  Rendered teacher_sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 195.8ms | Allocations: 31828)
+Completed 200 OK in 203ms (Views: 200.8ms | ActiveRecord: 0.0ms | Allocations: 32906)
+
+
+Started POST "/teacher_sessions" for 127.0.0.1 at 2021-04-12 23:53:48 +0300
+Processing by TeacherSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "email"=>"werehenry2@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."email" = ? LIMIT ?[0m  [["email", "werehenry2@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/teacher_sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/teachers/1
+Completed 302 Found in 388ms (ActiveRecord: 0.9ms | Allocations: 11119)
+
+
+Started GET "/teachers/1" for 127.0.0.1 at 2021-04-12 23:53:49 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (1.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."slug" = ? LIMIT ?[0m  [["slug", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  [1m[36mTeacher Load (1.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendered layouts/_main-nav.html.erb (Duration: 6.2ms | Allocations: 743)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered teachers/show.html.erb within layouts/application (Duration: 47.7ms | Allocations: 4814)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 223.8ms | Allocations: 36009)
+Completed 200 OK in 262ms (Views: 231.8ms | ActiveRecord: 3.4ms | Allocations: 38534)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-04-12 23:53:56 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendered layouts/_main-nav.html.erb (Duration: 1.9ms | Allocations: 620)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 32772)
+Completed 200 OK in 88ms (Views: 86.3ms | ActiveRecord: 0.4ms | Allocations: 33470)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-12 23:54:20 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.8ms | Allocations: 171)
+  Rendered layouts/_notice.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered profiles/_form.html.erb (Duration: 11.5ms | Allocations: 2643)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 137.9ms | Allocations: 34442)
+Completed 200 OK in 167ms (Views: 142.8ms | ActiveRecord: 0.2ms | Allocations: 40499)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-12 23:56:25 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.9ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 15.1ms | Allocations: 3066)
+  Rendered posts/new.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4633)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 158.6ms | Allocations: 36431)
+Completed 200 OK in 164ms (Views: 160.6ms | ActiveRecord: 0.1ms | Allocations: 38306)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-12 23:57:33 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.3ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 13.9ms | Allocations: 3069)
+  Rendered posts/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 4640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 142.3ms | Allocations: 36416)
+Completed 200 OK in 148ms (Views: 145.4ms | ActiveRecord: 0.1ms | Allocations: 38287)
+
+

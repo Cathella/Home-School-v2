@@ -1,8 +1,6 @@
 <%= form_with(model: profile, local: true) do |form| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
-      <p><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</p>
-
       <ul>
       <% profile.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -69,7 +67,7 @@
         </p>
       </div>
       <div class="col-md-8 col-lg-8">
-        <%= form.text_area :description, class: 'form-control mt-3', style: 'height: 240px;'%>
+        <%= form.rich_text_area :description, class: 'form-control mt-3', style: 'height: 240px;'%>
       </div>
     </div>
   </div>
