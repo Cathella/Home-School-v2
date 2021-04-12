@@ -21,6 +21,6 @@ class ChildSessionsController < ApplicationController
 
   def destroy
     session[:child_id] = nil
-    redirect_to childrenhome_path, notice: "You have been logged out!"
+    redirect_to accounts_path, notice: "You have been logged out!"
   end
 end

@@ -26,4 +26,6 @@ class HomeController < ApplicationController
 
   def privateaching
   end
+
+  def account; end
 end

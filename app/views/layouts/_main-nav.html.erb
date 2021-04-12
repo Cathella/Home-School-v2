@@ -22,10 +22,11 @@
           <%= link_to "Logout", admin_session_path("current"), method: "delete" %>
         <% else %>
           <%= link_to "Home", root_path %>
-          <%= link_to "For Teachers", teachershome_path %>
-          <%= link_to "For Parents / Students", childrenhome_path %>
+          <!-- <%= link_to "For Teachers", teachershome_path %>
+          <%= link_to "For Parents / Students", childrenhome_path %> -->
           <%= link_to "Hire a tutor", profiles_path %>
           <%= link_to "Post a tutor job", posts_path %>
+          <%= link_to "Sign up / Login", accounts_path %>
         <% end %>
       </div>
     </div>
@@ -34,7 +35,9 @@
       🏠 
       <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
     </a>
-    
+    <% if current_account %>
+      <small class="text-muted">Hello, <%= current_account.name %></small>
+    <% end %>
     <span style="cursor:pointer; margin-top: 13px;" class="float-right" onclick="openNav()">
       <div class="rounded" style="background: #095578; width: 43px; height: 4px; margin: 0 0 7px 0;"></div>
       <div class="rounded" style="background: #095578; width: 43px; height: 4px; margin: 0 0 7px 0;"></div>
