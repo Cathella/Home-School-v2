@@ -29,15 +29,15 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :subject, "Subject:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
-            Add a subjects required of the teacher.
+            Subjects to be taught.
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
+      <div class="col-md-8 col-lg-9">
         <%= form.select :subject,  ['Maths', 'Science', 'Social studies', 'English', 'Reading'], {}, { class: "custom-select mt-3" } %>
       </div>
     </div>
@@ -45,7 +45,7 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :grade, "Class:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -53,7 +53,7 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
+      <div class="col-md-8 col-lg-9">
         <%= form.select :grade,  ['Pre-school', 'P.1', 'P.2', 'P.3', 'P.4', 'P.5', 'P.6', 'P.7'], {}, { class: "custom-select mt-3" } %>
       </div>
     </div>
@@ -61,7 +61,7 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :meeting, "Meeting options:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -69,7 +69,7 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
+      <div class="col-md-8 col-lg-9">
         <%= form.select :meeting,  ['Online Sessions', 'Student/Parents place', 'Teachers place'], {}, { class: "custom-select mt-3" } %>
       </div>
     </div>
@@ -77,7 +77,7 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :budget, "Budget:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -85,10 +85,10 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
+      <div class="col-md-8 col-lg-9">
         <div class="row">
           <div class="col-sm-7 col-md-7 col-lg-7">
-            <%= form.text_field :budget, class: "form-control mt-3" %>
+            <%= form.number_field :budget, class: "form-control mt-3", placeholder: "Ex. 20,000" %>
           </div>
           <div class="col-sm-5 col-md-5 col-lg-5">
             <%= form.select :per_payment,  ['Fixed amount', 'per day', 'per week', 'per month'], {}, { class: "custom-select mt-3" } %>
@@ -100,7 +100,7 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :gender, "Gender Preference:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -108,7 +108,7 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
+      <div class="col-md-8 col-lg-9">
         <%= form.select :gender,  ['Female', 'Male', 'Both Female and Male'], {}, { class: "custom-select mt-3" } %>
       </div>
     </div>
@@ -116,7 +116,7 @@
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :tutors_number, "Teachers wanted:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -124,15 +124,15 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
-        <%= form.text_field :tutors_number, class: "form-control mt-3" %>
+      <div class="col-md-8 col-lg-9">
+        <%= form.number_field :tutors_number, class: "form-control mt-3" %>
       </div>
     </div>
   </div>
 
   <div class="field mb-4">
     <div class="row">
-      <div class="col-md-4 col-lg-4">
+      <div class="col-md-4 col-lg-3">
         <%= form.label :commitment, "Teacher's commitment:" %>
         <p class="text-muted" style="line-height: 1;">
           <small>
@@ -140,7 +140,7 @@
           </small>
         </p>
       </div>
-      <div class="col-md-8 col-lg-8">
+      <div class="col-md-8 col-lg-9">
         <%= form.select :commitment,  ['Part-time', 'Full-time'], {}, { class: "custom-select mt-3" } %>
       </div>
     </div>
@@ -148,7 +148,7 @@
 
   <div class="actions">
     <div class="row">
-      <div class="col-md-8 col-lg-8 ml-auto">
+      <div class="col-md-9 col-lg-9 ml-auto">
         <%= form.submit "Post Requirement", class: "shadow" %>
       </div>
     </div>

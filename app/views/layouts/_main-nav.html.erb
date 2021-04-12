@@ -6,15 +6,17 @@
       </a>
       <div class="overlay-content">
         <% if current_teacher %>
+          <a href="/teachers/<%= current_account.id %>">My Profile</a>
           <%= link_to "My Group", teacher_group_path %>
           <%= link_to "My Address", teacher_address_path %>
-          <%= link_to "Find a tutor job", posts_path %>
+          <%= link_to "Find a tutor job", profiles_path %>
           <%= link_to "Mailbox", conversations_path %>
           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
         <% elsif current_child %>
+          <a href="/children/<%= current_account.id %>">My Profile</a>
           <%= link_to "My Group", my_group_path %>
           <%= link_to "My Address", my_address_path %>
-          <%= link_to "Post a tutor job", profiles_path %>
+          <%= link_to "Post a tutor job", posts_path %>
           <%= link_to "Mailbox", conversations_path %>
           <%= link_to "Logout", child_session_path("current"), method: "delete" %>
         <% elsif current_admin %>

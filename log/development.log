@@ -24316,3 +24316,892 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 148ms (Views: 145.4ms | ActiveRecord: 0.1ms | Allocations: 38287)
 
 
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-12 23:59:33 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.0ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 5.3ms | Allocations: 3068)
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.8ms | Allocations: 36390)
+Completed 200 OK in 176ms (Views: 171.1ms | ActiveRecord: 0.1ms | Allocations: 38255)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:00:30 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.5ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 7.0ms | Allocations: 3067)
+  Rendered posts/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 143.4ms | Allocations: 36407)
+Completed 200 OK in 153ms (Views: 148.0ms | ActiveRecord: 0.2ms | Allocations: 38274)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:02:36 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 7.0ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.7ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 16.1ms | Allocations: 3073)
+  Rendered posts/new.html.erb within layouts/application (Duration: 29.2ms | Allocations: 4638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 165.0ms | Allocations: 36395)
+Completed 200 OK in 171ms (Views: 167.5ms | ActiveRecord: 0.2ms | Allocations: 38266)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:03:12 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.7ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 7.0ms | Allocations: 3067)
+  Rendered posts/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 4638)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 139.8ms | Allocations: 36411)
+Completed 200 OK in 147ms (Views: 143.9ms | ActiveRecord: 0.1ms | Allocations: 38286)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:04:39 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.6ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 1.1ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 32.4ms | Allocations: 1574)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 53.0ms | Allocations: 3138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 213.9ms | Allocations: 34623)
+Completed 200 OK in 244ms (Views: 229.3ms | ActiveRecord: 0.4ms | Allocations: 36379)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:05:23 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.2ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 5.0ms | Allocations: 1575)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 34635)
+Completed 200 OK in 94ms (Views: 90.6ms | ActiveRecord: 0.1ms | Allocations: 36389)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:05:50 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.0ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 10.0ms | Allocations: 1575)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 3136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.5ms | Allocations: 34587)
+Completed 200 OK in 161ms (Views: 157.8ms | ActiveRecord: 0.1ms | Allocations: 36336)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:06:23 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.7ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 4.6ms | Allocations: 1575)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 154.2ms | Allocations: 34629)
+Completed 200 OK in 162ms (Views: 158.0ms | ActiveRecord: 0.1ms | Allocations: 36383)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:06:51 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.4ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 9.9ms | Allocations: 1575)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 3137)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.2ms | Allocations: 34593)
+Completed 200 OK in 120ms (Views: 117.5ms | ActiveRecord: 0.1ms | Allocations: 36343)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:07:26 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.4ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 8.8ms | Allocations: 1574)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 16.3ms | Allocations: 3142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 170.4ms | Allocations: 34639)
+Completed 200 OK in 178ms (Views: 173.7ms | ActiveRecord: 0.2ms | Allocations: 36395)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:07:49 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.1ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 5.0ms | Allocations: 1574)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 139.7ms | Allocations: 34595)
+Completed 200 OK in 147ms (Views: 143.2ms | ActiveRecord: 0.2ms | Allocations: 36351)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:15:27 +0300
+Processing by PostsController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.2ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 6.6ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 14.0ms | Allocations: 3066)
+  Rendered posts/new.html.erb within layouts/application (Duration: 27.5ms | Allocations: 4637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 167.3ms | Allocations: 36414)
+Completed 200 OK in 180ms (Views: 171.4ms | ActiveRecord: 1.9ms | Allocations: 38791)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:15:36 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/_form.html.erb (Duration: 4.6ms | Allocations: 2315)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2676)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 152.4ms | Allocations: 34111)
+Completed 200 OK in 159ms (Views: 155.3ms | ActiveRecord: 0.2ms | Allocations: 35200)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:16:01 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered profiles/_form.html.erb (Duration: 77.6ms | Allocations: 4061)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 85.6ms | Allocations: 4744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 246.4ms | Allocations: 35894)
+Completed 200 OK in 252ms (Views: 248.4ms | ActiveRecord: 0.3ms | Allocations: 37444)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:16:31 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 693)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 5.6ms | Allocations: 1584)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.0ms | Allocations: 34639)
+Completed 200 OK in 101ms (Views: 97.9ms | ActiveRecord: 0.1ms | Allocations: 36387)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:19:51 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.4ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.9ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 5.9ms | Allocations: 3074)
+  Rendered posts/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 4645)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 146.7ms | Allocations: 36422)
+Completed 200 OK in 154ms (Views: 150.6ms | ActiveRecord: 0.1ms | Allocations: 38306)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:20:54 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.2ms | Allocations: 703)
+  Rendered layouts/_notice.html.erb (Duration: 0.8ms | Allocations: 114)
+  Rendered posts/_form.html.erb (Duration: 10.4ms | Allocations: 3075)
+  Rendered posts/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 4640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 171.1ms | Allocations: 36415)
+Completed 200 OK in 179ms (Views: 175.2ms | ActiveRecord: 0.1ms | Allocations: 38290)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-04-13 00:21:31 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 2.3ms | Allocations: 617)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1571)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.2ms | Allocations: 33143)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 0.5ms | Allocations: 33925)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2021-04-13 00:25:34 +0300
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 652)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:18
+  Rendered profiles/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 118.7ms | Allocations: 33320)
+Completed 200 OK in 124ms (Views: 121.4ms | ActiveRecord: 0.5ms | Allocations: 34562)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-04-13 00:27:30 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 6.4ms | Allocations: 1175)
+  Rendered layouts/_notice.html.erb (Duration: 0.7ms | Allocations: 114)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2446)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 230.2ms | Allocations: 34364)
+Completed 200 OK in 238ms (Views: 234.2ms | ActiveRecord: 1.1ms | Allocations: 35814)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-04-13 00:29:33 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 1175)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 114)
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.0ms | Allocations: 34343)
+Completed 200 OK in 115ms (Views: 112.5ms | ActiveRecord: 0.3ms | Allocations: 35781)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-04-13 00:29:48 +0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 3.7ms | Allocations: 1175)
+  Rendered layouts/_notice.html.erb (Duration: 9.0ms | Allocations: 114)
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 2443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 178.3ms | Allocations: 34335)
+Completed 200 OK in 184ms (Views: 181.7ms | ActiveRecord: 0.4ms | Allocations: 35776)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:30:09 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/_form.html.erb (Duration: 5.5ms | Allocations: 3069)
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3719)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | Allocations: 35184)
+Completed 200 OK in 115ms (Views: 111.6ms | ActiveRecord: 0.1ms | Allocations: 36407)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-04-13 00:32:46 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "post"=>{"description"=>"<div>need some help in probability and statistics, on these lectures&nbsp;<br>Unit 5 : sampling distribution&nbsp;<br>Unit 6 : estimation&nbsp;<br>Unit 7a : hypothesis testing (singla sample )<br>Unit 7b : hypothesis testing (two sample )<br>Unit 8 : one way anova&nbsp;<br>Unit 9 : two factor anova and block design&nbsp;<br>Unit 10 : regression&nbsp;<br>Unit 11 : categorical data analysis</div>", "subject"=>"Maths", "grade"=>"P.7", "meeting"=>"Teachers place", "budget"=>"50000", "per_payment"=>"per week", "gender"=>"Male", "tutors_number"=>"1", "commitment"=>"Full-time"}, "commit"=>"Post Requirement"}
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mCACHE Child Load (0.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `create'
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:28:in `create'
+Redirected to http://localhost:3000/posts/new
+Completed 302 Found in 68ms (ActiveRecord: 0.5ms | Allocations: 12284)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-04-13 00:32:46 +0300
+Processing by PostsController#new as HTML
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered posts/_form.html.erb (Duration: 16.8ms | Allocations: 2324)
+  Rendered posts/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 2690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 214.0ms | Allocations: 34123)
+Completed 200 OK in 234ms (Views: 220.2ms | ActiveRecord: 0.6ms | Allocations: 35240)
+
+
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:36:23 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mChild Load (2.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.2ms | Allocations: 186)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/mygroup.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 20)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 36.5ms | Allocations: 4042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 172.5ms | Allocations: 35609)
+Completed 200 OK in 283ms (Views: 174.9ms | ActiveRecord: 13.1ms | Allocations: 52043)
+
+
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:38:27 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 24.6ms | Allocations: 5747)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6279)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 6348)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.1ms | Allocations: 8170)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `child' for #<ActionView::Base:0x0000000001b120>
+Did you mean?  child_url):
+    12:           <%= link_to "Mailbox", conversations_path %>
+    13:           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+    14:         <% elsif current_child %>
+    15:           <%= link_to "My Profile", child %>
+    16:           <%= link_to "My Group", my_group_path %>
+    17:           <%= link_to "My Address", my_address_path %>
+    18:           <%= link_to "Post a tutor job", profiles_path %>
+  
+app/views/layouts/_main-nav.html.erb:15
+app/views/home/mygroup.html.erb:1
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:38:55 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.2ms | Allocations: 2012)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2542)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2611)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 4424)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"children"}, missing required keys: [:id]
+Did you mean?  child_url
+               children_url
+               new_child_url
+               children_path):
+    12:           <%= link_to "Mailbox", conversations_path %>
+    13:           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+    14:         <% elsif current_child %>
+    15:           <%= link_to "My Profile", child_path %>
+    16:           <%= link_to "My Group", my_group_path %>
+    17:           <%= link_to "My Address", my_address_path %>
+    18:           <%= link_to "Post a tutor job", profiles_path %>
+  
+app/views/layouts/_main-nav.html.erb:15
+app/views/home/mygroup.html.erb:1
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:39:41 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.3ms | Allocations: 1984)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2514)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2583)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms | Allocations: 4394)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"children"}, missing required keys: [:id]
+Did you mean?  child_path
+               children_url
+               new_child_url
+               children_path):
+    12:           <%= link_to "Mailbox", conversations_path %>
+    13:           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+    14:         <% elsif current_child %>
+    15:           <%= link_to "My Profile", child_url %>
+    16:           <%= link_to "My Group", my_group_path %>
+    17:           <%= link_to "My Address", my_address_path %>
+    18:           <%= link_to "Post a tutor job", profiles_path %>
+  
+app/views/layouts/_main-nav.html.erb:15
+app/views/home/mygroup.html.erb:1
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:40:08 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.9ms | Allocations: 2306)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/mygroup.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 21.3ms | Allocations: 3974)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 159.5ms | Allocations: 35916)
+Completed 200 OK in 167ms (Views: 162.2ms | ActiveRecord: 0.5ms | Allocations: 37763)
+
+
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:41:14 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 16.8ms | Allocations: 5467)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 19.2ms | Allocations: 5996)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 6065)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.1ms | Allocations: 7858)
+
+
+  
+ActionView::Template::Error (undefined method `child' for #<ActionView::Base:0x0000000001c3e0>
+Did you mean?  child_url):
+    12:           <%= link_to "Mailbox", conversations_path %>
+    13:           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+    14:         <% elsif current_child %>
+    15:           <%= link_to "My Profile", child(current_child) %>
+    16:           <%= link_to "My Group", my_group_path %>
+    17:           <%= link_to "My Address", my_address_path %>
+    18:           <%= link_to "Post a tutor job", profiles_path %>
+  
+app/views/layouts/_main-nav.html.erb:15
+app/views/home/mygroup.html.erb:1
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:41:29 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 13.3ms | Allocations: 5448)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 15.2ms | Allocations: 5978)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 6047)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms | Allocations: 7842)
+
+
+  
+ActionView::Template::Error (undefined method `child' for #<ActionView::Base:0x0000000001c868>
+Did you mean?  child_url):
+    12:           <%= link_to "Mailbox", conversations_path %>
+    13:           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+    14:         <% elsif current_child %>
+    15:           <%= link_to "My Profile", child(current_child.id) %>
+    16:           <%= link_to "My Group", my_group_path %>
+    17:           <%= link_to "My Address", my_address_path %>
+    18:           <%= link_to "Post a tutor job", profiles_path %>
+  
+app/views/layouts/_main-nav.html.erb:15
+app/views/home/mygroup.html.erb:1
+Started GET "/mygroup" for 127.0.0.1 at 2021-04-13 00:42:11 +0300
+Processing by HomeController#mygroup as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering home/mygroup.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.8ms | Allocations: 703)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/mygroup.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 1.9ms | Allocations: 114)
+  Rendered home/mygroup.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 224.8ms | Allocations: 34286)
+Completed 200 OK in 235ms (Views: 230.1ms | ActiveRecord: 0.4ms | Allocations: 36117)
+
+
+Started GET "/myaddress" for 127.0.0.1 at 2021-04-13 00:42:25 +0300
+Processing by HomeController#myaddress as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:6:in `myaddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/myaddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.9ms | Allocations: 145)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/myaddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.3ms | Allocations: 18)
+  [1m[36mAddress Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "addresses" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:54:in `address_add'
+  Rendered home/myaddress.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2089)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 187.6ms | Allocations: 33537)
+Completed 200 OK in 230ms (Views: 187.7ms | ActiveRecord: 3.4ms | Allocations: 43589)
+
+
+Started GET "/myaddress" for 127.0.0.1 at 2021-04-13 00:44:04 +0300
+Processing by HomeController#myaddress as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:6:in `myaddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/myaddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.9ms | Allocations: 706)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/myaddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 1.6ms | Allocations: 114)
+  [1m[36mAddress Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "addresses" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:54:in `address_add'
+  Rendered home/myaddress.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 115.3ms | Allocations: 34752)
+Completed 200 OK in 121ms (Views: 116.3ms | ActiveRecord: 0.9ms | Allocations: 37126)
+
+
+Started GET "/myaddress" for 127.0.0.1 at 2021-04-13 00:45:20 +0300
+Processing by HomeController#myaddress as HTML
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:6:in `myaddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/myaddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.8ms | Allocations: 706)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/myaddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 3.8ms | Allocations: 114)
+  [1m[36mAddress Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "addresses" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:54:in `address_add'
+  Rendered home/myaddress.html.erb within layouts/application (Duration: 26.4ms | Allocations: 2898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.2ms | Allocations: 34801)
+Completed 200 OK in 187ms (Views: 179.3ms | ActiveRecord: 1.4ms | Allocations: 37185)
+
+
+Started GET "/myaddress" for 127.0.0.1 at 2021-04-13 00:46:29 +0300
+Processing by HomeController#myaddress as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:6:in `myaddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/myaddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.8ms | Allocations: 728)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/myaddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 1.0ms | Allocations: 115)
+  [1m[36mAddress Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "addresses" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:54:in `address_add'
+  Rendered home/myaddress.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 125.7ms | Allocations: 34749)
+Completed 200 OK in 136ms (Views: 129.0ms | ActiveRecord: 0.7ms | Allocations: 37131)
+
+
+Started GET "/children/2" for 127.0.0.1 at 2021-04-13 00:46:39 +0300
+Processing by ChildrenController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."slug" = ? LIMIT ?[0m  [["slug", "2"], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:80:in `set_child'
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:80:in `set_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/show.html.erb within layouts/application
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 4.5ms | Allocations: 661)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 20)
+  Rendered children/show.html.erb within layouts/application (Duration: 15.8ms | Allocations: 2324)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 189.1ms | Allocations: 33946)
+Completed 200 OK in 205ms (Views: 192.3ms | ActiveRecord: 1.3ms | Allocations: 36543)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:47:43 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 9.0ms | Allocations: 737)
+  Rendered layouts/_notice.html.erb (Duration: 1.2ms | Allocations: 114)
+  Rendered profiles/_form.html.erb (Duration: 56.5ms | Allocations: 8227)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 77.3ms | Allocations: 9837)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 202.0ms | Allocations: 41269)
+Completed 200 OK in 344ms (Views: 215.5ms | ActiveRecord: 8.4ms | Allocations: 58313)
+
+
+Started GET "/teachers/1" for 127.0.0.1 at 2021-04-13 00:47:50 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."slug" = ? LIMIT ?[0m  [["slug", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendered layouts/_main-nav.html.erb (Duration: 5.3ms | Allocations: 651)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered teachers/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 159.8ms | Allocations: 34385)
+Completed 200 OK in 171ms (Views: 163.1ms | ActiveRecord: 1.1ms | Allocations: 36857)
+
+
+Started GET "/teacheraddress" for 127.0.0.1 at 2021-04-13 00:48:28 +0300
+Processing by HomeController#teacheraddress as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  [1m[36mDirection Load (0.4ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:10:in `teacheraddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/teacheraddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.5ms | Allocations: 176)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/teacheraddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 20)
+  [1m[36mDirection Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "directions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `direction_add'
+  Rendered home/teacheraddress.html.erb within layouts/application (Duration: 29.0ms | Allocations: 2113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.0ms | Allocations: 33362)
+Completed 200 OK in 224ms (Views: 181.0ms | ActiveRecord: 4.6ms | Allocations: 43656)
+
+
+Started GET "/teacheraddress" for 127.0.0.1 at 2021-04-13 00:54:01 +0300
+Processing by HomeController#teacheraddress as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  [1m[36mDirection Load (0.6ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:10:in `teacheraddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/teacheraddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 29.4ms | Allocations: 5613)
+  Rendered home/teacheraddress.html.erb within layouts/application (Duration: 37.2ms | Allocations: 6141)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 6210)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 1.7ms | Allocations: 8958)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `profile' for #<ActionView::Base:0x0000000001d7e0>
+Did you mean?  provide):
+     9:           <a href="/teachers/<%= current_account.id %>">My Profile</a>
+    10:           <%= link_to "My Group", teacher_group_path %>
+    11:           <%= link_to "My Address", teacher_address_path %>
+    12:           <%= link_to "My Tutor profile", profile %>
+    13:           <%= link_to "Find a tutor job", posts_path %>
+    14:           <%= link_to "Mailbox", conversations_path %>
+    15:           <%= link_to "Logout", teacher_session_path("current"), method: "delete" %>
+  
+app/views/layouts/_main-nav.html.erb:12
+app/views/home/teacheraddress.html.erb:1
+Started GET "/teacheraddress" for 127.0.0.1 at 2021-04-13 00:55:02 +0300
+Processing by HomeController#teacheraddress as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:10:in `teacheraddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/teacheraddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.9ms | Allocations: 729)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/teacheraddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.4ms | Allocations: 114)
+  [1m[36mDirection Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "directions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `direction_add'
+  Rendered home/teacheraddress.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 144.5ms | Allocations: 34501)
+Completed 200 OK in 156ms (Views: 149.0ms | ActiveRecord: 0.8ms | Allocations: 36769)
+
+
+Started GET "/teacheraddress" for 127.0.0.1 at 2021-04-13 00:55:59 +0300
+Processing by HomeController#teacheraddress as HTML
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:10:in `teacheraddress'
+  Rendering layout layouts/application.html.erb
+  Rendering home/teacheraddress.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 729)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/home/teacheraddress.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  [1m[36mDirection Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "directions" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:64:in `direction_add'
+  Rendered home/teacheraddress.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2919)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 147.3ms | Allocations: 34443)
+Completed 200 OK in 155ms (Views: 149.2ms | ActiveRecord: 0.8ms | Allocations: 36704)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2021-04-13 00:56:13 +0300
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 651)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:18
+  Rendered profiles/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.0ms | Allocations: 32934)
+Completed 200 OK in 106ms (Views: 104.1ms | ActiveRecord: 0.5ms | Allocations: 34067)
+
+
+Started GET "/profiles/new" for 127.0.0.1 at 2021-04-13 00:56:20 +0300
+Processing by ProfilesController#new as HTML
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered profiles/_form.html.erb (Duration: 5.6ms | Allocations: 1578)
+  Rendered profiles/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.7ms | Allocations: 33445)
+Completed 200 OK in 112ms (Views: 108.6ms | ActiveRecord: 0.2ms | Allocations: 34542)
+
+
+Started POST "/profiles" for 127.0.0.1 at 2021-04-13 00:58:16 +0300
+Processing by ProfilesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "profile"=>{"fee"=>"100000", "per_charge"=>"weekly", "experience"=>"5", "commitment"=>"Part-time", "description"=>"<div>Aslamualikum.. I am Naima Nadeem and i am here to teach you Quran... Holy book of Allah... I hhave been teaching from last 5 years.... I hope you people will be able to get best education here... I will teach you in urdu....&nbsp;<br>I assure you that you will enjoy my class.... And be able to achieve more success... In sha Allah... You are free to contact me... And i love teaching my students in a way that is completely comfortable for them... I used to take tests...&nbsp;<br><br>And built them for there future.... I may also arrange parents teacher meeting... So that i will be able to know the progress of my students.... You are free to ask questions from me as many as you want.... Thank you...</div>"}, "commit"=>"Join private tutoring"}
+  [1m[36mTeacher Load (1.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  [1m[36mCACHE Teacher Load (0.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:28:in `create'
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/profiles_controller.rb:32:in `block in create'
+  [1m[36mProfile Create (2.1ms)[0m  [1m[32mINSERT INTO "profiles" ("per_charge", "fee", "experience", "commitment", "teacher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["per_charge", "weekly"], ["fee", 100000], ["experience", 5], ["commitment", "Part-time"], ["teacher_id", 1], ["created_at", "2021-04-12 21:58:16.856667"], ["updated_at", "2021-04-12 21:58:16.856667"]]
+  ↳ app/controllers/profiles_controller.rb:32:in `block in create'
+  [1m[36mActionText::RichText Create (1.4ms)[0m  [1m[32mINSERT INTO "action_text_rich_texts" ("name", "body", "record_type", "record_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "description"], ["body", "<div>Aslamualikum.. I am Naima Nadeem and i am here to teach you Quran... Holy book of Allah... I hhave been teaching from last 5 years.... I hope you people will be able to get best education here... I will teach you in urdu.... <br>I assure you that you will enjoy my class.... And be able to achieve more success... In sha Allah... You are free to contact me... And i love teaching my students in a way that is completely comfortable for them... I used to take tests... <br><br>And built them for there future.... I may also arrange parents teacher meeting... So that i will be able to know the progress of my students.... You are free to ask questions from me as many as you want.... Thank you...</div>"], ["record_type", "Profile"], ["record_id", 1], ["created_at", "2021-04-12 21:58:16.931184"], ["updated_at", "2021-04-12 21:58:16.931184"]]
+  ↳ app/controllers/profiles_controller.rb:32:in `block in create'
+  [1m[36mProfile Update (1.5ms)[0m  [1m[33mUPDATE "profiles" SET "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["updated_at", "2021-04-12 21:58:16.941351"], ["id", 1]]
+  ↳ app/controllers/profiles_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/profiles_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 287ms (ActiveRecord: 26.4ms | Allocations: 22258)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2021-04-13 00:58:17 +0300
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.7ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendered layouts/_main-nav.html.erb (Duration: 5.6ms | Allocations: 617)
+  Rendered layouts/_notice.html.erb (Duration: 0.2ms | Allocations: 23)
+  [1m[36mCACHE Teacher Load (0.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:10
+  [1m[36mDirection Load (1.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:29
+  [1m[36mActionText::RichText Load (1.5ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Profile"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:80
+  Rendered /home/nakitto/.rvm/gems/ruby-3.0.0/gems/actiontext-6.1.3.1/app/views/action_text/content/_layout.html.erb (Duration: 4.6ms | Allocations: 466)
+  Rendered profiles/show.html.erb within layouts/application (Duration: 68.1ms | Allocations: 4715)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 227.9ms | Allocations: 35962)
+Completed 200 OK in 244ms (Views: 228.5ms | ActiveRecord: 3.7ms | Allocations: 37223)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2021-04-13 00:58:29 +0300
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_teacher'
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 614)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mCACHE Teacher Load (0.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:10
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:29
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Profile"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:80
+  Rendered /home/nakitto/.rvm/gems/ruby-3.0.0/gems/actiontext-6.1.3.1/app/views/action_text/content/_layout.html.erb (Duration: 0.6ms | Allocations: 351)
+  Rendered profiles/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3622)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.2ms | Allocations: 34784)
+Completed 200 OK in 115ms (Views: 111.4ms | ActiveRecord: 0.6ms | Allocations: 35724)
+
+
