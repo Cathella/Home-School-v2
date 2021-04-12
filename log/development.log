@@ -27161,3 +27161,123 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 196ms (Views: 194.1ms | ActiveRecord: 0.0ms | Allocations: 34311)
 
 
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:14:55 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 2.0ms | Allocations: 986)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 136.1ms | Allocations: 32490)
+Completed 200 OK in 140ms (Views: 138.4ms | ActiveRecord: 0.0ms | Allocations: 33111)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:16:42 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.7ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 121.5ms | Allocations: 33996)
+Completed 200 OK in 128ms (Views: 125.6ms | ActiveRecord: 0.0ms | Allocations: 35404)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:22:01 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.0ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.9ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 231.7ms | Allocations: 33991)
+Completed 200 OK in 242ms (Views: 239.5ms | Allocations: 35399)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:23:03 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.3ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 153.7ms | Allocations: 33990)
+Completed 200 OK in 162ms (Views: 159.6ms | Allocations: 35398)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:24:21 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.0ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.2ms | Allocations: 33997)
+Completed 200 OK in 156ms (Views: 153.7ms | Allocations: 35409)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:24:48 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 54.9ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 135.4ms | Allocations: 2226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 504.0ms | Allocations: 34001)
+Completed 200 OK in 558ms (Views: 532.7ms | Allocations: 35411)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:25:12 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.8ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.8ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 133.4ms | Allocations: 33997)
+Completed 200 OK in 140ms (Views: 137.5ms | Allocations: 35407)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:25:44 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.7ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 147.9ms | Allocations: 34001)
+Completed 200 OK in 154ms (Views: 152.2ms | Allocations: 35407)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:26:01 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 153.9ms | Allocations: 33994)
+Completed 200 OK in 160ms (Views: 157.6ms | Allocations: 35414)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:28:04 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.3ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 1.2ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 179.4ms | Allocations: 33999)
+Completed 200 OK in 185ms (Views: 183.3ms | Allocations: 35403)
+
+

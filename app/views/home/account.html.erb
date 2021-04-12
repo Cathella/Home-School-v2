@@ -5,11 +5,11 @@
     <%= render 'layouts/notice2' %>
 
     <div class="row">
-      <div class="col-md-8 col-lg-5">
+      <div class="d-none d-lg-block col-lg-5">
         <%= image_tag("jeremy-alford-ngOT6TG3qgs-unsplash.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 1.6em 0 0 0;") %>  
       </div>
 
-      <div class="col-md-8 col-lg-7">
+      <div class="col-md-12 col-lg-7">
         <div class="pl-5">
           <h1 class="text-heading font-weight-bold mt-5">
             We Stand for <br>
@@ -19,18 +19,18 @@
             Children are grouped in a study group 
             with a qualified teacher they will adore
           </p>
-          <div class="mb-5 pb-4 mt-4">
-            <%= link_to 'Register your Child', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3" %>
-            <%= link_to 'Child Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_child_session_path, class: "ml-5 text-info", id: "login-btn" %>
+          <div class="mb-5 pb-4 d-flex flex-wrap">
+            <%= link_to 'Register your Child', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-4" %>
+            <%= link_to 'Child Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_child_session_path, class: "ml-5 text-info mt-5", id: "login-btn" %>
           </div>
           <hr>
           <h1 class="text-heading font-weight-bold mt-5 text-capitalize">
             We empower <br>great <span class="text-info">Teachers</span>
           </h1>
           <p class="text-muted mt-4">Teach small groups of children in a secure and contained environment.</p>
-          <div class="mb-5 mt-4">
-            <%= link_to 'Become a Teacher', new_teacher_path, class: "btn bg-red-btn text-white shadow px-5 py-3" %>
-            <%= link_to 'Teacher Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_teacher_session_path, class: "ml-5 text-info", id: "login-btn" %>
+          <div class="mb-5 d-flex flex-wrap">
+            <%= link_to 'Become a Teacher', new_teacher_path, class: "btn bg-red-btn text-white shadow px-5 py-3 mt-4" %>
+            <%= link_to 'Teacher Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_teacher_session_path, class: "ml-5 text-info mt-5", id: "login-btn" %>
           </div>
         </div>
       </div>
