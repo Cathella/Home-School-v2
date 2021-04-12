@@ -5,7 +5,6 @@ class CreateProfiles < ActiveRecord::Migration[5.2]
       t.integer :fee
       t.integer :experience
       t.string :commitment
-      t.text :description
       t.references :teacher, foreign_key: true
 
       t.timestamps

@@ -6,3 +6,6 @@ window.initMap = function(...args) {
   event.args = args
   window.dispatchEvent(event)
 }
+
+require("trix")
+require("@rails/actiontext")

@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     @post.child_id = current_child.id
 
     if @post.child.address.nil? || @post.child.grade.nil? || @post.child.phone.nil?
-      redirect_to new_post_path, notice: "Please update your profile or add your address."
+      redirect_to new_post_path, notice: "Please complete your profile and add your address to post a job."
     else
       respond_to do |format|
         if @post.save
