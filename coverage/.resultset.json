@@ -1,0 +1,294 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/helpers/blacklists_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/rails_helper.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          0
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/address_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/admin_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/child_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/contact_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/conversation_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/direction_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/group_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/message_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/post_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/profile_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/teacher_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/video_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          null
+        ]
+      },
+      "/home/nakitto/odin_on_rails/Home-School-v2/spec/requests/blacklists_spec.rb": {
+        "lines": [
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1618244235
+  }
+}
