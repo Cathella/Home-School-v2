@@ -6,14 +6,6 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-digitalocean:
-  service: S3
-  endpoint: "https://ams3.digitaloceanspaces.com"
-  access_key_id: 6VCI54RIABFJIZDM4QLN
-  secret_access_key: 1ZdlLtWDRiCmzoKiNOw8RODi0xe63y+h1bTQqSokqOE
-  region: ams3
-  bucket: homeschool-space
-
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
