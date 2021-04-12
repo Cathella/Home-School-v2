@@ -22416,3 +22416,13 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 135ms (Views: 132.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/accounts" for 127.0.0.1 at 2021-04-12 14:29:28 +0300
+Processing by HomeController#account as HTML
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (7.2ms)
+  Rendered layouts/_notice2.html.erb (3.1ms)
+  Rendered home/account.html.erb within layouts/application (22.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 177ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
