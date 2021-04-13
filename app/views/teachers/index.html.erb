@@ -42,6 +42,7 @@
             <% end %>
           </div>
 
+          <% if current_account %>
           <div class="text-center">
             <% unless conversation_exists?(current_account, teacher) %>
               <% if can_create_conversation?(current_account, teacher) %>
@@ -61,6 +62,7 @@
               <% end %>
             <% end %>
           </div>
+          <% end %>
         </div>
       </div>
     <% end %>

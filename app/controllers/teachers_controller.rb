@@ -5,7 +5,7 @@ class TeachersController < ApplicationController
   # GET /teachers.json
   def index
     @teachers = Teacher.all
-    @conversation = current_account.hato_conversations.build
+    @conversation = current_account.hato_conversations.build if current_account
   end
 
   # GET /teachers/1

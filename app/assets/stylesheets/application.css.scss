@@ -86,7 +86,7 @@ a {
 }
 
 .intro-img {
-  background-image: url('/assets/bg2.jpg');
+  background-image: image-url('bg2.jpg');
   background-size: cover;
   background-position: 70% 0%;
   padding: 9em 0;
@@ -94,28 +94,28 @@ a {
 }
 
 .teacher-intro-img {
-  background-image: url('/assets/teacher.jpg');
+  background-image: image-url('teacher.jpg');
   background-size: cover;
   background-position: 70% 40%;
   padding: 9em 0;
 }
 
 .joined-img {
-  background-image: url(/assets/boy.jpg);
+  background-image: image-url('boy.jpg');
   background-size: cover;
   background-position: 70% 12%;
   padding: 9em 0;
 }
 
 .ug-intro {
-  background-image: url(/assets/ugabg.jpg);
+  background-image: image-url('ugabg.jpg');
   background-size: cover;
   background-position: 70% 12%;
   padding: 9em 0;
 }
 
 .child-intro-img {
-  background-image: url('/assets/jeremy-alford-ngOT6TG3qgs-unsplash.jpg');
+  background-image: image-url('jeremy-alford-ngOT6TG3qgs-unsplash.jpg');
   background-size: cover;
   background-position: 70% 20%;
   padding: 9em 0;
@@ -269,7 +269,7 @@ a {
 .lady-img-bg {
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(to right, rgba(11, 58, 68, .4), rgba(11, 58, 68, 8)), url('/assets/teacher.jpg');
+  background-image: linear-gradient(to right, rgba(11, 58, 68, .4), rgba(11, 58, 68, 8)), image-url('teacher.jpg');
 }
 
 .lady-img-bg h2 {
@@ -318,7 +318,7 @@ a {
 
 /* covid-alert */
 .covid-alert {
-  background-image: url('/assets/bg.jpg');
+  background-image: image-url('bg.jpg');
   background-size: cover;
   background-position: center;
   padding: 4.3em 0;
@@ -420,7 +420,7 @@ header {
 }
 
 main {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .97)), url('/assets/network.png');
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .97)), image-url('network.png');
   background-repeat: repeat;
   background-position: center;
 }
