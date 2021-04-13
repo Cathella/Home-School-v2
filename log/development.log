@@ -27281,3 +27281,394 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 185ms (Views: 183.3ms | Allocations: 35403)
 
 
+Started DELETE "/teacher_sessions/current" for 127.0.0.1 at 2021-04-13 02:33:54 +0300
+Processing by TeacherSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"current"}
+Redirected to http://localhost:3000/accounts
+Completed 302 Found in 11ms (Allocations: 395)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:33:54 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.3ms | Allocations: 697)
+  Rendered layouts/_notice2.html.erb (Duration: 1.6ms | Allocations: 126)
+  Rendered home/account.html.erb within layouts/application (Duration: 21.5ms | Allocations: 2227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.6ms | Allocations: 33624)
+Completed 200 OK in 170ms (Views: 166.4ms | Allocations: 34934)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:34:28 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 2.5ms | Allocations: 982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 156.4ms | Allocations: 32100)
+Completed 200 OK in 160ms (Views: 158.5ms | Allocations: 32602)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:35:02 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 2.5ms | Allocations: 981)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 32078)
+Completed 200 OK in 80ms (Views: 78.3ms | Allocations: 32580)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2021-04-13 02:35:06 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 613)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.3ms | Allocations: 31830)
+Completed 200 OK in 116ms (Views: 114.3ms | Allocations: 32907)
+
+
+Started POST "/child_sessions" for 127.0.0.1 at 2021-04-13 02:35:15 +0300
+Processing by ChildSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "email"=>"ncathie214@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/child_sessions_controller.rb:6:in `create'
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."email" = ? LIMIT ?[0m  [["email", "ncathie214@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/child_sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/children/namwirya-ella
+Completed 302 Found in 316ms (ActiveRecord: 1.3ms | Allocations: 1526)
+
+
+Started GET "/children/namwirya-ella" for 127.0.0.1 at 2021-04-13 02:35:16 +0300
+Processing by ChildrenController#show as HTML
+  Parameters: {"id"=>"namwirya-ella"}
+  [1m[36mChild Load (1.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."slug" = ? LIMIT ?[0m  [["slug", "namwirya-ella"], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:80:in `set_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/show.html.erb within layouts/application
+  [1m[36mChild Load (0.5ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 6.6ms | Allocations: 719)
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 2.1ms | Allocations: 119)
+  Rendered children/show.html.erb within layouts/application (Duration: 27.0ms | Allocations: 2623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 218.0ms | Allocations: 33937)
+Completed 200 OK in 244ms (Views: 227.3ms | ActiveRecord: 2.7ms | Allocations: 35715)
+
+
+Started GET "/profiles" for 127.0.0.1 at 2021-04-13 02:35:31 +0300
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 684)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:18
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:22
+  [1m[36mActionText::RichText Load (0.6ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Profile"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:23
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:29
+  Rendered profiles/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 4249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 200.3ms | Allocations: 35534)
+Completed 200 OK in 207ms (Views: 202.5ms | ActiveRecord: 2.1ms | Allocations: 36626)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2021-04-13 02:35:44 +0300
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 643)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:10
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:29
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = ? AND "action_text_rich_texts"."record_type" = ? AND "action_text_rich_texts"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Profile"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/profiles/show.html.erb:80
+  Rendered /home/nakitto/.rvm/gems/ruby-3.0.0/gems/actiontext-6.1.3.1/app/views/action_text/content/_layout.html.erb (Duration: 4.6ms | Allocations: 452)
+  Rendered profiles/show.html.erb within layouts/application (Duration: 30.0ms | Allocations: 4518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.6ms | Allocations: 35699)
+Completed 200 OK in 156ms (Views: 151.7ms | ActiveRecord: 1.0ms | Allocations: 36802)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 02:35:50 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mChild Load (1.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 207)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 20)
+  [1m[36mTeacher Load (1.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (1.8ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  Rendered teachers/index.html.erb within layouts/application (Duration: 43.3ms | Allocations: 3123)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 163.1ms | Allocations: 34424)
+Completed 200 OK in 203ms (Views: 175.7ms | ActiveRecord: 5.1ms | Allocations: 36140)
+
+
+Started GET "/teachers/1" for 127.0.0.1 at 2021-04-13 02:35:53 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."slug" = ? LIMIT ?[0m  [["slug", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/show.html.erb within layouts/application
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 643)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered teachers/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.7ms | Allocations: 33484)
+Completed 200 OK in 128ms (Views: 120.6ms | ActiveRecord: 0.9ms | Allocations: 35385)
+
+
+Started DELETE "/child_sessions/current" for 127.0.0.1 at 2021-04-13 02:36:11 +0300
+Processing by ChildSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"current"}
+Redirected to http://localhost:3000/accounts
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 393)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:36:11 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered home/account.html.erb within layouts/application (Duration: 3.3ms | Allocations: 991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 149.9ms | Allocations: 32132)
+Completed 200 OK in 154ms (Views: 151.9ms | ActiveRecord: 0.0ms | Allocations: 32669)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-13 02:49:08 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 4625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.1ms | Allocations: 36098)
+Completed 200 OK in 65ms (Views: 63.1ms | Allocations: 36834)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 02:49:26 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 1.9ms | Allocations: 982)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 177.6ms | Allocations: 32471)
+Completed 200 OK in 182ms (Views: 179.8ms | Allocations: 33099)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
