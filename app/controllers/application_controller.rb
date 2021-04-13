@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def current_account
-    current_teacher || current_child
+    current_teacher || current_child || current_admin
   end
 
   helper_method :current_account

@@ -27672,3 +27672,926 @@ For historical reasons, it may run twice, so it has to be idempotent.
 Check the "Autoloading and Reloading Constants" guide to learn more about how
 Rails autoloads and reloads.
  (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2021-04-13 17:04:16 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.3ms | Allocations: 884)
+  Rendered layouts/_notice2.html.erb (Duration: 5.1ms | Allocations: 557)
+  Rendered home/index.html.erb within layouts/application (Duration: 4882.0ms | Allocations: 1460265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5239.9ms | Allocations: 1497803)
+Completed 200 OK in 5293ms (Views: 5263.8ms | ActiveRecord: 0.0ms | Allocations: 1501926)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:04:36 +0300
+Processing by TeachersController#index as HTML
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms | Allocations: 7615)
+
+
+  
+NoMethodError (undefined method `hato_conversations' for nil:NilClass):
+  
+app/controllers/teachers_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2021-04-13 17:05:15 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.7ms | Allocations: 147)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 20)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.9ms | Allocations: 4060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 167.5ms | Allocations: 36773)
+Completed 200 OK in 177ms (Views: 175.0ms | Allocations: 37628)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 17:05:27 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 113)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 167.7ms | Allocations: 33843)
+Completed 200 OK in 173ms (Views: 170.8ms | Allocations: 34604)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2021-04-13 17:05:30 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 162.0ms | Allocations: 34020)
+Completed 200 OK in 167ms (Views: 165.7ms | Allocations: 35236)
+
+
+Started POST "/child_sessions" for 127.0.0.1 at 2021-04-13 17:05:36 +0300
+Processing by ChildSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "email"=>"ncathie214@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/child_sessions_controller.rb:6:in `create'
+  [1m[36mChild Load (0.8ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."email" = ? LIMIT ?[0m  [["email", "ncathie214@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/child_sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/children/namwirya-ella
+Completed 302 Found in 595ms (ActiveRecord: 6.9ms | Allocations: 15647)
+
+
+Started GET "/children/namwirya-ella" for 127.0.0.1 at 2021-04-13 17:05:36 +0300
+Processing by ChildrenController#show as HTML
+  Parameters: {"id"=>"namwirya-ella"}
+  [1m[36mChild Load (4.9ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."slug" = ? LIMIT ?[0m  [["slug", "namwirya-ella"], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:80:in `set_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/show.html.erb within layouts/application
+  [1m[36mChild Load (2.0ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 23.5ms | Allocations: 840)
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 3.4ms | Allocations: 127)
+  Rendered children/show.html.erb within layouts/application (Duration: 130.1ms | Allocations: 6862)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 281.5ms | Allocations: 39725)
+Completed 200 OK in 408ms (Views: 298.5ms | ActiveRecord: 9.2ms | Allocations: 41786)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:05:45 +0300
+Processing by ChildrenController#index as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.8ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (15.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:35
+  Rendered children/index.html.erb within layouts/application (Duration: 74.1ms | Allocations: 3155)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 247.0ms | Allocations: 35920)
+Completed 200 OK in 326ms (Views: 239.3ms | ActiveRecord: 20.4ms | Allocations: 43522)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:06:18 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 208)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.8ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  Rendered teachers/index.html.erb within layouts/application (Duration: 92.7ms | Allocations: 10991)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 332.6ms | Allocations: 43744)
+Completed 200 OK in 362ms (Views: 333.0ms | ActiveRecord: 6.3ms | Allocations: 49347)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:08:57 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.3ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  Rendered teachers/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 102.9ms | Allocations: 35183)
+Completed 200 OK in 111ms (Views: 104.8ms | ActiveRecord: 0.7ms | Allocations: 36474)
+
+
+Started DELETE "/child_sessions/current" for 127.0.0.1 at 2021-04-13 17:09:22 +0300
+Processing by ChildSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"current"}
+Redirected to http://localhost:3000/accounts
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 878)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 17:09:22 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.6ms | Allocations: 113)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered home/account.html.erb within layouts/application (Duration: 3.4ms | Allocations: 989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.5ms | Allocations: 33634)
+Completed 200 OK in 174ms (Views: 171.9ms | ActiveRecord: 0.0ms | Allocations: 34295)
+
+
+Started GET "/admin_sessions/new" for 127.0.0.1 at 2021-04-13 17:09:32 +0300
+Processing by AdminSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admin_sessions/new.html.erb within layouts/application
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 23)
+  Rendered admin_sessions/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 229.4ms | Allocations: 33894)
+Completed 200 OK in 235ms (Views: 232.5ms | ActiveRecord: 0.0ms | Allocations: 35098)
+
+
+Started POST "/admin_sessions" for 127.0.0.1 at 2021-04-13 17:09:50 +0300
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "email"=>"ncathie2020@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "ncathie2020@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_sessions_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admin_sessions/new.html.erb within layouts/application
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered admin_sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 165.2ms | Allocations: 33436)
+Completed 200 OK in 183ms (Views: 166.4ms | ActiveRecord: 0.7ms | Allocations: 36078)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/admin_sessions" for 127.0.0.1 at 2021-04-13 17:11:45 +0300
+Processing by AdminSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "email"=>"cathie@homeschool.ug", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "cathie@homeschool.ug"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/admins
+Completed 302 Found in 323ms (ActiveRecord: 0.5ms | Allocations: 4123)
+
+
+Started GET "/admins" for 127.0.0.1 at 2021-04-13 17:11:45 +0300
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "children"[0m
+  ↳ app/controllers/admins_controller.rb:6:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "children" WHERE "children"."group_id" IS NULL[0m
+  ↳ app/controllers/admins_controller.rb:9:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers" WHERE "teachers"."group_id" IS NULL[0m
+  ↳ app/controllers/admins_controller.rb:10:in `index'
+  [1m[36mTeacher Load (3.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admins_controller.rb:12:in `index'
+  [1m[36mChild Load (1.3ms)[0m  [1m[34mSELECT "children".* FROM "children" ORDER BY "children"."id" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admins_controller.rb:13:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering admins/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.0ms | Allocations: 135)
+  Rendered layouts/_notice.html.erb (Duration: 0.8ms | Allocations: 24)
+  Rendered admins/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 163.2ms | Allocations: 34068)
+Completed 200 OK in 244ms (Views: 169.5ms | ActiveRecord: 11.8ms | Allocations: 41784)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:11:55 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 3315)
+
+
+  
+NoMethodError (undefined method `hato_conversations' for #<Admin id: 1, name: "Nakitto Catherine", email: "cathie@homeschool.ug", phone: "0770836909", password_digest: "$2a$12$IAKlfiuvuQSFZsYx/3JiNO6BGutE9OH0TIWSxb98S0e...", created_at: "2021-03-16 01:27:52.241171000 +0000", updated_at: "2021-03-16 01:27:52.241171000 +0000">):
+  
+app/controllers/teachers_controller.rb:8:in `index'
+Started GET "/admins" for 127.0.0.1 at 2021-04-13 17:12:09 +0300
+Processing by AdminsController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "children"[0m
+  ↳ app/controllers/admins_controller.rb:6:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "children" WHERE "children"."group_id" IS NULL[0m
+  ↳ app/controllers/admins_controller.rb:9:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers" WHERE "teachers"."group_id" IS NULL[0m
+  ↳ app/controllers/admins_controller.rb:10:in `index'
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admins_controller.rb:12:in `index'
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" ORDER BY "children"."id" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admins_controller.rb:13:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering admins/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 100)
+  Rendered layouts/_notice.html.erb (Duration: 1.3ms | Allocations: 18)
+  Rendered admins/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 168.0ms | Allocations: 33405)
+Completed 200 OK in 226ms (Views: 173.8ms | ActiveRecord: 5.6ms | Allocations: 37824)
+
+
+Started GET "/admins" for 127.0.0.1 at 2021-04-13 17:13:06 +0300
+Processing by AdminsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "children"[0m
+  ↳ app/controllers/admins_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "groups"[0m
+  ↳ app/controllers/admins_controller.rb:7:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "children" WHERE "children"."group_id" IS NULL[0m
+  ↳ app/controllers/admins_controller.rb:9:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "teachers" WHERE "teachers"."group_id" IS NULL[0m
+  ↳ app/controllers/admins_controller.rb:10:in `index'
+  [1m[36mTeacher Load (1.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admins_controller.rb:12:in `index'
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" ORDER BY "children"."id" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/controllers/admins_controller.rb:13:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering admins/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 137)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 20)
+  Rendered admins/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 727)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 210.8ms | Allocations: 33573)
+Completed 200 OK in 519ms (Views: 216.6ms | ActiveRecord: 26.9ms | Allocations: 68977)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:13:13 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.5ms | Allocations: 130)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.3ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Admin"], ["sender_id", 1], ["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  [1m[36mDenshobato::Blacklist Load (0.3ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_type" = ? AND "denshobato_blacklists"."blocker_id" = ? AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocker_type", "Admin"], ["blocker_id", 1], ["blocked_type", "Teacher"], ["blocked_id", 1]]
+  ↳ app/views/teachers/index.html.erb:48
+  Rendered teachers/index.html.erb within layouts/application (Duration: 58.0ms | Allocations: 8365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 225.3ms | Allocations: 41126)
+Completed 200 OK in 234ms (Views: 224.3ms | ActiveRecord: 4.0ms | Allocations: 42681)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:13:38 +0300
+Processing by ChildrenController#index as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.0ms | Allocations: 130)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mChild Load (0.5ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Admin"], ["sender_id", 1], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:35
+  [1m[36mDenshobato::Blacklist Load (0.2ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_type" = ? AND "denshobato_blacklists"."blocker_id" = ? AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocker_type", "Admin"], ["blocker_id", 1], ["blocked_type", "Child"], ["blocked_id", 2]]
+  ↳ app/views/children/index.html.erb:37
+  Rendered children/index.html.erb within layouts/application (Duration: 25.1ms | Allocations: 5190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.5ms | Allocations: 37897)
+Completed 200 OK in 181ms (Views: 171.5ms | ActiveRecord: 1.6ms | Allocations: 39433)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:18:51 +0300
+Processing by ChildrenController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 684)
+  Rendered layouts/_notice.html.erb (Duration: 3.2ms | Allocations: 114)
+  [1m[36mChild Load (0.8ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.4ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Admin"], ["sender_id", 1], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:35
+  [1m[36mDenshobato::Blacklist Load (1.0ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_type" = ? AND "denshobato_blacklists"."blocker_id" = ? AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocker_type", "Admin"], ["blocker_id", 1], ["blocked_type", "Child"], ["blocked_id", 2]]
+  ↳ app/views/children/index.html.erb:37
+  Rendered children/index.html.erb within layouts/application (Duration: 66.5ms | Allocations: 5910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 235.7ms | Allocations: 38874)
+Completed 200 OK in 249ms (Views: 237.0ms | ActiveRecord: 2.9ms | Allocations: 40959)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:22:02 +0300
+Processing by ChildrenController#index as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25:in `current_admin'
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.6ms | Allocations: 684)
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  [1m[36mChild Load (0.7ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Admin"], ["sender_id", 1], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:35
+  [1m[36mDenshobato::Blacklist Load (0.2ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_type" = ? AND "denshobato_blacklists"."blocker_id" = ? AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocker_type", "Admin"], ["blocker_id", 1], ["blocked_type", "Child"], ["blocked_id", 2]]
+  ↳ app/views/children/index.html.erb:37
+  Rendered children/index.html.erb within layouts/application (Duration: 38.7ms | Allocations: 5920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 219.2ms | Allocations: 38959)
+Completed 200 OK in 227ms (Views: 220.8ms | ActiveRecord: 1.9ms | Allocations: 41031)
+
+
+Started DELETE "/admin_sessions/current" for 127.0.0.1 at 2021-04-13 17:25:20 +0300
+Processing by AdminSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"current"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (Allocations: 908)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-13 17:25:21 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.8ms | Allocations: 146)
+  Rendered layouts/_notice2.html.erb (Duration: 2.9ms | Allocations: 125)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.8ms | Allocations: 4928)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 221.7ms | Allocations: 37594)
+Completed 200 OK in 236ms (Views: 232.3ms | Allocations: 38818)
+
+
+Started GET "/" for 127.0.0.1 at 2021-04-13 17:25:28 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.1ms | Allocations: 113)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 123.9ms | Allocations: 36595)
+Completed 200 OK in 127ms (Views: 126.4ms | Allocations: 37218)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:25:48 +0300
+Processing by TeachersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.7ms | Allocations: 143)
+  Rendered layouts/_notice.html.erb (Duration: 0.7ms | Allocations: 20)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mTeacher Load (1.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (1.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_id" IS NULL AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  [1m[36mDenshobato::Blacklist Load (0.3ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_id" IS NULL AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocked_type", "Teacher"], ["blocked_id", 1]]
+  ↳ app/views/teachers/index.html.erb:48
+  Rendered teachers/index.html.erb within layouts/application (Duration: 120.7ms | Allocations: 15523)
+  Rendered layout layouts/application.html.erb (Duration: 122.8ms | Allocations: 15592)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 12.6ms | Allocations: 20751)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    52:                 <% else %>
+    53:                   <div class="d-flex flex-wrap align-items-center justify-content-center">
+    54:                     <%= button_to 'Blacklist', black_list_path(user: teacher, klass: teacher.class.name), class: 'btn btn-danger mr-2' %>
+    55:                     <%= form_for @conversation, url: :conversations do |form| %>
+    56:                       <%= fill_conversation_form(form, teacher) %>
+    57:                       <%= form.submit 'Start Conversation', class: 'btn btn-info ml-2' %>
+    58:                     <% end %>
+  
+app/views/teachers/index.html.erb:55
+app/views/teachers/index.html.erb:10
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:27:29 +0300
+Processing by TeachersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.1ms | Allocations: 144)
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 20)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mTeacher Load (1.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (2.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_id" IS NULL AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  [1m[36mDenshobato::Blacklist Load (0.2ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_id" IS NULL AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocked_type", "Teacher"], ["blocked_id", 1]]
+  ↳ app/views/teachers/index.html.erb:48
+  Rendered teachers/index.html.erb within layouts/application (Duration: 131.4ms | Allocations: 14840)
+  Rendered layout layouts/application.html.erb (Duration: 132.8ms | Allocations: 14909)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 22.3ms | Allocations: 19681)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    52:                 <% else %>
+    53:                   <div class="d-flex flex-wrap align-items-center justify-content-center">
+    54:                     <%= button_to 'Blacklist', black_list_path(user: teacher, klass: teacher.class.name), class: 'btn btn-danger mr-2' %>
+    55:                     <%= form_for @conversation, url: :conversations do |form| %>
+    56:                       <%= fill_conversation_form(form, teacher) %>
+    57:                       <%= form.submit 'Start Conversation', class: 'btn btn-info ml-2' %>
+    58:                     <% end %>
+  
+app/views/teachers/index.html.erb:55
+app/views/teachers/index.html.erb:10
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:28:16 +0300
+Processing by TeachersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 144)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 20)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mTeacher Load (1.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (1.7ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_id" IS NULL AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:46
+  [1m[36mDenshobato::Blacklist Load (0.3ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_id" IS NULL AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocked_type", "Teacher"], ["blocked_id", 1]]
+  ↳ app/views/teachers/index.html.erb:48
+  Rendered teachers/index.html.erb within layouts/application (Duration: 125.9ms | Allocations: 14840)
+  Rendered layout layouts/application.html.erb (Duration: 127.3ms | Allocations: 14909)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 14.6ms | Allocations: 19681)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    52:                 <% else %>
+    53:                   <div class="d-flex flex-wrap align-items-center justify-content-center">
+    54:                     <%= button_to 'Blacklist', black_list_path(user: teacher, klass: teacher.class.name), class: 'btn btn-danger mr-2' %>
+    55:                     <%= form_for @conversation, url: :conversations do |form| %>
+    56:                       <%= fill_conversation_form(form, teacher) %>
+    57:                       <%= form.submit 'Start Conversation', class: 'btn btn-info ml-2' %>
+    58:                     <% end %>
+  
+app/views/teachers/index.html.erb:55
+app/views/teachers/index.html.erb:10
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:28:26 +0300
+Processing by ChildrenController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mChild Load (0.5ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.6ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_id" IS NULL AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:35
+  [1m[36mDenshobato::Blacklist Load (0.1ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_id" IS NULL AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocked_type", "Child"], ["blocked_id", 2]]
+  ↳ app/views/children/index.html.erb:37
+  Rendered children/index.html.erb within layouts/application (Duration: 82.4ms | Allocations: 12603)
+  Rendered layout layouts/application.html.erb (Duration: 83.4ms | Allocations: 12672)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 2.5ms | Allocations: 17510)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    42:                   <div class="d-flex flex-wrap align-items-center justify-content-center">
+    43:                     <%= button_to 'Blacklist',
+    44:                       black_list_path(user: child, klass: child.class.name), class: 'btn btn-danger mr-2' %>
+    45:                     <%= form_for @conversation, url: :conversations do |form| %>
+    46:                       <%= fill_conversation_form(form, child) %>
+    47:                       <%= form.submit 'Start Conversation', class: 'btn btn-primary ml-2' %>
+    48:                     <% end %>
+  
+app/views/children/index.html.erb:45
+app/views/children/index.html.erb:10
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:29:50 +0300
+Processing by ChildrenController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.2ms | Allocations: 697)
+  Rendered layouts/_notice.html.erb (Duration: 0.6ms | Allocations: 114)
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  Rendered children/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 3168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 168.7ms | Allocations: 36322)
+Completed 200 OK in 175ms (Views: 172.7ms | ActiveRecord: 0.3ms | Allocations: 37772)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:30:53 +0300
+Processing by TeachersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.3ms | Allocations: 697)
+  Rendered layouts/_notice.html.erb (Duration: 0.4ms | Allocations: 114)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  Rendered teachers/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 3249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 659.6ms | Allocations: 36398)
+Completed 200 OK in 666ms (Views: 662.9ms | ActiveRecord: 0.4ms | Allocations: 37836)
+
+
+Started GET "/teachers/1" for 127.0.0.1 at 2021-04-13 17:31:05 +0300
+Processing by TeachersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."slug" = ? LIMIT ?[0m  [["slug", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers_controller.rb:83:in `set_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/show.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.9ms | Allocations: 113)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered teachers/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1721)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 154.4ms | Allocations: 34476)
+Completed 200 OK in 169ms (Views: 156.1ms | ActiveRecord: 1.4ms | Allocations: 36618)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-04-13 17:31:16 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 146)
+  Rendered layouts/_notice2.html.erb (Duration: 1.0ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 187.1ms | Allocations: 34211)
+Completed 200 OK in 206ms (Views: 198.7ms | ActiveRecord: 0.0ms | Allocations: 35463)
+
+
+Started GET "/child_sessions/new" for 127.0.0.1 at 2021-04-13 17:31:19 +0300
+Processing by ChildSessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering child_sessions/new.html.erb within layouts/application
+  Rendered child_sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1133)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 155.5ms | Allocations: 33852)
+Completed 200 OK in 162ms (Views: 160.0ms | ActiveRecord: 0.0ms | Allocations: 35057)
+
+
+Started POST "/child_sessions" for 127.0.0.1 at 2021-04-13 17:31:25 +0300
+Processing by ChildSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "email"=>"ncathie214@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."email" = ? LIMIT ?[0m  [["email", "ncathie214@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/child_sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/children/namwirya-ella
+Completed 302 Found in 333ms (ActiveRecord: 0.4ms | Allocations: 2219)
+
+
+Started GET "/children/namwirya-ella" for 127.0.0.1 at 2021-04-13 17:31:26 +0300
+Processing by ChildrenController#show as HTML
+  Parameters: {"id"=>"namwirya-ella"}
+  [1m[36mChild Load (1.9ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."slug" = ? LIMIT ?[0m  [["slug", "namwirya-ella"], ["LIMIT", 1]]
+  ↳ app/controllers/children_controller.rb:80:in `set_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/show.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendered layouts/_main-nav.html.erb (Duration: 5.6ms | Allocations: 815)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/show.html.erb:8
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 25)
+  Rendered children/show.html.erb within layouts/application (Duration: 21.2ms | Allocations: 2485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 181.8ms | Allocations: 35305)
+Completed 200 OK in 217ms (Views: 191.2ms | ActiveRecord: 2.7ms | Allocations: 37247)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:31:36 +0300
+Processing by ChildrenController#index as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 18)
+  [1m[36mChild Load (0.9ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (2.0ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:36
+  Rendered children/index.html.erb within layouts/application (Duration: 42.8ms | Allocations: 3001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 217.4ms | Allocations: 35900)
+Completed 200 OK in 230ms (Views: 216.7ms | ActiveRecord: 3.8ms | Allocations: 37334)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:31:58 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 181)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:47
+  Rendered teachers/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2386)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 151.1ms | Allocations: 35144)
+Completed 200 OK in 159ms (Views: 151.6ms | ActiveRecord: 1.0ms | Allocations: 36436)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2021-04-13 17:32:05 +0300
+Processing by ConversationsController#index as HTML
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering conversations/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.9ms | Allocations: 208)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mDenshobato::Conversation Load (0.4ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? ORDER BY "denshobato_conversations"."updated_at" DESC[0m  [["trashed", 0], ["sender_type", "Child"], ["sender_id", 2]]
+  ↳ app/views/conversations/index.html.erb:9
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/conversations/index.html.erb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "denshobato_notifications"."message_id" FROM "denshobato_notifications" WHERE "denshobato_notifications"."conversation_id" = ?[0m  [["conversation_id", 1]]
+  ↳ app/views/conversations/index.html.erb:17
+  [1m[36mDenshobato::Message Load (0.9ms)[0m  [1m[34mSELECT "denshobato_messages".* FROM "denshobato_messages" WHERE "denshobato_messages"."id" = ? ORDER BY "denshobato_messages"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:17
+  [1m[36mDenshobato::Conversation Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? LIMIT ?[0m  [["trashed", 1], ["sender_type", "Child"], ["sender_id", 2], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:30
+  Rendered conversations/index.html.erb within layouts/application (Duration: 132.3ms | Allocations: 11130)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 361.5ms | Allocations: 43922)
+Completed 200 OK in 384ms (Views: 361.5ms | ActiveRecord: 8.8ms | Allocations: 45919)
+
+
+Started GET "/conversations/1" for 127.0.0.1 at 2021-04-13 17:32:09 +0300
+Processing by ConversationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDenshobato::Conversation Load (1.1ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:17:in `show'
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  [1m[36mDenshobato::Conversation Load (0.4ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."id" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ?[0m  [["id", 1], ["sender_type", "Child"], ["sender_id", 2]]
+  ↳ app/controllers/conversations_controller.rb:18:in `show'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "denshobato_notifications"."message_id" FROM "denshobato_notifications" WHERE "denshobato_notifications"."conversation_id" = ?[0m  [["conversation_id", 1]]
+  ↳ app/controllers/conversations_controller.rb:21:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering conversations/show.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.7ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mDenshobato::Message Load (2.5ms)[0m  [1m[34mSELECT "denshobato_messages".* FROM "denshobato_messages" WHERE "denshobato_messages"."id" = ? ORDER BY created_at DESC[0m  [["id", 1]]
+  ↳ app/views/conversations/show.html.erb:19
+  [1m[36mCACHE Child Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/conversations/show.html.erb:24
+  Rendered conversations/show.html.erb within layouts/application (Duration: 56.7ms | Allocations: 3102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 260.9ms | Allocations: 35761)
+Completed 200 OK in 285ms (Views: 260.0ms | ActiveRecord: 4.7ms | Allocations: 39014)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2021-04-13 17:32:13 +0300
+Processing by ConversationsController#index as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering conversations/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.7ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? ORDER BY "denshobato_conversations"."updated_at" DESC[0m  [["trashed", 0], ["sender_type", "Child"], ["sender_id", 2]]
+  ↳ app/views/conversations/index.html.erb:9
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/conversations/index.html.erb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "denshobato_notifications"."message_id" FROM "denshobato_notifications" WHERE "denshobato_notifications"."conversation_id" = ?[0m  [["conversation_id", 1]]
+  ↳ app/views/conversations/index.html.erb:17
+  [1m[36mDenshobato::Message Load (0.2ms)[0m  [1m[34mSELECT "denshobato_messages".* FROM "denshobato_messages" WHERE "denshobato_messages"."id" = ? ORDER BY "denshobato_messages"."id" DESC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:17
+  [1m[36mDenshobato::Conversation Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? LIMIT ?[0m  [["trashed", 1], ["sender_type", "Child"], ["sender_id", 2], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:30
+  Rendered conversations/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 4627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 279.0ms | Allocations: 37380)
+Completed 200 OK in 287ms (Views: 278.1ms | ActiveRecord: 2.7ms | Allocations: 38780)
+
+
+Started DELETE "/conversations/1" for 127.0.0.1 at 2021-04-13 17:32:15 +0300
+Processing by ConversationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Notification Load (2.1ms)[0m  [1m[34mSELECT "denshobato_notifications".* FROM "denshobato_notifications" WHERE "denshobato_notifications"."conversation_id" = ?[0m  [["conversation_id", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Notification Destroy (10.6ms)[0m  [1m[31mDELETE FROM "denshobato_notifications" WHERE "denshobato_notifications"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Message Load (1.3ms)[0m  [1m[34mSELECT "denshobato_messages".* FROM "denshobato_messages" WHERE "denshobato_messages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "denshobato_notifications"."conversation_id" FROM "denshobato_notifications" WHERE "denshobato_notifications"."message_id" = ?[0m  [["message_id", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Conversation Load (0.3ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Message Destroy (4.8ms)[0m  [1m[31mDELETE FROM "denshobato_messages" WHERE "denshobato_messages"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Conversation Load (0.5ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Conversation Destroy (1.3ms)[0m  [1m[31mDELETE FROM "denshobato_conversations" WHERE "denshobato_conversations"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mDenshobato::Conversation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Teacher"], ["sender_id", 1], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/conversations_controller.rb:26:in `destroy'
+Redirected to http://localhost:3000/conversations
+Completed 302 Found in 224ms (ActiveRecord: 43.2ms | Allocations: 19877)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2021-04-13 17:32:16 +0300
+Processing by ConversationsController#index as HTML
+  [1m[36mChild Load (0.5ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering conversations/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.0ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.5ms | Allocations: 18)
+  [1m[36mDenshobato::Conversation Load (0.9ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? ORDER BY "denshobato_conversations"."updated_at" DESC[0m  [["trashed", 0], ["sender_type", "Child"], ["sender_id", 2]]
+  ↳ app/views/conversations/index.html.erb:9
+  [1m[36mDenshobato::Conversation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? LIMIT ?[0m  [["trashed", 1], ["sender_type", "Child"], ["sender_id", 2], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:30
+  Rendered conversations/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 195.4ms | Allocations: 34586)
+Completed 200 OK in 210ms (Views: 197.7ms | ActiveRecord: 1.6ms | Allocations: 35981)
+
+
+Started GET "/conversations" for 127.0.0.1 at 2021-04-13 17:32:21 +0300
+Processing by ConversationsController#index as HTML
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering conversations/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.8ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? ORDER BY "denshobato_conversations"."updated_at" DESC[0m  [["trashed", 0], ["sender_type", "Child"], ["sender_id", 2]]
+  ↳ app/views/conversations/index.html.erb:9
+  [1m[36mDenshobato::Conversation Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "denshobato_conversations" WHERE "denshobato_conversations"."trashed" = ? AND "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? LIMIT ?[0m  [["trashed", 1], ["sender_type", "Child"], ["sender_id", 2], ["LIMIT", 1]]
+  ↳ app/views/conversations/index.html.erb:30
+  Rendered conversations/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 213.1ms | Allocations: 34224)
+Completed 200 OK in 233ms (Views: 215.9ms | ActiveRecord: 1.7ms | Allocations: 35611)
+
+
+Started GET "/teachers" for 127.0.0.1 at 2021-04-13 17:32:33 +0300
+Processing by TeachersController#index as HTML
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.8ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers"[0m
+  ↳ app/views/teachers/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Teacher"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.3ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Teacher"], ["recipient_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/index.html.erb:47
+  [1m[36mDenshobato::Blacklist Load (0.3ms)[0m  [1m[34mSELECT "denshobato_blacklists".* FROM "denshobato_blacklists" WHERE "denshobato_blacklists"."blocker_type" = ? AND "denshobato_blacklists"."blocker_id" = ? AND "denshobato_blacklists"."blocked_type" = ? AND "denshobato_blacklists"."blocked_id" = ?[0m  [["blocker_type", "Child"], ["blocker_id", 2], ["blocked_type", "Teacher"], ["blocked_id", 1]]
+  ↳ app/views/teachers/index.html.erb:49
+  Rendered teachers/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 4367)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.6ms | Allocations: 37103)
+Completed 200 OK in 184ms (Views: 177.7ms | ActiveRecord: 1.1ms | Allocations: 38395)
+
+
+Started GET "/children" for 127.0.0.1 at 2021-04-13 17:32:45 +0300
+Processing by ChildrenController#index as HTML
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `current_child'
+  Rendering layout layouts/application.html.erb
+  Rendering children/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.4ms | Allocations: 170)
+  Rendered layouts/_notice.html.erb (Duration: 0.7ms | Allocations: 18)
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children"[0m
+  ↳ app/views/children/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Child"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:14
+  [1m[36mDenshobato::Conversation Load (0.2ms)[0m  [1m[34mSELECT "denshobato_conversations".* FROM "denshobato_conversations" WHERE "denshobato_conversations"."sender_type" = ? AND "denshobato_conversations"."sender_id" = ? AND "denshobato_conversations"."recipient_type" = ? AND "denshobato_conversations"."recipient_id" = ? LIMIT ?[0m  [["sender_type", "Child"], ["sender_id", 2], ["recipient_type", "Child"], ["recipient_id", 2], ["LIMIT", 1]]
+  ↳ app/views/children/index.html.erb:36
+  Rendered children/index.html.erb within layouts/application (Duration: 42.8ms | Allocations: 2339)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 195.6ms | Allocations: 35128)
+Completed 200 OK in 219ms (Views: 200.4ms | ActiveRecord: 1.3ms | Allocations: 36422)
+
+
