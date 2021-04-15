@@ -124,7 +124,7 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => "587",
     :user_name            => "homeschoolug@gmail.com",
-    :password             => "2021Mangoes",
+    :password             => "JobBy2022",
     :authentication       => "plain",
     :openssl_verify_mode  => "none",
     :enable_starttls_auto => true
