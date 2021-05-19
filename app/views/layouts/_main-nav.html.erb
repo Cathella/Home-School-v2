@@ -13,7 +13,7 @@
       <% elsif current_admin %>
           <%= link_to "Logout", admin_session_path("current"), method: "delete" %>
       <% else %>
-          <%= link_to "Sign up | Login", accounts_path %>
+          <%= link_to "Sign up | Login", accounts_path, class: "text-muted" %>
       <% end %>
     </div>
   </nav>

@@ -82,12 +82,6 @@ a {
 }
 
 /* Intro */
-.intro,
-.teacher-intro,
-.child-intro,
-.intro-img {
-  // padding: 9em 0;
-}
 
 .intro-img {
   background-image: url(image-path("bg2.jpg"));
@@ -540,6 +534,10 @@ main {
 
 .bg-green {
   background: #095578;
+}
+
+.neg_space {
+  letter-spacing: -1.5px;
 }
 
 /* Messages */
