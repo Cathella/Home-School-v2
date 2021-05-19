@@ -1,18 +1,18 @@
 <%= render 'layouts/main-nav' %>
 
-<div class="">
-  <div class="container-fluid">
+<div class="pt-5 mt-4 mb-4">
+  <div class="container">
     <div class="row">
       <%= render 'layouts/notice2' %>
       <div class="col-md-4 col-lg-6 intro-img">
       </div>
-      <div class="col-md-8 col-lg-6 intro">
-        <h1 class="text-heading pr-1">
+      <div class="col-md-8 col-lg-6 intro py-5 pl-5">
+        <h1 class="text-heading mt-5 ml-5 font-weight-bold">
           We match 
-          <span class="orange-link" style="text-decoration: underline">Learners</span> with 
-          <span class="text-info" style="text-decoration: underline">Teachers</span> in the Neighbourhood
+          <span class="orange-link underlined">Learners</span> and 
+          <span class="text-info underlined">Teachers</span> in the Neighbourhood
         </h1>
-        <div class="lft-it">
+        <div class="mt-4 mb-5 ml-5">
           <%= link_to 'Register your Child', new_child_path, class: "btn bg-green-btn text-white shadow px-5 py-3" %>
         </div>
       </div>
