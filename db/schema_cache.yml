@@ -1,0 +1,810 @@
+--- !ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache
+columns:
+  schema_migrations:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: version
+    sql_type_metadata: &1 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  ar_internal_metadata:
+  - &6 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: key
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: value
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &3 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    sql_type_metadata: &2 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime(6)
+      type: :datetime
+      limit: 
+      precision: 6
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &4 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    sql_type_metadata: *2
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  action_text_rich_texts:
+  - &5 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: id
+    sql_type_metadata: &8 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &18 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: name
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: body
+    sql_type_metadata: &7 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: text
+      type: :text
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &19 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: record_type
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: record_id
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: bigint
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *3
+  - *4
+  active_storage_blobs:
+  - *5
+  - *6
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: filename
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: content_type
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: metadata
+    sql_type_metadata: *7
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: byte_size
+    sql_type_metadata: *8
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: checksum
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &9 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    sql_type_metadata: &10 !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: service_name
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  admins:
+  - *5
+  - &11 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: name
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &13 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: email
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &12 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: phone
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &14 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: password_digest
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *9
+  - &15 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    sql_type_metadata: *10
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  children:
+  - *5
+  - *11
+  - *12
+  - *13
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: program
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &16 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: grade
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: guardian
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - &17 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: group_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *9
+  - *15
+  denshobato_blacklists:
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: blocker_type
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: blocker_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: blocked_type
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: blocked_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  denshobato_conversations:
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: trashed
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: boolean
+      type: :boolean
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: sender_type
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: sender_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: recipient_type
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: recipient_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *9
+  - *15
+  denshobato_messages:
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: body
+    sql_type_metadata: *7
+    'null': true
+    default: ''
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: author_type
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: author_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *9
+  - *15
+  denshobato_notifications:
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: message_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: conversation_id
+    sql_type_metadata: *8
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  friendly_id_slugs:
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: slug
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: sluggable_id
+    sql_type_metadata: *8
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: sluggable_type
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar(50)
+      type: :string
+      limit: 50
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: scope
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    sql_type_metadata: *10
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  teachers:
+  - *5
+  - *11
+  - *12
+  - *13
+  - *16
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: subject
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *14
+  - *17
+  - *9
+  - *15
+  videos:
+  - *5
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: title
+    sql_type_metadata: *1
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: description
+    sql_type_metadata: *7
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *9
+  - *15
+  active_storage_attachments:
+  - *5
+  - *18
+  - *19
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: record_id
+    sql_type_metadata: *8
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &20 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: blob_id
+    sql_type_metadata: *8
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - *9
+  active_storage_variant_records:
+  - *5
+  - *20
+  - !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: variation_digest
+    sql_type_metadata: *1
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+primary_keys:
+  schema_migrations: version
+  ar_internal_metadata: key
+  action_text_rich_texts: id
+  active_storage_blobs: id
+  admins: id
+  children: id
+  denshobato_blacklists: id
+  denshobato_conversations: id
+  denshobato_messages: id
+  denshobato_notifications: id
+  friendly_id_slugs: id
+  teachers: id
+  videos: id
+  active_storage_attachments: id
+  active_storage_variant_records: id
+data_sources:
+  schema_migrations: true
+  ar_internal_metadata: true
+  action_text_rich_texts: true
+  active_storage_blobs: true
+  admins: true
+  children: true
+  denshobato_blacklists: true
+  denshobato_conversations: true
+  denshobato_messages: true
+  denshobato_notifications: true
+  friendly_id_slugs: true
+  teachers: true
+  videos: true
+  active_storage_attachments: true
+  active_storage_variant_records: true
+indexes:
+  schema_migrations: []
+  ar_internal_metadata: []
+  action_text_rich_texts:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: action_text_rich_texts
+    name: index_action_text_rich_texts_uniqueness
+    unique: true
+    columns:
+    - record_type
+    - record_id
+    - name
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  active_storage_blobs:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: active_storage_blobs
+    name: index_active_storage_blobs_on_key
+    unique: true
+    columns:
+    - key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  admins: []
+  children:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: children
+    name: index_children_on_group_id
+    unique: false
+    columns:
+    - group_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  denshobato_blacklists:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_blacklists
+    name: blocker_user
+    unique: false
+    columns:
+    - blocker_type
+    - blocker_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_blacklists
+    name: blocked_user
+    unique: false
+    columns:
+    - blocked_type
+    - blocked_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  denshobato_conversations:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_conversations
+    name: conversation_polymorphic_sender
+    unique: false
+    columns:
+    - sender_type
+    - sender_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_conversations
+    name: conversation_polymorphic_recipient
+    unique: false
+    columns:
+    - recipient_type
+    - recipient_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  denshobato_messages:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_messages
+    name: message_polymorphic_author
+    unique: false
+    columns:
+    - author_type
+    - author_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  denshobato_notifications:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_notifications
+    name: notification_for_message
+    unique: false
+    columns:
+    - message_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_notifications
+    name: unique_messages_for_conversations
+    unique: true
+    columns:
+    - message_id
+    - conversation_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: denshobato_notifications
+    name: notification_for_conversation
+    unique: false
+    columns:
+    - conversation_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  friendly_id_slugs:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: friendly_id_slugs
+    name: index_friendly_id_slugs_on_sluggable_type_and_sluggable_id
+    unique: false
+    columns:
+    - sluggable_type
+    - sluggable_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: friendly_id_slugs
+    name: index_friendly_id_slugs_on_slug_and_sluggable_type
+    unique: false
+    columns:
+    - slug
+    - sluggable_type
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: friendly_id_slugs
+    name: index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope
+    unique: true
+    columns:
+    - slug
+    - sluggable_type
+    - scope
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  teachers:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: teachers
+    name: index_teachers_on_group_id
+    unique: false
+    columns:
+    - group_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  videos: []
+  active_storage_attachments:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: active_storage_attachments
+    name: index_active_storage_attachments_uniqueness
+    unique: true
+    columns:
+    - record_type
+    - record_id
+    - name
+    - blob_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: active_storage_attachments
+    name: index_active_storage_attachments_on_blob_id
+    unique: false
+    columns:
+    - blob_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+  active_storage_variant_records:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: active_storage_variant_records
+    name: index_active_storage_variant_records_uniqueness
+    unique: true
+    columns:
+    - blob_id
+    - variation_digest
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: 
+    comment: 
+version: 20210412203526
+database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
+  version:
+  - 3
+  - 31
+  - 1
+  full_version_string: 

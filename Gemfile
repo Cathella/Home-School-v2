@@ -69,6 +69,7 @@ group :development do
   gem "rubocop"
   gem "rubocop-rails", require: false
   gem "rubocop-rspec"
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
 end
 
 group :test do
