@@ -2,6 +2,9 @@ class HomeController < ApplicationController
   def index
   end
 
+  def dashboard
+  end
+
   def myaddress
     @address = current_child.address
   end

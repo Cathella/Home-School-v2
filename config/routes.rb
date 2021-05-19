@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   # get "myaddress", to: "home#myaddress", as: "my_address"
   # get "teacheraddress", to: "home#teacheraddress", as: "teacher_address"
   get "accounts", to: "home#account", as: "accounts"
+  get "dashboard", to: "home#dashboard", as: "dashboard"
   # get 'messages/create'
   
   patch :to_trash, to: 'conversations#to_trash', as: :to_trash
