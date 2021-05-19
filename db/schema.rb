@@ -45,21 +45,9 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
   end
 
   create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
+    t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
-  end
-
-  create_table "addresses", force: :cascade do |t|
-    t.string "landmark", null: false
-    t.decimal "latitude", precision: 10, scale: 6
-    t.decimal "longitude", precision: 10, scale: 6
-    t.integer "child_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["child_id"], name: "index_addresses_on_child_id"
-    t.index ["slug"], name: "index_addresses_on_slug", unique: true
   end
 
   create_table "admins", force: :cascade do |t|
@@ -82,29 +70,7 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
     t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "auth_token"
-    t.string "password_reset_token"
-    t.datetime "password_reset_sent_at"
-    t.boolean "email_confirmed", default: false
-    t.string "confirm_token"
-    t.string "slug"
     t.index ["group_id"], name: "index_children_on_group_id"
-    t.index ["slug"], name: "index_children_on_slug", unique: true
-  end
-
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "email"
-    t.string "user"
-    t.text "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "conversations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "denshobato_blacklists", force: :cascade do |t|
@@ -145,18 +111,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
     t.index ["message_id"], name: "notification_for_message"
   end
 
-  create_table "directions", force: :cascade do |t|
-    t.string "landmark", null: false
-    t.decimal "latitude", precision: 10, scale: 6
-    t.decimal "longitude", precision: 10, scale: 6
-    t.integer "teacher_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_directions_on_slug", unique: true
-    t.index ["teacher_id"], name: "index_directions_on_teacher_id"
-  end
-
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -166,48 +120,6 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
-  end
-
-  create_table "groups", force: :cascade do |t|
-    t.string "name"
-    t.string "grade"
-    t.string "place"
-    t.string "program"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_groups_on_slug", unique: true
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "subject"
-    t.string "grade"
-    t.string "meeting"
-    t.integer "budget"
-    t.string "gender"
-    t.integer "tutors_number"
-    t.string "commitment"
-    t.string "per_payment"
-    t.integer "child_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["child_id"], name: "index_posts_on_child_id"
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string "per_charge"
-    t.integer "fee"
-    t.integer "experience"
-    t.string "commitment"
-    t.integer "teacher_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["teacher_id"], name: "index_profiles_on_teacher_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -220,14 +132,7 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
     t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_reset_token"
-    t.datetime "password_reset_sent_at"
-    t.string "auth_token"
-    t.boolean "email_confirmed", default: false
-    t.string "confirm_token"
-    t.string "slug"
     t.index ["group_id"], name: "index_teachers_on_group_id"
-    t.index ["slug"], name: "index_teachers_on_slug", unique: true
   end
 
   create_table "videos", force: :cascade do |t|
@@ -235,11 +140,8 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_videos_on_slug", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "posts", "children"
-  add_foreign_key "profiles", "teachers"
 end
