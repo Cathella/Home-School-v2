@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  devise_for :children
+  devise_for :teachers
   resources :profiles, :posts, :videos, :groups, :conversations, :messages
   resources :child_sessions, :teacher_sessions, :admins, :admin_sessions
   resources :contacts, :teacher_password_resets, :password_resets, :directions, :addresses
