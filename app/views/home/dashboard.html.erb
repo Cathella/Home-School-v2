@@ -1,16 +1,16 @@
 <%= render 'layouts/main-nav' %>
 <div class="container py-5">
-  <p>
-    Welcome 
+  <p class="text-center text-muted fs-5">
+    Welcome, 
     <% if current_teacher %>
-      <%= current_teacher.full_name %>,
+      <%= current_teacher.full_name %>
     <% else %>
-      <%= current_child.full_name %>,
-    <% end %>
+      <%= current_child.full_name %>
+    <% end %>!
   </p>
-  <div>
-    Where do you live?<br />
-    Or Enter a landmark near you.
-    Please allow us to locate you.
+
+  <div class="bg-light rounded my-5 py-5 text-center w-75 mx-auto border-bottom">
+    <p class="text-muted mb-4 fs-5 pb-4">Where do you live?</p>
+    <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add Address'.html_safe, {}, class: "btn btn-info px-5 py-3 very-rounded" %>
   </div>
 </div>
