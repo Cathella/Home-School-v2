@@ -5,12 +5,15 @@
       <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
     </a>
 
-    <div>
+    <div style="font-size: 16px;">
       <% if current_teacher %>
-          <%= link_to "Dashboard", dashboard_path, class: "mr-3" %>
-          <%= link_to "Logout", destroy_teacher_session_path, method: :delete %>
+          <%= link_to "Dashboard", dashboard_path, class: "mr-4 text-muted" %>
+          <%= link_to "Account", edit_teacher_registration_path, class: "mr-4 text-muted" %>
+          <%= link_to "Logout", destroy_teacher_session_path, method: :delete, class: "text-muted" %>
       <% elsif current_child %>
           <%= link_to "Dashboard" %>
+          <%= link_to "Dashboard", dashboard_path, class: "mr-4 text-muted" %>
+          <%= link_to "Account", edit_child_registration_path, class: "mr-4 text-muted" %>
           <%= link_to "Logout", destroy_child_session_path, method: :delete %>
       <% elsif current_admin %>
           <%= link_to "Dashboard" %>
