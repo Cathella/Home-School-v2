@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_081912) do
+ActiveRecord::Schema.define(version: 2021_06_09_171652) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 2021_05_19_081912) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "landmark"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "child_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["child_id"], name: "index_addresses_on_child_id"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -111,6 +121,16 @@ ActiveRecord::Schema.define(version: 2021_05_19_081912) do
     t.index ["conversation_id"], name: "notification_for_conversation"
     t.index ["message_id", "conversation_id"], name: "unique_messages_for_conversations", unique: true
     t.index ["message_id"], name: "notification_for_message"
+  end
+
+  create_table "directions", force: :cascade do |t|
+    t.string "landmark"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "teacher_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["teacher_id"], name: "index_directions_on_teacher_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

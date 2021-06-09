@@ -4,6 +4,7 @@ class CreateDirections < ActiveRecord::Migration[6.1]
       t.string :landmark
       t.float :latitude
       t.float :longitude
+      t.references :teacher
 
       t.timestamps
     end
