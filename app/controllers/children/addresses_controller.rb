@@ -7,11 +7,11 @@ class Children::AddressesController < ApplicationController
   end
 
   def create
-    @address = @child.address.create address_params
+    @address = @child.build_address address_params
     @address.child_id = current_child.id
 
     if @address.save
-      redirect_to dashbord_path, notice: "Your Address has been saved!"
+      redirect_to dashboard_path, notice: "Your Address has been saved!"
     else
       redirect_to new_child_address_path, notice: "Failed to save Address!"
     end
@@ -21,6 +21,11 @@ class Children::AddressesController < ApplicationController
   end
   
   def update
+    if @address.update(address_params)
+      redirect_to dashboard_path, notice: "Your Address has been Updated!"
+    else
+      redirect_to dashboard_path, notice: "Failed to Update Address!"
+    end
   end
 
   private
