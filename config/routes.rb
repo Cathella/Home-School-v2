@@ -7,6 +7,14 @@ Rails.application.routes.draw do
   # resources :contacts, :teacher_password_resets, :password_resets, :directions, :addresses
 
   root to: 'home#index'
+  
+  resources :children do
+    resources :addresses, module: :children
+  end
+
+  resources :teachers do
+    resources :directions, module: :teachers
+  end
 
   # get "/teachershome", to: "teachers#teachershome", as: :teachershome 
   # get "lessons", to: "home#lessons", as: "lessons"
