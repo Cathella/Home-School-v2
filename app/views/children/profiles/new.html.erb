@@ -1,0 +1,23 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5">
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5">Complete your Profile</h4>
+      <%= form_for [@child, @profile] do |form| %>
+
+        <div class="field mb-4">
+          <%= form.text_field :phone, placeholder: "Phone Number", class: "form-control py-4" %>
+        </div>
+
+        <div class="field">
+          <%= form.text_field :grade, placeholder: "Choose your grade", class: "form-control py-4" %>
+        </div>
+
+        <div class="actions mt-4">
+          <%= form.submit "Save Profile", class: "btn btn-info px-5 py-3 very-rounded" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

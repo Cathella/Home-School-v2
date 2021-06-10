@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   
   resources :children do
     resources :addresses, module: :children
+    resources :profiles, module: :children
   end
 
   resources :teachers do

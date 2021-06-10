@@ -19,7 +19,7 @@
         </div>
 
         <div class="mb-5">
-          <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, {}, class: "btn btn-info w-100 py-3"%>
+          <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_child_profile_path(current_child.id), class: "btn btn-info w-100 py-3"%>
         </div>
       <% else %>
         <div class="bg-light rounded my-5 py-5 text-center w-75 mx-auto border-bottom">
