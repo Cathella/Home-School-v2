@@ -20,6 +20,7 @@
           <%= link_to "Dashboard" %>
           <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
       <% else %>
+          <%= link_to "Upscale", {}, class: "text-muted mr-5" %>
           <%= link_to "Sign up | Login", accounts_path, class: "text-muted" %>
       <% end %>
     </div>
