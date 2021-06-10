@@ -1,0 +1,24 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5">
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5 text-muted">Create Study Group</h4>
+
+      <%= form_for [@teacher, @group] do |form| %>
+
+        <div class="field mb-4">
+          <%= form.text_field :name, placeholder: "Group Name", class: "form-control py-4" %>
+        </div>
+        <small class="text-muted">Generated Name: <span class="text-info"><%= @group_name %></span></small>
+        <div class="field mt-4">
+          <%= form.select :subject, options_for_select(["Choose a subject you will teach", "Reading", "English", "Mathematics", "Science", "Social Studies"]), {}, class: "custom-select", style: "height: 3em;" %>
+        </div>
+
+        <div class="actions mt-4">
+          <%= form.submit "Create Group", class: "btn btn-info px-5 py-3 very-rounded shadow" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

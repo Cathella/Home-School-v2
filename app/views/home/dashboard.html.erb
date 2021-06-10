@@ -69,7 +69,11 @@
                   </div>
                 </div>
               </div>
-              <%= link_to 'Create a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, {}, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <% if current_teacher.groups.present? %>
+                <%= link_to 'See my Groups<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, teacher_groups_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <% else %>
+                <%= link_to 'Create a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_teacher_group_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <% end %>
             <% else %>
               <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_teacher_detail_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
             <% end %>
