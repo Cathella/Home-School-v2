@@ -29372,3 +29372,1388 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 208ms (Views: 203.3ms | ActiveRecord: 0.0ms | Allocations: 38627)
 
 
+Started GET "/" for 127.0.0.1 at 2021-06-10 23:41:17 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.9ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 95.9ms | Allocations: 4139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 298.2ms | Allocations: 37118)
+Completed 200 OK in 307ms (Views: 300.7ms | Allocations: 37636)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-10 23:41:24 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.6ms | Allocations: 283)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 8.5ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 150.5ms | Allocations: 33935)
+Completed 200 OK in 162ms (Views: 156.8ms | Allocations: 34575)
+
+
+Started GET "/teachers/sign_in" for 127.0.0.1 at 2021-06-10 23:41:34 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 294)
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 580)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 179.4ms | Allocations: 6125)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 260.3ms | Allocations: 39273)
+Completed 200 OK in 301ms (Views: 299.0ms | Allocations: 41426)
+
+
+Started POST "/teachers/sign_in" for 127.0.0.1 at 2021-06-10 23:41:47 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "teacher"=>{"email"=>"cathie@homeschool.ug", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTeacher Load (1.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."email" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["email", "cathie@homeschool.ug"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 389ms (ActiveRecord: 5.9ms | Allocations: 5515)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-10 23:41:48 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 12.7ms | Allocations: 885)
+  [1m[36mDirection Load (3.9ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:49
+  [1m[36mDetail Load (1.4ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:57
+  [1m[36mGroup Load (2.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/home/dashboard.html.erb:72
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 54.4ms | Allocations: 2996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 219.1ms | Allocations: 36150)
+Completed 200 OK in 224ms (Views: 211.7ms | ActiveRecord: 8.8ms | Allocations: 36704)
+
+
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:41:54 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (1.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 172)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 107.7ms | Allocations: 34002)
+Completed 200 OK in 129ms (Views: 109.7ms | ActiveRecord: 2.3ms | Allocations: 35692)
+
+
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:49:02 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.6ms | Allocations: 593)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 248.5ms | Allocations: 35077)
+Completed 200 OK in 264ms (Views: 252.2ms | ActiveRecord: 1.5ms | Allocations: 38143)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-10 23:49:09 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+Completed 404 Not Found in 18ms (ActiveRecord: 0.7ms | Allocations: 1664)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Group without an ID:
+  app/controllers/teachers/groups_controller.rb:35:in `set_group'
+
+Started POST "/__better_errors/7037db48270fc915/variables" for 127.0.0.1 at 2021-06-10 23:49:09 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:50:32 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.2ms | Allocations: 593)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 160.0ms | Allocations: 35027)
+Completed 200 OK in 182ms (Views: 167.2ms | ActiveRecord: 1.6ms | Allocations: 37557)
+
+
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:50:37 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.3ms | Allocations: 172)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 186.3ms | Allocations: 33997)
+Completed 200 OK in 206ms (Views: 187.9ms | ActiveRecord: 1.9ms | Allocations: 35680)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-10 23:50:42 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+Completed 404 Not Found in 12ms (ActiveRecord: 0.9ms | Allocations: 1648)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Group without an ID:
+  app/controllers/teachers/groups_controller.rb:35:in `set_group'
+
+Started POST "/__better_errors/ad1d745bee878a03/variables" for 127.0.0.1 at 2021-06-10 23:50:42 +0300
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-10 23:51:29 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.7ms | Allocations: 2126)
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 20.5ms | Allocations: 4891)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 4960)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 7.5ms | Allocations: 11977)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/teachers/groups/show.html.erb:6
+
+Started POST "/__better_errors/06870cda27ad9b84/variables" for 127.0.0.1 at 2021-06-10 23:51:30 +0300
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-10 23:53:10 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+Completed 404 Not Found in 52ms (ActiveRecord: 6.2ms | Allocations: 8322)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Group without an ID:
+  app/controllers/teachers/groups_controller.rb:35:in `set_group'
+
+Started POST "/__better_errors/017830960a724b51/variables" for 127.0.0.1 at 2021-06-10 23:53:11 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:55:01 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.2ms | Allocations: 1695)
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 41.7ms | Allocations: 9614)
+  Rendered layout layouts/application.html.erb (Duration: 43.0ms | Allocations: 9683)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 3.5ms | Allocations: 13581)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"teachers/groups", :teacher_id=>"1"}, missing required keys: [:id]
+Did you mean?  teacher_group_url
+               teacher_groups_url
+               teacher_groups_path
+               new_teacher_group_url:
+  app/views/teachers/groups/index.html.erb:10
+  app/views/teachers/groups/index.html.erb:8
+
+Started POST "/__better_errors/68757906b8f2e654/variables" for 127.0.0.1 at 2021-06-10 23:55:02 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:55:36 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (2.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (1.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.7ms | Allocations: 593)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 4193)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 4262)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 4.2ms | Allocations: 6764)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"teachers/groups", :teacher_id=>#<Teacher id: 1, email: "cathie@homeschool.ug", full_name: "Nakitto Catherine", created_at: "2021-05-19 13:03:12.738673000 +0000", updated_at: "2021-06-10 16:09:46.503471000 +0000">}, missing required keys: [:id]
+Did you mean?  teacher_group_url
+               teacher_groups_url
+               teacher_groups_path
+               new_teacher_group_url:
+  app/views/teachers/groups/index.html.erb:10
+  app/views/teachers/groups/index.html.erb:8
+
+Started POST "/__better_errors/0a4ed562546349bb/variables" for 127.0.0.1 at 2021-06-10 23:55:36 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:56:01 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.1ms | Allocations: 593)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 4075)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 4144)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 1.4ms | Allocations: 6646)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"teachers/groups", :teacher_id=>1}, missing required keys: [:id]
+Did you mean?  teacher_group_url
+               teacher_groups_url
+               teacher_groups_path
+               new_teacher_group_url:
+  app/views/teachers/groups/index.html.erb:10
+  app/views/teachers/groups/index.html.erb:8
+
+Started POST "/__better_errors/57130f1f8cbe78e2/variables" for 127.0.0.1 at 2021-06-10 23:56:02 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:59:03 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.5ms | Allocations: 593)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 4253)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 4322)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 2.1ms | Allocations: 6824)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/teachers/groups/index.html.erb:10
+  app/views/teachers/groups/index.html.erb:8
+
+Started POST "/__better_errors/db0ead30ba14c1e6/variables" for 127.0.0.1 at 2021-06-10 23:59:03 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-10 23:59:28 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.5ms | Allocations: 593)
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 37.9ms | Allocations: 4245)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 4314)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.6ms | Allocations: 6816)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/teachers/groups/index.html.erb:10
+  app/views/teachers/groups/index.html.erb:8
+
+Started POST "/__better_errors/f10284e2da25e212/variables" for 127.0.0.1 at 2021-06-10 23:59:28 +0300
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-11 00:00:10 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.4ms | Allocations: 593)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1560)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 173.5ms | Allocations: 35038)
+Completed 200 OK in 256ms (Views: 181.0ms | ActiveRecord: 2.3ms | Allocations: 37582)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:00:19 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1644)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Group without an ID:
+  app/controllers/teachers/groups_controller.rb:35:in `set_group'
+
+Started POST "/__better_errors/3a04212f98399324/variables" for 127.0.0.1 at 2021-06-11 00:00:20 +0300
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:01:01 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.0ms | Allocations: 2130)
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 193.1ms | Allocations: 35494)
+Completed 200 OK in 278ms (Views: 197.0ms | ActiveRecord: 8.8ms | Allocations: 46655)
+
+
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-11 00:01:46 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.0ms | Allocations: 174)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2846)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | Allocations: 35798)
+Completed 200 OK in 154ms (Views: 130.9ms | ActiveRecord: 1.2ms | Allocations: 38752)
+
+
+Started GET "/teachers/1/groups" for 127.0.0.1 at 2021-06-11 00:28:33 +0300
+Processing by Teachers::GroupsController#index as HTML
+  Parameters: {"teacher_id"=>"1"}
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.1ms | Allocations: 593)
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/teachers/groups/index.html.erb:8
+  Rendered teachers/groups/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.9ms | Allocations: 34975)
+Completed 200 OK in 244ms (Views: 199.7ms | ActiveRecord: 6.0ms | Allocations: 38029)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:28:38 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 3.6ms | Allocations: 874)
+  [1m[36mDetail Load (0.5ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:11
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 65.5ms | Allocations: 12301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 151.9ms | Allocations: 45314)
+Completed 200 OK in 157ms (Views: 149.6ms | ActiveRecord: 3.5ms | Allocations: 46892)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:29:34 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.1ms | Allocations: 1295)
+  [1m[36mDetail Load (0.4ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:11
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 24.4ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 158.2ms | Allocations: 35642)
+Completed 200 OK in 174ms (Views: 163.1ms | ActiveRecord: 1.9ms | Allocations: 37945)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:31:10 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 9.9ms | Allocations: 1295)
+  [1m[36mDetail Load (0.2ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:11
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 174.0ms | Allocations: 35686)
+Completed 200 OK in 201ms (Views: 183.8ms | ActiveRecord: 2.0ms | Allocations: 37977)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:31:37 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 13.8ms | Allocations: 1296)
+  [1m[36mDetail Load (0.3ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:11
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 27.6ms | Allocations: 2240)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 176.1ms | Allocations: 35643)
+Completed 200 OK in 206ms (Views: 188.2ms | ActiveRecord: 2.2ms | Allocations: 37946)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:36:10 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.8ms | Allocations: 1295)
+  [1m[36mDetail Load (0.6ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 30.3ms | Allocations: 2248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 178.3ms | Allocations: 35719)
+Completed 200 OK in 213ms (Views: 185.2ms | ActiveRecord: 2.3ms | Allocations: 38018)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:36:49 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (1.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.1ms | Allocations: 1295)
+  [1m[36mDetail Load (0.8ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 31.0ms | Allocations: 2243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 181.0ms | Allocations: 35645)
+Completed 200 OK in 221ms (Views: 194.1ms | ActiveRecord: 2.5ms | Allocations: 37958)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:38:33 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 16.7ms | Allocations: 1295)
+  [1m[36mDetail Load (0.7ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 31.4ms | Allocations: 2247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 185.6ms | Allocations: 35716)
+Completed 200 OK in 221ms (Views: 196.7ms | ActiveRecord: 2.4ms | Allocations: 38009)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:39:00 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.3ms | Allocations: 1295)
+  [1m[36mDetail Load (1.0ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 2243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 203.7ms | Allocations: 35686)
+Completed 200 OK in 237ms (Views: 219.8ms | ActiveRecord: 2.3ms | Allocations: 37983)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:43:41 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 16.6ms | Allocations: 1295)
+  [1m[36mDetail Load (1.3ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.4ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 119.4ms | Allocations: 13765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 308.2ms | Allocations: 47131)
+Completed 200 OK in 341ms (Views: 316.9ms | ActiveRecord: 7.9ms | Allocations: 49433)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:44:43 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.5ms | Allocations: 1295)
+  [1m[36mDetail Load (0.7ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 33.2ms | Allocations: 2891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.9ms | Allocations: 36374)
+Completed 200 OK in 216ms (Views: 197.7ms | ActiveRecord: 3.3ms | Allocations: 38681)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-11 00:45:56 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 16.1ms | Allocations: 904)
+  [1m[36mDirection Load (0.5ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:49
+  [1m[36mDetail Load (0.6ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:57
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/home/dashboard.html.erb:72
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 49.2ms | Allocations: 3709)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 189.9ms | Allocations: 36848)
+Completed 200 OK in 199ms (Views: 192.3ms | ActiveRecord: 2.5ms | Allocations: 38133)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:47:05 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.3ms | Allocations: 1295)
+  [1m[36mDetail Load (0.3ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.6ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 31.4ms | Allocations: 2884)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 594.4ms | Allocations: 36355)
+Completed 200 OK in 631ms (Views: 604.3ms | ActiveRecord: 2.7ms | Allocations: 38662)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:47:34 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 10.8ms | Allocations: 1295)
+  [1m[36mDetail Load (0.7ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 32.0ms | Allocations: 2889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 167.7ms | Allocations: 36330)
+Completed 200 OK in 204ms (Views: 174.8ms | ActiveRecord: 3.1ms | Allocations: 38639)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:49:32 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 15.0ms | Allocations: 1295)
+  [1m[36mDetail Load (0.6ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (1.0ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 36.0ms | Allocations: 2883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 190.9ms | Allocations: 36328)
+Completed 200 OK in 218ms (Views: 199.9ms | ActiveRecord: 3.5ms | Allocations: 38617)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:50:02 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 9.6ms | Allocations: 1295)
+  [1m[36mDetail Load (0.5ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 30.3ms | Allocations: 2884)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.1ms | Allocations: 36315)
+Completed 200 OK in 209ms (Views: 195.3ms | ActiveRecord: 3.0ms | Allocations: 38606)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:50:42 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.1ms | Allocations: 1295)
+  [1m[36mDetail Load (0.5ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.9ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 31.1ms | Allocations: 2887)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 204.9ms | Allocations: 36353)
+Completed 200 OK in 245ms (Views: 212.9ms | ActiveRecord: 2.3ms | Allocations: 38658)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:51:06 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 13.5ms | Allocations: 1295)
+  [1m[36mDetail Load (0.5ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 34.5ms | Allocations: 2886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 203.8ms | Allocations: 36300)
+Completed 200 OK in 243ms (Views: 212.3ms | ActiveRecord: 2.6ms | Allocations: 38605)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:52:33 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 10.2ms | Allocations: 1295)
+  [1m[36mDetail Load (0.4ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:27
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 30.8ms | Allocations: 2885)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 185.2ms | Allocations: 36265)
+Completed 200 OK in 214ms (Views: 194.2ms | ActiveRecord: 2.7ms | Allocations: 38569)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:53:39 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 12.9ms | Allocations: 1295)
+  [1m[36mDetail Load (0.5ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:15
+  [1m[36mDirection Load (0.5ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:33
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 31.6ms | Allocations: 2890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 181.4ms | Allocations: 36395)
+Completed 200 OK in 200ms (Views: 189.5ms | ActiveRecord: 2.0ms | Allocations: 38692)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:54:48 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.1ms | Allocations: 1295)
+  [1m[36mDirection Load (0.5ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:9
+  [1m[36mDetail Load (0.3ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:16
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 25.9ms | Allocations: 2903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 183.9ms | Allocations: 36337)
+Completed 200 OK in 216ms (Views: 189.8ms | ActiveRecord: 2.9ms | Allocations: 38642)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:55:50 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 9.5ms | Allocations: 1295)
+  [1m[36mDirection Load (0.9ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:10
+  [1m[36mDetail Load (0.8ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:17
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 33.2ms | Allocations: 2903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 187.0ms | Allocations: 36339)
+Completed 200 OK in 221ms (Views: 194.7ms | ActiveRecord: 2.9ms | Allocations: 38654)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:56:48 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.7ms | Allocations: 1295)
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:10
+  [1m[36mDetail Load (0.5ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:17
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 31.2ms | Allocations: 2878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.4ms | Allocations: 36340)
+Completed 200 OK in 217ms (Views: 199.6ms | ActiveRecord: 2.9ms | Allocations: 38635)
+
+
+Started GET "/teachers/1/groups/1" for 127.0.0.1 at 2021-06-11 00:57:54 +0300
+Processing by Teachers::GroupsController#show as HTML
+  Parameters: {"teacher_id"=>"1", "id"=>"1"}
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:31:in `set_teacher'
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teachers/groups_controller.rb:35:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering teachers/groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.5ms | Allocations: 1295)
+  [1m[36mDirection Load (0.4ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:10
+  [1m[36mDetail Load (0.7ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/teachers/groups/show.html.erb:17
+  Rendered teachers/groups/show.html.erb within layouts/application (Duration: 28.1ms | Allocations: 2885)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 203.8ms | Allocations: 36344)
+Completed 200 OK in 231ms (Views: 214.7ms | ActiveRecord: 2.7ms | Allocations: 38649)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-11 01:06:58 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 29.7ms | Allocations: 6947)
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:49
+  [1m[36mDetail Load (0.2ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:57
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/home/dashboard.html.erb:72
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 124.3ms | Allocations: 30031)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 224.5ms | Allocations: 63401)
+Completed 200 OK in 230ms (Views: 226.8ms | ActiveRecord: 2.2ms | Allocations: 65572)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:07:02 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 5.2ms | Allocations: 904)
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:8
+  Rendered groups/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 171.7ms | Allocations: 34896)
+Completed 200 OK in 178ms (Views: 174.0ms | ActiveRecord: 0.4ms | Allocations: 36203)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:09:06 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.5ms | Allocations: 1284)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:8
+  Rendered groups/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.0ms | Allocations: 35662)
+Completed 200 OK in 209ms (Views: 201.8ms | ActiveRecord: 0.8ms | Allocations: 37113)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-11 01:09:11 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 10.7ms | Allocations: 868)
+  [1m[36mDirection Load (1.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:10
+  [1m[36mDetail Load (0.4ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:17
+  Rendered groups/show.html.erb within layouts/application (Duration: 37.7ms | Allocations: 2329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 195.9ms | Allocations: 35462)
+Completed 200 OK in 218ms (Views: 199.7ms | ActiveRecord: 3.2ms | Allocations: 36714)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-11 01:27:16 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 9.3ms | Allocations: 1288)
+  [1m[36mTeacher Load (1.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:10
+  [1m[36mDirection Load (0.8ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:10
+  [1m[36mDetail Load (0.9ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:17
+  Rendered groups/show.html.erb within layouts/application (Duration: 43.6ms | Allocations: 3767)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 201.8ms | Allocations: 37204)
+Completed 200 OK in 229ms (Views: 212.4ms | ActiveRecord: 4.2ms | Allocations: 39076)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-11 01:28:05 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.5ms | Allocations: 1288)
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:10
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:10
+  [1m[36mDetail Load (0.6ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:17
+  Rendered groups/show.html.erb within layouts/application (Duration: 42.8ms | Allocations: 3469)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 171.3ms | Allocations: 36942)
+Completed 200 OK in 185ms (Views: 173.6ms | ActiveRecord: 3.5ms | Allocations: 38817)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-11 01:31:07 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.3ms | Allocations: 1288)
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.7ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDetail Load (0.9ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:18
+  Rendered groups/show.html.erb within layouts/application (Duration: 40.4ms | Allocations: 3521)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 181.8ms | Allocations: 36944)
+Completed 200 OK in 212ms (Views: 190.2ms | ActiveRecord: 3.8ms | Allocations: 38816)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-11 01:33:39 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.5ms | Allocations: 1288)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDetail Load (0.6ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:18
+  Rendered groups/show.html.erb within layouts/application (Duration: 33.8ms | Allocations: 3515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.7ms | Allocations: 36950)
+Completed 200 OK in 179ms (Views: 173.6ms | ActiveRecord: 1.9ms | Allocations: 38829)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-11 01:33:59 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (1.3ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 15.6ms | Allocations: 1288)
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (1.0ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDetail Load (0.7ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:18
+  Rendered groups/show.html.erb within layouts/application (Duration: 48.1ms | Allocations: 3514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 188.7ms | Allocations: 36928)
+Completed 200 OK in 213ms (Views: 192.5ms | ActiveRecord: 4.0ms | Allocations: 38813)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:34:28 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 12.5ms | Allocations: 863)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:8
+  Rendered groups/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 1596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 147.4ms | Allocations: 34754)
+Completed 200 OK in 155ms (Views: 149.7ms | ActiveRecord: 1.3ms | Allocations: 35465)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-11 01:34:48 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 10.7ms | Allocations: 902)
+  [1m[36mDirection Load (0.9ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:49
+  [1m[36mDetail Load (0.2ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:57
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/home/dashboard.html.erb:72
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 42.1ms | Allocations: 3681)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.7ms | Allocations: 36872)
+Completed 200 OK in 218ms (Views: 207.5ms | ActiveRecord: 2.6ms | Allocations: 38088)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:34:56 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 3.8ms | Allocations: 863)
+  [1m[36mGroup Load (1.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:8
+  Rendered groups/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1440)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.7ms | Allocations: 34579)
+Completed 200 OK in 131ms (Views: 124.7ms | ActiveRecord: 2.0ms | Allocations: 35157)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:37:28 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (1.0ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 23.3ms | Allocations: 1284)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 41.6ms | Allocations: 2201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 172.2ms | Allocations: 35615)
+Completed 200 OK in 195ms (Views: 187.0ms | ActiveRecord: 1.6ms | Allocations: 37065)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:38:13 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.2ms | Allocations: 1284)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 2197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 160.7ms | Allocations: 35615)
+Completed 200 OK in 178ms (Views: 170.7ms | ActiveRecord: 0.4ms | Allocations: 37071)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:38:43 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 16.0ms | Allocations: 1284)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 2203)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 175.3ms | Allocations: 35719)
+Completed 200 OK in 184ms (Views: 178.7ms | ActiveRecord: 1.4ms | Allocations: 37175)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:39:16 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.4ms | Allocations: 1284)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 164.7ms | Allocations: 35654)
+Completed 200 OK in 184ms (Views: 179.0ms | ActiveRecord: 0.3ms | Allocations: 37105)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:39:43 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 12.4ms | Allocations: 1284)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 2198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 165.4ms | Allocations: 35622)
+Completed 200 OK in 189ms (Views: 182.1ms | ActiveRecord: 0.8ms | Allocations: 37077)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2021-06-11 01:39:53 +0300
+Processing by GroupsController#new as HTML
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.2ms | Allocations: 165)
+  Rendered groups/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 163.5ms | Allocations: 34058)
+Completed 200 OK in 178ms (Views: 166.4ms | ActiveRecord: 0.4ms | Allocations: 35430)
+
+
+Started POST "/groups" for 127.0.0.1 at 2021-06-11 01:40:21 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"nakitto-catherine-study-group", "subject"=>"Reading"}, "commit"=>"Create Group"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:18:in `create'
+  [1m[36mGroup Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "nakitto-catherine-study-group"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/groups_controller.rb:18:in `create'
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mGroup Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "nakitto-catherine-study-group"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+Redirected to http://localhost:3000/groups/new
+Completed 302 Found in 74ms (ActiveRecord: 3.6ms | Allocations: 7433)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2021-06-11 01:40:22 +0300
+Processing by GroupsController#new as HTML
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.8ms | Allocations: 164)
+  Rendered groups/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 175.3ms | Allocations: 33763)
+Completed 200 OK in 191ms (Views: 180.3ms | ActiveRecord: 0.5ms | Allocations: 35001)
+
+
+Started POST "/groups" for 127.0.0.1 at 2021-06-11 01:40:41 +0300
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"nakitto-catherine-study-group-2", "subject"=>"English"}, "commit"=>"Create Group"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:18:in `create'
+  [1m[36mGroup Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "nakitto-catherine-study-group-2"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/groups_controller.rb:18:in `create'
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mGroup Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "groups" WHERE "groups"."name" = ? LIMIT ?[0m  [["name", "nakitto-catherine-study-group-2"], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mGroup Create (11.0ms)[0m  [1m[32mINSERT INTO "groups" ("name", "subject", "teacher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "nakitto-catherine-study-group-2"], ["subject", "English"], ["teacher_id", 1], ["created_at", "2021-06-10 22:40:41.448331"], ["updated_at", "2021-06-10 22:40:41.448331"]]
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (22.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/groups_controller.rb:21:in `create'
+Redirected to http://localhost:3000/groups/2
+Completed 302 Found in 117ms (ActiveRecord: 37.8ms | Allocations: 9317)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2021-06-11 01:40:41 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.5ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 9.8ms | Allocations: 867)
+  [1m[36mTeacher Load (0.9ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.5ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDetail Load (0.7ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:18
+  Rendered groups/show.html.erb within layouts/application (Duration: 34.9ms | Allocations: 2957)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 190.7ms | Allocations: 36102)
+Completed 200 OK in 210ms (Views: 192.4ms | ActiveRecord: 3.5ms | Allocations: 37227)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:40:53 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 9.9ms | Allocations: 863)
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 1507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 186.2ms | Allocations: 34635)
+Completed 200 OK in 211ms (Views: 197.8ms | ActiveRecord: 0.9ms | Allocations: 35216)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-11 01:41:32 +0300
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 22.3ms | Allocations: 1284)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:11
+  Rendered groups/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 2243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 184.7ms | Allocations: 35652)
+Completed 200 OK in 200ms (Views: 192.6ms | ActiveRecord: 1.3ms | Allocations: 37097)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2021-06-11 01:41:49 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:30:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 10.4ms | Allocations: 867)
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.8ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDetail Load (0.2ms)[0m  [1m[34mSELECT "details".* FROM "details" WHERE "details"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:18
+  Rendered groups/show.html.erb within layouts/application (Duration: 40.6ms | Allocations: 2958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 201.9ms | Allocations: 36057)
+Completed 200 OK in 227ms (Views: 206.4ms | ActiveRecord: 2.6ms | Allocations: 37191)
+
+

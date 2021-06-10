@@ -1,9 +1,8 @@
-class Teachers::GroupsController < ApplicationController
-  before_action :set_teacher
+class GroupsController < ApplicationController
   before_action :set_group, only: [ :edit, :update, :show ]
 
   def index
-    @groups = current_teacher.groups
+    @groups = Group.all
   end
 
   def new
@@ -16,23 +15,19 @@ class Teachers::GroupsController < ApplicationController
   end
 
   def create
-    @group = @teacher.groups.new group_params
+    @group = Group.create group_params
     @group.teacher_id = current_teacher.id
 
     if @group.save
       redirect_to @group, notice: 'Group was successfully created.'
     else
-      redirect_to new_teacher_group_path, notice: "Group not created. Try Again!"
+      redirect_to new_group_path, notice: "Group not created. Try Again!"
     end
   end
 
   private
-    def set_teacher
-      @teacher = Teacher.find(params[:teacher_id])
-    end
-
     def set_group
-      @group = Group.find(params[:group_id])
+      @group = Group.find(params[:id])
     end
 
     def group_params

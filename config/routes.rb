@@ -16,8 +16,9 @@ Rails.application.routes.draw do
   resources :teachers do
     resources :directions, module: :teachers
     resources :details, module: :teachers
-    resources :groups, module: :teachers
   end
+
+  resources :groups
 
   # get "/teachershome", to: "teachers#teachershome", as: :teachershome 
   # get "lessons", to: "home#lessons", as: "lessons"
