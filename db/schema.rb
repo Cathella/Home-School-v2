@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_000444) do
+ActiveRecord::Schema.define(version: 2021_06_10_114403) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -121,6 +121,15 @@ ActiveRecord::Schema.define(version: 2021_06_10_000444) do
     t.index ["conversation_id"], name: "notification_for_conversation"
     t.index ["message_id", "conversation_id"], name: "unique_messages_for_conversations", unique: true
     t.index ["message_id"], name: "notification_for_message"
+  end
+
+  create_table "details", force: :cascade do |t|
+    t.string "grade"
+    t.string "phone"
+    t.integer "teacher_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["teacher_id"], name: "index_details_on_teacher_id"
   end
 
   create_table "directions", force: :cascade do |t|
