@@ -13,7 +13,7 @@ class Children::ProfilesController < ApplicationController
     if @profile.save
       redirect_to dashboard_path, notice: 'Your profile has been saved'
     else
-      redirect_to dashboard_path, notice: 'Profile not saved. Try Again!'
+      redirect_to new_child_profile_path, notice: 'Profile not saved. Try Again!'
     end
   end
   

@@ -53,7 +53,27 @@
             <small><%= link_to "Change this address?", {}, class: "text-info" %></small>
           </div>
 
-          <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, {}, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+          <div class="mb-5">
+            <% if current_teacher.detail.present? %>
+              <div class="row mb-5">
+                <div class="col-lg-6">
+                  <div class="border rounded text-center">
+                    <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-graduation-cap"></i>Grade</span>
+                    <span class="text-muted border-top py-3 d-block"><%= current_teacher.detail.grade %></span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="border rounded text-center">
+                    <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-mobile-alt"></i>Phone</span>
+                    <span class="text-muted border-top py-3 d-block"><%= current_teacher.detail.phone %></span>
+                  </div>
+                </div>
+              </div>
+              <%= link_to 'Create a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, {}, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+            <% else %>
+              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_teacher_detail_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+            <% end %>
+          </div>
         <% else %>
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-4 fs-5 pb-4">Where do you live?</p>
