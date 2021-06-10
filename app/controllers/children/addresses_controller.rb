@@ -1,6 +1,6 @@
 class Children::AddressesController < ApplicationController
   before_action :set_child
-  before_action :set_address, only: [:edit, :update]
+  before_action :set_address, only: [ :edit, :update ]
 
   def new
     @address = Address.new
