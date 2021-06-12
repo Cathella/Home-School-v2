@@ -14,8 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet"> 
     <link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
 
@@ -47,15 +46,7 @@
     <script defer data-turbolinks-eval="false" 
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxEpbkQuzNCC2GqvdPRaVQM83NezXvokI&libraries=places&callback=initMap">
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=Figaro.env.gmaps_key%>" async defer></script>
     <script src="https://vjs.zencdn.net/7.10.2/video.min.js"></script>
-    <script>
-      function openNav() {
-        document.getElementById("myNav").style.width = "100%";
-      }
-
-      function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
-      }
-    </script>
   </body>
 </html>
