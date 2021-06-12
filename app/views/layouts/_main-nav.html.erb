@@ -7,14 +7,12 @@
 
     <div style="font-size: 17px;">
       <% if current_teacher %>
-          <%= link_to "Upscale", {}, class: "mr-4 text-muted" %>
-          <%= link_to "Dashboard", dashboard_path, class: "mr-4 text-muted" %>
-          <%= link_to "Account", edit_teacher_registration_path, class: "mr-4 text-muted" %>
+          <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-muted" %>
+          <%= link_to "Children nearby", {}, class: "mr-5 text-muted" %>
           <%= link_to "Logout", destroy_teacher_session_path, method: :delete, class: "text-muted" %>
       <% elsif current_child %>
-          <%= link_to "Upscale", {}, class: "mr-4 text-muted" %>
-          <%= link_to "Dashboard", dashboard_path, class: "mr-4 text-muted" %>
-          <%= link_to "Account", edit_child_registration_path, class: "mr-4 text-muted" %>
+          <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-muted" %>
+          <%= link_to "Teachers nearby", {}, class: "mr-5 text-muted" %>
           <%= link_to "Logout", destroy_child_session_path, method: :delete, class: "text-muted" %>
       <% elsif current_admin %>
           <%= link_to "Dashboard" %>

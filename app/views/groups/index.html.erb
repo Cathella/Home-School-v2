@@ -2,16 +2,53 @@
 
 <div class="container py-5">
   <div class="row my-5">
-    <div class="col-lg-8 mx-auto">
-      <div class="d-flex justify-content-between align-items-center mb-5 ">
-        <h4 class="text-muted font-weight-bold">My Groups</h4>
-        <%= link_to "New Group?", new_group_path, class: "text-info" %>
-      </div>
+    <% if child_signed_in? %>
+      <div class="col-lg-4">
+        <div class="bg-light px-4 text-muted py-4 rounded">
+          <small class="text-center d-block">Search for a study group in your area.</small>
 
-      <% @groups.each do |group| %>
-        <div class="text-info bg-light py-3 px-3 border-bottom">
-          <%= link_to group.name, group, class: "text-info" %>
+          <%= search_form_for @q, html: { class: "form mt-4" } do |form| %>
+            <%= form.search_field :name_or_subject_or_teacher_detail_grade_or_teacher_direction_landmark_cont, placeholder: "Search...", class: "form-control py-4" %>
+          <% end %>
+
+          <small>
+            <%= link_to '<i class="fas mr-2 fa-sync-alt"></i>Reload Groups'.html_safe, groups_path, class: "text-info d-block mt-2 text-center" %>
+          </small>
         </div>
+      </div>
+    <% end %>
+
+    <div class="col-lg-7 mx-auto">
+      <% if teacher_signed_in? %>
+        <div class="d-flex justify-content-between align-items-center mb-5 ">
+          <h4 class="text-muted font-weight-bold">My Groups</h4>
+          <%= link_to "New Group?", new_group_path, class: "text-info" %>
+        </div>
+      <% else %>
+        <div class="d-flex justify-content-between align-items-center mb-4 ">
+          <h4 class="text-muted font-weight-bold">Study Groups</h4>
+        </div>
+      <% end %>
+
+      <% if child_signed_in? %>
+        <% @groups.each do |group| %>
+          <div class="bg-light py-3 px-3 border-bottom mb-3">
+            <section class="d-flex justify-content-between">
+              <%= link_to group.name, group, class: "text-info" %>
+              <span class="">
+                <small class="text-muted"><i class="fas mr-2 fa-graduation-cap"></i><%= group.teacher.detail.grade %></small>
+              </span>
+            </section>
+            <small class="d-block text-muted mt-2"><i class="fas mr-2 fa-map-marker-alt"></i><%= group.teacher.direction.landmark %></small>
+            </span>
+          </div>
+        <% end %>
+      <% elsif teacher_signed_in? %>
+        <% current_teacher.groups.each do |group| %>
+          <div class="text-info bg-light py-3 px-3 border-bottom">
+            <%= link_to group.name, group, class: "text-info" %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

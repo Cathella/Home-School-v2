@@ -84,3 +84,4 @@ gem 'devise', '~> 4.8'
 
 gem 'binding_of_caller', '~> 1.0'
 gem 'geocoder', '~> 1.6', '>= 1.6.7'
+gem 'ransack', '~> 2.4', '>= 2.4.2'

@@ -2,7 +2,9 @@ class GroupsController < ApplicationController
   before_action :set_group, only: [ :edit, :update, :show ]
 
   def index
-    @groups = Group.all
+    # @groups = Group.all
+    @q = Group.search(params[:q])
+    @groups = @q.result(distinct: true)
   end
 
   def new
