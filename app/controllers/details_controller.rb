@@ -1,5 +1,4 @@
-class Teachers::DetailsController < ApplicationController
-  before_action :set_teacher
+class DetailsController < ApplicationController
   before_action :set_detail, only: [ :edit, :update ]
 
   def new
@@ -7,13 +6,13 @@ class Teachers::DetailsController < ApplicationController
   end
   
   def create
-    @detail = @teacher.build_detail detail_params
+    @detail = Detail.create detail_params
     @detail.teacher_id = current_teacher.id
 
     if @detail.save
       redirect_to dashboard_path, notice: "Your profile has been saved"
     else
-      redirect_to new_teacher_detail_path, notice: "Profile not saved. Try Again!"
+      redirect_to new_detail_path, notice: "Profile not saved. Try Again!"
     end
   end
   
@@ -24,10 +23,6 @@ class Teachers::DetailsController < ApplicationController
   end
 
   private
-    def set_teacher
-      @teacher = Teacher.find(params[:teacher_id])
-    end
-
     def set_detail
       @detail = Detail.find(params[:id])
     end

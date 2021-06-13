@@ -1,4 +1,5 @@
 <%= render 'layouts/main-nav' %>
+
 <div class="container py-5">
   <div class="row">
     <div class="col-lg-7 mx-auto">
@@ -36,13 +37,13 @@
               </div>
               <%= link_to 'Join a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, groups_path, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
             <% else %>
-              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_child_profile_path(current_child.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_profile_path(current_child.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
             <% end %>
           </div>
         <% else %>
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-4 fs-5 pb-4">Where do you live?</p>
-            <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_child_address_path(current_child.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
+            <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_address_path(current_child.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
           </div>
         <% end %>
       <% elsif teacher_signed_in? %>
@@ -75,13 +76,13 @@
                 <%= link_to 'Create a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_group_path, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
               <% end %>
             <% else %>
-              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_teacher_detail_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_detail_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
             <% end %>
           </div>
         <% else %>
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-4 fs-5 pb-4">Where do you live?</p>
-            <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_teacher_direction_path(current_teacher.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
+            <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_direction_path(current_teacher.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
           </div>
         <% end %>
       <% end %>

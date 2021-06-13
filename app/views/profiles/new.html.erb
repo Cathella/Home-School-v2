@@ -4,7 +4,7 @@
   <div class="row my-5">
     <div class="col-lg-6 mx-auto">
       <h4 class="mb-5">Complete your Profile</h4>
-      <%= form_for [@child, @profile] do |form| %>
+      <%= form_for @profile do |form| %>
 
         <div class="field mb-4">
           <%= form.text_field :phone, placeholder: "Phone Number", class: "form-control py-4" %>

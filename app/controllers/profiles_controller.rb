@@ -1,5 +1,4 @@
-class Children::ProfilesController < ApplicationController
-  before_action :set_child
+class ProfilesController < ApplicationController
   before_action :set_profile, only: [ :edit, :update ]
 
   def new
@@ -7,13 +6,13 @@ class Children::ProfilesController < ApplicationController
   end
 
   def create
-    @profile = @child.build_profile profile_params
+    @profile = Profile.create profile_params
     @profile.child_id = current_child.id
 
     if @profile.save
       redirect_to dashboard_path, notice: 'Your profile has been saved'
     else
-      redirect_to new_child_profile_path, notice: 'Profile not saved. Try Again!'
+      redirect_to new_profile_path, notice: 'Profile not saved. Try Again!'
     end
   end
   
@@ -31,9 +30,5 @@ class Children::ProfilesController < ApplicationController
     
     def profile_params
       params.require(:profile).permit(:phone, :grade)
-    end
-    
-    def set_child
-      @child = Child.find(params[:child_id])
     end
 end
