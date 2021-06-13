@@ -28,6 +28,6 @@ class DetailsController < ApplicationController
     end
     
     def detail_params
-      params.require(:detail).permit(:phone, :grade)
+      params.require(:detail).permit(:phone)
     end
 end

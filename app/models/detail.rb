@@ -1,4 +1,4 @@
 class Detail < ApplicationRecord
   belongs_to :teacher
-  validates :phone, :grade, presence: true
+  validates :phone, presence: true
 end

@@ -124,7 +124,6 @@ ActiveRecord::Schema.define(version: 2021_06_10_124120) do
   end
 
   create_table "details", force: :cascade do |t|
-    t.string "grade"
     t.string "phone"
     t.integer "teacher_id"
     t.datetime "created_at", precision: 6, null: false
@@ -156,6 +155,7 @@ ActiveRecord::Schema.define(version: 2021_06_10_124120) do
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.string "subject"
+    t.string "grade"
     t.integer "teacher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
