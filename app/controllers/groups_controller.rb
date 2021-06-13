@@ -9,7 +9,6 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    # @value = 5.times.map { (0...(rand(10))).map { ('a'..'z').to_a[rand(26)] }.join }.join(" ")
     @group_name = current_teacher.full_name.parameterize(separator: '-') + "-study-group"
   end
 
