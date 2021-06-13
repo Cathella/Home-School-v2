@@ -14,7 +14,7 @@
           <%= button_to "Logout", destroy_child_session_path, method: :delete, class: "text-muted bg-white border-0 p-0" %>
       <% elsif current_admin %>
           <%= link_to "Dashboard" %>
-          <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
+          <%= button_to "Logout", destroy_admin_session_path, method: :delete, class: "text-muted bg-white border-0 p-0" %>
       <% else %>
           <%= link_to "Upscale", {}, class: "text-muted mr-5" %>
           <%= link_to "Sign up | Login", accounts_path, class: "text-muted" %>

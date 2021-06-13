@@ -1,19 +1,42 @@
-<%= render 'layouts/main-nav' %>
+<section style="background: #ff738e">
+  <header class="pt-1 pb-1 shadow">
+    <nav class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand logo text-white" href="/">
+        🏠 
+        HomeSchool
+      </a>
 
-<div class="pt-5 mt-4 mb-4">
-  <div class="container">
-    <div class="row">
-      <%= render 'layouts/notice2' %>
-      <div class="col-md-4 col-lg-6 intro-img">
+      <div style="font-size: 17px;" class="d-flex">
+        <% if current_teacher %>
+            <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-white" %>
+            <%= button_to "Logout", destroy_teacher_session_path, method: :delete, class: "text-white bg-white border-0 p-0" %>
+        <% elsif current_child %>
+            <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-white" %>
+            <%= button_to "Logout", destroy_child_session_path, method: :delete, class: "text-white bg-white border-0 p-0" %>
+        <% elsif current_admin %>
+            <%= link_to "Dashboard" %>
+            <%= button_to "Logout", destroy_admin_session_path, method: :delete, class: "text-white bg-white border-0 p-0" %>
+        <% else %>
+            <%= link_to "Upscale", {}, class: "text-white mr-5" %>
+            <%= link_to "Sign up | Login", accounts_path, class: "text-white" %>
+        <% end %>
       </div>
-      <div class="col-md-8 col-lg-6 intro py-5 pl-5">
-        <h1 class="text-heading mt-5 ml-5 font-weight-bold">
+    </nav>
+  </header>
+</section>
+
+<div class="try">
+  <div class="container-fluid py-5">
+    <div class="row py-5">
+      <%= render 'layouts/notice2' %>
+      <div class="col-lg-6 intro py-5 text-center mx-auto">
+        <h1 class="text-heading mt-5 font-weight-bold">
           We match 
-          <span class="orange-link underlined">Learners</span> and 
-          <span class="text-info underlined">Teachers</span> in the Neighbourhood
+          <span class="text-white underlined">Learners</span> and 
+          <span class="text-white underlined">Teachers</span> in the Neighbourhood
         </h1>
-        <div class="mt-4 mb-5 ml-5">
-          <%= link_to 'Register your Child', new_child_registration_path, class: "btn bg-green-btn text-white shadow px-5 py-3" %>
+        <div class="mt-4 mb-5">
+          <%= link_to 'Register your Child', new_child_registration_path, class: "btn bg-yellow fs-6 very-rounded text-label shadow px-5 py-3" %>
         </div>
       </div>
     </div>
@@ -45,7 +68,7 @@
   </div>
 </div>
 
-<div class="how">
+<%# <div class="how">
     <div class="container pt-5">
         <h1 class="pb-3 mt-5 mb-5 text-center font-weight-bold text-label">How it works</h1>
         <div class="row">
@@ -86,48 +109,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> %>
 
-<div class="secondary-intro">
-  <div class="container pt-5">
-    <div class="row">
-      <div class="col-md-7 col-lg-5 mr-auto">
-        <p class="font-weight-bold">
-          Home school is giving hope to the children at home.
-          Classes of 5-8 students are grouped in a study group
-          with a qualified teacher they adore 💕
-        </p>
-        <div class="d-flex justify-content-between mt-5">
-          <div class="profile">
-            <%= image_tag("boy.jpg", :alt => "") %>
-          </div>
-          <span class="w-75 text-muted">
-            Learning is fun because my neighbors are my playmates. 
-            I am always excited!<br>
-            -- Kalule Simon.
-          </span>
-        </div>
-        <div class="d-flex justify-content-between mt-5">
-          <div class="profile">
-            <%= image_tag("teacher.jpg", :alt => "") %>
-          </div>
-          <span class="w-75 text-muted">
-            I find great joy in having a small class because I spend more time my students<br>
-            -- Beatrice Achen.
-          </span>
-        </div>
-      </div>
-      <div class="col-md-5 col-lg-6">
-        <div class="" style="height: 650px; overflow: hidden">
-          <%= image_tag("boy.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 1.6em") %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="recommend-teachers">
-  <div class="container">
+<div class="recommend-teachers pt-5">
+  <div class="container my-5">
     <div class="row">
       <div class="col-md-5 col-lg-6">
         <div class="">
@@ -167,7 +152,7 @@
   </div>
 </div>
 
-<div class="faqs">
+<%# <div class="faqs">
   <div class="container pt-5 mt-5">
     <h1 class="text-center font-weight-bold text-label mb-5">FAQS</h1>
     <div class="row">
@@ -243,7 +228,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>
 
 <div class="convinient-school">
   <div class="container">

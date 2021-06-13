@@ -28,11 +28,21 @@ body {
   color: #aa8e21;
 }
 
+.bg-yellow {
+  background: #ffc438;
+}
+
 .logo .color-5 {
   color: #095578;
 }
 
 /* Intro */
+
+.try {
+  background-image: url(image-path("tt2.gif"));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .intro-img {
   background-image: url(image-path("bg2.jpg"));
@@ -348,7 +358,7 @@ body {
 
 /* register teachers */
 header {
-  background: white;
+  // background: white;
 }
 
 .register-teachers {

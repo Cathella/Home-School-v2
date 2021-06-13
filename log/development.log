@@ -36856,3 +36856,788 @@ Processing by GroupsController#new as HTML
 Completed 200 OK in 116ms (Views: 56.0ms | ActiveRecord: 0.2ms | Allocations: 34749)
 
 
+Started DELETE "/teachers/sign_out" for 127.0.0.1 at 2021-06-13 13:19:02 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeacher Update (1.9ms)[0m  [1m[33mUPDATE "teachers" SET "remember_created_at" = ?, "updated_at" = ? WHERE "teachers"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2021-06-13 10:19:02.340296"], ["id", 1]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 11.3ms | Allocations: 7003)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 13:19:02 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.2ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 23)
+  Rendered home/index.html.erb within layouts/application (Duration: 21.7ms | Allocations: 4143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 12737)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.0ms | Allocations: 13495)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 13:43:20 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.0ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 141.0ms | Allocations: 12664)
+Completed 200 OK in 156ms (Views: 146.6ms | Allocations: 13167)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:01:29 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.9ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.0ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 47.7ms | Allocations: 5551)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.2ms | Allocations: 14326)
+Completed 200 OK in 125ms (Views: 118.6ms | Allocations: 15704)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:01:57 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.5ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 4.3ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 51.7ms | Allocations: 5543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.0ms | Allocations: 14304)
+Completed 200 OK in 118ms (Views: 113.9ms | Allocations: 15669)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:03:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.8ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.5ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.9ms | Allocations: 5530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 84.6ms | Allocations: 14291)
+Completed 200 OK in 95ms (Views: 90.4ms | Allocations: 15658)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:03:56 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 4.9ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.4ms | Allocations: 5533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.6ms | Allocations: 14326)
+Completed 200 OK in 88ms (Views: 84.5ms | Allocations: 15693)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:04:26 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.8ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.9ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.3ms | Allocations: 5532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 81.4ms | Allocations: 14296)
+Completed 200 OK in 96ms (Views: 89.9ms | Allocations: 15661)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:05:02 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.7ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.4ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 53.0ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.9ms | Allocations: 14292)
+Completed 200 OK in 127ms (Views: 119.4ms | Allocations: 15661)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:05:42 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.4ms | Allocations: 14293)
+Completed 200 OK in 72ms (Views: 69.0ms | Allocations: 15666)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:06:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.0ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 5532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 14321)
+Completed 200 OK in 101ms (Views: 96.9ms | Allocations: 15694)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:06:51 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.7ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 35.4ms | Allocations: 5530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.2ms | Allocations: 14294)
+Completed 200 OK in 94ms (Views: 89.0ms | Allocations: 15669)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:07:14 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.8ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 3.2ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 59.3ms | Allocations: 5543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 128.7ms | Allocations: 14304)
+Completed 200 OK in 155ms (Views: 142.3ms | Allocations: 15677)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:07:39 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 7.6ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.5ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 58.5ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 14292)
+Completed 200 OK in 111ms (Views: 103.4ms | Allocations: 15665)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:07:55 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.6ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.1ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.6ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 14292)
+Completed 200 OK in 104ms (Views: 99.1ms | Allocations: 15657)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:08:11 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.1ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.7ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.5ms | Allocations: 5530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | Allocations: 14292)
+Completed 200 OK in 99ms (Views: 94.4ms | Allocations: 15673)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:31:48 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.5ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.7ms | Allocations: 5533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 14307)
+Completed 200 OK in 91ms (Views: 85.4ms | Allocations: 15676)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:32:48 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.0ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.0ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.4ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.3ms | Allocations: 14292)
+Completed 200 OK in 83ms (Views: 80.6ms | Allocations: 15667)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:34:02 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.2ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 4.9ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 66.7ms | Allocations: 5552)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 118.5ms | Allocations: 14348)
+Completed 200 OK in 138ms (Views: 131.4ms | Allocations: 15715)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:34:33 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 11.1ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 0.9ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 51.8ms | Allocations: 5544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 99.5ms | Allocations: 14319)
+Completed 200 OK in 116ms (Views: 110.9ms | Allocations: 15692)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:34:57 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.2ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 3.5ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 43.0ms | Allocations: 5541)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.3ms | Allocations: 14302)
+Completed 200 OK in 107ms (Views: 98.5ms | Allocations: 15669)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:35:18 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.8ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 3.6ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 70.0ms | Allocations: 5536)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 136.5ms | Allocations: 14297)
+Completed 200 OK in 160ms (Views: 154.1ms | Allocations: 15666)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:35:48 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 9.6ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 3.2ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 51.5ms | Allocations: 5533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 103.6ms | Allocations: 14326)
+Completed 200 OK in 123ms (Views: 113.3ms | Allocations: 15699)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:36:15 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.8ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 5532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 14293)
+Completed 200 OK in 58ms (Views: 54.5ms | Allocations: 15664)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:36:39 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.8ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 0.8ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 5530)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.6ms | Allocations: 14294)
+Completed 200 OK in 73ms (Views: 71.0ms | Allocations: 15663)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:37:00 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.4ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 14292)
+Completed 200 OK in 34ms (Views: 32.5ms | Allocations: 15657)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:37:47 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.5ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.9ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 64.5ms | Allocations: 5534)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 137.6ms | Allocations: 14327)
+Completed 200 OK in 162ms (Views: 154.0ms | Allocations: 15692)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:38:31 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 5.5ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 2.5ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 49.9ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.3ms | Allocations: 14296)
+Completed 200 OK in 114ms (Views: 104.8ms | Allocations: 15663)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:39:13 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 7.9ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 3.1ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 62.4ms | Allocations: 5531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 101.2ms | Allocations: 14292)
+Completed 200 OK in 118ms (Views: 107.2ms | Allocations: 15663)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:39:39 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 9.9ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.1ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 46.5ms | Allocations: 5543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 94.3ms | Allocations: 14304)
+Completed 200 OK in 119ms (Views: 107.1ms | Allocations: 15685)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:42:50 +0300
+Processing by HomeController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.8ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 4410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 12929)
+Completed 200 OK in 58ms (Views: 54.5ms | Allocations: 13471)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:44:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 9.8ms | Allocations: 619)
+  Rendered layouts/_notice2.html.erb (Duration: 1.8ms | Allocations: 121)
+  Rendered home/index.html.erb within layouts/application (Duration: 45.4ms | Allocations: 5543)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 98.3ms | Allocations: 14305)
+Completed 200 OK in 116ms (Views: 111.1ms | Allocations: 15671)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:46:18 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.7ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 55.6ms | Allocations: 4139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 166.2ms | Allocations: 12668)
+Completed 200 OK in 171ms (Views: 168.3ms | Allocations: 13171)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:46:34 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 47.4ms | Allocations: 4139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 124.1ms | Allocations: 12660)
+Completed 200 OK in 130ms (Views: 127.1ms | Allocations: 13160)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:47:52 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 280)
+  Rendered layouts/_notice2.html.erb (Duration: 0.6ms | Allocations: 18)
+  Rendered home/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 928.0ms | Allocations: 133588)
+Completed 200 OK in 934ms (Views: 931.1ms | Allocations: 134090)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:54:38 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.0ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 42.2ms | Allocations: 5268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 98.6ms | Allocations: 14114)
+Completed 200 OK in 113ms (Views: 106.8ms | Allocations: 15478)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:55:20 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 3.5ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 50.1ms | Allocations: 5247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 14000)
+Completed 200 OK in 99ms (Views: 94.4ms | Allocations: 15367)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-13 21:58:25 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.6ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 5251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 14010)
+Completed 200 OK in 93ms (Views: 87.1ms | Allocations: 15383)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 00:20:16 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 4095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 842.0ms | Allocations: 128879)
+Completed 200 OK in 852ms (Views: 846.9ms | Allocations: 129390)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 00:21:26 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 2.4ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 47.9ms | Allocations: 5279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 670.2ms | Allocations: 128585)
+Completed 200 OK in 692ms (Views: 686.6ms | Allocations: 129947)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 00:22:12 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 3.7ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 58.4ms | Allocations: 5282)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 110.0ms | Allocations: 14417)
+Completed 200 OK in 132ms (Views: 126.6ms | Allocations: 15794)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 00:23:15 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 30.5ms | Allocations: 4105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 505.2ms | Allocations: 123158)
+Completed 200 OK in 512ms (Views: 508.8ms | Allocations: 123653)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 00:59:10 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 384.6ms | Allocations: 80640)
+Completed 200 OK in 391ms (Views: 387.4ms | Allocations: 81140)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 00:59:55 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 4107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 655.2ms | Allocations: 122034)
+Completed 200 OK in 663ms (Views: 658.1ms | Allocations: 122540)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:06:03 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 32.0ms | Allocations: 4105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 297.6ms | Allocations: 81471)
+Completed 200 OK in 303ms (Views: 299.9ms | Allocations: 81975)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:09:28 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 25.3ms | Allocations: 4104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 267.7ms | Allocations: 80714)
+Completed 200 OK in 270ms (Views: 268.7ms | Allocations: 81224)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:18:56 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 4109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 651.2ms | Allocations: 126451)
+Completed 200 OK in 655ms (Views: 653.2ms | Allocations: 126955)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:23:16 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 600.7ms | Allocations: 126643)
+Completed 200 OK in 610ms (Views: 605.1ms | Allocations: 127155)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:24:14 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.1ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 498.9ms | Allocations: 126835)
+Completed 200 OK in 508ms (Views: 502.8ms | Allocations: 127335)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:30:52 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.9ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.4ms | Allocations: 5333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 14439)
+Completed 200 OK in 93ms (Views: 84.2ms | Allocations: 15813)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:31:21 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 46.0ms | Allocations: 5046)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 108.7ms | Allocations: 14065)
+Completed 200 OK in 138ms (Views: 130.4ms | Allocations: 15437)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:31:57 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 2.5ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 29.1ms | Allocations: 4147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 13162)
+Completed 200 OK in 88ms (Views: 81.6ms | Allocations: 14540)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:32:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.3ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.2ms | Allocations: 4147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 13163)
+Completed 200 OK in 121ms (Views: 112.0ms | Allocations: 14532)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:33:16 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 2.8ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 40.1ms | Allocations: 4154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 99.3ms | Allocations: 13167)
+Completed 200 OK in 118ms (Views: 111.6ms | Allocations: 14540)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:33:51 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 23.7ms | Allocations: 4149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 13163)
+Completed 200 OK in 96ms (Views: 91.2ms | Allocations: 14532)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:34:18 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.7ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 27.6ms | Allocations: 4160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.3ms | Allocations: 13172)
+Completed 200 OK in 83ms (Views: 78.0ms | Allocations: 14549)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 01:35:24 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.3ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 4160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.0ms | Allocations: 13172)
+Completed 200 OK in 86ms (Views: 80.8ms | Allocations: 14545)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:00:34 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 3064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 661.8ms | Allocations: 126208)
+Completed 200 OK in 671ms (Views: 664.0ms | Allocations: 126711)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:03:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.3ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 4168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 13269)
+Completed 200 OK in 74ms (Views: 71.9ms | Allocations: 14639)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:04:09 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.7ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 4159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 13171)
+Completed 200 OK in 93ms (Views: 87.1ms | Allocations: 14536)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:04:23 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.6ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 4159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 86.0ms | Allocations: 13171)
+Completed 200 OK in 104ms (Views: 97.8ms | Allocations: 14552)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:08:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.6ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 4170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 703.8ms | Allocations: 128032)
+Completed 200 OK in 719ms (Views: 713.5ms | Allocations: 129409)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:09:04 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 1.6ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 13272)
+Completed 200 OK in 32ms (Views: 30.7ms | Allocations: 14645)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:09:23 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 123)
+  Rendered home/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 13167)
+Completed 200 OK in 29ms (Views: 26.8ms | Allocations: 14546)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-14 02:10:58 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.3ms | Allocations: 588)
+  Rendered layouts/_notice2.html.erb (Duration: 0.7ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 10142)
+Completed 200 OK in 76ms (Views: 70.4ms | Allocations: 10770)
+
+
+Started GET "/teachers/sign_in" for 127.0.0.1 at 2021-06-14 02:11:06 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.0ms | Allocations: 290)
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 495)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 10961)
+Completed 200 OK in 36ms (Views: 33.5ms | Allocations: 13025)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-14 02:16:22 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered home/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 3064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 11819)
+Completed 200 OK in 52ms (Views: 50.6ms | Allocations: 12318)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-14 02:16:57 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.7ms | Allocations: 282)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 6.3ms | Allocations: 520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 9486)
+Completed 200 OK in 59ms (Views: 50.2ms | Allocations: 9998)
+
+
