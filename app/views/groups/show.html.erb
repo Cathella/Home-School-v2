@@ -10,7 +10,7 @@
         <small class="text-info">near</small>
         <span class="text-muted py-3 d-block"><%= @group.teacher.direction.landmark %></span>
         <% if child_signed_in? %>
-          <%= link_to "Join group", {}, class: "btn bg-yellow text-label mt-3" %>
+          <%= member_or_not_member_btn(@group) %>
         <% end %>
       </div>
 

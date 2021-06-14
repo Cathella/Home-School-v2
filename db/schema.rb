@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_10_124120) do
+ActiveRecord::Schema.define(version: 2021_06_14_080056) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -160,6 +160,15 @@ ActiveRecord::Schema.define(version: 2021_06_10_124120) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["teacher_id"], name: "index_groups_on_teacher_id"
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.integer "child_id"
+    t.integer "group_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["child_id"], name: "index_members_on_child_id"
+    t.index ["group_id"], name: "index_members_on_group_id"
   end
 
   create_table "profiles", force: :cascade do |t|
