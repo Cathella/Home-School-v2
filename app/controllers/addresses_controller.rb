@@ -34,6 +34,6 @@ class AddressesController < ApplicationController
     end
 
     def address_params
-      params.require(:address).permit(:landmark)
+      params.require(:address).permit(:landmark, :longitude, :latitude)
     end
 end

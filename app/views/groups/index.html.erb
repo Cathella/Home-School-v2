@@ -8,7 +8,7 @@
           <small class="text-center d-block">Search for a study group in your area.</small>
 
           <%= search_form_for @q, html: { class: "form mt-4" } do |form| %>
-            <%= form.search_field :name_or_subject_or_teacher_detail_grade_or_teacher_direction_landmark_cont, placeholder: "Search...", class: "form-control py-4" %>
+            <%= form.search_field :name_or_subject_or_grade_or_teacher_direction_landmark_cont, placeholder: "Search...", class: "form-control py-4" %>
           <% end %>
 
           <small>
@@ -36,7 +36,7 @@
             <section class="d-flex justify-content-between">
               <%= link_to group.name, group, class: "text-info" %>
               <span class="">
-                <small class="text-muted"><i class="fas mr-2 fa-graduation-cap"></i><%= group.teacher.detail.grade %></small>
+                <small class="text-muted"><i class="fas mr-2 fa-graduation-cap"></i><%= group.grade %></small>
               </span>
             </section>
             <small class="d-block text-muted mt-2"><i class="fas mr-2 fa-map-marker-alt"></i><%= group.teacher.direction.landmark %></small>

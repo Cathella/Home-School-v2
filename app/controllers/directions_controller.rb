@@ -28,6 +28,6 @@ class DirectionsController < ApplicationController
     end
 
     def direction_params
-      params.require(:direction).permit(:landmark)
+      params.require(:direction).permit(:landmark, :longitude, :latitude)
     end
 end
