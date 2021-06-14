@@ -1,6 +1,7 @@
 <%= render 'layouts/main-nav' %>
 
 <div class="container py-5">
+  <%= render 'layouts/notice2' %>
   <div class="row mt-5">
     <div class="col-lg-6 mx-auto">
       <%= form_for [@child, @address], data: { controller: "places", action: "google-maps-callback@window->places#initMap", places_latitude: @address.latitude, places_longitude: @address.longitude } do |form| %>

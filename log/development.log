@@ -41993,3 +41993,98 @@ Processing by GroupsController#show as HTML
 Completed 200 OK in 274ms (Views: 194.3ms | ActiveRecord: 24.7ms | Allocations: 40636)
 
 
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-14 15:03:48 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 8.0ms | Allocations: 974)
+  [1m[36mAddress Load (1.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:15
+  [1m[36mProfile Load (1.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:23
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 121.2ms | Allocations: 17610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 217.1ms | Allocations: 26542)
+Completed 200 OK in 228ms (Views: 214.2ms | ActiveRecord: 8.6ms | Allocations: 27348)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-14 15:03:57 +0300
+Processing by GroupsController#index as HTML
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /home/nakitto/odin_on_rails/Home-School-v2/app/controllers/groups_controller.rb:6)
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mChild Load (0.7ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 19.5ms | Allocations: 931)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:34
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:42
+  [1m[36mDirection Load (0.5ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:42
+  Rendered groups/index.html.erb within layouts/application (Duration: 49.7ms | Allocations: 3334)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.3ms | Allocations: 12351)
+Completed 200 OK in 117ms (Views: 110.3ms | ActiveRecord: 2.4ms | Allocations: 13100)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 15:04:00 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mChild Load (0.8ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 10.6ms | Allocations: 930)
+  [1m[36mTeacher Load (0.6ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."group_id" = ? AND "members"."child_id" = ? LIMIT ?[0m  [["group_id", 1], ["child_id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:4:in `member_or_not_member_btn'
+  Rendered groups/show.html.erb within layouts/application (Duration: 28.7ms | Allocations: 2799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 11742)
+Completed 200 OK in 83ms (Views: 76.9ms | ActiveRecord: 1.9ms | Allocations: 12753)
+
+
+Started POST "/groups/1/members" for 127.0.0.1 at 2021-06-14 15:04:05 +0300
+Processing by MembersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group_id"=>"1"}
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/members_controller.rb:6:in `create'
+  [1m[36mMember Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "members" WHERE "members"."child_id" = ? AND "members"."group_id" = ? LIMIT ?[0m  [["child_id", 1], ["group_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:6:in `create'
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/members_controller.rb:6:in `create'
+  [1m[36mMember Create (2.4ms)[0m  [1m[32mINSERT INTO "members" ("child_id", "group_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["child_id", 1], ["group_id", 1], ["created_at", "2021-06-14 12:04:05.410095"], ["updated_at", "2021-06-14 12:04:05.410095"]]
+  ↳ app/controllers/members_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (34.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/members_controller.rb:6:in `create'
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 120ms (ActiveRecord: 41.6ms | Allocations: 10589)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-14 15:04:05 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mChild Load (0.9ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 12.4ms | Allocations: 934)
+  [1m[36mAddress Load (0.9ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:15
+  [1m[36mProfile Load (0.8ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:23
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 34.8ms | Allocations: 2329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 11635)
+Completed 200 OK in 89ms (Views: 82.4ms | ActiveRecord: 2.5ms | Allocations: 12204)
+
+
