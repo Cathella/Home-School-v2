@@ -40320,3 +40320,207 @@ DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please us
 Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 1.0ms | Allocations: 12869)
 
 
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:46:05 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 5.1ms | Allocations: 930)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.3ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 11162)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 1.0ms | Allocations: 12152)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:48:59 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 3.1ms | Allocations: 1270)
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 12213)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.5ms | Allocations: 14079)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:50:29 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 5.6ms | Allocations: 1270)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.1ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 13.7ms | Allocations: 3002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 12219)
+Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 0.6ms | Allocations: 14076)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-14 08:51:03 +0300
+Processing by GroupsController#index as HTML
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /home/nakitto/odin_on_rails/Home-School-v2/app/controllers/groups_controller.rb:6)
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mChild Load (0.2ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 3.7ms | Allocations: 930)
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT DISTINCT "groups".* FROM "groups"[0m
+  ↳ app/views/groups/index.html.erb:34
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:42
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/index.html.erb:42
+  Rendered groups/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 12585)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 1.0ms | Allocations: 13440)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:51:06 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mChild Load (0.6ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 5.0ms | Allocations: 930)
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 11235)
+Completed 200 OK in 56ms (Views: 50.2ms | ActiveRecord: 1.2ms | Allocations: 12227)
+
+
+Started GET "/groups" for 127.0.0.1 at 2021-06-14 08:51:14 +0300
+Processing by GroupsController#index as HTML
+DEPRECATION WARNING: #search is deprecated and will be removed in 2.3, please use #ransack instead (called from index at /home/nakitto/odin_on_rails/Home-School-v2/app/controllers/groups_controller.rb:6)
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  [1m[36mTeacher Load (0.8ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 11.5ms | Allocations: 868)
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."teacher_id" = ?[0m  [["teacher_id", 1]]
+  ↳ app/views/groups/index.html.erb:47
+  Rendered groups/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 1695)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 10636)
+Completed 200 OK in 70ms (Views: 61.6ms | ActiveRecord: 1.8ms | Allocations: 11367)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:51:18 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 14.6ms | Allocations: 864)
+  [1m[36mTeacher Load (0.4ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.5ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 32.9ms | Allocations: 2228)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 11169)
+Completed 200 OK in 99ms (Views: 87.4ms | ActiveRecord: 1.9ms | Allocations: 12174)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:52:50 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mTeacher Load (0.2ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? ORDER BY "teachers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:9
+  Rendered layouts/_main-nav.html.erb (Duration: 15.3ms | Allocations: 1202)
+  [1m[36mTeacher Load (0.7ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.9ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 43.9ms | Allocations: 2947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.4ms | Allocations: 12163)
+Completed 200 OK in 124ms (Views: 109.6ms | ActiveRecord: 2.5ms | Allocations: 14034)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2021-06-14 08:52:59 +0300
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGroup Load (0.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:31:in `set_group'
+  Rendering layout layouts/application.html.erb
+  Rendering groups/show.html.erb within layouts/application
+  [1m[36mChild Load (0.1ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:12
+  Rendered layouts/_main-nav.html.erb (Duration: 2.1ms | Allocations: 936)
+  [1m[36mTeacher Load (0.1ms)[0m  [1m[34mSELECT "teachers".* FROM "teachers" WHERE "teachers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  [1m[36mDirection Load (0.2ms)[0m  [1m[34mSELECT "directions".* FROM "directions" WHERE "directions"."teacher_id" = ? LIMIT ?[0m  [["teacher_id", 1], ["LIMIT", 1]]
+  ↳ app/views/groups/show.html.erb:11
+  Rendered groups/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2314)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 11255)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.5ms | Allocations: 12253)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'

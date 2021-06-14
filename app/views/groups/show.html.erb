@@ -9,6 +9,9 @@
         <h3 class="text-muted"><%= @group.name %></h3>
         <small class="text-info">near</small>
         <span class="text-muted py-3 d-block"><%= @group.teacher.direction.landmark %></span>
+        <% if child_signed_in? %>
+          <%= link_to "Join group", {}, class: "btn bg-yellow text-label mt-3" %>
+        <% end %>
       </div>
 
       <div class="row mb-5">

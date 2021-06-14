@@ -4,4 +4,5 @@ class Child < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
   has_one :address
   has_one :profile
+  has_many :members, dependent: :destroy
 end
