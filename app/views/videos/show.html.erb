@@ -2,7 +2,7 @@
 
 <div class="container py-5">
   <div>
-    <iframe src='https://www.youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+    <iframe class="w-100" style="height: 600px" src='https://www.youtube.com/embed/<%= @video.youtube %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
   </div>
-  <h4><%= @video.title %></h4>
+  <h4 class="mt-4"><%= @video.title %></h4>
 </div>

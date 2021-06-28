@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  
-  get 'videos/index'
-  get 'videos/new'
-  get 'videos/show'
   devise_for :children
   root to: 'home#index'
-  resources :addresses, :profiles, :directions, :details
+  resources :addresses, :profiles, :directions, :details, :videos
   resources :groups do
     resources :members, only: [:create, :destroy]
   end

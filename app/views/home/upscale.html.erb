@@ -86,9 +86,10 @@
   </div>
   <div class="row mt-5">
     <% @videos.each do |video| %>
-      <div class="col-lg-3">
-        <div class="bg-blue rounded" style="height: 220px;"></div>
-        <p class="mb-4 mt-3"><%= video.title %></p>
+      <div class="col-lg-4">
+        <iframe class="w-100 rounded" style="height: 210px" src='https://www.youtube.com/embed/<%= video.youtube %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+        
+        <p class="mb-4 mt-3"><%= link_to video.title, video %></p>
       </div>
     <% end %>
   </div>

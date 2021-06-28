@@ -1,3 +1,3 @@
 class Video < ApplicationRecord
-  validates :title, :youtube_url, presence: true
+  validates :title, :youtube, presence: true
 end
