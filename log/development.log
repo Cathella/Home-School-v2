@@ -43627,3 +43627,131 @@ Processing by HomeController#upscale as HTML
 Completed 200 OK in 62ms (Views: 56.2ms | Allocations: 6368)
 
 
+Started GET "/upscale" for 127.0.0.1 at 2021-06-28 23:06:36 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered home/upscale.html.erb within layouts/application (Duration: 22.4ms | Allocations: 3444)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 3513)
+Completed 500 Internal Server Error in 46ms (Allocations: 4912)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/home/upscale.html.erb:88
+
+Started POST "/__better_errors/3e6e32cd0068af91/variables" for 127.0.0.1 at 2021-06-28 23:06:37 +0300
+Started GET "/upscale" for 127.0.0.1 at 2021-06-28 23:08:54 +0300
+Processing by HomeController#upscale as HTML
+Completed 500 Internal Server Error in 18ms (Allocations: 4948)
+
+
+
+NameError - uninitialized constant HomeController::Video:
+  app/controllers/home_controller.rb:12:in `upscale'
+
+Started POST "/__better_errors/648c3f6ed87e8b65/variables" for 127.0.0.1 at 2021-06-28 23:08:55 +0300
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVideos (20210628201056)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "videos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "youtube_id" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210628201056"]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/upscale" for 127.0.0.1 at 2021-06-28 23:17:41 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:88
+  Rendered home/upscale.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 7657)
+Completed 200 OK in 59ms (Views: 43.3ms | ActiveRecord: 0.2ms | Allocations: 9579)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-28 23:19:06 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:88
+  Rendered home/upscale.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1241)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 7039)
+Completed 200 OK in 77ms (Views: 68.0ms | ActiveRecord: 0.7ms | Allocations: 8481)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-28 23:20:40 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  [1m[36mVideo Load (1.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:88
+  Rendered home/upscale.html.erb within layouts/application (Duration: 19.0ms | Allocations: 1246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 691.3ms | Allocations: 121937)
+Completed 200 OK in 716ms (Views: 709.6ms | ActiveRecord: 1.3ms | Allocations: 123385)
+
+

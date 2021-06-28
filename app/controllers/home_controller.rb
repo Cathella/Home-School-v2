@@ -9,5 +9,6 @@ class HomeController < ApplicationController
   end
 
   def upscale
+    @videos = Video.all
   end
 end
