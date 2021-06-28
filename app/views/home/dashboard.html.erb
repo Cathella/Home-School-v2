@@ -16,7 +16,7 @@
         <% if current_child.address.present? %>
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-3 fs-5"><i class="fas mr-2 fa-map-marker-alt"></i>My Address</p>
-            <p class="text-muted"><%= current_child.address.landmark %></p>
+            <p class="text-muted px-4"><%= current_child.address.landmark %></p>
             <small><%= link_to "Change this address?", {}, class: "text-info" %></small>
           </div>
 
@@ -51,7 +51,7 @@
         <% if current_teacher.direction.present? %>
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-3 fs-5"><i class="fas mr-2 fa-map-marker-alt"></i>My Address</p>
-            <p class="text-muted"><%= current_teacher.direction.landmark %></p>
+            <p class="text-muted px-4"><%= current_teacher.direction.landmark %></p>
             <small><%= link_to "Change this address?", {}, class: "text-info" %></small>
           </div>
 
@@ -82,5 +82,12 @@
         <% end %>
       <% end %>
     </div>
+    <%# <div class="col-lg-5 pt-4 mr-auto">
+      <div class="bg-light mt-5">
+        <p class="fs-5 pb-3 border-bottom text-muted">My Groups</p>
+        <span class="d-block">
+        </span>
+      </div>
+    </div> %>
   </div>
 </div>

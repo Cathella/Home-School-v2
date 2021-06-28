@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap");
 //= require actiontext
 
 body {
@@ -32,8 +33,34 @@ body {
   background: #ffc438;
 }
 
+.bg-purple {
+  background: #80e;
+}
+
+.color-blue {
+  color: #80e2ff;
+}
+
+.bg-blue {
+  background: #80e2ff;
+}
+
 .logo .color-5 {
   color: #095578;
+}
+
+.fs-3 {
+  font-size: 1.75rem !important;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+h1#h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+  font-family: "Zilla Slab", serif;
 }
 
 /* Intro */

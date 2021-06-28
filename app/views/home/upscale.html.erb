@@ -1,0 +1,56 @@
+<header class="bg-purple text-center text-white">
+  
+  <section class="shadow py-1">
+    <nav class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand logo text-white" href="/">
+        🏠 
+        HomeSchool
+      </a>
+
+      <div style="font-size: 17px;" class="d-flex">
+        <% if current_teacher %>
+            <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-white" %>
+            <%= button_to "Logout", destroy_teacher_session_path, method: :delete, class: "text-white bg-white border-0 p-0" %>
+        <% elsif current_child %>
+            <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-white" %>
+            <%= button_to "Logout", destroy_child_session_path, method: :delete, class: "text-white bg-white border-0 p-0" %>
+        <% elsif current_admin %>
+            <%= link_to "Dashboard" %>
+            <%= button_to "Logout", destroy_admin_session_path, method: :delete, class: "text-white bg-white border-0 p-0" %>
+        <% else %>
+            <%= link_to "Upscale", {}, class: "text-white mr-5" %>
+            <%= link_to "Sign up | Login", accounts_path, class: "text-white" %>
+        <% end %>
+      </div>
+    </nav>
+  </section>
+
+  <div class="container py-5">
+    <div class="">
+      <div class="row mt-4">
+        <div class="col-lg-9 mx-auto">
+          <h1 class="font-weight-bold mt-5 mb-4" id="h1">A Top-Class Video Educational Resources Platform.</h1>
+      <a href="#" class="btn font-weight-bold bg-red mt-4 shadow rounded-pill text-white py-3 px-5" style="font-size: 1.1em">Get started</a>
+        </div>
+      </div>
+      <div class="row mt-5 mb-4">
+        <section class="col-lg-3 py-4">
+          <i class="fas me-2 fs-3 mb-3 fa-star color-blue"></i>
+          <h5>High-quality content</h5>
+        </section>
+        <section class="col-lg-3 py-4">
+          <i class="fas me-2 fs-3 mb-3 fa-book color-blue"></i>
+          <h5>Daily Content uploads</h5>
+        </section>
+        <section class="col-lg-3 py-4">
+          <i class="fas me-2 fs-3 mb-3 fa-video color-blue"></i>
+          <h5>Captivating Videos</h5>
+        </section>
+        <section class="col-lg-3 py-4">
+          <i class="fas me-2 fs-3 mb-3 fa-book-open color-blue"></i>
+          <h5>Well Explained Topics</h5>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>

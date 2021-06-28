@@ -7,4 +7,7 @@ class HomeController < ApplicationController
 
   def account
   end
+
+  def upscale
+  end
 end

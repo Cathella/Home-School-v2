@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   get "accounts", to: "home#account", as: "accounts"
   get "dashboard", to: "home#dashboard", as: "dashboard"
+  get "upscale", to: "home#upscale", as: "upscale"
   
   devise_for :admins
   devise_for :teachers
