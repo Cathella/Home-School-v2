@@ -492,16 +492,8 @@ h1#h1 {
 }
 
 @media only screen and (max-width: 1229px) {
-  #teacher-intro h1 {
-    margin: 0 1em 1em 1em;
-  }
-
   .intro-desc {
     margin: -1em 0em 3em 3em;
-  }
-
-  #teacher-intro .lft-it {
-    margin-left: 3em;
   }
 }
 
@@ -510,10 +502,6 @@ h1#h1 {
     font-size: 2.5em;
     letter-spacing: -2px;
     margin: 0 1em 1em 1.5em;
-  }
-
-  .lft-it {
-    margin-left: 4em;
   }
 }
 
@@ -525,27 +513,6 @@ h1#h1 {
 
   .image-container-4 {
     height: 500px;
-  }
-}
-
-@media only screen and (max-width: 1132px) {
-  #disappear {
-    display: none;
-  }
-
-  #remain {
-    margin: 0 auto;
-  }
-
-  .my-form {
-    padding: 2.8em 2em 0em;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  #teacher-intro a#login-btn {
-    display: block;
-    margin-top: 1.5em;
   }
 }
 
@@ -621,17 +588,7 @@ h1#h1 {
   }
 }
 
-@media only screen and (max-width: 970px) {
-  .my-form {
-    padding: 2.8em 0em 0em;
-  }
-}
-
 @media only screen and (max-width: 767px) {
-  header .justify-content-between {
-    flex-direction: column;
-  }
-
   .secondary-intro {
     margin: 0 0 5em;
   }
@@ -663,22 +620,6 @@ h1#h1 {
     width: 100%;
     height: 400px;
     margin: 3em 0 0 0;
-  }
-
-  #dash .border-right {
-    border: none !important;
-  }
-
-  #dash .pr-5 {
-    padding: 0 !important;
-  }
-
-  #dash .mb-5 {
-    margin: 0 !important;
-  }
-
-  .my-form {
-    padding: 2.8em 5em 0em;
   }
 }
 
@@ -743,22 +684,11 @@ h1#h1 {
   .recommend-teachers {
     padding-top: 0;
   }
-
-  .register-teachers h2,
-  .signup-view h2 {
-    font-size: 2em;
-  }
 }
 
 @media only screen and (max-width: 437px) {
   .intro h1 {
-    font-size: 1.8em;
     letter-spacing: -1px;
-    margin: 0 0 1em 1em;
-  }
-
-  .lft-it {
-    margin-left: 2em;
   }
 }
 

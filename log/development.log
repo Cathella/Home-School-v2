@@ -51492,3 +51492,44 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 41ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 8387)
 
 
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:47:08 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.7ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 2.7ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 4094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 651.8ms | Allocations: 109774)
+Completed 200 OK in 670ms (Views: 661.4ms | Allocations: 111150)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:47:43 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.2ms | Allocations: 67)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:63
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 24.4ms | Allocations: 1783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 6939)
+Completed 200 OK in 71ms (Views: 63.1ms | ActiveRecord: 3.9ms | Allocations: 7596)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:48:14 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 7867)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 8389)
+
+
