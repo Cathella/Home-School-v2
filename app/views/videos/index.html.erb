@@ -1,2 +1,14 @@
-<h1>Videos#index</h1>
-<p>Find me in app/views/videos/index.html.erb</p>
+<%= render "layouts/main-nav" %>
+
+<div class="container py-5">
+  <h2 class="font-weight-bold mt-4">All Videos</h2>
+  <div class="row my-5">
+    <% @videos.each do |video| %>
+      <div class="col-lg-4">
+        <iframe class="w-100 rounded" style="height: 210px" src='https://www.youtube.com/embed/<%= video.youtube %>?rel=0&controls=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+        <span class="mt-2 d-block"><%= link_to video.title, video, class: "text-dark" %></span>
+        <small class="text-muted">Added &middot; <%= local_time_ago(video.created_at) %></small>
+      </div>
+    <% end %>
+  </div>
+</div>

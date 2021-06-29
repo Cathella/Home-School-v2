@@ -1,5 +1,5 @@
 <header class="bg-purple text-center text-white">
-  <section class="shadow py-1">
+  <section class="py-1" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3)">
     <%= render 'layouts/nav' %>
   </section>
 
@@ -8,25 +8,25 @@
       <div class="row mt-4">
         <div class="col-lg-9 mx-auto">
           <h1 class="font-weight-bold mt-5 mb-4" id="h1">A Top-Class Video Educational Resources Platform.</h1>
-          <%= link_to "Get started", videos_path, class: "btn font-weight-bold bg-red mt-4 shadow rounded-pill text-white py-3 px-5", style: "font-size: 1.1em" %>
+          <%= link_to 'Get started<i class="fas fa-arrow-right ml-3"></i>'.html_safe, videos_path, class: "btn bg-yellow mt-4 shadow rounded-pill text-label py-3 px-5", style: "font-size: 1.1em" %>
         </div>
       </div>
       <div class="row mt-5 mb-4">
         <section class="col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-star color-blue"></i>
-          <h5>High-quality content</h5>
+          <p>High-quality content</p>
         </section>
         <section class="col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-book color-blue"></i>
-          <h5>Daily Content uploads</h5>
+          <p>Daily Content uploads</p>
         </section>
         <section class="col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-video color-blue"></i>
-          <h5>Captivating Videos</h5>
+          <p>Captivating Videos</p>
         </section>
         <section class="col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-book-open color-blue"></i>
-          <h5>Well Explained Topics</h5>
+          <p>Well Explained Topics</p>
         </section>
       </div>
     </div>
@@ -66,7 +66,7 @@
   <div class="row my-5">
     <% @videos.each do |video| %>
       <div class="col-lg-4">
-        <iframe class="w-100 rounded" style="height: 210px" src='https://www.youtube.com/embed/<%= video.youtube %>?rel=0&controls=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+        <iframe class="w-100 rounded" style="height: 210px" src='https://www.youtube.com/embed/<%= video.youtube %>?rel=0&controls=0&color=white&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
         <span class="mt-2 d-block"><%= link_to video.title, video, class: "text-dark" %></span>
         <small class="text-muted">Added &middot; <%= local_time_ago(video.created_at) %></small>
       </div>

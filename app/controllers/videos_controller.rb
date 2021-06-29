@@ -1,7 +1,9 @@
 class VideosController < ApplicationController
   before_action :set_video, only: [:show, :update, :destroy, :edit]
+  before_action :authenticate_admin!, except: [:index, :show]
 
   def index
+    @videos = Video.all
   end
 
   def new
@@ -25,9 +27,18 @@ class VideosController < ApplicationController
   end
 
   def update
+    if @video.update(video_params)
+      redirect_to @video, notice: 'Video was updated successfully'
+    else
+      redirect_to @video, notice: 'Unable to update video!'
+    end
   end
 
   def destroy
+    @video.destroy
+    respond_to do |format|
+      format.html { redirect_to videos_path, notice: 'Video has been deleted!' }
+    end
   end
 
   private
