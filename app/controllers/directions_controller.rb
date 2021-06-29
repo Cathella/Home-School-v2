@@ -20,6 +20,11 @@ class DirectionsController < ApplicationController
   end
 
   def update
+    if @direction.update(direction_params)
+      redirect_to dashboard_path, notice: "Your Address has been Updated!"
+    else
+      redirect_to dashboard_path, notice: "Failed to Update Address!"
+    end
   end
 
   private

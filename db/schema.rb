@@ -85,44 +85,6 @@ ActiveRecord::Schema.define(version: 2021_06_28_201056) do
     t.index ["reset_password_token"], name: "index_children_on_reset_password_token", unique: true
   end
 
-  create_table "denshobato_blacklists", force: :cascade do |t|
-    t.string "blocker_type"
-    t.integer "blocker_id"
-    t.string "blocked_type"
-    t.integer "blocked_id"
-    t.index ["blocked_type", "blocked_id"], name: "blocked_user"
-    t.index ["blocker_type", "blocker_id"], name: "blocker_user"
-  end
-
-  create_table "denshobato_conversations", force: :cascade do |t|
-    t.boolean "trashed", default: false
-    t.string "sender_type"
-    t.integer "sender_id"
-    t.string "recipient_type"
-    t.integer "recipient_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipient_type", "recipient_id"], name: "conversation_polymorphic_recipient"
-    t.index ["sender_type", "sender_id"], name: "conversation_polymorphic_sender"
-  end
-
-  create_table "denshobato_messages", force: :cascade do |t|
-    t.text "body", default: ""
-    t.string "author_type"
-    t.integer "author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "message_polymorphic_author"
-  end
-
-  create_table "denshobato_notifications", force: :cascade do |t|
-    t.integer "message_id"
-    t.integer "conversation_id"
-    t.index ["conversation_id"], name: "notification_for_conversation"
-    t.index ["message_id", "conversation_id"], name: "unique_messages_for_conversations", unique: true
-    t.index ["message_id"], name: "notification_for_message"
-  end
-
   create_table "details", force: :cascade do |t|
     t.string "phone"
     t.integer "teacher_id"

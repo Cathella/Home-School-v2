@@ -17,7 +17,7 @@
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-3 fs-5"><i class="fas mr-2 fa-map-marker-alt"></i>My Address</p>
             <p class="text-muted px-4"><%= current_child.address.landmark %></p>
-            <small><%= link_to "Change this address?", {}, class: "text-info" %></small>
+            <small><%= link_to "Change this address?", edit_address_path(current_child.id), class: "text-info" %></small>
           </div>
 
           <div class="mb-5">
@@ -52,7 +52,7 @@
           <div class="bg-light rounded my-5 py-5 text-center border-bottom">
             <p class="text-muted mb-3 fs-5"><i class="fas mr-2 fa-map-marker-alt"></i>My Address</p>
             <p class="text-muted px-4"><%= current_teacher.direction.landmark %></p>
-            <small><%= link_to "Change this address?", {}, class: "text-info" %></small>
+            <small><%= link_to "Change this address?", edit_direction_path(current_teacher.id), class: "text-info" %></small>
           </div>
 
           <div class="mb-5">
