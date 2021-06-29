@@ -1,0 +1,93 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row">
+    <div class="col-lg-7 mx-auto">
+      <p class="text-center text-muted fs-5">
+        Welcome, 
+        <% if current_teacher %>
+          <%= current_teacher.full_name %>
+        <% else %>
+          <%= current_child.full_name %>
+        <% end %>!
+      </p>
+      <% if child_signed_in? %>
+        <% if current_child.address.present? %>
+          <div class="bg-light rounded my-5 py-5 text-center border-bottom">
+            <p class="text-muted mb-3 fs-5"><i class="fas mr-2 fa-map-marker-alt"></i>My Address</p>
+            <p class="text-muted px-4"><%= current_child.address.landmark %></p>
+            <small><%= link_to "Change this address?", edit_address_path(current_child.id), class: "text-info" %></small>
+          </div>
+
+          <div class="mb-5">
+            <% if current_child.profile.present? %>
+              <div class="row mb-5">
+                <div class="col-lg-6">
+                  <div class="border rounded text-center">
+                    <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-graduation-cap"></i>Grade</span>
+                    <span class="text-muted border-top py-3 d-block"><%= current_child.profile.grade %></span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="border rounded text-center">
+                    <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-mobile-alt"></i>Phone</span>
+                    <span class="text-muted border-top py-3 d-block"><%= current_child.profile.phone %></span>
+                  </div>
+                </div>
+              </div>
+              <%= link_to 'Join a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, groups_path, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+            <% else %>
+              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_profile_path(current_child.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="bg-light rounded my-5 py-5 text-center border-bottom">
+            <p class="text-muted mb-4 fs-5 pb-4">Where do you live?</p>
+            <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_address_path(current_child.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
+          </div>
+        <% end %>
+      <% elsif teacher_signed_in? %>
+        <% if current_teacher.direction.present? %>
+          <div class="bg-light rounded my-5 py-5 text-center border-bottom">
+            <p class="text-muted mb-3 fs-5"><i class="fas mr-2 fa-map-marker-alt"></i>My Address</p>
+            <p class="text-muted px-4"><%= current_teacher.direction.landmark %></p>
+            <small><%= link_to "Change this address?", edit_direction_path(current_teacher.id), class: "text-info" %></small>
+          </div>
+
+          <div class="mb-5">
+            <% if current_teacher.detail.present? %>
+              <div class="row mb-5">
+                <div class="col-lg-12">
+                  <div class="border rounded text-center">
+                    <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-mobile-alt"></i>Phone</span>
+                    <span class="text-muted border-top py-3 d-block"><%= current_teacher.detail.phone %></span>
+                  </div>
+                </div>
+              </div>
+              <% if current_teacher.groups.present? %>
+                <%= link_to 'See my Groups<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, groups_path, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <% else %>
+                <%= link_to 'Create a Group<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_group_path, class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+              <% end %>
+            <% else %>
+              <%= link_to 'Continue to complete your profile<i class="fas ml-5 fa-arrow-right"></i>'.html_safe, new_detail_path(current_teacher.id), class: "btn btn-info w-100 py-3 fs-6 font-weight-bold" %>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="bg-light rounded my-5 py-5 text-center border-bottom">
+            <p class="text-muted mb-4 fs-5 pb-4">Where do you live?</p>
+            <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_direction_path(current_teacher.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <%# <div class="col-lg-5 pt-4 mr-auto">
+      <div class="bg-light mt-5">
+        <p class="fs-5 pb-3 border-bottom text-muted">My Groups</p>
+        <span class="d-block">
+        </span>
+      </div>
+    </div> %>
+  </div>
+</div>

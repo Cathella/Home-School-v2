@@ -1,42 +1,6 @@
 <%= render "layouts/main-nav" %>
 
-<div class="container py-5 dash-view">
-  <%= render 'layouts/notice' %>
-
-  <div class="row my-5">
-    <div class="col-lg-12">
-      <!--<div>
-        <%= video_tag(url_for(@video.clip), style: "width: 100%; height: auto", controls: "") %>
-      </div> -->
-
-      <video
-        id="my-video"
-        class="video-js border w-100"
-        controls
-        preload="auto"
-        width=""
-        height="480"
-        poster="<%= url_for(@video.thumbnail) %>"
-        data-setup="{}"
-      >
-        <source src="<%= url_for(@video.clip) %>" type="video/mp4" />
-      </video>
-    </div>
-
-    <div class="col-lg-12 text-muted mt-4">
-      <h4 class="mb-4 text-label">
-        <%= @video.title %>
-      </h4>
-      <div class="border-bottom pb-4">
-        <small><span class="text-label">Posted on:</span> <%= @video.created_at.to_formatted_s(:short) %></small>
-        <small class="ml-4"><span class="text-label">Author:</span> Homeschool</small>
-      </div>
-
-      <p class="my-4">
-        <%= @video.description %>
-      </p>
-
-      <%= link_to '<i class="fas fa-long-arrow-alt-left mr-2"></i>Back to videos'.html_safe, videos_path, class: "btn bg-green-btn bg-light px-5 py-3 border" %>
-    </div>
-  </div>
+<div class="container py-5">
+  <iframe class="w-100" style="height: 600px" src='https://www.youtube.com/embed/<%= @video.youtube %>?rel=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+  <h4 class="mt-4"><%= @video.title %></h4>
 </div>

@@ -1,0 +1,20 @@
+<nav class="container navbar navbar-dark navbar-expand-lg">
+  <a class="navbar-brand logo text-white" href="/">
+    🏠 
+    HomeSchool
+  </a>
+  <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text-white"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto" style="font-size: 17px;">
+        <li class="nav-item">
+          <%= link_to "Upscale", upscale_path, class: "nav-link text-white mr-4" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign up | Login", accounts_path, class: "nav-link text-white" %>
+        </li>
+      </ul>
+    </div>
+  </nav>

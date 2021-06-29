@@ -6,7 +6,6 @@ ruby '3.0.0'
 
 # Begin custom gems
 gem 'friendly_id'
-gem 'denshobato'
 # End custom gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -69,6 +68,7 @@ group :development do
   gem "rubocop"
   gem "rubocop-rails", require: false
   gem "rubocop-rspec"
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
 end
 
 group :test do
@@ -79,3 +79,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'devise', '~> 4.8'
+
+gem 'binding_of_caller', '~> 1.0'
+gem 'geocoder', '~> 1.6', '>= 1.6.7'
+gem 'ransack', '~> 2.4', '>= 2.4.2'
+gem 'local_time', '~> 2.1'

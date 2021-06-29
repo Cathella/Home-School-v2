@@ -2,30 +2,13 @@ class HomeController < ApplicationController
   def index
   end
 
-  def myaddress
-    @address = current_child.address
+  def dashboard
   end
 
-  def teacheraddress
-    @direction = current_teacher.direction
+  def account
   end
 
-  def mygroup
-    @group = current_child.group
+  def upscale
+    @videos = Video.all
   end
-
-  def teachergroup
-    @group = current_teacher.group
-  end
-
-  def joined
-  end
-
-  def lessons
-  end
-
-  def privateaching
-  end
-
-  def account; end
 end

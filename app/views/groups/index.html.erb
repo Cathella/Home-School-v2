@@ -1,35 +1,56 @@
-<%= render "layouts/main-nav" %>
+<%= render 'layouts/main-nav' %>
 
-<div class="container py-5 dash-view">
-  <%= render 'layouts/notice' %>
-  
-  <h1 class="font-weight-bold text-label mb-3 mt-4">Study Groups in your area</h1>
-  <p class="mb-5 text-muted">See groups that have been created near you and find a perfect one for your child.</p>
-  
-  <div class="table-responsive">
-    <table class="child-table" style="min-width: 600px">
-      <tbody>
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <% if child_signed_in? %>
+      <div class="col-lg-4">
+        <div class="bg-light px-4 text-muted py-4 rounded">
+          <small class="text-center d-block">Search for a study group in your area.</small>
+
+          <%= search_form_for @q, html: { class: "form mt-4" } do |form| %>
+            <%= form.search_field :name_or_subject_or_grade_or_teacher_direction_landmark_cont, placeholder: "Search...", class: "form-control py-4" %>
+          <% end %>
+
+          <small>
+            <%= link_to '<i class="fas mr-2 fa-sync-alt"></i>Reload Groups'.html_safe, groups_path, class: "text-info d-block mt-2 text-center" %>
+          </small>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="col-lg-7 mx-auto">
+      <% if teacher_signed_in? %>
+        <div class="d-flex justify-content-between align-items-center mb-5 ">
+          <h4 class="text-muted font-weight-bold">My Groups</h4>
+          <%= link_to "New Group?", new_group_path, class: "text-info" %>
+        </div>
+      <% else %>
+        <div class="d-flex justify-content-between align-items-center mb-4 ">
+          <h4 class="text-muted font-weight-bold">Study Groups</h4>
+        </div>
+      <% end %>
+
+      <% if child_signed_in? %>
         <% @groups.each do |group| %>
-          <tr>
-            <td><%= group.name %></td>
-            <td>
-              <small class="text-label font-weight-bold">Class:</small><br>
-              <%= group.grade %>
-            </td>
-            <!--<td>
-              <small class="text-label font-weight-bold">Address:</small><br>
-              <%= group.place %>
-            </td> -->
-            <td class="text-right">
-              <%= link_to 'View group', group, class: "btn bg-green-btn text-white px-4", style: "font-size: .9em"%>
-              <% if current_admin %>
-              <%= link_to '<i class="fas fa-pen-alt ml-3"></i>'.html_safe, edit_group_path(group), class: "text-green" %>
-              <%= link_to '<i class="fas fa-trash ml-3"></i>'.html_safe, group, method: :delete, data: { confirm: 'Are you sure?' }, class: 'text-danger' %>
-              <% end %>
-            </td>
-          </tr>
+          <div class="bg-light py-3 px-3 border-bottom mb-3">
+            <section class="d-flex justify-content-between">
+              <%= link_to group.name, group, class: "text-info" %>
+              <span class="">
+                <small class="text-muted"><i class="fas mr-2 fa-graduation-cap"></i><%= group.grade %></small>
+              </span>
+            </section>
+            <small class="d-block text-muted mt-2"><i class="fas mr-2 fa-map-marker-alt"></i><%= group.teacher.direction.landmark %></small>
+            </span>
+          </div>
         <% end %>
-      </tbody>
-    </table>
+      <% elsif teacher_signed_in? %>
+        <% current_teacher.groups.each do |group| %>
+          <div class="text-info bg-light py-3 px-3 border-bottom">
+            <%= link_to group.name, group, class: "text-info" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

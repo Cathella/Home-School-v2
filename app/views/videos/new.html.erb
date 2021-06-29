@@ -1,16 +1,24 @@
-<%= render "layouts/main-nav" %>
+<%= render 'layouts/main-nav' %>
 
-<div class="container py-5 dash-view">
-  <%= render 'layouts/notice' %>
-  <h1 class="text-center my-5 text-green font-weight-bold">Upload Video</h1>
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5 text-muted">New Video</h4>
 
-  <div class="row mb-5">
-    <div class="col-lg-6 mx-auto bg-light rounded p-5">
-      <%= render 'form', video: @video %>
-      <div class="text-center mt-4">
-        <%= link_to 'Back to Videos', videos_path, class: "" %>
-      </div>
+      <%= form_for @video do |form| %>
+
+        <div class="field">
+          <%= form.text_field :title, placeholder: "Video Title", class: "form-control py-4" %>
+        </div>
+        <div class="field mt-4">
+          <%= form.text_field :youtube, placeholder: "Video ID", class: "form-control py-4" %>
+        </div>
+
+        <div class="actions mt-4">
+          <%= form.submit "Create Video", class: "btn btn-info px-5 py-3 very-rounded shadow" %>
+        </div>
+      <% end %>
     </div>
   </div>
-
 </div>

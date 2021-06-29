@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_203526) do
+ActiveRecord::Schema.define(version: 2021_06_28_201056) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -51,109 +51,56 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
   end
 
   create_table "addresses", force: :cascade do |t|
-    t.string "landmark", null: false
-    t.decimal "latitude", precision: 10, scale: 6
-    t.decimal "longitude", precision: 10, scale: 6
+    t.string "landmark"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "child_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["child_id"], name: "index_addresses_on_child_id"
-    t.index ["slug"], name: "index_addresses_on_slug", unique: true
   end
 
   create_table "admins", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "full_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
   create_table "children", force: :cascade do |t|
-    t.string "name"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "full_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_children_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_children_on_reset_password_token", unique: true
+  end
+
+  create_table "details", force: :cascade do |t|
     t.string "phone"
-    t.string "email"
-    t.string "program"
-    t.string "grade"
-    t.string "guardian"
-    t.string "password_digest"
-    t.integer "group_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "auth_token"
-    t.string "password_reset_token"
-    t.datetime "password_reset_sent_at"
-    t.boolean "email_confirmed", default: false
-    t.string "confirm_token"
-    t.string "slug"
-    t.index ["group_id"], name: "index_children_on_group_id"
-    t.index ["slug"], name: "index_children_on_slug", unique: true
-  end
-
-  create_table "contacts", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "email"
-    t.string "user"
-    t.text "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "conversations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "denshobato_blacklists", force: :cascade do |t|
-    t.string "blocker_type"
-    t.integer "blocker_id"
-    t.string "blocked_type"
-    t.integer "blocked_id"
-    t.index ["blocked_type", "blocked_id"], name: "blocked_user"
-    t.index ["blocker_type", "blocker_id"], name: "blocker_user"
-  end
-
-  create_table "denshobato_conversations", force: :cascade do |t|
-    t.boolean "trashed", default: false
-    t.string "sender_type"
-    t.integer "sender_id"
-    t.string "recipient_type"
-    t.integer "recipient_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipient_type", "recipient_id"], name: "conversation_polymorphic_recipient"
-    t.index ["sender_type", "sender_id"], name: "conversation_polymorphic_sender"
-  end
-
-  create_table "denshobato_messages", force: :cascade do |t|
-    t.text "body", default: ""
-    t.string "author_type"
-    t.integer "author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "message_polymorphic_author"
-  end
-
-  create_table "denshobato_notifications", force: :cascade do |t|
-    t.integer "message_id"
-    t.integer "conversation_id"
-    t.index ["conversation_id"], name: "notification_for_conversation"
-    t.index ["message_id", "conversation_id"], name: "unique_messages_for_conversations", unique: true
-    t.index ["message_id"], name: "notification_for_message"
+    t.integer "teacher_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["teacher_id"], name: "index_details_on_teacher_id"
   end
 
   create_table "directions", force: :cascade do |t|
-    t.string "landmark", null: false
-    t.decimal "latitude", precision: 10, scale: 6
-    t.decimal "longitude", precision: 10, scale: 6
+    t.string "landmark"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "teacher_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_directions_on_slug", unique: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["teacher_id"], name: "index_directions_on_teacher_id"
   end
 
@@ -170,76 +117,52 @@ ActiveRecord::Schema.define(version: 2021_04_12_203526) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.string "grade"
-    t.string "place"
-    t.string "program"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_groups_on_slug", unique: true
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
     t.string "subject"
     t.string "grade"
-    t.string "meeting"
-    t.integer "budget"
-    t.string "gender"
-    t.integer "tutors_number"
-    t.string "commitment"
-    t.string "per_payment"
+    t.integer "teacher_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["teacher_id"], name: "index_groups_on_teacher_id"
+  end
+
+  create_table "members", force: :cascade do |t|
     t.integer "child_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["child_id"], name: "index_posts_on_child_id"
+    t.integer "group_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["child_id"], name: "index_members_on_child_id"
+    t.index ["group_id"], name: "index_members_on_group_id"
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "per_charge"
-    t.integer "fee"
-    t.integer "experience"
-    t.string "commitment"
-    t.integer "teacher_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["teacher_id"], name: "index_profiles_on_teacher_id"
+    t.string "grade"
+    t.string "phone"
+    t.integer "child_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["child_id"], name: "index_profiles_on_child_id"
   end
 
   create_table "teachers", force: :cascade do |t|
-    t.string "name"
-    t.string "phone"
-    t.string "email"
-    t.string "grade"
-    t.string "subject"
-    t.string "password_digest"
-    t.integer "group_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_reset_token"
-    t.datetime "password_reset_sent_at"
-    t.string "auth_token"
-    t.boolean "email_confirmed", default: false
-    t.string "confirm_token"
-    t.string "slug"
-    t.index ["group_id"], name: "index_teachers_on_group_id"
-    t.index ["slug"], name: "index_teachers_on_slug", unique: true
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "full_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_teachers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_teachers_on_reset_password_token", unique: true
   end
 
   create_table "videos", force: :cascade do |t|
     t.string "title"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.index ["slug"], name: "index_videos_on_slug", unique: true
+    t.string "youtube"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "posts", "children"
-  add_foreign_key "profiles", "teachers"
 end

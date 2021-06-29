@@ -1,61 +1,41 @@
-<%= render "layouts/main-nav" %>
+<%= render 'layouts/main-nav' %>
 
-<div class="container py-5 dash-view">
-  <div class="row">
-    <%= render 'layouts/notice' %>
-
-    <div class="col-md-6">
-      <h2 class="text-heading mb-5 pb-3 border-bottom font-weight-bold">
-        <%= @group.name %>
-      </h2>
-      <div class="pb-3 bg-light rounded px-5 py-4">
-        <p class="profile-p">
-          <strong>Location:</strong>
-          <span><%= @group.place %></span>
-        </p>
-        <p class="profile-p">
-          <strong>Class:</strong>
-          <span><%= @group.grade %></span>
-        </p>
-        <p class="profile-p">
-          <strong>No. of Children:</strong>
-          <span><%= @group_count %> Child(ren)</span>
-        </p>
-      </div>
-    </div>
-
-    <div class="col-md-5 mx-auto">
-      <div class="">
-        <p class="orange-link pb-2 font-weight-bold mt-5">Group Members</p>
-        <table class="child-table">
-          <tbody>
-            <% @children.each do |child| %>
-              <tr>
-                <td><%= child.name %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-      <div class="">
-        <p class="orange-link pb-2 font-weight-bold mt-5">Teachers Allocated</p>
-        <table class="child-table">
-          <tbody>
-            <% @teachers.each do |teacher| %>
-              <tr>
-                <td><%= teacher.name %></td>
-                <td class="text-right"><%= link_to 'View Profile', teacher, class: "btn bg-green-btn text-white px-4", style: "font-size: .9em;" %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-      <div class="">
-        <% if current_admin %>
-        <%= link_to 'Edit Group', edit_group_path(@group), class: 'btn btn-info text-center w-100 mt-5 py-3' %>
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <div class="col-lg-10 mx-auto">
+      <p><%= link_to '<i class="fas mr-3 fa-arrow-left"></i>Back to groups'.html_safe, groups_path, class: "text-muted" %></p>
+      <div class="bg-light rounded mb-5 py-5 mt-4 text-center border-bottom">
+        <p class="text-muted mb-3 fs-5"><i class="fas fa-lg fa-users"></i></p>
+        <h3 class="text-muted"><%= @group.name %></h3>
+        <small class="text-info">near</small>
+        <span class="text-muted py-3 d-block"><%= @group.teacher.direction.landmark %></span>
+        <% if child_signed_in? %>
+          <%= member_or_not_member_btn(@group) %>
         <% end %>
-        <%= link_to 'View all Groups', groups_path, class: 'btn btn-light text-center mt-4 py-3 px-5 border', style: 'border-radius: 3em;'%>
       </div>
+
+      <div class="row mb-5">
+        <div class="col-lg-4">
+          <div class="border rounded text-center">
+            <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-graduation-cap"></i>Grade</span>
+            <span class="text-muted border-top py-3 d-block"><%= @group.grade %></span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="border rounded text-center">
+            <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-book"></i>Subject</span>
+            <span class="text-muted border-top py-3 d-block"><%= @group.subject %></span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="border rounded text-center">
+            <span class="text-muted d-block py-3 bg-light"><i class="fas mr-2 fa-chalkboard-teacher"></i>Teacher</span>
+            <span class="text-muted border-top py-3 d-block"><%= @group.teacher.full_name %></span>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
