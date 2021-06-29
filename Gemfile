@@ -6,14 +6,13 @@ ruby '3.0.0'
 
 # Begin custom gems
 gem 'friendly_id'
-gem 'denshobato'
 # End custom gems
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1', '>= 6.1.3.1'
 # Use sqlite3 as the database for Active Record
-# gem 'pg'
-gem 'sqlite3'
+gem 'pg'
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
