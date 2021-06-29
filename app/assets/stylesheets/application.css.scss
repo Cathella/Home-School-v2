@@ -70,9 +70,10 @@ h1#h1 {
 /* Intro */
 
 .try {
-  background-image: url(image-path("tt2.gif"));
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(image-path("tt2.gif"));
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background: #ff738e;
 }
 
 .intro-img {
@@ -387,39 +388,14 @@ h1#h1 {
   height: 1.5em;
 }
 
-/* register teachers */
-header {
-  // background: white;
-}
-
-.register-teachers {
-  padding: 4em 0;
-}
-
-.register-teachers h2 {
-  font-size: 2.5em;
-  font-weight: 900;
-  color: #1c93ae;
-  margin: 1em 0 0.8em 0;
-}
-
 #user_remember_me {
   height: 1em;
   width: 1em;
 }
 
-/* teacher-list */
-.teacher-list h2 {
-  color: #1c93ae;
-}
-
 /* Links */
 .orange-link {
   color: #e37238;
-}
-
-.login-link {
-  margin-left: 1.5em;
 }
 
 .register-link {

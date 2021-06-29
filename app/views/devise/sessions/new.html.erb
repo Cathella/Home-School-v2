@@ -2,7 +2,7 @@
 <div class="container mt-5" style="min-height: 550px">
   <%= render 'layouts/notice2' %>
   <div class="row">
-    <div class="col-lg-4 mx-auto">
+    <div class="col-md-6 col-lg-4 mx-auto">
       <p class="text-center text-info my-5"><%= resource_name.capitalize %> Login</p>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

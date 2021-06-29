@@ -1,30 +1,31 @@
-<header class="bg-purple text-center text-white">
+<header class="bg-purple text-white">
   <section class="py-1" style="border-bottom: 1px solid rgba(255, 255, 255, 0.3)">
     <%= render 'layouts/nav' %>
   </section>
 
   <div class="container py-5">
-    <div class="">
+    <div class="text-center">
       <div class="row mt-4">
         <div class="col-lg-9 mx-auto">
-          <h1 class="font-weight-bold mt-5 mb-4" id="h1">A Top-Class Video Educational Resources Platform.</h1>
+          <h1 class="font-weight-bold mt-5 mb-4" id="h1">Video Educational Resources Platform.</h1>
+          <p class="opacity-75">Adapted from Homeschooling material provided by NCDC</p>
           <%= link_to 'Get started<i class="fas fa-arrow-right ml-3"></i>'.html_safe, videos_path, class: "btn bg-yellow mt-4 shadow rounded-pill text-label py-3 px-5", style: "font-size: 1.1em" %>
         </div>
       </div>
       <div class="row mt-5 mb-4">
-        <section class="col-lg-3 py-4">
+        <section class="col-sm-6 col-md-3 col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-star color-blue"></i>
           <p>High-quality content</p>
         </section>
-        <section class="col-lg-3 py-4">
+        <section class="col-sm-6 col-md-3 col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-book color-blue"></i>
           <p>Daily Content uploads</p>
         </section>
-        <section class="col-lg-3 py-4">
+        <section class="col-sm-6 col-md-3 col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-video color-blue"></i>
           <p>Captivating Videos</p>
         </section>
-        <section class="col-lg-3 py-4">
+        <section class="col-sm-6 col-md-3 col-lg-3 py-4">
           <i class="fas me-2 fs-3 mb-3 fa-book-open color-blue"></i>
           <p>Well Explained Topics</p>
         </section>
@@ -34,17 +35,15 @@
 </header>
 
 <div class="container py-5">
-  <div class="row">
-    <div class="col-lg-8">
-      <div class="">
-        <a href="#" class="mr-5 btn bg-blue rounded-pill px-4">Recent</a>
-        <a href="#" class="mr-5 btn px-4">Week</a>
-        <a href="#" class="mr-5 btn px-4">Month</a>
-        <a href="#" class="mr-5 btn px-4">Year</a>
-        <a href="#" class="btn px-4"><i class="fas mr-2 color-red fa-lock"></i>Premium</a>
-      </div>
+  <div class="">
+    <a href="#" class="mr-4 btn bg-blue rounded-pill px-4">Recent</a>
+    <a href="#" class="mr-4 btn">Week</a>
+    <a href="#" class="mr-4 btn">Month</a>
+    <a href="#" class="mr-4 btn">Year</a>
+    <a href="#" class="btn"><i class="fas mr-2 color-red fa-lock"></i>Premium</a>
+  </div>
 
-      <%# <div class="mt-5 p-5 bg-light rounded shadow-sm">
+  <%# <div class="mt-5 p-5 bg-light rounded shadow-sm">
         <div class="text-muted d-flex justify-content-end mb-3">
           <small class="me-3">Primary One</small>
           <small class="me-3">Video</small>
@@ -58,14 +57,11 @@
           <small class="me-3 text-muted">June 18, 2021</small>
           <a href="#" class="text-white px-3 btn btn-sm bg-red text-white rounded-pill"><i class="far me-1 fa-eye"></i>Video</a>
         </section>
-      </div> %>
-    </div>
-    <div class="col-lg-4">
-    </div>
-  </div>
+  </div> %>
+
   <div class="row my-5">
     <% @videos.each do |video| %>
-      <div class="col-lg-4">
+      <div class="col-md-6 col-lg-4 mb-4">
         <iframe class="w-100 rounded" style="height: 210px" src='https://www.youtube.com/embed/<%= video.youtube %>?rel=0&controls=0&color=white&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
         <span class="mt-2 d-block"><%= link_to video.title, video, class: "text-dark" %></span>
         <small class="text-muted">Added &middot; <%= local_time_ago(video.created_at) %></small>

@@ -48553,3 +48553,2942 @@ Processing by HomeController#account as HTML
 Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.0ms | Allocations: 7154)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-06-29 12:22:23 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 10.7ms | Allocations: 758)
+  Rendered layouts/_notice2.html.erb (Duration: 2.1ms | Allocations: 135)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 2965.1ms | Allocations: 1369141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2998.7ms | Allocations: 1375084)
+Completed 200 OK in 3047ms (Views: 3016.3ms | ActiveRecord: 0.0ms | Allocations: 1379022)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 12:26:29 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.9ms | Allocations: 240)
+  [1m[36mVideo Load (1.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:67
+  Rendered home/upscale.html.erb within layouts/application (Duration: 18.7ms | Allocations: 1232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.0ms | Allocations: 6524)
+Completed 200 OK in 105ms (Views: 63.0ms | ActiveRecord: 1.4ms | Allocations: 10686)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 12:55:56 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 553)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 6517)
+Completed 200 OK in 46ms (Views: 42.0ms | Allocations: 7165)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 12:57:59 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.1ms | Allocations: 239)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:67
+  [1m[36mVideo Load (3.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:67
+  Rendered home/upscale.html.erb within layouts/application (Duration: 23.5ms | Allocations: 1360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 6721)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 8.3ms | Allocations: 7249)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:39:19 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.4ms | Allocations: 759)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:67
+  Rendered home/upscale.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2351.8ms | Allocations: 1372462)
+Completed 200 OK in 2393ms (Views: 2355.5ms | ActiveRecord: 0.3ms | Allocations: 1377087)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:41:10 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 7.2ms | Allocations: 568)
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:67
+  Rendered home/upscale.html.erb within layouts/application (Duration: 21.2ms | Allocations: 1580)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 7219)
+Completed 200 OK in 67ms (Views: 60.1ms | ActiveRecord: 0.8ms | Allocations: 8605)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:41:32 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 8.8ms | Allocations: 568)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:67
+  Rendered home/upscale.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 7220)
+Completed 200 OK in 70ms (Views: 62.4ms | ActiveRecord: 0.2ms | Allocations: 8616)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:46:01 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 7.0ms | Allocations: 568)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 22.5ms | Allocations: 1579)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 7221)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 0.3ms | Allocations: 8615)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:46:41 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 11.1ms | Allocations: 568)
+  [1m[36mVideo Load (1.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 24.2ms | Allocations: 1573)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 7212)
+Completed 200 OK in 94ms (Views: 81.6ms | ActiveRecord: 1.2ms | Allocations: 8593)
+
+
+Started GET "/videos" for 127.0.0.1 at 2021-06-29 15:47:29 +0300
+Processing by VideosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 6.1ms | Allocations: 615)
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:6
+  Rendered videos/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 1495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.8ms | Allocations: 7094)
+Completed 200 OK in 54ms (Views: 49.5ms | ActiveRecord: 0.9ms | Allocations: 8609)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:48:10 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.3ms | Allocations: 605)
+  [1m[36mVideo Load (0.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1610)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 7249)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms | Allocations: 8620)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:49:30 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.8ms | Allocations: 605)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 7256)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.4ms | Allocations: 8636)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:51:27 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.3ms | Allocations: 608)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 7251)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.3ms | Allocations: 8632)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:51:51 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.2ms | Allocations: 608)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 7251)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms | Allocations: 8626)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:57:24 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 5.5ms | Allocations: 597)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:68
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 21.6ms | Allocations: 2151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 7790)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 2.8ms | Allocations: 9157)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:57:46 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.3ms | Allocations: 597)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 7240)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 0.4ms | Allocations: 8619)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:58:03 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 5.5ms | Allocations: 593)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 7236)
+Completed 200 OK in 45ms (Views: 39.1ms | ActiveRecord: 0.2ms | Allocations: 8619)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:58:38 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.2ms | Allocations: 590)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1595)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 7237)
+Completed 200 OK in 68ms (Views: 62.5ms | ActiveRecord: 0.3ms | Allocations: 8608)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 15:59:06 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.6ms | Allocations: 590)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1599)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 7239)
+Completed 200 OK in 41ms (Views: 35.8ms | ActiveRecord: 0.3ms | Allocations: 8618)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:00:27 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.4ms | Allocations: 636)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1640)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 7279)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 0.3ms | Allocations: 8658)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:01:59 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.0ms | Allocations: 682)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 7325)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.3ms | Allocations: 8704)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:02:19 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.8ms | Allocations: 680)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1684)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 7323)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 0.3ms | Allocations: 8694)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:03:08 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.0ms | Allocations: 678)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 7321)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.3ms | Allocations: 8698)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:03:34 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 5.4ms | Allocations: 678)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 7321)
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 0.4ms | Allocations: 8700)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:19:04 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.4ms | Allocations: 218)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:68
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 7410)
+Completed 200 OK in 56ms (Views: 44.4ms | ActiveRecord: 1.6ms | Allocations: 8789)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:19:36 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.9ms | Allocations: 216)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 6859)
+Completed 200 OK in 43ms (Views: 36.8ms | ActiveRecord: 0.4ms | Allocations: 8234)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:19:50 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.6ms | Allocations: 215)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 6858)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.4ms | Allocations: 8237)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:22:56 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.8ms | Allocations: 597)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 7241)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.3ms | Allocations: 8618)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:23:30 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 7.4ms | Allocations: 597)
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 18.8ms | Allocations: 1604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 7244)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 0.5ms | Allocations: 8633)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:24:34 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.0ms | Allocations: 608)
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 7251)
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 0.5ms | Allocations: 8620)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:25:38 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.6ms | Allocations: 608)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 7251)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.4ms | Allocations: 8624)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 16:26:39 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 5.7ms | Allocations: 608)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 17.2ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 7251)
+Completed 200 OK in 69ms (Views: 59.6ms | ActiveRecord: 0.4ms | Allocations: 8620)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:18:41 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 20.4ms | Allocations: 798)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 27.4ms | Allocations: 2103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3521.5ms | Allocations: 1372546)
+Completed 200 OK in 3586ms (Views: 3532.3ms | ActiveRecord: 0.7ms | Allocations: 1380063)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:19:37 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.5ms | Allocations: 608)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1626)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 7269)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.2ms | Allocations: 8666)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:22:26 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.3ms | Allocations: 608)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 23.4ms | Allocations: 1618)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 7260)
+Completed 200 OK in 68ms (Views: 60.8ms | ActiveRecord: 0.2ms | Allocations: 8656)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:26:10 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 8.7ms | Allocations: 593)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 7236)
+Completed 200 OK in 68ms (Views: 60.9ms | ActiveRecord: 0.2ms | Allocations: 8605)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:29:59 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.3ms | Allocations: 590)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1594)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 7233)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms | Allocations: 8608)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:34:03 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 5.5ms | Allocations: 635)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 15.8ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 7278)
+Completed 200 OK in 56ms (Views: 50.8ms | ActiveRecord: 0.7ms | Allocations: 8669)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:35:45 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.6ms | Allocations: 634)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 7286)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.2ms | Allocations: 8676)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:36:35 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 7.2ms | Allocations: 680)
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1690)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.6ms | Allocations: 7332)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 0.9ms | Allocations: 8718)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:36:53 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 6.9ms | Allocations: 678)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 7321)
+Completed 200 OK in 68ms (Views: 62.5ms | ActiveRecord: 0.4ms | Allocations: 8698)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:37:29 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 5.2ms | Allocations: 678)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 17.2ms | Allocations: 1682)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 7321)
+Completed 200 OK in 66ms (Views: 60.2ms | ActiveRecord: 0.7ms | Allocations: 8704)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:39:11 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.0ms | Allocations: 216)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 6859)
+Completed 200 OK in 60ms (Views: 51.5ms | ActiveRecord: 0.2ms | Allocations: 8236)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:45:02 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.5ms | Allocations: 216)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:68
+  [1m[36mVideo Load (1.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1769)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 7408)
+Completed 200 OK in 54ms (Views: 47.7ms | ActiveRecord: 2.0ms | Allocations: 8777)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:45:53 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.9ms | Allocations: 216)
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 6859)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 0.4ms | Allocations: 8238)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:47:15 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.3ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 1.7ms | Allocations: 134)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 3839)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 112.1ms | Allocations: 8989)
+Completed 200 OK in 116ms (Views: 113.7ms | ActiveRecord: 0.0ms | Allocations: 9628)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:51:20 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.0ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 2967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 8134)
+Completed 200 OK in 50ms (Views: 45.4ms | Allocations: 8638)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 17:51:28 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.9ms | Allocations: 595)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 6559)
+Completed 200 OK in 61ms (Views: 50.3ms | Allocations: 7199)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:51:46 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 8106)
+Completed 200 OK in 31ms (Views: 28.6ms | Allocations: 8608)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:56:27 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.5ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 2.3ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 4094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 9498)
+Completed 200 OK in 75ms (Views: 66.8ms | Allocations: 10859)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:56:33 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 67)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:68
+  [1m[36mVideo Load (1.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 6848)
+Completed 200 OK in 52ms (Views: 42.2ms | ActiveRecord: 2.7ms | Allocations: 7500)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:56:38 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 8106)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.0ms | Allocations: 8622)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:57:39 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 2.7ms | Allocations: 631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5989)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 6513)
+
+
+Started GET "/videos" for 127.0.0.1 at 2021-06-29 17:57:50 +0300
+Processing by VideosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.5ms | Allocations: 607)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:6
+  Rendered videos/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1475)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 6853)
+Completed 200 OK in 60ms (Views: 54.5ms | ActiveRecord: 0.2ms | Allocations: 8111)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:58:00 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 8106)
+Completed 200 OK in 55ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 8621)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:58:58 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.6ms | Allocations: 67)
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 7.6ms | Allocations: 631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 5989)
+Completed 200 OK in 49ms (Views: 37.2ms | ActiveRecord: 0.5ms | Allocations: 6513)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 17:59:05 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.4ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 8106)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.0ms | Allocations: 8620)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:59:08 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.7ms | Allocations: 67)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 5.5ms | Allocations: 631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.2ms | Allocations: 6009)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.2ms | Allocations: 6537)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 17:59:28 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.0ms | Allocations: 67)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 8.8ms | Allocations: 632)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 5991)
+Completed 200 OK in 49ms (Views: 45.7ms | ActiveRecord: 0.7ms | Allocations: 6504)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 18:00:08 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 4.3ms | Allocations: 631)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 5989)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.3ms | Allocations: 6508)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 18:00:24 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 8106)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.0ms | Allocations: 8618)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:00:29 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 0.9ms | Allocations: 247)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 7.8ms | Allocations: 704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 6062)
+Completed 200 OK in 46ms (Views: 40.0ms | ActiveRecord: 0.0ms | Allocations: 6696)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:02:34 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 610)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 7074)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms | Allocations: 8441)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:03:27 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 606)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1431)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 7070)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.0ms | Allocations: 8431)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:05:02 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.7ms | Allocations: 589)
+  Rendered layouts/_notice2.html.erb (Duration: 1.7ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1414)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 7053)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 8418)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:13:42 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 8.6ms | Allocations: 978)
+  Rendered layouts/_notice2.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1803)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 7442)
+Completed 200 OK in 56ms (Views: 52.5ms | Allocations: 8804)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:14:22 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.7ms | Allocations: 969)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 7433)
+Completed 200 OK in 30ms (Views: 27.7ms | Allocations: 8799)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:16:53 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.3ms | Allocations: 616)
+  Rendered layouts/_notice2.html.erb (Duration: 2.8ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1441)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 7080)
+Completed 200 OK in 59ms (Views: 52.3ms | Allocations: 8430)
+
+
+Started GET "/children/sign_in" for 127.0.0.1 at 2021-06-29 18:17:21 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.9ms | Allocations: 240)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 20)
+  Rendered devise/shared/_links.html.erb (Duration: 4.1ms | Allocations: 576)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 66.6ms | Allocations: 11819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.3ms | Allocations: 17165)
+Completed 200 OK in 138ms (Views: 98.7ms | ActiveRecord: 5.3ms | Allocations: 24941)
+
+
+Started POST "/children/sign_in" for 127.0.0.1 at 2021-06-29 18:17:33 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "child"=>{"email"=>"ben@homeschool.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mChild Load (0.4ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."email" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["email", "ben@homeschool.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.4ms | Allocations: 2207)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "child"=>{"email"=>"ben@homeschool.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.2ms | Allocations: 188)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 118)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 66.7ms | Allocations: 6423)
+Completed 200 OK in 395ms (Views: 70.3ms | ActiveRecord: 0.0ms | Allocations: 7191)
+
+
+Started GET "/children/sign_up" for 127.0.0.1 at 2021-06-29 18:17:40 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.5ms | Allocations: 240)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.2ms | Allocations: 184)
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 109)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.2ms | Allocations: 1787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 7232)
+Completed 200 OK in 73ms (Views: 69.5ms | ActiveRecord: 0.0ms | Allocations: 9003)
+
+
+Started POST "/children" for 127.0.0.1 at 2021-06-29 18:18:09 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "child"=>{"full_name"=>"Were Ben", "email"=>"ben@homeschool.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mChild Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "children" WHERE "children"."email" = ? LIMIT ?[0m  [["email", "ben@homeschool.com"], ["LIMIT", 1]]
+  [1m[36mChild Create (4.0ms)[0m  [1m[32mINSERT INTO "children" ("email", "encrypted_password", "full_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "ben@homeschool.com"], ["encrypted_password", "$2a$12$aByQsDb28aBuiUAx0n11MO2KHNvwaGjzXDkI8ojLiaI5G5wM4fu8y"], ["full_name", "Were Ben"], ["created_at", "2021-06-29 15:18:10.041249"], ["updated_at", "2021-06-29 15:18:10.041249"]]
+  [1m[36mTRANSACTION (19.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 439ms (ActiveRecord: 25.1ms | Allocations: 13685)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-29 18:18:10 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mChild Load (1.7ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:20
+  Rendered layouts/_main-nav.html.erb (Duration: 12.1ms | Allocations: 1011)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 25)
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:16
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 62.7ms | Allocations: 7280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 90.3ms | Allocations: 12523)
+Completed 200 OK in 100ms (Views: 90.5ms | ActiveRecord: 3.5ms | Allocations: 13212)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-29 18:18:25 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mChild Load (0.3ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:20
+  Rendered layouts/_main-nav.html.erb (Duration: 7.2ms | Allocations: 935)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:16
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 7085)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms | Allocations: 7608)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2021-06-29 18:21:02 +0300
+Processing by HomeController#dashboard as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/dashboard.html.erb within layouts/application
+  [1m[36mChild Load (1.8ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:20
+  Rendered layouts/_main-nav.html.erb (Duration: 16.7ms | Allocations: 1320)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."child_id" = ? LIMIT ?[0m  [["child_id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/dashboard.html.erb:16
+  Rendered home/dashboard.html.erb within layouts/application (Duration: 33.1ms | Allocations: 3230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 8852)
+Completed 200 OK in 83ms (Views: 74.5ms | ActiveRecord: 2.1ms | Allocations: 10235)
+
+
+Started DELETE "/children/sign_out" for 127.0.0.1 at 2021-06-29 18:21:29 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mChild Load (0.5ms)[0m  [1m[34mSELECT "children".* FROM "children" WHERE "children"."id" = ? ORDER BY "children"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 0.5ms | Allocations: 5250)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 18:21:29 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.3ms | Allocations: 200)
+  Rendered layouts/_notice2.html.erb (Duration: 0.7ms | Allocations: 23)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered home/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 3832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 8990)
+Completed 200 OK in 58ms (Views: 52.5ms | ActiveRecord: 0.0ms | Allocations: 9641)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 18:21:34 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 67)
+  [1m[36mVideo Load (1.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 9.0ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 6313)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 1.2ms | Allocations: 6959)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 18:23:39 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.2ms | Allocations: 215)
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 6859)
+Completed 200 OK in 57ms (Views: 52.3ms | ActiveRecord: 0.6ms | Allocations: 8239)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 18:26:01 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.7ms | Allocations: 215)
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1220)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 6859)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.9ms | Allocations: 8240)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 18:26:29 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.6ms | Allocations: 596)
+  Rendered layouts/_notice2.html.erb (Duration: 1.0ms | Allocations: 121)
+  Rendered home/account.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1415)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 6773)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 7419)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2021-06-29 18:27:20 +0300
+Processing by VideosController#new as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 311)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-06-29 18:27:20 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.6ms | Allocations: 239)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 20)
+  Rendered devise/shared/_links.html.erb (Duration: 5.9ms | Allocations: 561)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.6ms | Allocations: 2080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 7555)
+Completed 200 OK in 86ms (Views: 64.0ms | ActiveRecord: 2.7ms | Allocations: 13261)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2021-06-29 18:27:27 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 239)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.9ms | Allocations: 175)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 42.2ms | Allocations: 7043)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 7115)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms | Allocations: 8739)
+
+
+
+NoMethodError - undefined method `full_name' for #<Admin id: nil, email: "", created_at: nil, updated_at: nil>:
+  app/views/devise/registrations/new.html.erb:12
+  app/views/devise/registrations/new.html.erb:8
+
+Started POST "/__better_errors/44ef9685ee27dcc5/variables" for 127.0.0.1 at 2021-06-29 18:27:27 +0300
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-06-29 18:34:55 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.7ms | Allocations: 212)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 18)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 118)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 6431)
+Completed 200 OK in 45ms (Views: 40.3ms | Allocations: 7195)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateVideos (20210628201056)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "videos"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210628201056"]]
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMembers (20210614080056)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "members"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210614080056"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGroups (20210610124120)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "groups"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210610124120"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDetails (20210610114403)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "details"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210610114403"]]
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfiles (20210610000444)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "profiles"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210610000444"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDirections (20210609171652)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "directions"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210609171652"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddresses (20210609171621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210609171621"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdmins (20210519081912)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_admins_on_reset_password_token"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP INDEX "index_admins_on_email"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "admins"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210519081912"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateChildren (20210519081858)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP INDEX "index_children_on_reset_password_token"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_children_on_email"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "children"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210519081858"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateTeachers (20210519081837)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX "index_teachers_on_reset_password_token"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_teachers_on_email"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "teachers"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210519081837"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActionTextTables (20210412203526)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "action_text_rich_texts"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210412203526"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageVariantRecords (20210412125459)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "active_storage_variant_records"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210412125459"]]
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20210412125458)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "service_name" varchar NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_blobs_on_key" ON "aactive_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aactive_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name" FROM "active_storage_blobs"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at" FROM "aactive_storage_blobs"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aactive_storage_blobs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210412125458"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFriendlyIdSlugs (20210304024744)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210304024744"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20210105160657)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "active_storage_attachments"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210105160657"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20210105160657)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210105160657"]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFriendlyIdSlugs (20210304024744)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id" ON "friendly_id_slugs" ("sluggable_type", "sluggable_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210304024744"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddServiceNameToActiveStorageBlobs (20210412125458)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "active_storage_blobs" ADD "service_name" varchar[0m
+  [1m[36mActiveStorage::Blob Update All (0.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "service_name" = ?[0m  [["service_name", "local"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (3.4ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aactive_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "service_name" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_aactive_storage_blobs_on_key" ON "aactive_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aactive_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name" FROM "active_storage_blobs"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "active_storage_blobs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer NOT NULL PRIMARY KEY, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar DEFAULT NULL, "metadata" text DEFAULT NULL, "byte_size" integer NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL, "service_name" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name")
+                     SELECT "id","key","filename","content_type","metadata","byte_size","checksum","created_at","service_name" FROM "aactive_storage_blobs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aactive_storage_blobs"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210412125458"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveStorageVariantRecords (20210412125459)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210412125459"]]
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActionTextTables (20210412203526)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "action_text_rich_texts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "body" text, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_action_text_rich_texts_uniqueness" ON "action_text_rich_texts" ("record_type", "record_id", "name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210412203526"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateTeachers (20210519081837)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "teachers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "full_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teachers_on_email" ON "teachers" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_teachers_on_reset_password_token" ON "teachers" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210519081837"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateChildren (20210519081858)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "children" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "full_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_children_on_email" ON "children" ("email")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_children_on_reset_password_token" ON "children" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210519081858"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateAdmins (20210519081912)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "full_name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210519081912"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAddresses (20210609171621)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "landmark" varchar, "latitude" float, "longitude" float, "child_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_child_id" ON "addresses" ("child_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210609171621"]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDirections (20210609171652)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "directions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "landmark" varchar, "latitude" float, "longitude" float, "teacher_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_directions_on_teacher_id" ON "directions" ("teacher_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210609171652"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfiles (20210610000444)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "grade" varchar, "phone" varchar, "child_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_profiles_on_child_id" ON "profiles" ("child_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210610000444"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDetails (20210610114403)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "phone" varchar, "teacher_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_details_on_teacher_id" ON "details" ("teacher_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210610114403"]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGroups (20210610124120)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "groups" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "subject" varchar, "grade" varchar, "teacher_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_groups_on_teacher_id" ON "groups" ("teacher_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210610124120"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateMembers (20210614080056)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "members" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "child_id" integer, "group_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_members_on_child_id" ON "members" ("child_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_members_on_group_id" ON "members" ("group_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210614080056"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVideos (20210628201056)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "videos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "youtube" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210628201056"]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+`config.autoloader` is set to `classic`. These autoloaded constants would have been unloaded if `config.autoloader` had been set to `:zeitwerk`.
+
+In order to autoload safely at boot time, please wrap your code in a reloader
+callback this way:
+
+    Rails.application.reloader.to_prepare do
+      # Autoload classes and modules needed at boot time here.
+    end
+
+That block runs when the application boots, and every time there is a reload.
+For historical reasons, it may run twice, so it has to be idempotent.
+
+Check the "Autoloading and Reloading Constants" guide to learn more about how
+Rails autoloads and reloads.
+ (called from <main> at /home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ config/environment.rb:5:in `<main>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ config/environment.rb:5:in `<main>'
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-06-29 18:40:09 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.6ms | Allocations: 733)
+  Rendered layouts/_notice2.html.erb (Duration: 5.6ms | Allocations: 135)
+  Rendered devise/shared/_links.html.erb (Duration: 5.2ms | Allocations: 580)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 122.0ms | Allocations: 12953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2680.7ms | Allocations: 1383249)
+Completed 200 OK in 2756ms (Views: 2697.3ms | ActiveRecord: 2.5ms | Allocations: 1392364)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2021-06-29 18:40:18 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.2ms | Allocations: 240)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 184)
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 110)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.6ms | Allocations: 1789)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 7204)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.0ms | Allocations: 9004)
+
+
+Started POST "/admins" for 127.0.0.1 at 2021-06-29 18:41:31 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "admin"=>{"full_name"=>"Nakayiza Maria Gorreti", "email"=>"gorreti@homeschool.ug", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "gorreti@homeschool.ug"], ["LIMIT", 1]]
+  [1m[36mAdmin Create (1.4ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "full_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "gorreti@homeschool.ug"], ["encrypted_password", "$2a$12$howEAHbKkZpPCSPzpK1uDe5AXn9HoOzA6Wc6jOFSet/l2hksoUpHi"], ["full_name", "Nakayiza Maria Gorreti"], ["created_at", "2021-06-29 15:41:31.847437"], ["updated_at", "2021-06-29 15:41:31.847437"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/videos/new
+Completed 302 Found in 402ms (ActiveRecord: 14.7ms | Allocations: 11412)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2021-06-29 18:41:31 +0300
+Processing by VideosController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering videos/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.4ms | Allocations: 1436)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 27)
+  Rendered videos/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 7553)
+Completed 200 OK in 50ms (Views: 25.3ms | ActiveRecord: 1.9ms | Allocations: 13285)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2021-06-29 18:42:52 +0300
+Processing by VideosController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering videos/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.5ms | Allocations: 686)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered videos/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 7317)
+Completed 200 OK in 35ms (Views: 26.0ms | ActiveRecord: 0.2ms | Allocations: 9714)
+
+
+Started POST "/videos" for 127.0.0.1 at 2021-06-29 18:47:18 +0300
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "video"=>{"title"=>"Fractions - Introduction", "youtube"=>"2nB4LDFAMKE"}, "commit"=>"Create Video"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+  [1m[36mVideo Create (1.1ms)[0m  [1m[32mINSERT INTO "videos" ("title", "youtube", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fractions - Introduction"], ["youtube", "2nB4LDFAMKE"], ["created_at", "2021-06-29 15:47:18.690047"], ["updated_at", "2021-06-29 15:47:18.690047"]]
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+Redirected to http://localhost:3000/videos/1
+Completed 302 Found in 78ms (ActiveRecord: 16.1ms | Allocations: 5525)
+
+
+Started GET "/videos/1" for 127.0.0.1 at 2021-06-29 18:47:18 +0300
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:51:in `set_video'
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:27
+  Rendered layouts/_main-nav.html.erb (Duration: 4.8ms | Allocations: 984)
+  Rendered videos/show.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 6544)
+Completed 200 OK in 51ms (Views: 34.3ms | ActiveRecord: 1.1ms | Allocations: 7911)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2021-06-29 18:48:56 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 0.5ms | Allocations: 5212)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 18:48:56 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.0ms | Allocations: 222)
+  Rendered layouts/_notice2.html.erb (Duration: 0.6ms | Allocations: 25)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 12)
+  Rendered home/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 3920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 9074)
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 0.0ms | Allocations: 10321)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 18:49:03 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.4ms | Allocations: 67)
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:68
+  Rendered home/upscale.html.erb within layouts/application (Duration: 15.9ms | Allocations: 1112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 6470)
+Completed 200 OK in 62ms (Views: 53.8ms | ActiveRecord: 0.8ms | Allocations: 7135)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 20:47:54 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.4ms | Allocations: 215)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:63
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 17.8ms | Allocations: 1883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 7522)
+Completed 200 OK in 61ms (Views: 54.6ms | ActiveRecord: 2.0ms | Allocations: 8914)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 20:51:25 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.6ms | Allocations: 215)
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.7ms | Allocations: 1331)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.6ms | Allocations: 6971)
+Completed 200 OK in 124ms (Views: 112.6ms | ActiveRecord: 0.9ms | Allocations: 8346)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2021-06-29 20:54:26 +0300
+Processing by VideosController#new as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2021-06-29 20:54:26 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 591)
+  Rendered layouts/_notice2.html.erb (Duration: 2.0ms | Allocations: 121)
+  Rendered devise/shared/_links.html.erb (Duration: 4.6ms | Allocations: 495)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.1ms | Allocations: 2657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 8132)
+Completed 200 OK in 69ms (Views: 62.1ms | ActiveRecord: 0.0ms | Allocations: 10252)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2021-06-29 20:55:14 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "admin"=>{"email"=>"gorreti@homeschool.ug", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "gorreti@homeschool.ug"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Update (0.3ms)[0m  [1m[33mUPDATE "admins" SET "remember_created_at" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["remember_created_at", "2021-06-29 17:55:14.640317"], ["updated_at", "2021-06-29 17:55:14.640545"], ["id", 1]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/videos/new
+Completed 302 Found in 405ms (ActiveRecord: 13.0ms | Allocations: 12702)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2021-06-29 20:55:14 +0300
+Processing by VideosController#new as HTML
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering videos/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 1.4ms | Allocations: 339)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 24)
+  Rendered videos/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 6393)
+Completed 200 OK in 46ms (Views: 38.9ms | ActiveRecord: 0.3ms | Allocations: 8903)
+
+
+Started POST "/videos" for 127.0.0.1 at 2021-06-29 20:55:33 +0300
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "video"=>{"title"=>"Create a portfolio in minutes", "youtube"=>"cGI38Q7wXAY"}, "commit"=>"Create Video"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+  [1m[36mVideo Create (1.3ms)[0m  [1m[32mINSERT INTO "videos" ("title", "youtube", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Create a portfolio in minutes"], ["youtube", "cGI38Q7wXAY"], ["created_at", "2021-06-29 17:55:33.185576"], ["updated_at", "2021-06-29 17:55:33.185576"]]
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+Redirected to http://localhost:3000/videos/2
+Completed 302 Found in 83ms (ActiveRecord: 23.9ms | Allocations: 5318)
+
+
+Started GET "/videos/2" for 127.0.0.1 at 2021-06-29 20:55:33 +0300
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:51:in `set_video'
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:27
+  Rendered layouts/_main-nav.html.erb (Duration: 9.8ms | Allocations: 983)
+  Rendered videos/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 6535)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 0.8ms | Allocations: 7696)
+
+
+Started GET "/videos/new" for 127.0.0.1 at 2021-06-29 20:56:05 +0300
+Processing by VideosController#new as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering videos/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.7ms | Allocations: 296)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered videos/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6035)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 7603)
+
+
+Started POST "/videos" for 127.0.0.1 at 2021-06-29 20:56:18 +0300
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "video"=>{"title"=>"Styling devise forms", "youtube"=>"Ys9J_dqhyOU"}, "commit"=>"Create Video"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+  [1m[36mVideo Create (1.8ms)[0m  [1m[32mINSERT INTO "videos" ("title", "youtube", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Styling devise forms"], ["youtube", "Ys9J_dqhyOU"], ["created_at", "2021-06-29 17:56:18.805182"], ["updated_at", "2021-06-29 17:56:18.805182"]]
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/videos_controller.rb:14:in `create'
+Redirected to http://localhost:3000/videos/3
+Completed 302 Found in 74ms (ActiveRecord: 18.3ms | Allocations: 5300)
+
+
+Started GET "/videos/3" for 127.0.0.1 at 2021-06-29 20:56:19 +0300
+Processing by VideosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/videos_controller.rb:51:in `set_video'
+  Rendering layout layouts/application.html.erb
+  Rendering videos/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_main-nav.html.erb:27
+  Rendered layouts/_main-nav.html.erb (Duration: 6.5ms | Allocations: 983)
+  Rendered videos/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 6403)
+Completed 200 OK in 41ms (Views: 33.4ms | ActiveRecord: 0.5ms | Allocations: 7423)
+
+
+Started DELETE "/admins/sign_out" for 127.0.0.1 at 2021-06-29 20:57:05 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Update (1.4ms)[0m  [1m[33mUPDATE "admins" SET "remember_created_at" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2021-06-29 17:57:05.410734"], ["id", 1]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 63ms (ActiveRecord: 12.4ms | Allocations: 6643)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 20:57:05 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.5ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 25)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered home/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 3572)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 8727)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 9391)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 20:57:22 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.7ms | Allocations: 67)
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.3ms | Allocations: 916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 6274)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.6ms | Allocations: 6800)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 20:59:58 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.1ms | Allocations: 215)
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 21.9ms | Allocations: 1517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.6ms | Allocations: 7156)
+Completed 200 OK in 73ms (Views: 66.2ms | ActiveRecord: 0.6ms | Allocations: 8556)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:01:00 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.8ms | Allocations: 215)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 18.2ms | Allocations: 1516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 7155)
+Completed 200 OK in 65ms (Views: 55.7ms | ActiveRecord: 0.7ms | Allocations: 8546)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:01:59 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.0ms | Allocations: 215)
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 14.5ms | Allocations: 1516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 7175)
+Completed 200 OK in 64ms (Views: 56.7ms | ActiveRecord: 0.8ms | Allocations: 8556)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:02:56 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.1ms | Allocations: 215)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 7156)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.2ms | Allocations: 8539)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:06:25 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.7ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 1.0ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 3783)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.1ms | Allocations: 8934)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 0.0ms | Allocations: 9581)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:07:30 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 897.8ms | Allocations: 137357)
+Completed 200 OK in 900ms (Views: 898.9ms | ActiveRecord: 0.0ms | Allocations: 137870)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:09:52 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 486.1ms | Allocations: 118244)
+Completed 200 OK in 489ms (Views: 487.3ms | Allocations: 118762)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:11:20 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 4.0ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 1.8ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 4100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 9304)
+Completed 200 OK in 70ms (Views: 67.1ms | Allocations: 10681)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:12:17 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.9ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 4102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 9267)
+Completed 200 OK in 36ms (Views: 33.4ms | Allocations: 10640)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:12:49 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.2ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 9258)
+Completed 200 OK in 63ms (Views: 60.4ms | Allocations: 10632)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:13:10 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.8ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 0.7ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 4094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 9259)
+Completed 200 OK in 57ms (Views: 55.0ms | Allocations: 10636)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:13:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.2ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 2.0ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 31.1ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 9258)
+Completed 200 OK in 69ms (Views: 66.3ms | Allocations: 10632)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:13:51 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.7ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 32.7ms | Allocations: 4096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 9271)
+Completed 200 OK in 84ms (Views: 81.5ms | Allocations: 10637)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:14:17 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.6ms | Allocations: 216)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 4094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 9259)
+Completed 200 OK in 51ms (Views: 49.5ms | Allocations: 10631)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:14:40 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.0ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 1.4ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 9259)
+Completed 200 OK in 75ms (Views: 73.0ms | Allocations: 10631)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:15:19 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.6ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 1.5ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 9258)
+Completed 200 OK in 72ms (Views: 70.0ms | Allocations: 10630)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:15:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.0ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 9258)
+Completed 200 OK in 35ms (Views: 32.7ms | Allocations: 10636)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:17:09 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.5ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 2.9ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 39.9ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | Allocations: 9258)
+Completed 200 OK in 91ms (Views: 83.8ms | Allocations: 10628)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:17:29 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.5ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 9258)
+Completed 200 OK in 26ms (Views: 24.8ms | Allocations: 10624)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:17:45 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.6ms | Allocations: 67)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:63
+  [1m[36mVideo Load (1.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 30.7ms | Allocations: 1782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 6901)
+Completed 200 OK in 86ms (Views: 75.6ms | ActiveRecord: 4.6ms | Allocations: 7559)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:17:48 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 9.1ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 37.4ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 68.1ms | Allocations: 7867)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms | Allocations: 8389)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:17:51 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.2ms | Allocations: 67)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 11.9ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 6036)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.7ms | Allocations: 6566)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:17:54 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 23.9ms | Allocations: 2969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 7897)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.0ms | Allocations: 8407)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:17:57 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 1.1ms | Allocations: 67)
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 13.3ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 6036)
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.9ms | Allocations: 6558)
+
+
+Started GET "/videos" for 127.0.0.1 at 2021-06-29 21:18:06 +0300
+Processing by VideosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 9.7ms | Allocations: 618)
+  [1m[36mVideo Load (1.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:6
+  Rendered videos/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 1795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 6980)
+Completed 200 OK in 65ms (Views: 60.0ms | ActiveRecord: 1.2ms | Allocations: 8147)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:18:56 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.2ms | Allocations: 67)
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 3.7ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6036)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 6567)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:19:48 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 3.0ms | Allocations: 215)
+  [1m[36mVideo Load (1.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 22.2ms | Allocations: 1517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 6917)
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 1.1ms | Allocations: 8299)
+
+
+Started GET "/videos" for 127.0.0.1 at 2021-06-29 21:21:12 +0300
+Processing by VideosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering videos/index.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.9ms | Allocations: 618)
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/videos/index.html.erb:6
+  Rendered videos/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1785)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 7185)
+Completed 200 OK in 61ms (Views: 55.2ms | ActiveRecord: 0.7ms | Allocations: 8582)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:21:25 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.9ms | Allocations: 215)
+  Rendered layouts/_notice2.html.erb (Duration: 2.1ms | Allocations: 121)
+  Rendered layouts/_notice2.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 4101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 9048)
+Completed 200 OK in 80ms (Views: 73.0ms | ActiveRecord: 0.0ms | Allocations: 10193)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 21:25:02 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.5ms | Allocations: 247)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 18)
+  Rendered home/account.html.erb within layouts/application (Duration: 13.1ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 5838)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 0.0ms | Allocations: 6486)
+
+
+Started GET "/teachers/sign_in" for 127.0.0.1 at 2021-06-29 21:25:06 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.8ms | Allocations: 239)
+  Rendered layouts/_notice2.html.erb (Duration: 0.4ms | Allocations: 20)
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 560)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 2131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 7346)
+Completed 200 OK in 91ms (Views: 60.3ms | ActiveRecord: 2.3ms | Allocations: 13677)
+
+
+Started GET "/teachers/sign_in" for 127.0.0.1 at 2021-06-29 21:26:50 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.6ms | Allocations: 591)
+  Rendered layouts/_notice2.html.erb (Duration: 2.1ms | Allocations: 121)
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 495)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 2654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 8087)
+Completed 200 OK in 73ms (Views: 69.3ms | ActiveRecord: 0.0ms | Allocations: 10384)
+
+
+Started GET "/teachers/sign_up" for 127.0.0.1 at 2021-06-29 21:27:13 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 3.0ms | Allocations: 239)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 20)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 175)
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 108)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 1729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 6955)
+Completed 200 OK in 63ms (Views: 58.6ms | ActiveRecord: 0.0ms | Allocations: 8611)
+
+
+Started GET "/teachers/sign_up" for 127.0.0.1 at 2021-06-29 21:27:43 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 7.4ms | Allocations: 591)
+  Rendered layouts/_notice2.html.erb (Duration: 2.9ms | Allocations: 121)
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 175)
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 449)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 38.5ms | Allocations: 2873)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 8310)
+Completed 200 OK in 103ms (Views: 93.9ms | ActiveRecord: 0.0ms | Allocations: 10540)
+
+
+Started GET "/teachers/sign_in" for 127.0.0.1 at 2021-06-29 21:27:49 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 4.0ms | Allocations: 239)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 122)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.8ms | Allocations: 1443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 6661)
+Completed 200 OK in 64ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 8365)
+
+
+Started GET "/accounts" for 127.0.0.1 at 2021-06-29 21:29:18 +0300
+Processing by HomeController#account as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/account.html.erb within layouts/application
+  Rendered layouts/_main-nav.html.erb (Duration: 2.9ms | Allocations: 266)
+  Rendered layouts/_notice2.html.erb (Duration: 0.8ms | Allocations: 20)
+  Rendered home/account.html.erb within layouts/application (Duration: 11.3ms | Allocations: 733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 5915)
+Completed 200 OK in 62ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 7064)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:30:20 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 2.3ms | Allocations: 196)
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/home/upscale.html.erb:63
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 32.7ms | Allocations: 2040)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 7159)
+Completed 200 OK in 64ms (Views: 54.8ms | ActiveRecord: 5.1ms | Allocations: 7822)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:30:47 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.7ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 3557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 8468)
+Completed 200 OK in 52ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 9109)
+
+
+Started GET "/upscale" for 127.0.0.1 at 2021-06-29 21:31:28 +0300
+Processing by HomeController#upscale as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/upscale.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.4ms | Allocations: 67)
+  [1m[36mVideo Load (1.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/home/upscale.html.erb:63
+  Rendered home/upscale.html.erb within layouts/application (Duration: 16.1ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 6036)
+Completed 200 OK in 58ms (Views: 45.8ms | ActiveRecord: 1.0ms | Allocations: 6562)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-29 21:32:11 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_nav.html.erb (Duration: 0.9ms | Allocations: 67)
+  Rendered layouts/_notice2.html.erb (Duration: 0.5ms | Allocations: 18)
+  Rendered layouts/_notice2.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered home/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 7867)
+Completed 200 OK in 41ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 8387)
+
+
