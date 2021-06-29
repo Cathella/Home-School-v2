@@ -1,33 +1,25 @@
-<%= render "layouts/main-nav" %>
+<%= render 'layouts/main-nav' %>
 
-<div class="register-teachers">
-  <div class="container">
-    <div class="row" id="dash">
-      <div class="col-md-4 pr-5">
-        <div class="mb-5">
-          <div class="profile-pic text-center">
-            <% if current_child.image.attached? %>
-              <%= image_tag current_child.image, style: "width: 200px; display: block; margin: 0 auto", class: "rounded-circle shadow" %>
-            <% else %>
-              <div class="text-center" style="font-size: 6em;">🧒</div>
-            <% end %>
-          </div>
-          
-          <p class="mt-5 text-center text-muted">
-            <%= current_child.name %>
-          </p>
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row mt-5">
+    <div class="col-lg-6 mx-auto">
+      <%= form_for @address, data: { controller: "places", action: "google-maps-callback@window->places#initMap", places_latitude: @address.latitude, places_longitude: @address.longitude } do |form| %>
+
+        <div class="field">
+          <%= form.search_field :landmark, placeholder: "Enter Nearest landmark near your home", class: "form-control py-4", data: { target: "places.field", action: "keydown->places#keydown" } %>
         </div>
-      </div>
 
-      <div class="col-md-6 mx-auto">
-        <%= render 'layouts/notice' %>
-        
-        <h1 class="text-heading font-weight-bold">Add an Address</h1>
-        <p class="mt-4 alert-success p-3 rounded">
-          Adding an Address allows the system to match you with the nearest teachers or group for your children.
-        </p>
-        <%= render 'form', address: @address %>
-      </div>
+        <%= form.hidden_field :latitude, data: { target: "places.latitude" } %>
+        <%= form.hidden_field :longitude, data: { target: "places.longitude" } %>
+
+        <div id="map" data-target="places.map" style="height: 300px; width: 100%;" class="my-4">
+        </div>
+
+        <div class="actions mt-3">
+          <%= form.submit "Save Address", class: "btn btn-info px-5 py-3 very-rounded" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

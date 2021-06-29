@@ -1,39 +1,14 @@
 Rails.application.routes.draw do
-  resources :contacts
-  resources :teacher_password_resets
-  resources :password_resets
+  devise_for :children, :admins, :teachers
 
-  resources :directions
   root to: 'home#index'
-
-  get "joined", to: "home#joined", as: "joined"
-
-  resources :groups
-  get "mygroup", to: "home#mygroup", as: "my_group"
-  get "teachergroup", to: "home#teachergroup", as: "teacher_group"
-
-  resources :children do
-    member do
-      get :confirm_email
-    end
+  resources :addresses, :profiles, :directions, :details, :videos
+  resources :groups do
+    resources :members, only: [:create, :destroy]
   end
-
-  get "/childrenhome", to: "children#childrenhome", as: :childrenhome
-  resources :child_sessions
   
-  resources :teachers do
-    member do
-      get :confirm_email
-    end
-  end
-  get "/teachershome", to: "teachers#teachershome", as: :teachershome
-  resources :teacher_sessions
+  get "accounts", to: "home#account", as: "accounts"
+  get "dashboard", to: "home#dashboard", as: "dashboard"
+  get "upscale", to: "home#upscale", as: "upscale"
 
-  resources :admins
-  resources :admin_sessions
-  # get "/admin", to: "admin#index", as: :admin
-
-  resources :addresses
-  get "myaddress", to: "home#myaddress", as: "my_address"
-  get "teacheraddress", to: "home#teacheraddress", as: "teacher_address"
 end

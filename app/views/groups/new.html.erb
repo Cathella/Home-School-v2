@@ -1,17 +1,27 @@
-<%= render "layouts/main-nav" %>
+<%= render 'layouts/main-nav' %>
 
-<div class="register-teachers">
-  <div class="container">
-    <div class="row" id="dash">
-      <%= render 'layouts/notice' %>
-      
-      <div class="col-md-6 mx-auto">
-        <h1 class="text-heading font-weight-bold text-center mb-5">New Study Group</h1>
-        <%= render 'form', group: @group %>
-        <p class="text-center mt-3">
-          <%= link_to 'Back to Groups', groups_path %>
-        </p>
-      </div>
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5 text-muted">Create Study Group</h4>
+
+      <%= form_for @group do |form| %>
+
+        <div class="field">
+          <%= form.text_field :name, placeholder: "Group Name", class: "form-control py-4" %>
+        </div>
+        <div class="field mt-4">
+          <%= form.select :grade, options_for_select(["Choose a class you teach", "Pre-school", "P.1", "P.2", "P.3", "P.4", "P.5", "P.6", "P.7"]), {}, class: "custom-select", style: "height: 3em;" %>
+        </div>
+        <div class="field mt-4">
+          <%= form.select :subject, options_for_select(["Choose a subject you will teach", "Reading", "English", "Mathematics", "Science", "Social Studies"], multiple: :true), {}, class: "custom-select", style: "height: 3em;" %>
+        </div>
+
+        <div class="actions mt-4">
+          <%= form.submit "Create Group", class: "btn btn-info px-5 py-3 very-rounded shadow" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

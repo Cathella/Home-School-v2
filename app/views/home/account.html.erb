@@ -1,0 +1,34 @@
+<%= render 'layouts/main-nav' %>
+
+<div style="min-height: 600px">
+  <div class="container py-5">
+    <%= render 'layouts/notice2' %>
+    <div class="row">
+      <div class="col-lg-5">
+          <h3 class="text-heading font-weight-bold mt-5">
+            Let your child join Homeschool today.
+          </h3>
+          <p class="text-muted mt-4">
+            Children are grouped in a study group 
+            with a qualified teacher they will adore
+          </p>
+          <div class="mb-5 pb-4 d-flex flex-wrap">
+            <%= link_to 'Register your Child', new_child_registration_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-4" %>
+            <%= link_to 'Child Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_child_session_path, class: "ml-5 text-info mt-5", id: "login-btn" %>
+          </div>
+      </div>
+      <div class="col-lg-5 ml-auto">
+          <h3 class="text-heading font-weight-bold mt-5">
+            Our job is to empower Great teachers.
+          </h3>
+          <p class="text-muted mt-4">
+            Teach small groups of children in a secure and contained environment.
+          </p>
+          <div class="mb-5 d-flex flex-wrap">
+            <%= link_to 'Become a Teacher', new_teacher_registration_path, class: "btn bg-red-btn text-white shadow px-5 py-3 mt-4" %>
+            <%= link_to 'Teacher Login<i class="fas fa-arrow-right ml-2 text-info"></i>'.html_safe, new_teacher_session_path, class: "ml-5 text-info mt-5", id: "login-btn" %>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

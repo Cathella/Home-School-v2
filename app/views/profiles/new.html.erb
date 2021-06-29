@@ -1,0 +1,24 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5">Complete your Profile</h4>
+      <%= form_for @profile do |form| %>
+
+        <div class="field mb-4">
+          <%= form.text_field :phone, placeholder: "Phone Number", class: "form-control py-4" %>
+        </div>
+
+        <div class="field">
+          <%= form.select :grade, options_for_select(["Choose your grade", "Pre-school", "P.1", "P.2", "P.3", "P.4", "P.5", "P.6", "P.7"]), {}, class: "custom-select", style: "height: 3em;" %>
+        </div>
+
+        <div class="actions mt-4">
+          <%= form.submit "Save Profile", class: "btn btn-info px-5 py-3 very-rounded shadow" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

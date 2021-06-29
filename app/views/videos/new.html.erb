@@ -1,0 +1,24 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5 text-muted">New Video</h4>
+
+      <%= form_for @video do |form| %>
+
+        <div class="field">
+          <%= form.text_field :title, placeholder: "Video Title", class: "form-control py-4" %>
+        </div>
+        <div class="field mt-4">
+          <%= form.text_field :youtube, placeholder: "Video ID", class: "form-control py-4" %>
+        </div>
+
+        <div class="actions mt-4">
+          <%= form.submit "Create Video", class: "btn btn-info px-5 py-3 very-rounded shadow" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

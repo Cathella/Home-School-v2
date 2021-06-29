@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  subject: MyString
+  grade: MyString
+  meeting: MyString
+  budget: MyString
+  gender: MyString
+  tutors_number: MyString
+  commitment: MyString
+
+two:
+  description: MyString
+  subject: MyString
+  grade: MyString
+  meeting: MyString
+  budget: MyString
+  gender: MyString
+  tutors_number: MyString
+  commitment: MyString
