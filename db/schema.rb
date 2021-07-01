@@ -159,6 +159,9 @@ ActiveRecord::Schema.define(version: 2021_06_28_201056) do
   create_table "videos", force: :cascade do |t|
     t.string "title"
     t.string "youtube"
+    t.string "grade"
+    t.string "subject"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -8,8 +8,10 @@
         Welcome, 
         <% if current_teacher %>
           <%= current_teacher.full_name %>
-        <% else %>
+        <% elsif current_child %>
           <%= current_child.full_name %>
+        <% else %>
+          <%= current_admin.full_name %>
         <% end %>!
       </p>
       <% if child_signed_in? %>
@@ -80,14 +82,12 @@
             <%= link_to '<i class="fas mr-2 fa-map-marker-alt"></i>Add your Address'.html_safe, new_direction_path(current_teacher.id), class: "btn btn-info px-5 py-3 very-rounded fs-6 font-weight-bold" %>
           </div>
         <% end %>
+      <% else %>
+        <div class="bg-light rounded my-5 py-5 text-center text-muted border-bottom">
+          Do you want to add a video? 
+          <%= link_to "Create one here", new_video_path, class: "text-green underlined" %>
+        </div>
       <% end %>
     </div>
-    <%# <div class="col-lg-5 pt-4 mr-auto">
-      <div class="bg-light mt-5">
-        <p class="fs-5 pb-3 border-bottom text-muted">My Groups</p>
-        <span class="d-block">
-        </span>
-      </div>
-    </div> %>
   </div>
 </div>

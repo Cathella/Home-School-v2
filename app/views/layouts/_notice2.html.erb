@@ -1,5 +1,8 @@
 <% if notice %>
-  <p style="position: absolute; top: 120px; left: 25px; z-index: 100; color: #155724; background: linen; padding: 1em 2em; border-radius: .25rem; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="position: absolute; top: 120px; left: 25px; z-index: 100;">
     <%= notice %>
-  </p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 <% end %>

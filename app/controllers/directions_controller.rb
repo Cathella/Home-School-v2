@@ -1,5 +1,6 @@
 class DirectionsController < ApplicationController
   before_action :set_direction, only: [ :edit, :update ]
+  before_action :authenticate_teacher!
 
   def new
     @direction = Direction.new

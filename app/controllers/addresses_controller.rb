@@ -1,5 +1,6 @@
 class AddressesController < ApplicationController
   before_action :set_address, only: [ :edit, :update ]
+  before_action :authenticate_child!
 
   def new
     @address = Address.new
