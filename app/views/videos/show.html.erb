@@ -3,7 +3,7 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-lg-9">
-      <iframe class="w-100 rounded shadow" style="height: auto; min-height: 450px" src='https://www.youtube.com/embed/<%= @video.youtube %>?rel=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+      <iframe class="w-100 rounded shadow" src='https://www.youtube.com/embed/<%= @video.youtube %>?rel=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
       <div class="mt-4 d-flex flex-wrap justify-content-between align-content-center">
         <h4 class=""><%= @video.title %></h4>
         <span>

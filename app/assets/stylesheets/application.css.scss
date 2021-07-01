@@ -305,16 +305,6 @@ h1#h1 {
   border-left: 3px solid #095578;
 }
 
-/* recommend teachers */
-.recommend-teachers {
-  // padding: 0 0 6em 0;
-  // background: white;
-}
-
-.recommend-teachers h2 {
-  // font-size: 2em;
-}
-
 .recommend-teachers ul {
   color: #1c93ae;
   list-style: none;
@@ -369,6 +359,10 @@ h1#h1 {
   letter-spacing: -1.5px;
 }
 
+iframe {
+  height: 450px;
+}
+
 /* Messages */
 #error_explanation {
   background: rgba(246, 36, 89, 0.1);
@@ -384,18 +378,13 @@ h1#h1 {
   .image-container-4 {
     height: 500px;
   }
+
+  iframe {
+    height: 400px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
-  .big-btn {
-    font-size: 1em;
-  }
-
-  .secondary-intro p {
-    font-size: 1em;
-    margin: 1em 0 0 0;
-  }
-
   .image-container {
     width: 100%;
     height: auto;
@@ -408,6 +397,10 @@ h1#h1 {
 
   .image-container-3 {
     margin-bottom: 1.5em;
+  }
+
+  iframe {
+    height: 350px;
   }
 }
 
@@ -426,6 +419,16 @@ h1#h1 {
     width: 100%;
     height: 400px;
     margin: 3em 0 0 0;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  iframe {
+    height: 250px;
   }
 }
 
