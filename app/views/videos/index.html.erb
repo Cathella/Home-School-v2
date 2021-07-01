@@ -1,13 +1,17 @@
 <%= render "layouts/main-nav" %>
 
 <div class="container py-5">
-  <h2 class="font-weight-bold mt-4">All Videos</h2>
+  <h2 class="font-weight-bold mt-4 text-label">All Videos</h2>
   <div class="row my-5">
     <% @videos.each do |video| %>
       <div class="col-md-6 col-lg-4 mb-4">
-        <iframe class="w-100 rounded" style="height: 210px" src='https://www.youtube.com/embed/<%= video.youtube?rel=0&controls=0&color=white&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe> %>
+        <div id="thumbnail-img">
+          <%= link_to image_tag(video.thumbnail), video %>
+        </div>
         <span class="mt-2 d-block"><%= link_to video.title, video, class: "text-dark" %></span>
-        <small class="text-muted">Added &middot; <%= local_time_ago(video.created_at) %></small>
+        <small class="bg-blue px-2 rounded"><%= video.subject %></small>
+        <small class="bg-yellow px-2 rounded"><%= video.grade %></small>
+        <small class="text-muted">&middot; <%= local_time_ago(video.created_at) %></small>
       </div>
     <% end %>
   </div>

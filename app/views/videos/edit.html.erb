@@ -1,0 +1,48 @@
+<%= render 'layouts/main-nav' %>
+
+<div class="container py-5">
+  <%= render 'layouts/notice2' %>
+  <div class="row my-5">
+    <div class="col-lg-6 mx-auto">
+      <h4 class="mb-5 text-muted">New Video</h4>
+
+      <%= form_for @video do |form| %>
+
+        <div class="field">
+          <%= form.text_field :title, placeholder: "Video Title", class: "form-control py-4" %>
+        </div>
+        <div class="field mt-4">
+          <%= form.text_field :youtube, placeholder: "Video ID", class: "form-control py-4" %>
+        </div>
+        <div class="field mt-4">
+          <div class="row">
+            <div class="col-lg-4">
+              <%= form.label "Upload Thumbnail", class: "text-muted" %>
+            </div>
+            <div class="col-lg-8">
+              <%= form.file_field :thumbnail, placeholder: "Upload video", class: "form-control bg-light" %>
+            </div>
+          </div>
+        </div>
+        <div class="field mt-4">
+          <%= form.text_area :description, placeholder: "Description", class: "form-control py-4" %>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <div class="field">
+              <%= form.select :grade, options_for_select(["Grade", "Pre-school", "P.1", "P.2", "P.3", "P.4", "P.5", "P.6", "P.7"]), {}, class: "custom-select", style: "height: 3em;" %>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="field">
+              <%= form.select :subject, options_for_select(["Subject", "English", "Mathematics", "Science", "Social Studies"], multiple: :true), {}, class: "custom-select", style: "height: 3em;" %>
+            </div>
+          </div>
+        </div>
+        <div class="actions mt-4">
+          <%= form.submit "Update Video", class: "btn btn-info px-5 py-3 rounded-pill shadow" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
