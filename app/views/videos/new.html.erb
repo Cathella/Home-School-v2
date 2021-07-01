@@ -15,6 +15,16 @@
           <%= form.text_field :youtube, placeholder: "Video ID", class: "form-control py-4" %>
         </div>
         <div class="field mt-4">
+          <div class="row">
+            <div class="col-lg-4">
+              <%= form.label "Upload Thumbnail", class: "text-muted" %>
+            </div>
+            <div class="col-lg-8">
+              <%= form.file_field :thumbnail, placeholder: "Upload video", class: "form-control bg-light" %>
+            </div>
+          </div>
+        </div>
+        <div class="field mt-4">
           <%= form.text_area :description, placeholder: "Description", class: "form-control py-4" %>
         </div>
         <div class="row mt-4">

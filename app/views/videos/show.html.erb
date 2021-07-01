@@ -1,6 +1,21 @@
 <%= render "layouts/main-nav" %>
 
 <div class="container py-5">
-  <iframe class="w-100" style="height: 600px" src='https://www.youtube.com/embed/<%= @video.youtube %>?rel=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
-  <h4 class="mt-4"><%= @video.title %></h4>
+  <div class="row">
+    <div class="col-lg-9">
+      <iframe class="w-100 rounded shadow" style="height: auto; min-height: 450px" src='https://www.youtube.com/embed/<%= @video.youtube %>?rel=0&modestbranding=1&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+      <div class="mt-4 d-flex justify-content-between align-content-center">
+        <h4 class=""><%= @video.title %></h4>
+        <span>
+        <small class="bg-blue px-2 rounded"><%= @video.subject %></small>
+        <small class="bg-yellow px-2 rounded"><%= @video.grade %></small>
+        <small class="text-muted">&middot; <%= local_time_ago(@video.created_at) %></small>
+        </span>
+      </div>
+      <div class="text-muted mt-3 bg-light mb-5 p-3"><%= @video.description %></div>
+    </div>
+    <div class="col-lg-3">
+      <p class="border-bottom text-muted pb-3">0 Comments</p>
+    </div>
+  </div>
 </div>
