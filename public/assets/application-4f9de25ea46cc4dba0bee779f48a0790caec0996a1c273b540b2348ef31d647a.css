@@ -1,0 +1,829 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap");
+/* line 4, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.15em;
+}
+
+/* Nav */
+/* line 10, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.logo {
+  font-size: 1.5em;
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: bold;
+}
+
+/* line 16, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.logo .color-1 {
+  color: #458773;
+}
+
+/* line 20, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.logo .color-2 {
+  color: #d46f4f;
+}
+
+/* line 24, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.logo .color-3 {
+  color: #64525d;
+}
+
+/* line 28, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.logo .color-4 {
+  color: #aa8e21;
+}
+
+/* line 32, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-yellow {
+  background: #ffc438;
+}
+
+/* line 36, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-purple {
+  background: #80e;
+}
+
+/* line 40, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.color-blue {
+  color: #80e2ff;
+}
+
+/* line 44, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-blue {
+  background: #80e2ff;
+}
+
+/* line 48, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.logo .color-5 {
+  color: #095578;
+}
+
+/* line 52, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.color-red {
+  color: #ff1948;
+}
+
+/* line 56, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.fs-3 {
+  font-size: 1.75rem !important;
+}
+
+/* line 60, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.opacity-75 {
+  opacity: 0.75;
+}
+
+/* line 64, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+h1#h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+  font-family: "Zilla Slab", serif;
+}
+
+/* Intro */
+/* line 72, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.try {
+  background: #ff738e;
+}
+
+/* line 79, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.intro-img {
+  background-image: url("/images/bg2.jpg");
+  background-size: cover;
+  background-position: 70% 0%;
+  padding: 9em 0;
+  border-radius: 0 0 1.6em 0;
+}
+
+/* line 87, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.fs-5 {
+  font-size: 1.2em;
+}
+
+/* line 91, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.underlined {
+  text-decoration: underline;
+}
+
+/* line 95, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.intro h1,
+.teacher-intro,
+.child-intro {
+  font-size: 2.9em;
+  letter-spacing: -2.5px;
+}
+
+/* line 102, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.intro-desc {
+  margin: -2.5em 5em 3em 8em;
+}
+
+/* line 106, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.lft-it {
+  margin-left: 8em;
+}
+
+/* line 110, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.less-white {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 114, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.transparent-field {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+}
+
+/* How to */
+/* line 122, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how {
+  padding-bottom: 3em;
+}
+
+/* line 126, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how h2 {
+  font-weight: 900;
+}
+
+/* line 130, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to {
+  height: 15.8em;
+  padding: 0 2em;
+  position: relative;
+  margin-top: 3.5em;
+}
+
+/* line 137, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to-1 {
+  background: #458773;
+  border-radius: 1.6em 0 0 0;
+}
+
+/* line 142, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to-2 {
+  background: #d46f4f;
+  border-radius: 0 0 1.6em 0;
+}
+
+/* line 147, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to-3 {
+  background: #aa8e21;
+  border-radius: 0 1.6em 0 0;
+}
+
+/* line 152, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to-4 {
+  background: #095578;
+  border-radius: 0 0 0 1.6em;
+}
+
+/* line 157, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to h1 {
+  font-size: 5em;
+  position: relative;
+  top: -0.6em;
+}
+
+/* line 163, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to h4 {
+  color: white;
+  font-weight: 900;
+  position: relative;
+  top: -2em;
+}
+
+/* line 170, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-to p {
+  position: relative;
+  top: -2em;
+  color: whitesmoke;
+}
+
+/* secondary-intro */
+/* line 177, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.secondary-intro {
+  margin: 5em 0 8em;
+  background: white;
+}
+
+/* line 182, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+#notice {
+  position: relative;
+  top: 0;
+  right: 0;
+  background: linen;
+  padding: 1em 2em;
+  border-radius: 0.25rem;
+  color: #155724;
+}
+
+/* line 192, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.image-container {
+  width: 90%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 1em;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* line 200, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.image-container-2 {
+  width: 80%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 1em;
+  float: right;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* line 209, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.image-container-3 {
+  width: 100%;
+  height: 143px;
+  overflow: hidden;
+  border-radius: 0.3em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* line 217, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.image-container-4,
+.image-container-5 {
+  width: 90%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 0.3em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* line 226, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.image-container-5 {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* line 232, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.lady-img-bg {
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(11, 58, 68, 0.4), #0b3a44), url("/assets/teacher-1ed14021dc3a5cc0007dc0b6196fb0f9fc88b60b5504f098e5d4983f0e4827a5.jpg");
+}
+
+/* line 243, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.lady-img-bg h2 {
+  padding: 2.5em 1.8em 3.3em;
+  font-weight: bold;
+  font-size: 3.2em;
+  line-height: 1.62;
+  margin-bottom: 0;
+}
+
+/* line 251, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.lady-img-bg h2 span {
+  color: #e37238;
+}
+
+/* line 255, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.my-form {
+  padding: 2.8em 5em 0em;
+}
+
+/* line 259, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.image-container img,
+.image-container-2 img,
+.image-container-3 img,
+.image-container-4 img,
+.image-container-5 img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 268, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.secondary-intro p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin: 4em 0 0 0;
+  color: #1c93ae;
+}
+
+/* line 275, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.profile {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #1c93ae;
+}
+
+/* line 283, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.profile img {
+  width: 100%;
+}
+
+/* covid-alert */
+/* line 288, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.covid-alert {
+  background-image: url("/assets/bg-12b4a6743200289c423723f3e587c4ae9bfee9ba873af3f3981ec12eeb23fb69.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 4.3em 0;
+}
+
+/* line 295, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.statement-1 {
+  padding: 4em;
+  border-radius: 1.6em 0;
+}
+
+/* line 300, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.statement-1 p {
+  border-left: 3px solid #095578;
+}
+
+/* recommend teachers */
+/* line 305, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.recommend-teachers {
+  padding: 0 0 6em 0;
+  background: white;
+}
+
+/* line 310, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.very-rounded {
+  border-radius: 2rem;
+}
+
+/* line 314, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.recommend-teachers h2 {
+  font-weight: 900;
+  font-size: 2.5em;
+  margin: 2.7em 0 1em 0;
+}
+
+/* line 320, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.recommend-teachers ul {
+  color: #1c93ae;
+  list-style: none;
+  border-left: 3px solid #1c93ae;
+}
+
+/* line 326, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.recommend-teachers li {
+  line-height: 2.2;
+}
+
+/* convinient-school */
+/* line 331, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.convinient-school {
+  padding: 5em 0;
+}
+
+/* line 335, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.convinient-school h2 {
+  font-weight: 900;
+  margin: 0 auto 1em auto;
+  font-size: 2em;
+}
+
+/* enroll */
+/* line 342, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.enroll {
+  margin: 3em 0 0 0;
+  padding: 5em 0 5em 0;
+  background: #e37238;
+}
+
+/* line 348, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.enroll h1 {
+  font-weight: 900;
+  margin: 0 0 2em 0;
+}
+
+/* line 353, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.enroll input {
+  background: transparent;
+  border-color: white;
+  height: 3em;
+}
+
+/* line 359, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.input_height {
+  height: 3em;
+}
+
+/* line 363, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.enroll button {
+  background: white;
+  height: 3em;
+  color: #e37238;
+}
+
+/* Buttons */
+/* line 370, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.big-btn {
+  padding: 0.8em 2em;
+  font-size: 1.3em;
+  background-color: #1c93ae;
+  border-color: #1c93ae;
+}
+
+/* line 377, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.button_def {
+  height: 3em;
+  font-size: 1.01em;
+  border-radius: 3em;
+}
+
+/* line 383, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-btn {
+  font-size: 1.3em;
+}
+
+/* line 387, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.how-btn img {
+  height: 1.5em;
+}
+
+/* line 391, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+#user_remember_me {
+  height: 1em;
+  width: 1em;
+}
+
+/* Links */
+/* line 397, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.orange-link {
+  color: #e37238;
+}
+
+/* line 401, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.register-link {
+  margin-left: 1.3em;
+}
+
+/* line 405, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.text-heading {
+  color: #095578;
+}
+
+/* line 409, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-red {
+  background: #e37238;
+}
+
+/* line 413, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.fs-6 {
+  font-size: 1.1em !important;
+}
+
+/* line 417, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-red-btn {
+  background: #da6f4f;
+  border-radius: 2rem;
+  font-size: 1em;
+}
+
+/* line 423, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-green-btn {
+  background: #1c93ae;
+  border-radius: 2em;
+  font-size: 1em;
+}
+
+/* line 429, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.text-label {
+  color: #095578;
+}
+
+/* line 433, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.text-green {
+  color: #1c93ae;
+}
+
+/* line 437, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.bg-green {
+  background: #095578;
+}
+
+/* line 441, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.neg_space {
+  letter-spacing: -1.5px;
+}
+
+/* Messages */
+/* line 446, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+#error_explanation {
+  background: rgba(246, 36, 89, 0.1);
+  padding: 1em;
+  border-radius: 0.25rem;
+  margin: 0 0 1em 0;
+  color: #f62459;
+  border: 1px solid #f62459;
+}
+
+/* line 455, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.profile-p {
+  line-height: 2.9;
+  color: #095578;
+}
+
+/* line 460, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.profile-p span {
+  border: 1px dashed #ddd;
+  padding: 0em 1em 0em 0.5em;
+  color: #777;
+  display: block;
+  width: 100%;
+  background: white;
+}
+
+/* line 469, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+.profile-button {
+  width: 100%;
+  background: #1c93ae;
+  color: white;
+  font-size: 1em;
+  padding: 0.6em 0;
+  margin: 1em 0 0 0;
+}
+
+/* Responsive media queries */
+@media only screen and (max-width: 1394px) {
+  /* line 480, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .lady-img-bg h2 {
+    font-size: 2.9em;
+    line-height: 1.5;
+  }
+}
+@media only screen and (max-width: 1263px) {
+  /* line 487, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .lady-img-bg h2 {
+    font-size: 2.6em;
+    line-height: 1.3;
+    padding: 3.7em 1.8em 3em;
+  }
+}
+@media only screen and (max-width: 1229px) {
+  /* line 495, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .intro-desc {
+    margin: -1em 0em 3em 3em;
+  }
+}
+@media only screen and (max-width: 1219px) {
+  /* line 501, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .intro h1 {
+    font-size: 2.5em;
+    letter-spacing: -2px;
+    margin: 0 1em 1em 1.5em;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  /* line 509, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how-to p {
+    font-size: 0.8em;
+    top: -3.5em;
+  }
+
+  /* line 514, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-4 {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  /* line 520, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .intro {
+    padding: 4em 0;
+  }
+
+  /* line 524, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .navbar-nav li {
+    margin-top: 1em;
+  }
+
+  /* line 528, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .login-link,
+  .register-link {
+    margin-left: 0;
+  }
+
+  /* line 533, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .big-btn {
+    font-size: 1em;
+  }
+
+  /* line 537, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how-to p {
+    font-size: 1em;
+    top: -2em;
+  }
+
+  /* line 542, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .secondary-intro p {
+    font-size: 1em;
+    margin: 1em 0 0 0;
+  }
+
+  /* line 547, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .recommend-teachers h2 {
+    font-size: 2em;
+    margin: 1em 0 1em 0;
+  }
+
+  /* line 552, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .recommend-teachers ul {
+    font-size: 0.9em;
+  }
+
+  /* line 556, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .recommend-teachers .big-btn {
+    font-size: 1em;
+  }
+
+  /* line 560, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 565, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-2 {
+    width: 95%;
+    height: 450px;
+  }
+
+  /* line 570, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-3 {
+    margin-bottom: 1.5em;
+  }
+
+  /* line 574, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  #side-with-image {
+    display: none;
+  }
+
+  /* line 578, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  #side-with-form {
+    margin: 0 auto;
+  }
+
+  /* line 582, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  #transparent-bg {
+    background: transparent !important;
+  }
+
+  /* line 586, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .convinient-school .w-50 {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 592, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .secondary-intro {
+    margin: 0 0 5em;
+  }
+
+  /* line 596, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .intro .big-btn,
+  .how-btn {
+    font-size: 1em;
+  }
+
+  /* line 601, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how-to p {
+    font-size: 0.8em;
+  }
+
+  /* line 605, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container {
+    margin-left: 0 !important;
+    margin-top: 2em;
+    height: 320px;
+  }
+
+  /* line 611, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-3 {
+    height: 200px;
+  }
+
+  /* line 615, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .convinient-school {
+    padding: 4em 0;
+  }
+
+  /* line 619, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-2 {
+    width: 100%;
+    height: 400px;
+    margin: 3em 0 0 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* line 627, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .my-form {
+    padding: 2.8em 2em 0em;
+  }
+}
+@media only screen and (max-width: 469px) {
+  /* line 633, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how {
+    padding-bottom: 3em;
+  }
+
+  /* line 637, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container {
+    height: 300px;
+  }
+
+  /* line 641, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-2 {
+    height: 350px;
+  }
+
+  /* line 645, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .convinient-school .w-50 {
+    width: 100% !important;
+  }
+
+  /* line 649, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .convinient-school h2 {
+    font-size: 1.8em;
+  }
+
+  /* line 653, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-3 img {
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 458px) {
+  /* line 659, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  header ul {
+    font-size: 0.8em;
+  }
+
+  /* line 663, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how-to h4 {
+    top: -2em;
+  }
+
+  /* line 667, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how-to p {
+    font-size: 1em;
+    top: -2em;
+  }
+
+  /* line 672, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-3 {
+    height: 200px;
+  }
+
+  /* line 676, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .image-container-3 img {
+    height: auto;
+  }
+
+  /* line 680, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .secondary-intro {
+    margin: 0 0 4em;
+  }
+
+  /* line 684, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .recommend-teachers {
+    padding-top: 0;
+  }
+}
+@media only screen and (max-width: 437px) {
+  /* line 690, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .intro h1 {
+    letter-spacing: -1px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  /* line 696, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .my-form {
+    padding: 2.8em 1em 0em;
+  }
+}
+@media only screen and (max-width: 267px) {
+  /* line 702, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .how-to p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-height: 450px) {
+  /* line 708, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .overlay a {
+    font-size: 20px;
+  }
+
+  /* line 711, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* line 718, /home/nakitto/odin_on_rails/Home-School-v2/app/assets/stylesheets/application.css.scss */
+#show_map {
+  height: 400px;
+}
