@@ -11,8 +11,7 @@ gem 'friendly_id'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1', '>= 6.1.3.1'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
-# gem 'sqlite3'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -52,6 +51,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails', '~> 6.1'
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -77,6 +77,10 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'pg'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.8'
@@ -85,3 +89,4 @@ gem 'binding_of_caller', '~> 1.0'
 gem 'geocoder', '~> 1.6', '>= 1.6.7'
 gem 'ransack', '~> 2.4', '>= 2.4.2'
 gem 'local_time', '~> 2.1'
+gem 'google-cloud-storage'

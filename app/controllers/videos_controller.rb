@@ -44,7 +44,7 @@ class VideosController < ApplicationController
   private
 
     def video_params
-      params.require(:video).permit(:title, :youtube)
+      params.require(:video).permit(:title, :youtube, :grade, :description, :subject, :thumbnail)
     end
 
     def set_video

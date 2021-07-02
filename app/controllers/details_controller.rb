@@ -1,5 +1,6 @@
 class DetailsController < ApplicationController
   before_action :set_detail, only: [ :edit, :update ]
+  before_action :authenticate_teacher!
 
   def new
     @detail = Detail.new

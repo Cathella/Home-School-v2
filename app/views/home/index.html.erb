@@ -6,17 +6,16 @@
 
 <div class="try">
   <div class="container py-5">
-    <%= render 'layouts/notice2' %>
     <div class="row py-5">
       <%= render 'layouts/notice2' %>
       <div class="col-lg-7 intro py-5 mx-auto text-center">
-        <h1 class="text-heading mt-4 font-weight-bold" style="line-height: 1.3">
+        <h1 class="text-label mt-4 font-weight-bold" style="line-height: 1.3">
           Organized 
           <span class="text-white underlined">Video Lessons</span> to help your Child 
           <span class="text-white underlined">Learn</span> at home.
         </h1>
         <div class="mt-4 mb-4">
-          <%= link_to 'Upscale<i class="fas fa-arrow-right ml-4"></i>'.html_safe, upscale_path, class: "btn bg-yellow fs-6 very-rounded text-label shadow px-5 py-3" %>
+          <%= link_to 'Upscale<i class="fas fa-arrow-right ml-4"></i>'.html_safe, upscale_path, class: "btn bg-yellow fs-6 rounded-pill text-label shadow px-5 py-3" %>
         </div>
       </div>
     </div>
@@ -26,22 +25,19 @@
 <div class="about">
   <div class="container pt-5 mb-5">
     <div class="row">
-      <div class="col-lg-6">
-        <h1 class="pb-3 mt-5 mb-4 font-weight-bold text-label">About Us</h1>
-        <div class="text-muted pr-4">
+      <div class="col-lg-5 mx-auto pt-5">
+        <h2 class="font-weight-bold text-label">About Us</h2>
+        <div class="text-muted mt-5">
           We are a Not-for-Profit team that is aiming for quality education across the country. 
           Our platform finds tutors for the community children to study in small localised groups at 
-          subsidised fees that have been agreed upon by the teachers and the parents of the grouped children.
+          subsidised fees that have been agreed upon by the teachers and the parents of the children.
           <br><br>
-          Ever since the COVID-19 education lockdown, our children have been seated home and 
-          are wearing away academically, and with the recently increased school lockdown for lower primary, 
+          Ever since the COVID-19 education lockdown, most children have been seated home 
+          wearing away academically, and with the recently increased school lockdown for lower primary, 
           we believe home schooling is a viable option to keep the children occupied academically.
-          <br><br>
-          Our job is to create study-groups and add children or students according to their proximity and then 
-          match them with a willing and qualified teacher.
         </div>
       </div>
-      <div class="col-lg-6 ml-auto pt-5">
+      <div class="col-lg-6 ml-auto">
         <%= image_tag("about.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 1.6em 0 0 0; margin-top: 4em") %>
       </div>
     </div>
@@ -92,23 +88,23 @@
 </div> %>
 
 <div class="recommend-teachers pt-5">
-  <div class="container my-5">
-    <div class="row">
+  <div class="container">
+    <div class="row mb-5 pb-5">
       <div class="col-md-5 col-lg-6">
         <div class="">
           <%= image_tag("teacher.jpg", :alt => "", class: "img-fluid shadow", style: "border-radius: 0 1.6em 0 1.6em") %>
         </div>
       </div>
-      <div class="col-md-7 col-lg-6">
-        <div class="ml-5">
-          <h2 class="text-heading">Our Recommended Teachers</h2>
+      <div class="col-md-7 col-lg-5 mx-auto">
+        <div>
+          <h2 class="text-label font-weight-bold my-5 pt-5">Our Recommended Teachers</h2>
           <ul>
             <li>🌟 Have a minimum of 3 years of experience.</li>
             <li>🌟 Are Registered Teachers</li>
             <li>🌟 Amazing Recommendations</li>
             <li>🌟 Focus on Student-Teacher relationships.</li>
           </ul>
-          <%= link_to 'Become a Teacher', new_teacher_registration_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-5" %>
+          <%= link_to 'Become a Teacher', new_teacher_registration_path, class: "btn btn-info rounded-pill shadow px-5 py-3 mt-5" %>
         </div>
       </div>           
     </div>
@@ -119,7 +115,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9 col-lg-6 mr-auto">
-        <div class="statement-1 bg-info text-white shadow">
+        <div class="statement-1 bg-yellow text-label shadow">
           <h2 class="font-weight-bold mb-4">Even with covid19 around, education is still essential.</h2>
           <p class="pl-5">
               This is a solution for parents looking for a quality
@@ -210,9 +206,9 @@
   </div>
 </div> %>
 
-<div class="convinient-school">
+<div class="convinient-school py-5">
   <div class="container">
-    <h1 class="text-green font-weight-bold mb-5 mt-3 text-center" style="font-size: 3em">Benefits.</h1>
+    <h1 class="text-green font-weight-bold my-5 text-center" style="">Benefits.</h1>
     <div class="row mt-5" id="gallery">
       <div class="col-md-6 col-lg-3">
         <div class="bg-red py-5 mb-3" style="border-radius: 1.6em 0">
@@ -255,6 +251,6 @@
 <div class="container pb-5">
   <div class="text-center mb-5 p-5 bg-green" style="border-radius: 0 1.6em 0 0">
     <h1 class="mt-4 text-white">Ready to get Started?</h1>
-    <%= link_to 'Register at HomeSchool today', new_child_registration_path, class: "btn bg-green-btn text-white shadow px-5 py-3 mt-3 mb-4" %>
+    <%= link_to 'Register your child', new_child_registration_path, class: "btn bg-info rounded-pill text-white shadow px-5 py-3 mt-3 mb-4" %>
   </div>
 </div>
