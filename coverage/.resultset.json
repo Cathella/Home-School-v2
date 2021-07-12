@@ -1,16 +1,19 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/nakitto/odin_on_rails/Home-School-v2/spec/models/profile_spec.rb": {
+      "/mnt/c/code/Home-School-v2/spec/models/address_spec.rb": {
         "lines": [
           1,
           null,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/environment.rb": {
+      "/mnt/c/code/Home-School-v2/config/environment.rb": {
         "lines": [
           null,
           1,
@@ -19,7 +22,7 @@
           1
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/application.rb": {
+      "/mnt/c/code/Home-School-v2/config/application.rb": {
         "lines": [
           1,
           null,
@@ -45,7 +48,7 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/boot.rb": {
+      "/mnt/c/code/Home-School-v2/config/boot.rb": {
         "lines": [
           1,
           null,
@@ -53,7 +56,7 @@
           1
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/environments/test.rb": {
+      "/mnt/c/code/Home-School-v2/config/environments/test.rb": {
         "lines": [
           1,
           null,
@@ -117,7 +120,7 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/application_controller_renderer.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -129,7 +132,7 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/assets.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -144,10 +147,11 @@
           null,
           null,
           null,
+          null,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/backtrace_silencers.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -159,7 +163,7 @@
           1
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/content_security_policy.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -193,7 +197,7 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/cookies_serializer.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -202,7 +206,322 @@
           1
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/filter_parameter_logging.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/devise.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -212,7 +531,7 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/friendly_id.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/friendly_id.rb": {
         "lines": [
           null,
           null,
@@ -323,82 +642,9 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/inflections.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/geocoder.rb": {
         "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/mime_types.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/new_framework_defaults_6_1.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          1,
           null,
           null,
           null,
@@ -422,7 +668,106 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/permissions_policy.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/config/initializers/mime_types.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/config/initializers/new_framework_defaults_6_1.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -437,7 +782,7 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/initializers/wrap_parameters.rb": {
+      "/mnt/c/code/Home-School-v2/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -455,38 +800,296 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/config/routes.rb": {
+      "/mnt/c/code/Home-School-v2/spec/factories/addresses.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           1,
           1,
           1,
           1,
           1,
           null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/admins.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/children.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/details.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/directions.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/groups.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/members.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/profiles.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/teachers.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/factories/videos.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/config/routes.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/child.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/admin.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/teacher.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/address.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/models/admin_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/models/child_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/models/detail_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/detail.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/models/direction_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/direction.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/models/group_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/group.rb": {
+        "lines": [
+          1,
           1,
           1,
           null,
@@ -495,127 +1098,129 @@
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/addresses_helper.rb": {
+      "/mnt/c/code/Home-School-v2/spec/models/member_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/member.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
           1,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/admin_helper.rb": {
+      "/mnt/c/code/Home-School-v2/spec/models/profile_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/app/models/profile.rb": {
+        "lines": [
+          1,
+          1,
           1,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/admin_sessions_helper.rb": {
+      "/mnt/c/code/Home-School-v2/spec/models/teacher_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/mnt/c/code/Home-School-v2/spec/models/video_spec.rb": {
+        "lines": [
+          1,
+          null,
           1,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/application_helper.rb": {
+      "/mnt/c/code/Home-School-v2/app/models/video.rb": {
         "lines": [
+          1,
+          1,
           1,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/blacklists_helper.rb": {
+      "/mnt/c/code/Home-School-v2/spec/views/videos/index.html.erb_spec.rb": {
         "lines": [
+          1,
+          null,
           1,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/child_sessions_helper.rb": {
+      "/mnt/c/code/Home-School-v2/spec/views/videos/new.html.erb_spec.rb": {
         "lines": [
+          1,
+          null,
           1,
           null
         ]
       },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/children_helper.rb": {
+      "/mnt/c/code/Home-School-v2/spec/views/videos/show.html.erb_spec.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/contacts_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/conversations_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/directions_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/groups_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/home_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/messages_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/password_resets_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/posts_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/profiles_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/teacher_password_resets_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/teacher_sessions_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/teachers_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/nakitto/odin_on_rails/Home-School-v2/app/helpers/videos_helper.rb": {
-        "lines": [
+          null,
           1,
           null
         ]
       }
     },
-    "timestamp": 1618260421
+    "timestamp": 1626061775
   }
 }

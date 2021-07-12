@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Detail, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'belongs to teacher' do
+    detail = Detail.reflect_on_association(:teacher)
+    expect(detail.macro).to eq(:belongs_to)
+  end
 end
