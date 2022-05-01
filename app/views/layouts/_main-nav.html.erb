@@ -1,15 +1,14 @@
-<header class="pt-1 pb-1 shadow">
-  <nav class="container navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand logo text-info" href="/">
-      🏠 
-      <span class="color-1">H</span><span class="color-2">o</span><span class="color-3">m</span><span class="color-4">e</span><span class="color-5">S</span><span class="color-2">c</span><span class="color-3">h</span><span class="color-1">o</span><span class="color-2">o</span><span class="color-5">l</span>
+<header>
+  <nav class="container navbar border-bottom navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+      <%= image_tag("logo.svg", :alt => "", class: "", style: "height: 55px") %>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto" style="font-size: 17px;">
         <% if current_teacher %>
           <li class="nav-item">
             <%= link_to "Dashboard", dashboard_path, class: "mr-5 text-muted" %>
@@ -33,10 +32,10 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Upscale", upscale_path, class: "text-muted mr-5" %>
+            <%= link_to "Create Group", new_teacher_registration_path, class: "nav-link text-muted mr-5" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Sign up | Login", accounts_path, class: "text-muted" %>
+            <%= link_to "Join Group", new_child_registration_path, class: "nav-link btn btn-info px-3" %>
           </li>
         <% end %>
       </ul>

@@ -1,33 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;700&display=swap');
 //= require actiontext
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-size: 1.15em;
 }
 
+.navbar {
+  padding: 0;
+}
+
 /* Nav */
-.logo {
-  font-size: 1.5em;
-  font-family: "Patrick Hand SC", cursive;
-  font-weight: bold;
-}
+// .logo {
+//   font-size: 1.5em;
+//   font-family: "Patrick Hand SC", cursive;
+//   font-weight: bold;
+// }
 
-.logo .color-1 {
-  color: #458773;
-}
+// .logo .color-1 {
+//   color: #458773;
+// }
 
-.logo .color-2 {
-  color: #d46f4f;
-}
+// .logo .color-2 {
+//   color: #d46f4f;
+// }
 
-.logo .color-3 {
-  color: #64525d;
-}
+// .logo .color-3 {
+//   color: #64525d;
+// }
 
-.logo .color-4 {
-  color: #aa8e21;
-}
+// .logo .color-4 {
+//   color: #aa8e21;
+// }
 
 .bg-yellow {
   background: #ffc438;
@@ -45,9 +49,9 @@ body {
   background: #80e2ff;
 }
 
-.logo .color-5 {
-  color: #095578;
-}
+// .logo .color-5 {
+//   color: #095578;
+// }
 
 .color-red {
   color: #ff1948;
@@ -61,20 +65,15 @@ body {
   opacity: 0.75;
 }
 
-h1#h1 {
-  font-size: 3em;
+h1 {
+  letter-spacing: -2px;
+}
+
+h3 {
   letter-spacing: -1px;
-  font-family: "Zilla Slab", serif;
 }
 
 /* Intro */
-
-.try {
-  // background-image: url(image-path("tt2.gif"));
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  background: #ff738e;
-}
 
 .intro-img {
   background-image: url(image-path("bg2.jpg"));

@@ -1,19 +1,18 @@
-<nav class="container navbar navbar-dark navbar-expand-lg">
-  <a class="navbar-brand logo text-white" href="/">
-    🏠 
-    HomeSchool
+<nav class="container navbar border-bottom navbar-expand-lg">
+  <a class="navbar-brand" href="/">
+    <%= image_tag("logo.svg", :alt => "", class: "", style: "height: 55px") %>
   </a>
   <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon text-white"></span>
+    <span class="navbar-toggler-icon text-black"></span>
   </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto" style="font-size: 17px;">
         <li class="nav-item">
-          <%= link_to "Upscale", upscale_path, class: "nav-link text-white mr-4" %>
+          <%= link_to "Create Group", new_teacher_registration_path, class: "nav-link text-muted mr-5" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Sign up | Login", accounts_path, class: "nav-link text-white" %>
+          <%= link_to "Join Group", new_child_registration_path, class: "nav-link btn btn-info px-3" %>
         </li>
       </ul>
     </div>
